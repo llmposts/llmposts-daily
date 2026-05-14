@@ -3,8 +3,9 @@ name: 要闻汇总(每小时检查)
 on:
   schedule:
     # 每小时检查一次 llmposts.com 的 WordPress REST API,有新文章才提交。
+    # 故意避开整点:":00" 是 GitHub Actions 高负载时段,定时任务会被延迟甚至丢弃。
     # 公开仓库的 Actions 时长不计费,每小时跑无压力。
-    - cron: "0 * * * *"
+    - cron: "26 * * * *"
   workflow_dispatch: {} # 也可在 Actions 页面手动触发
 
 # 让 Action 有权限把生成的文件提交回仓库
