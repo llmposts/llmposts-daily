@@ -1,10 +1,10 @@
-name: 每日要闻汇总
+name: 要闻汇总(每小时检查)
 
 on:
   schedule:
-    # 每天 09:00(北京时间)运行 —— cron 用 UTC,01:00 UTC = 09:00 CST。
-    # 想更新更勤,再加一行 cron 即可(例如下午再跑一次)。
-    - cron: "0 1 * * *"
+    # 每小时检查一次 llmposts.com 的 RSS,有新文章才提交 —— 近似「有更新就追加」。
+    # 公开仓库的 Actions 时长不计费,每小时跑无压力。
+    - cron: "0 * * * *"
   workflow_dispatch: {} # 也可在 Actions 页面手动触发
 
 # 让 Action 有权限把生成的文件提交回仓库
@@ -27,15 +27,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: npm
 
       - name: 安装依赖
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
 
-      - name: 生成每日汇总
+      - name: 抓取并更新归档
         run: node scripts/generate.mjs
-        # 若把 RSS 地址放在仓库 Variables 里,取消下面注释:
-        # env:
-        #   RSS_URL: ${{ vars.RSS_URL }}
 
       - name: 提交变更
         run: |
@@ -45,6 +43,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "没有新内容,跳过提交"
           else
-            git commit -m "chore: 更新每日要闻汇总 ($(date -u +%F))"
+            git commit -m "chore: 更新要闻汇总 ($(date -u +'%F %H:%M') UTC)"
             git push
           fi

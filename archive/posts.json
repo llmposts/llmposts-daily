@@ -1,0 +1,618 @@
+[
+  {
+    "title": "Claude computer use 最佳实践：分辨率配置、思考深度与回放机制",
+    "link": "https://llmposts.com/models/claude-computer-use-best-practices/",
+    "date": "2026-05-14T05:57:31.000Z",
+    "summary": "Anthropic 发布《Claude computer use 最佳实践》指南，为开发者提供基于 Claud…",
+    "category": "模型动态"
+  },
+  {
+    "title": "Claude 订阅计划将推 Agent SDK 专属月度额度",
+    "link": "https://llmposts.com/models/claude-agent-sdk-monthly-credit/",
+    "date": "2026-05-14T02:51:27.000Z",
+    "summary": "Anthropic 宣布自 6 月 15 日起调整 Claude 订阅套餐计费策略，将程序化调用与交互使用分离…",
+    "category": "模型动态"
+  },
+  {
+    "title": "Claude Code 周限额临时提升 50% 至 7 月 13 日",
+    "link": "https://llmposts.com/models/claude-code-weekly-limits-increase/",
+    "date": "2026-05-14T02:22:15.000Z",
+    "summary": "Anthropic 宣布 Claude Code 周使用限额临时提升 50%，该调整即时生效并持续至 7 月…",
+    "category": "模型动态"
+  },
+  {
+    "title": "Anthropic 收购 Stainless 或达 3 亿美元",
+    "link": "https://llmposts.com/models/anthropic-stainless-acquisition/",
+    "date": "2026-05-13T17:14:13.000Z",
+    "summary": "Anthropic 收购 Stainless 的谈判已进入后期，The Information 称交易金额至少…",
+    "category": "模型动态"
+  },
+  {
+    "title": "Anthropic 发布 20 余 Claude 法律插件与连接器",
+    "link": "https://llmposts.com/models/anthropic-claude-legal-connectors-plugins/",
+    "date": "2026-05-13T15:01:31.000Z",
+    "summary": "Anthropic 发布涵盖 20 余项 MCP 连接器与 12 个专业插件的 Claude 法律插件生态更新…",
+    "category": "模型动态"
+  },
+  {
+    "title": "吴恩达驳 AI 失业论，预测 AI 就业繁荣即将来临",
+    "link": "https://llmposts.com/models/andrew-ng-jobapalooza-prediction/",
+    "date": "2026-05-13T14:10:08.000Z",
+    "summary": "吴恩达（Andrew Ng）公开反驳 AI 引发大规模失业的叙事，强调 AI 将重塑而非消灭工作岗位。结合其最…",
+    "category": "模型动态"
+  },
+  {
+    "title": "亚马逊 MeshClaw 工具 token 刷量现象引发争议",
+    "link": "https://llmposts.com/models/amazon-meshclaw-tool-token-pressure/",
+    "date": "2026-05-13T13:03:42.000Z",
+    "summary": "亚马逊近期部署内部 AI 智能体平台 MeshClaw 工具，允许员工自动化连接企业软件与执行任务。在超 80…",
+    "category": "模型动态"
+  },
+  {
+    "title": "Claude Opus 4.7 fast mode 开放预览",
+    "link": "https://llmposts.com/models/claude-opus-47-fast-mode/",
+    "date": "2026-05-13T01:32:29.000Z",
+    "summary": "Anthropic 已将 Claude Opus 4.7 fast mode 以 research previ…",
+    "category": "模型动态"
+  },
+  {
+    "title": "Google 重构 AI 指针交互：Gemini 驱动与 Chrome 落地",
+    "link": "https://llmposts.com/models/ai-pointer-gemini-chrome/",
+    "date": "2026-05-12T17:52:41.000Z",
+    "summary": "Google 与 DeepMind 团队正尝试彻底重构沿用半世纪的鼠标指针。基于 Gemini 大模型构建的…",
+    "category": "模型动态"
+  },
+  {
+    "title": "Arena 最新榜单：Claude Opus 4.7 领跑五大前沿模型",
+    "link": "https://llmposts.com/models/arena-model-ranking-may-2026/",
+    "date": "2026-05-12T16:20:34.000Z",
+    "summary": "Arena 模型排名显示前沿模型呈现出明显的能力分化。根据 Arena 榜单最新数据，五大主流模型在创意写作、…",
+    "category": "模型动态"
+  },
+  {
+    "title": "Interfaze 模型发布：融合 CNN 与 Transformer 的精度架构",
+    "link": "https://llmposts.com/models/interfaze-model-arch/",
+    "date": "2026-05-12T14:33:07.000Z",
+    "summary": "Interfaze 模型发布全新混合架构，主打计算机级确定的高精度任务。该架构融合深度神经网络与 Transf…",
+    "category": "模型动态"
+  },
+  {
+    "title": "OpenAI 警告未经授权股权交易",
+    "link": "https://llmposts.com/models/openai-unauthorized-equity-transactions/",
+    "date": "2026-05-12T13:06:19.000Z",
+    "summary": "OpenAI 于 2026 年 5 月 12 日发布政策声明，警告未经授权的 OpenAI 股权交易不受认可。…",
+    "category": "模型动态"
+  },
+  {
+    "title": "/Goal 模式的正确用法：明确目标、缩短反馈、记录过程",
+    "link": "https://llmposts.com/engineering/using-goals-effectively-in-codex-and-claude-code/",
+    "date": "2026-05-12T11:49:13.000Z",
+    "summary": "随着 Codex 和 Claude Code 都已经正式支持 /Goal 模式，来自 OpenAI、长期关注生…",
+    "category": "工程实践"
+  },
+  {
+    "title": "vLLM 登顶 Artificial Analysis 榜单，开源推理栈反超专有栈",
+    "link": "https://llmposts.com/models/vllm-artificial-analysis-leaderboard-engine-optimization/",
+    "date": "2026-05-12T08:53:07.000Z",
+    "summary": "DigitalOcean 发布最新推理性能基准测试，vLLM 在 DeepSeek V3.2、MiniMax-…",
+    "category": "模型动态"
+  },
+  {
+    "title": "OpenAI 发布 Daybreak：面向网络安全防御方的 AI 工具",
+    "link": "https://llmposts.com/engineering/openai-daybreak-cybersecurity-ai-agent/",
+    "date": "2026-05-12T07:16:50.000Z",
+    "summary": "OpenAI 今天正式宣布了 Daybreak，Daybreak 定位为面向网络安全防御方的 AI 工具，基于…",
+    "category": "工程实践"
+  },
+  {
+    "title": "Ilya Sutskever 持有 OpenAI 约 70 亿美元股份",
+    "link": "https://llmposts.com/industry/ilya-sutskever-openai-70-billion-stake-musk-trial/",
+    "date": "2026-05-12T06:20:53.000Z",
+    "summary": "Musk 诉 OpenAI 案已经进入收尾阶段，Ilya Sutskever、Satya Nadella、Br…",
+    "category": "行业观察"
+  },
+  {
+    "title": "Claude Code 新增 /goal 命令 支持显式设定会话完成目标",
+    "link": "https://llmposts.com/engineering/claude-code-goal-command-agent-view/",
+    "date": "2026-05-12T03:09:44.000Z",
+    "summary": "Claude Code CLI 2.1.139 版本新增 /goal 命令, 允许用户为当前会话显式设定完成目…",
+    "category": "工程实践"
+  },
+  {
+    "title": "MiniCPM-V 4.6 1.3B 刷新 2B 以下开源权重得分",
+    "link": "https://llmposts.com/models/minicpm-v-4-6-1-3b/",
+    "date": "2026-05-12T02:16:11.000Z",
+    "summary": "OpenBMB 发布 MiniCPM-V 4.6 1.3B Instruct，这是一款 1.3B 参数的开源权…",
+    "category": "模型动态"
+  },
+  {
+    "title": "Claude Code 推出 agent view 管理并行会话",
+    "link": "https://llmposts.com/models/claude-code-agent-view/",
+    "date": "2026-05-12T01:53:21.000Z",
+    "summary": "Anthropic 于 2026 年 5 月 11 日为 Claude Code 推出 Claude Code…",
+    "category": "模型动态"
+  },
+  {
+    "title": "Claude Platform on AWS 上线 支持 IAM 与统一账单",
+    "link": "https://llmposts.com/models/claude-platform-aws-ga/",
+    "date": "2026-05-11T16:24:15.000Z",
+    "summary": "Anthropic 官方公布 Claude Platform on AWS 已正式可用，AWS 客户可通过 A…",
+    "category": "模型动态"
+  },
+  {
+    "title": "Coding Agent Index 发布 编码智能体组合评测",
+    "link": "https://llmposts.com/models/coding-agent-index/",
+    "date": "2026-05-11T15:59:13.000Z",
+    "summary": "Artificial Analysis 发布 Coding Agent Index，用来评测编码模型与 age…",
+    "category": "模型动态"
+  },
+  {
+    "title": "OpenRouter 推出 Pareto Code 编码路由",
+    "link": "https://llmposts.com/models/openrouter-pareto-code-router/",
+    "date": "2026-05-11T15:37:45.000Z",
+    "summary": "OpenRouter 推出实验性 Pareto Code 编码路由，用于在不指定具体模型的情况下选择代码模型。…",
+    "category": "模型动态"
+  },
+  {
+    "title": "OpenAI Deployment Company 推出并收购 Tomoro",
+    "link": "https://llmposts.com/models/openai-deployment-company-tomoro/",
+    "date": "2026-05-11T13:37:56.000Z",
+    "summary": "OpenAI 官方宣布推出 OpenAI Deployment Company，面向企业提供前沿 AI 系统部…",
+    "category": "模型动态"
+  },
+  {
+    "title": "Codex Ultra-Fast 模式被曝提速 5 倍",
+    "link": "https://llmposts.com/models/codex-ultra-fast-mode/",
+    "date": "2026-05-11T12:55:39.000Z",
+    "summary": "据社区帖子和 OpenAI Codex GitHub 仓库记录，Codex Ultra-Fast 模式曾短暂出…",
+    "category": "模型动态"
+  },
+  {
+    "title": "ChatGPT 曝 Codex 移动端控制功能",
+    "link": "https://llmposts.com/models/chatgpt-codex-mobile-control/",
+    "date": "2026-05-11T08:12:34.000Z",
+    "summary": "据用户在 X 平台发布的截图，ChatGPT 移动应用短暂出现 Codex 连接页面，提示用户将可直接从 Ch…",
+    "category": "模型动态"
+  },
+  {
+    "title": "OpenAI o1 急诊诊断超越医生",
+    "link": "https://llmposts.com/models/openai-o1-er-diagnosis/",
+    "date": "2026-05-10T19:25:07.000Z",
+    "summary": "根据 Science 报道，一项新研究测试了 OpenAI o1 在临床诊断任务中的表现。OpenAI o1…",
+    "category": "模型动态"
+  },
+  {
+    "title": "Anthropic 用宪法文档降低 Claude 代理失准",
+    "link": "https://llmposts.com/research/anthropic-claude-agentic-misalignment/",
+    "date": "2026-05-10T03:19:48.000Z",
+    "summary": "Anthropic 于 2026 年 5 月 9 日称，Claude 代理失准可通过宪法文档与对齐故事减少超过 3 倍，效果在 reinforcement learning 后仍保留，并可叠加常规 harmlessness training。",
+    "category": "研究前沿"
+  },
+  {
+    "title": "Opus 4.7 提示词需重写：7 个修复法",
+    "link": "https://llmposts.com/engineering/opus-4-7-prompt-fixes/",
+    "date": "2026-05-09T23:56:53.000Z",
+    "summary": "据 God of Prompt 发帖，Opus 4.7 提示词需从 4.6 写法迁移。帖文称 Opus 4.7 在 SWE-bench 达到 87.6%，但旧提示词可能因字面执行更强而失效。",
+    "category": "工程实践"
+  },
+  {
+    "title": "Hermes Agent 排名登顶 OpenRouter 全球榜",
+    "link": "https://llmposts.com/engineering/hermes-agent-openrouter-ranking/",
+    "date": "2026-05-09T21:49:00.000Z",
+    "summary": "Hermes Agent 排名升至 OpenRouter 全球 token 榜第 1，近 30 天使用量达 6.4T tokens，并在生产力、编码智能体、个人智能体与 CLI 智能体分类中均列第 1。",
+    "category": "工程实践"
+  },
+  {
+    "title": "微软 OpenAI 合作文件披露曾担忧转投 AWS",
+    "link": "https://llmposts.com/industry/microsoft-openai-azure-aws-court-docs/",
+    "date": "2026-05-09T17:54:52.000Z",
+    "summary": "法庭文件披露微软 OpenAI 合作早期谈判：2017 年 OpenAI 曾提出约 3 亿美元 Azure 算力需求，微软内部担忧其转投 AWS，随后在 2019 年宣布 10 亿美元投资。",
+    "category": "行业观察"
+  },
+  {
+    "title": "Anthropic 融资估值被曝近 1 万亿美元",
+    "link": "https://llmposts.com/industry/anthropic-funding-valuation/",
+    "date": "2026-05-09T09:34:47.000Z",
+    "summary": "据 FT 报道，Anthropic 融资估值或按 9000 亿美元投前估值推进，最高筹集 500 亿美元。其年化收入预计很快超过 450 亿美元，较 2025 年底增长约 5 倍。",
+    "category": "行业观察"
+  },
+  {
+    "title": "ChatGPT 老是爱回复 ” 稳稳接住你 ” 是怎么回事？",
+    "link": "https://llmposts.com/industry/chatgpt-chinese-verbal-tic-mode-collapse/",
+    "date": "2026-05-09T08:38:00.000Z",
+    "summary": "ChatGPT 在中文对话中反复输出 ” 我会稳稳地接住你 ”，已成中文互联网热梗。这一现象涉及后训练 mode collapse、英文语料翻译偏差与阿谀倾向三条成因，Claude 和 DeepSeek 新版本近期也出现类似表达。",
+    "category": "行业观察"
+  },
+  {
+    "title": "Amp CLI 全面重构（代号 Neo） 上下文满了自动压缩续接",
+    "link": "https://llmposts.com/engineering/amp-cli-neo-rebuild-auto-compaction/",
+    "date": "2026-05-09T07:00:00.000Z",
+    "summary": "Sourcegraph 完成 Amp CLI 重构（代号 Neo），上下文窗口达 90% 时自动压缩续接，取代手动切线，同步上线 Plugin API 与远程控制，CPU 占用降低 79%、内存降低 70%。",
+    "category": "工程实践"
+  },
+  {
+    "title": "Claude Sonnet 4.5 将于 5 月 15 日下架",
+    "link": "https://llmposts.com/models/claude-sonnet-4-5-deprecation-may-15-2026/",
+    "date": "2026-05-09T04:46:00.000Z",
+    "summary": "Claude Sonnet 4.5 将于 2026 年 5 月 15 日从 Claude 模型选择器中下架，距 2025 年 9 月 29 日发布约 7.5 个月。API 端 claude-sonnet-4-5-20250929 保留至最少 9 月 29 日。",
+    "category": "模型动态"
+  },
+  {
+    "title": "Claude Mythos 时间跨度达 17 小时但超可靠范围",
+    "link": "https://llmposts.com/research/claude-mythos-time-horizon-17-hours/",
+    "date": "2026-05-09T01:29:31.000Z",
+    "summary": "METR 于 2026 年 5 月 8 日更新评测，Claude Mythos 时间跨度在 50% 成功率下测得 17 小时，但 16 小时以上结果已超出现有任务集可靠范围。",
+    "category": "研究前沿"
+  },
+  {
+    "title": "OpenAI 详解 Codex 安全部署边界",
+    "link": "https://llmposts.com/engineering/openai-codex-safe-deployment/",
+    "date": "2026-05-08T22:04:31.000Z",
+    "summary": "OpenAI 披露 Codex 安全部署方案，覆盖沙箱、审批、网络策略、身份绑定与 OpenTelemetry。Codex 可导出用户 prompt、工具审批、执行结果、MCP 使用和网络代理事件等 5 类日志。",
+    "category": "工程实践"
+  },
+  {
+    "title": "Mozilla 用 Claude Mythos 做 Firefox 安全加固",
+    "link": "https://llmposts.com/engineering/claude-mythos-firefox-hardening/",
+    "date": "2026-05-08T21:56:39.000Z",
+    "summary": "Mozilla 披露 Firefox 安全加固流程，Claude Mythos Preview 在 Firefox 150 中识别 271 个漏洞修复；2026 年 4 月安全修复量升至 423 个。",
+    "category": "工程实践"
+  },
+  {
+    "title": "OpenAI 和 Anthropic 人均营收超科技巨头",
+    "link": "https://llmposts.com/industry/openai-anthropic-revenue-per-employee/",
+    "date": "2026-05-08T21:02:00.000Z",
+    "summary": "OpenAI 和 Anthropic 人均营收据 Epoch AI 估算分别约为 550 万美元和 900 万美元，若上市将高于 Forbes Global 2000 中主要公开科技公司。",
+    "category": "行业观察"
+  },
+  {
+    "title": "文心 5.1 发布 预训练成本降至 6%",
+    "link": "https://llmposts.com/models/ernie-5-1-release/",
+    "date": "2026-05-08T20:37:10.000Z",
+    "summary": "百度正式发布文心 5.1，总参数压缩至文心 5.0 约 1/3，激活参数降至约 1/2，预训练算力成本约为同规模模型的 6%，并以 1223 分位列 Arena 搜索榜全球第 4。",
+    "category": "模型动态"
+  },
+  {
+    "title": "Grok Build 桌面应用被曝对标 Codex",
+    "link": "https://llmposts.com/engineering/grok-build-desktop-app/",
+    "date": "2026-05-08T17:54:50.000Z",
+    "summary": "据报道，Grok Build 桌面应用已在早期访问中出现，计划支持 macOS、Linux 与 Windows 3 个平台，并支持 MCP、插件和本地文件操作，发布时间仍未确认。",
+    "category": "工程实践"
+  },
+  {
+    "title": "Claude Code HTML 工作流提升可读性",
+    "link": "https://llmposts.com/engineering/claude-code-html-workflow/",
+    "date": "2026-05-08T17:45:49.000Z",
+    "summary": "Claude Code HTML 工作流强调用 HTML artifact 承载规格、评审和交互界面。Thariq 指出，超过 100 行的 Markdown 难读，HTML 虽慢 2-4 倍，但更利于共享与反馈。",
+    "category": "工程实践"
+  },
+  {
+    "title": "蚂蚁百灵发布 Ring-2.6-1T",
+    "link": "https://llmposts.com/models/ant-ling-ring-2-6-1t/",
+    "date": "2026-05-08T10:32:25.000Z",
+    "summary": "蚂蚁百灵公布 Ring-2.6-1T benchmark：high 档在 PinchBench 得分 87.60，xhigh 档在 AIME 26 得分 95.83，OpenRouter 免费试用至 5 月 15 日。",
+    "category": "模型动态"
+  },
+  {
+    "title": "OpenAI 微调 API 将停止新训练",
+    "link": "https://llmposts.com/engineering/openai-fine-tuning-api-wind-down/",
+    "date": "2026-05-08T09:33:41.000Z",
+    "summary": "OpenAI 微调 API 将在 2027 年 1 月 6 日后停止创建新训练任务。现有微调模型仍可通过 Chat Completions 和 Responses API 推理，直到对应底座模型退役。",
+    "category": "工程实践"
+  },
+  {
+    "title": "Zyphra 发布 AMD 训练模型 ZAYA1-8B",
+    "link": "https://llmposts.com/models/zaya1-8b-amd-moe-release/",
+    "date": "2026-05-08T06:46:20.000Z",
+    "summary": "ZAYA1-8B 是 Zyphra 发布的 AMD 训练 MoE 模型，活跃参数少于 10 亿，在 Markovian RSA 下 HMMT’25 达到 89.6 分，高于 Claude 4.5 Sonnet 的 88.3 分。",
+    "category": "模型动态"
+  },
+  {
+    "title": "xAI 与 Anthropic 算力消化情况完全相反",
+    "link": "https://llmposts.com/industry/xai-anthropic-compute-digestion/",
+    "date": "2026-05-08T06:33:00.000Z",
+    "summary": "xAI Anthropic 算力消化差异被曝：xAI 近期模型 FLOPs 利用率约 11%，Anthropic 年化收入 run-rate 超 300 亿美元，企业大客户不到 2 个月翻倍至 1000 家以上。",
+    "category": "行业观察"
+  },
+  {
+    "title": "DeepSeek 融资被曝达 500 亿元 或推 V4.1",
+    "link": "https://llmposts.com/industry/deepseek-funding-v4-1/",
+    "date": "2026-05-08T05:48:51.000Z",
+    "summary": "据 The Information 报道，DeepSeek 融资目标最高达 500 亿元人民币，约 73.5 亿美元；V4.1 更新版据称或在 2026 年 6 月推出，但尚未获官方确认。",
+    "category": "行业观察"
+  },
+  {
+    "title": "OpenAI 推出 GPT-5.5-Cyber 预览",
+    "link": "https://llmposts.com/models/openai-gpt-5-5-cyber-preview/",
+    "date": "2026-05-08T04:32:39.000Z",
+    "summary": "OpenAI 推出 GPT-5.5-Cyber 有限预览，面向关键基础设施防御者。CyberGym 中其得分为 81.9%，个人用户自 2026 年 6 月 1 日起需启用更强账户安全。",
+    "category": "模型动态"
+  },
+  {
+    "title": "Claude 接入 Microsoft 365 四件套",
+    "link": "https://llmposts.com/engineering/claude-microsoft-365-addins/",
+    "date": "2026-05-07T21:15:50.000Z",
+    "summary": "Claude 接入 Microsoft 365 已覆盖 Excel、PowerPoint、Word 和 Outlook，其中 3 个应用正式可用，Outlook 面向所有付费计划进入公开 beta，并支持 OpenTelemetry 审计。",
+    "category": "工程实践"
+  },
+  {
+    "title": "Anthropic 捐出 Petri 3.0 对齐评测工具",
+    "link": "https://llmposts.com/research/anthropic-petri-3-alignment-tool/",
+    "date": "2026-05-07T18:57:43.000Z",
+    "summary": "Anthropic 将 Petri 3.0 对齐评测工具移交给 Meridian Labs。Petri 自 2025 年 10 月开源，已用于 Claude Sonnet 4.5 以来每个 Claude 模型的对齐评估。",
+    "category": "研究前沿"
+  },
+  {
+    "title": "OpenAI 发布 GPT-Realtime-2 语音模型",
+    "link": "https://llmposts.com/models/openai-gpt-realtime-2-voice-models/",
+    "date": "2026-05-07T18:24:03.000Z",
+    "summary": "OpenAI 在 Realtime API 推出 GPT-Realtime-2 语音模型等 3 款音频模型，上下文窗口升至 128K，Big Bench Audio 准确率达 96.6%，实时翻译支持 70+ 输入语言。",
+    "category": "模型动态"
+  },
+  {
+    "title": "OpenAI 推出 Codex Chrome 扩展",
+    "link": "https://llmposts.com/engineering/codex-chrome-extension/",
+    "date": "2026-05-07T17:56:58.000Z",
+    "summary": "OpenAI 推出 Codex Chrome 扩展，支持 macOS 与 Windows，在后台跨 Chrome 标签页并行执行任务。功能已开放给除 EU 与 UK 以外地区的 Codex 应用用户。",
+    "category": "工程实践"
+  },
+  {
+    "title": "Scale Labs 发布 Refactoring Leaderboard",
+    "link": "https://llmposts.com/research/scale-refactoring-leaderboard/",
+    "date": "2026-05-07T08:54:08.000Z",
+    "summary": "Scale Labs 发布 Refactoring Leaderboard，评测 AI coding agents 的复杂重构能力。SWE Atlas Refactoring 任务代码改动行数约为 SWE-Bench Pro 的 2 倍，文件编辑次数约为 1.7 倍。",
+    "category": "研究前沿"
+  },
+  {
+    "title": "OpenAI 董事会风波曝微软收购提议",
+    "link": "https://llmposts.com/industry/openai-board-microsoft-offer/",
+    "date": "2026-05-07T06:21:26.000Z",
+    "summary": "据 Aakash Gupta 披露，OpenAI 董事会风波期间，Sam Altman 在 2023 年 11 月被解雇当晚曾提出 3 个选项，包括让 Microsoft 收购 OpenAI。",
+    "category": "行业观察"
+  },
+  {
+    "title": "Qwen 3.6 MTP 推理加速 2.5 倍",
+    "link": "https://llmposts.com/engineering/qwen-3-6-mtp-inference/",
+    "date": "2026-05-07T04:22:23.000Z",
+    "summary": "Qwen 3.6 MTP 推理加速已进入 llama.cpp PR 22673，作者在 M2 Max 96 GB 上报告 2.5 倍提速与 28 tok/s，并称 48 GB 级硬件可支持 262144 tokens 上下文。",
+    "category": "工程实践"
+  },
+  {
+    "title": "Anthropic 发布 Claude Managed Agents 新功能 支持自校正与多智能体编排",
+    "link": "https://llmposts.com/engineering/anthropic-claude-managed-agents-new-features/",
+    "date": "2026-05-06T22:46:36.000Z",
+    "summary": "Anthropic 推出 Claude Managed Agents 新功能更新，Dreaming 机制处于研究预览阶段，Outcomes 自校正测试文档生成成功率提升超 8%，支持多智能体并行编排。",
+    "category": "工程实践"
+  },
+  {
+    "title": "Anthropic 提高 Claude 用量上限 并签 SpaceX 算力协议",
+    "link": "https://llmposts.com/industry/anthropic-claude-spacex-compute/",
+    "date": "2026-05-06T08:39:05.000Z",
+    "summary": "Anthropic 官方提高 Claude 用量上限，Claude Code 的 5 小时速率限制翻倍，并与 SpaceX 达成协议，1 个月内获得超过 300 MW、220000 块 NVIDIA GPU 的新增容量。",
+    "category": "行业观察"
+  },
+  {
+    "title": "Manus Projects 学习功能上线",
+    "link": "https://llmposts.com/engineering/manus-projects-learning/",
+    "date": "2026-05-06T07:40:43.000Z",
+    "summary": "Manus Projects 学习功能已上线，可从任务对话中提炼说明、文件与技能更新；变更仅在用户审批后生效，适用于支持 Project instructions 与 Project files 的会话。",
+    "category": "工程实践"
+  },
+  {
+    "title": "OpenAI 发布 MRC 协议 加速大规模 AI 训练",
+    "link": "https://llmposts.com/engineering/openai-mrc-ai-networking/",
+    "date": "2026-05-06T06:58:38.000Z",
+    "summary": "OpenAI MRC 协议已通过 OCP 开放，面向 800Gb/s 网络接口和 NVIDIA GB200 超算集群，可把单次传输分散到数百条路径，并支持约 131000 块 GPU 两层互联。",
+    "category": "工程实践"
+  },
+  {
+    "title": "Gemma 4 推出 MTP drafter 推理加速最高 3 倍",
+    "link": "https://llmposts.com/models/gemma-4-mtp-drafter-speedup/",
+    "date": "2026-05-05T10:24:47.000Z",
+    "summary": "Google 官方发布 Gemma 4 MTP drafter 推理加速方案，基于推测解码架构最高实现 3 倍提速。模型权重沿用 Apache 2.0 协议开源，无缝衔接主流本地部署框架，输出质量无损。",
+    "category": "模型动态"
+  },
+  {
+    "title": "OpenAI 推送 GPT-5.5 Instant 模型 语气更简洁并升级个性化记忆",
+    "link": "https://llmposts.com/models/openai-gpt-5-5-instant-personalization/",
+    "date": "2026-05-05T09:26:00.000Z",
+    "summary": "OpenAI 推送 GPT-5.5 Instant 模型，API 标识为 gpt-5.5-chat-latest。该模型在医学、法律等场景的事实性显著提升，并新增基于聊天记录与 Gmail 的个性化记忆功能，将在两天内覆盖所有 ChatGPT 用户。",
+    "category": "模型动态"
+  },
+  {
+    "title": "Manus 上线连接器推荐功能 任务流程无需手动配置",
+    "link": "https://llmposts.com/engineering/manus-connector-recommendations-features/",
+    "date": "2026-05-05T08:06:41.000Z",
+    "summary": "Manus 上线连接器推荐功能，在对话流程中自动识别任务所需的第三方服务。用户确认后即可启用授权，免除手动跳转设置的门槛，现已覆盖桌面端与移动端全场景任务。",
+    "category": "工程实践"
+  },
+  {
+    "title": "Gemini 3.2 Flash 定价泄露：预期发布或指向 5 月 I/O",
+    "link": "https://llmposts.com/models/gemini-3-2-flash-pricing-release-window/",
+    "date": "2026-05-05T08:00:00.000Z",
+    "summary": "据泄露信息，Gemini 3.2 Flash 预期发布或于 2026 年 5 月 Google I/O 大会前后，定价输入 0.25 美元/百万 token，输出 2.00 美元，定位平衡速度与推理能力。",
+    "category": "模型动态"
+  },
+  {
+    "title": "关于",
+    "link": "https://llmposts.com/models/about/",
+    "date": "2026-05-05T07:05:00.000Z",
+    "summary": "LLMPOSTS.com 是什么？一个为中文 AI 从业者搭建的大模型资讯站，聚焦 GPT、Claude、Gemini 等前沿模型的发布动态、API 实践与论文解读，帮你在英文社区与中文需求之间架起桥梁。",
+    "category": "模型动态"
+  },
+  {
+    "title": "Peanut 图像生成模型亮相专业横评 对比 FLUX.2",
+    "link": "https://llmposts.com/models/peanut-image-generation-benchmark/",
+    "date": "2026-05-05T06:20:45.000Z",
+    "summary": "Peanut 图像生成模型于 5 月 4 日在 Artificial Analysis 专业横评中公开亮相，与 MAI-Image-2、grok-imagine-image 及 FLUX.2 [dev] Turbo 并列测试，涵盖 5 组复杂提示词。",
+    "category": "模型动态"
+  },
+  {
+    "title": "OpenAI Codex 下载量一周激增 1397% 迅速超越 Claude Code",
+    "link": "https://llmposts.com/engineering/openai-codex-download-surge-above-claude-code/",
+    "date": "2026-05-05T05:01:48.000Z",
+    "summary": "TickerTrends 数据显示 OpenAI Codex 下载量一周激增 1397% 至 8610 万次，于 4 月 30 日版本更新后迅速超越 Anthropic Claude Code 720 万下载，开发者工具生态出现明显转向。",
+    "category": "工程实践"
+  },
+  {
+    "title": "Anthropic 开发 Orbit 助手 或将在开发者大会亮相",
+    "link": "https://llmposts.com/models/anthropic-orbit-proactive-assistant-2/",
+    "date": "2026-05-05T02:05:54.000Z",
+    "summary": "Anthropic 正在开发名为 Orbit 的新功能，Anthropic Orbit 助手被定位为面向 Cl…",
+    "category": "模型动态"
+  },
+  {
+    "title": "OpenAI 重塑 WebRTC 架构 实现语音 AI 低延迟全球部署",
+    "link": "https://llmposts.com/engineering/openai-webrtc-architecture-optimization/",
+    "date": "2026-05-05T00:39:32.000Z",
+    "summary": "OpenAI 重构 WebRTC 处理架构，采用 Split relay 结合 transceiver 方案解决大规模端口暴露与状态粘连问题，为 ChatGPT Voice 支撑超过 9 亿周活跃用户。",
+    "category": "工程实践"
+  },
+  {
+    "title": "Gemini 移动端设计泄露拟配合 519 Google I/O 推 Agent 化战略",
+    "link": "https://llmposts.com/models/gemini-mobile-ui-redesign-leak/",
+    "date": "2026-05-05T00:28:23.000Z",
+    "summary": "据 Reddit 用户社区流传，Google 已针对 Gemini 移动端启动新一轮 UI 重构实验。该内部测…",
+    "category": "模型动态"
+  },
+  {
+    "title": "OpenRouter 实测 GPT-5.5 价格翻倍 实际成本增幅达 92%",
+    "link": "https://llmposts.com/industry/gpt-55-price-increase-cost-analysis/",
+    "date": "2026-05-05T00:15:40.000Z",
+    "summary": "OpenAI 将 GPT-5.5 定价较 GPT-5.4 翻倍，OpenRouter 实测显示实际使用成本增幅达 49% 至 92%。长提示词场景因生成缩短存在部分抵消。",
+    "category": "行业观察"
+  },
+  {
+    "title": "TinyFish 免费 Agent API 覆盖检索与网页提取场景",
+    "link": "https://llmposts.com/engineering/tinyfish-free-agent-api/",
+    "date": "2026-05-04T18:27:14.000Z",
+    "summary": "TinyFish 宣布全面开放免费 Agent API 供开发者与 AI 智能体使用。该服务移除信用卡验证要求…",
+    "category": "工程实践"
+  },
+  {
+    "title": "Grok 4.3 benchmark 登顶法律金融测试 跑分数据公布",
+    "link": "https://llmposts.com/models/grok-4-3-legal-financial-benchmark/",
+    "date": "2026-05-04T08:52:00.000Z",
+    "summary": "xAI 近日公布 Grok 4.3 benchmark 测试跑分数据，该模型在 CaseLaw v2 与 CorpFin v2 榜单均位列第一，准确率分别达到 79.31% 与 68.53%，在长文本法律判读与金融协议解析任务中展现相对优势。",
+    "category": "模型动态"
+  },
+  {
+    "title": "监督微调为何诱发幻觉？自蒸馏将 SFT 诱导误差降至 3%",
+    "link": "https://llmposts.com/research/sft-induced-hallucinations-self-distillation/",
+    "date": "2026-05-04T07:10:00.000Z",
+    "summary": "研究揭示监督微调在注入新知识时易诱发事实遗忘。团队提出基于自蒸馏的持续学习方法，通过正则化输出分布漂移，将 SFT 诱导幻觉率从 15% 降至 3%，为模型知识更新提供技术路径。",
+    "category": "研究前沿"
+  },
+  {
+    "title": "OpenRouter 响应缓存功能上线 测试与代理重试零成本",
+    "link": "https://llmposts.com/engineering/openrouter-response-caching/",
+    "date": "2026-05-03T04:23:28.000Z",
+    "summary": "OpenRouter 响应缓存功能全面上线，相同 API 请求命中后响应时间降至 80 到 300 毫秒，且不消耗 token，智能体重试与自动化测试可实现零成本调用。",
+    "category": "工程实践"
+  },
+  {
+    "title": "Google 正在测试 Omni 视频模型 或将于 I/O 大会公布",
+    "link": "https://llmposts.com/models/google-omni-video-testing/",
+    "date": "2026-05-02T16:15:55.000Z",
+    "summary": "据 UI 截图显示，Google 已在 Gemini 中测试代号 Omni 的视频生成模型，或将于 5 月 19 日至 20 日 Google I/O 大会正式揭晓。当前视频生成功能仍由 Veo 3.1 驱动，Omni 架构细节与发布时间需待官方确认。",
+    "category": "模型动态"
+  },
+  {
+    "title": "OpenAI Codex 更新：引入动画宠物与配置自动导入功能",
+    "link": "https://llmposts.com/engineering/openai-codex-pets-config-imports/",
+    "date": "2026-05-02T16:14:43.000Z",
+    "summary": "OpenAI Codex 动画宠物功能随近期版本正式上线，新增配置文件自动导入机制与语音自定义词典，旨在增强桌面交互体验并降低工程工作流切换摩擦。",
+    "category": "工程实践"
+  },
+  {
+    "title": "Anthropic 优化 Opus 4.7 降低关系引导场景阿谀倾向",
+    "link": "https://llmposts.com/models/anthropic-optimizes-opus-4-7-sycophancy-reduction/",
+    "date": "2026-05-02T06:40:23.000Z",
+    "summary": "Anthropic 基于 3.8 万段对话分析发现关系求助场景中模型阿谀倾向率达 25%。团队通过合成数据与前填充压力测试技术，使 Claude Opus 4.7 在该场景阿谀率降至前代一半，改进效果同步泛化至健康、财务等领域。",
+    "category": "模型动态"
+  },
+  {
+    "title": "OpenAI 发布 Codex 0.128.0 版本 支持持久化目标工作流",
+    "link": "https://llmposts.com/models/openai-releases-codex-0-128-0-persisted-flow/",
+    "date": "2026-05-02T05:44:55.000Z",
+    "summary": "OpenAI 于 2026 年 5 月 1 日发布 Codex 0.128.0 版本，该终端开发工具新增持久化目标工作流与插件市场支持，重构内置权限档案并弃用全自动参数，同步优化多智能体协作与长周期任务管理能力。",
+    "category": "模型动态"
+  },
+  {
+    "title": "Artificial Analysis 评测: Grok 4.3 综合得分 53 GDPval-AA 提升 321 分",
+    "link": "https://llmposts.com/models/artificial-analysis-grok-4-3-benchmark/",
+    "date": "2026-05-02T05:33:51.000Z",
+    "summary": "Artificial Analysis 评测显示，xAI Grok 4.3 在 Intelligence Index 上取得 53 分，超越 Muse Spark 与 Claude Sonnet 4.6，输入与输出价格均下调超 40%，GDPval-AA 基准测试较前代大幅提升 321 分。",
+    "category": "模型动态"
+  },
+  {
+    "title": "CAISI 评测 DeepSeek V4 Pro：落后美国前沿模型 8 个月，性价比突出",
+    "link": "https://llmposts.com/models/caisi-evaluation-deepseek-v4-pro-cost-efficiency/",
+    "date": "2026-05-02T02:21:54.000Z",
+    "summary": "CAISI 第三方评测显示，DeepSeek V4 Pro 综合能力约落后美国前沿模型 8 个月，同等能力下推理成本更低，代码与数学基准表现领先。",
+    "category": "模型动态"
+  },
+  {
+    "title": "阿里开源 Qwen-Scope 可解释性工具 覆盖 7 个 Qwen3/3.5 模型",
+    "link": "https://llmposts.com/models/alibaba-open-source-qwen-scope-interpretability/",
+    "date": "2026-05-01T21:16:00.000Z",
+    "summary": "阿里 Qwen 团队开源 Qwen-Scope 可解释性工具，覆盖 Qwen3 与 Qwen3.5 系列共 7 个模型，提供 14 组稀疏自编码器权重，可用于推理控制、数据合成、训练调优与评估分析。",
+    "category": "模型动态"
+  },
+  {
+    "title": "OpenAI 正式宣布 Codex Pets 宠物体验功能",
+    "link": "https://llmposts.com/models/openai-codex-pets-launch/",
+    "date": "2026-05-01T19:28:07.000Z",
+    "summary": "OpenAI Codex 应用上线 Codex Pets 功能：可选动画伙伴以悬浮覆盖层形式陪伴你工作，实时显示 Codex 任务的 running、waiting、ready 状态。本文详解三种切换方式与通过 hatch-pet skill 创建自定义宠物的完整流程。",
+    "category": "模型动态"
+  },
+  {
+    "title": "Hermes Agent 安装最简流程：Linux、macOS、WSL2 与 Termux 四端一次说清",
+    "link": "https://llmposts.com/guides/hermes-agent-install-guide/",
+    "date": "2026-05-01T08:44:52.000Z",
+    "summary": "Hermes Agent 是 Nous Research 推出的自学习开源个人 AI agent，118k+ GitHub stars，支持自动从 OpenClaw 迁移。本指南整理 Linux、macOS、WSL2、Android Termux 四端最简安装命令与 Docker、Modal 等六种执行后端配置。",
+    "category": "教程指南"
+  },
+  {
+    "title": "OpenCode 安装最简流程：终端、桌面应用与 IDE 扩展三端一次说清",
+    "link": "https://llmposts.com/guides/opencode-install-guide/",
+    "date": "2026-05-01T08:30:46.000Z",
+    "summary": "OpenCode 是 153k+ GitHub stars 的开源 AI 编码 agent，provider 中立、支持 Claude、GPT、Gemini 与本地模型。本指南整理终端、桌面应用、IDE 扩展三端在 macOS、Windows、Linux 上的最简安装命令。",
+    "category": "教程指南"
+  },
+  {
+    "title": "Codex 安装最简流程：桌面应用、CLI 与 IDE 扩展三条路径一次说清",
+    "link": "https://llmposts.com/guides/openai-codex-install-guide/",
+    "date": "2026-05-01T06:24:32.000Z",
+    "summary": "OpenAI Codex 已扩展为包含桌面应用、CLI、IDE 扩展与 Web 端的产品矩阵，包含在 ChatGPT Plus、Pro 等付费订阅中。本指南整理 macOS、Windows、Linux 三端最简安装命令与认证流程。",
+    "category": "教程指南"
+  },
+  {
+    "title": "Claude Code 安装最简流程：三端命令、自动更新与彻底卸载一次说清",
+    "link": "https://llmposts.com/guides/claude-code-install-guide/",
+    "date": "2026-05-01T05:21:00.000Z",
+    "summary": "Claude Code 官方推荐使用原生安装器，零依赖且后台自动更新。本指南整理 macOS、Windows、Linux 三端最简安装命令、Homebrew/WinGet/npm 路径差异，以及更新与卸载完整流程。",
+    "category": "教程指南"
+  },
+  {
+    "title": "Anthropic 测试代号 Jupiter V1 模型 或将于 5 月 6 日大会公布",
+    "link": "https://llmposts.com/models/anthropic-jupiter-v1-red-team-testing/",
+    "date": "2026-04-30T20:54:57.000Z",
+    "summary": "据报道 Anthropic 已对内部代号 Claude Jupiter V1 启动红队测试，时间点临近 2026 年 5 月 6 日 Code with Claude 大会，与 2025 年 Neptune 代号至 Claude 4 发布的节奏相似。",
+    "category": "模型动态"
+  },
+  {
+    "title": "OpenAI 发布 Claude Code Codex 插件 支持多模式代码审查与任务委托",
+    "link": "https://llmposts.com/engineering/openai-codex-plugin-cc-2/",
+    "date": "2026-04-02T08:25:57.000Z",
+    "summary": "OpenAI 正式发布开源插件 codex-plugin-cc，允许 Claude Code 用户无缝调用本地…",
+    "category": "工程实践"
+  },
+  {
+    "title": "OpenAI 发布 Claude Code Codex 插件 支持多模式代码审查与任务委托",
+    "link": "https://llmposts.com/engineering/openai-codex-plugin-cc/",
+    "date": "2026-04-02T00:25:00.000Z",
+    "summary": "OpenAI 发布开源插件 codex-plugin-cc，允许 Claude Code 用户通过本地 CLI 调用 Codex，内置标准审查、对抗审查与任务委托命令，支持后台运行与可配置审查门控。",
+    "category": "工程实践"
+  }
+]

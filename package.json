@@ -5,7 +5,8 @@
   "type": "module",
   "description": "大模型邮报 · 每日 AI 要闻汇总 —— 自动从 llmposts.com 的 RSS 生成",
   "scripts": {
-    "generate": "node scripts/generate.mjs"
+    "generate": "node scripts/generate.mjs",
+    "backfill": "node scripts/backfill.mjs"
   },
   "dependencies": {
     "fast-xml-parser": "^4.5.0"
