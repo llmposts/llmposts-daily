@@ -13,9 +13,21 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-14 · 共 6 篇
+## 🔥 最新汇总 · 2026-05-14 · 共 8 篇
 
-### 01 · 模型动态 · Model Updates · 6 篇
+### 01 · 模型动态 · Model Updates · 8 篇
+
+#### [Ramp 数据：Anthropic 企业采用率首超 OpenAI，达 34.4%](https://llmposts.com/models/anthropic-business-adoption-overtakes-openai/)
+
+据 Ramp AI Index，Anthropic 企业采用率 4 月升至 34.4%，首次超过 OpenAI 的 32.3%。过去一年 Anthropic 企业采用率增长约 4 倍，但分析师指出其面临成本上涨与服务质量下滑三重逆风。
+
+[阅读全文 →](https://llmposts.com/models/anthropic-business-adoption-overtakes-openai/)
+
+#### [Google I/O 或将发布 Gemini Spark Agent：曝 24/7 AI 助手支持学习用户行为](https://llmposts.com/models/gemini-spark-agent-io-preview/)
+
+Google I/O 前夕，社交媒体爆料显示 Gemini Spark Agent 或将作为 24/7 AI 助手发布。据披露，该 Agent 支持从用户行为中学习，可调用 Connected Apps 与第三方服务集成。
+
+[阅读全文 →](https://llmposts.com/models/gemini-spark-agent-io-preview/)
 
 #### [OpenAI Codex 企业推广：签约企业即送 2 个月免费额度](https://llmposts.com/models/openai-codex-enterprise-promo/)
 
