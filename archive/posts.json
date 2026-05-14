@@ -1,5 +1,19 @@
 [
   {
+    "title": "OpenAI Codex 企业推广：签约企业即送 2 个月免费额度",
+    "link": "https://llmposts.com/models/openai-codex-enterprise-promo/",
+    "date": "2026-05-14T16:40:34",
+    "summary": "OpenAI 宣布针对计划切换的企业客户提供激励政策。签约即送 2 个月免费 OpenAI Codex 企业推广额度。活动持续至 6 月中旬，旨在与 Anthropic 争夺开发者市场。",
+    "category": "模型动态"
+  },
+  {
+    "title": "OpenAI 重构 Windows 平台 Codex 沙箱实现方案",
+    "link": "https://llmposts.com/models/codex-windows-sandbox-implementation/",
+    "date": "2026-05-14T16:16:29",
+    "summary": "OpenAI 详细公开了 Codex 编码智能体在 Windows 平台的沙箱实现路径。该方案历经非提权与提权架构迭代，通过合成 SID、受限 token 与专属防火墙规则，在保障系统隔离的同时保留了智能体对开发者环境的读写兼容性。",
+    "category": "模型动态"
+  },
+  {
     "title": "Claude computer use 最佳实践：分辨率配置、思考深度与回放机制",
     "link": "https://llmposts.com/models/claude-computer-use-best-practices/",
     "date": "2026-05-14T13:57:31",
