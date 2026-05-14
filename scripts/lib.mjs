@@ -233,8 +233,8 @@ async function updateReadme(items) {
   const latestKey = items.length ? dateKey(items[0].date) : "";
   const latestItems = items.filter((it) => dateKey(it.date) === latestKey);
   const briefing = latestItems.length
-    ? `**${latestKey} · 共 ${latestItems.length} 篇**\n\n${renderSections(latestItems, 3)}`
-    : "_暂无内容_";
+    ? `## 🔥 最新汇总 · ${latestKey} · 共 ${latestItems.length} 篇\n\n${renderSections(latestItems, 3)}`
+    : "## 🔥 最新汇总\n\n_暂无内容_";
   const recentRe = /<!-- RECENT:START -->[\s\S]*?<!-- RECENT:END -->/;
   if (!recentRe.test(md)) fail("README.md 缺少 <!-- RECENT:START --> ... <!-- RECENT:END --> 标记");
   md = md.replace(recentRe, `<!-- RECENT:START -->\n${briefing}\n<!-- RECENT:END -->`);
