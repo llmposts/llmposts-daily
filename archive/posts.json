@@ -1,5 +1,19 @@
 [
   {
+    "title": "Kimi Web Bridge 浏览器扩展发布：支持 Claude Code 与 Cursor 本地网页自动化",
+    "link": "https://llmposts.com/models/kimi-web-bridge-browser-extension-2/",
+    "date": "2026-05-15T00:27:03",
+    "summary": "Kimi Web Bridge 浏览器扩展发布，支持 Claude Code、Cursor、Codex 等 AI Agent 通过 Chrome DevTools Protocol 操控本地浏览器。据官方文档，该工具采用本地桥接架构，登录状态与网页内容不上传云端，适用于电商比价、批量表单填写等重复性网页操作。",
+    "category": "模型动态"
+  },
+  {
+    "title": "蚂蚁百灵开源 Ring-2.6-1T 万亿参数模型，主打 Agent 执行与深度推理",
+    "link": "https://llmposts.com/models/ring-2-6-1t-open-source/",
+    "date": "2026-05-14T23:45:16",
+    "summary": "蚂蚁百灵开源 Ring-2.6-1T 万亿参数思考模型，采用 IcePop 异步强化学习算法。该模型在 PinchBench 与 SWE-Bench 等 benchmark 中表现突出，支持 high 与 xhigh 两种推理力度，面向复杂企业自动化与长程任务部署。",
+    "category": "模型动态"
+  },
+  {
     "title": "Ramp 数据：Anthropic 企业采用率首超 OpenAI，达 34.4%",
     "link": "https://llmposts.com/models/anthropic-business-adoption-overtakes-openai/",
     "date": "2026-05-14T22:22:36",

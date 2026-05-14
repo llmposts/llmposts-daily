@@ -8,62 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-05-14<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-05-15<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-14 · 共 8 篇
+## 🔥 最新汇总 · 2026-05-15 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 8 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Ramp 数据：Anthropic 企业采用率首超 OpenAI，达 34.4%](https://llmposts.com/models/anthropic-business-adoption-overtakes-openai/)
+#### [Kimi Web Bridge 浏览器扩展发布：支持 Claude Code 与 Cursor 本地网页自动化](https://llmposts.com/models/kimi-web-bridge-browser-extension-2/)
 
-据 Ramp AI Index，Anthropic 企业采用率 4 月升至 34.4%，首次超过 OpenAI 的 32.3%。过去一年 Anthropic 企业采用率增长约 4 倍，但分析师指出其面临成本上涨与服务质量下滑三重逆风。
+Kimi Web Bridge 浏览器扩展发布，支持 Claude Code、Cursor、Codex 等 AI Agent 通过 Chrome DevTools Protocol 操控本地浏览器。据官方文档，该工具采用本地桥接架构，登录状态与网页内容不上传云端，适用于电商比价、批量表单填写等重复性网页操作。
 
-[阅读全文 →](https://llmposts.com/models/anthropic-business-adoption-overtakes-openai/)
-
-#### [Google I/O 或将发布 Gemini Spark Agent：曝 24/7 AI 助手支持学习用户行为](https://llmposts.com/models/gemini-spark-agent-io-preview/)
-
-Google I/O 前夕，社交媒体爆料显示 Gemini Spark Agent 或将作为 24/7 AI 助手发布。据披露，该 Agent 支持从用户行为中学习，可调用 Connected Apps 与第三方服务集成。
-
-[阅读全文 →](https://llmposts.com/models/gemini-spark-agent-io-preview/)
-
-#### [OpenAI Codex 企业推广：签约企业即送 2 个月免费额度](https://llmposts.com/models/openai-codex-enterprise-promo/)
-
-OpenAI 宣布针对计划切换的企业客户提供激励政策。签约即送 2 个月免费 OpenAI Codex 企业推广额度。活动持续至 6 月中旬，旨在与 Anthropic 争夺开发者市场。
-
-[阅读全文 →](https://llmposts.com/models/openai-codex-enterprise-promo/)
-
-#### [OpenAI 重构 Windows 平台 Codex 沙箱实现方案](https://llmposts.com/models/codex-windows-sandbox-implementation/)
-
-OpenAI 详细公开了 Codex 编码智能体在 Windows 平台的沙箱实现路径。该方案历经非提权与提权架构迭代，通过合成 SID、受限 token 与专属防火墙规则，在保障系统隔离的同时保留了智能体对开发者环境的读写兼容性。
-
-[阅读全文 →](https://llmposts.com/models/codex-windows-sandbox-implementation/)
-
-#### [Claude computer use 最佳实践：分辨率配置、思考深度与回放机制](https://llmposts.com/models/claude-computer-use-best-practices/)
-
-Anthropic 正式公布 Claude computer use 最佳实践，明确 1280x720 默认配置与 3.75M 像素硬性上限，完整拆解点击精度对齐、自适应思考阈值调度及工作流录制回放架构。
-
-[阅读全文 →](https://llmposts.com/models/claude-computer-use-best-practices/)
-
-#### [Claude 订阅计划将推 Agent SDK 专属月度额度](https://llmposts.com/models/claude-agent-sdk-monthly-credit/)
-
-6 月 15 日起 Claude 订阅套餐将引入 Claude Agent SDK 月度额度，Pro 套餐 $20 起，隔离交互与程序化计费，规避自动化脚本抢占订阅限额。
-
-[阅读全文 →](https://llmposts.com/models/claude-agent-sdk-monthly-credit/)
-
-#### [Claude Code 周限额临时提升 50% 至 7 月 13 日](https://llmposts.com/models/claude-code-weekly-limits-increase/)
-
-Anthropic 宣布 Claude Code 周使用限额临时提升 50%，覆盖 Pro、Max、Team 及企业用户，有效期至 7 月 13 日，可与上周 2 倍时长上限叠加生效。
-
-[阅读全文 →](https://llmposts.com/models/claude-code-weekly-limits-increase/)
-
-#### [Anthropic 收购 Stainless 或达 3 亿美元](https://llmposts.com/models/anthropic-stainless-acquisition/)
-
-Anthropic 收购 Stainless 的谈判被曝进入后期，The Information 称金额至少 3 亿美元；Stainless 为 OpenAI、谷歌和 Anthropic 提供 SDK、API 文档与 agent 接口。
-
-[阅读全文 →](https://llmposts.com/models/anthropic-stainless-acquisition/)
+[阅读全文 →](https://llmposts.com/models/kimi-web-bridge-browser-extension-2/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
