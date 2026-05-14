@@ -12,21 +12,36 @@
 
 ---
 
-## 🔥 最近要闻
+## 🔥 最新汇总
 
 <!-- RECENT:START -->
-- `2026-05-14` [Claude computer use 最佳实践：分辨率配置、思考深度与回放机制](https://llmposts.com/models/claude-computer-use-best-practices/) `模型动态`
-- `2026-05-14` [Claude 订阅计划将推 Agent SDK 专属月度额度](https://llmposts.com/models/claude-agent-sdk-monthly-credit/) `模型动态`
-- `2026-05-14` [Claude Code 周限额临时提升 50% 至 7 月 13 日](https://llmposts.com/models/claude-code-weekly-limits-increase/) `模型动态`
-- `2026-05-14` [Anthropic 收购 Stainless 或达 3 亿美元](https://llmposts.com/models/anthropic-stainless-acquisition/) `模型动态`
-- `2026-05-13` [Anthropic 发布 20 余 Claude 法律插件与连接器](https://llmposts.com/models/anthropic-claude-legal-connectors-plugins/) `模型动态`
-- `2026-05-13` [吴恩达驳 AI 失业论，预测 AI 就业繁荣即将来临](https://llmposts.com/models/andrew-ng-jobapalooza-prediction/) `模型动态`
-- `2026-05-13` [亚马逊 MeshClaw 工具 token 刷量现象引发争议](https://llmposts.com/models/amazon-meshclaw-tool-token-pressure/) `模型动态`
-- `2026-05-13` [Claude Opus 4.7 fast mode 开放预览](https://llmposts.com/models/claude-opus-47-fast-mode/) `模型动态`
-- `2026-05-13` [Google 重构 AI 指针交互：Gemini 驱动与 Chrome 落地](https://llmposts.com/models/ai-pointer-gemini-chrome/) `模型动态`
-- `2026-05-13` [Arena 最新榜单：Claude Opus 4.7 领跑五大前沿模型](https://llmposts.com/models/arena-model-ranking-may-2026/) `模型动态`
-- `2026-05-12` [Interfaze 模型发布：融合 CNN 与 Transformer 的精度架构](https://llmposts.com/models/interfaze-model-arch/) `模型动态`
-- `2026-05-12` [OpenAI 警告未经授权股权交易](https://llmposts.com/models/openai-unauthorized-equity-transactions/) `模型动态`
+**2026-05-14 · 共 4 篇**
+
+### 01 · 模型动态 · Model Updates · 4 篇
+
+#### [Claude computer use 最佳实践：分辨率配置、思考深度与回放机制](https://llmposts.com/models/claude-computer-use-best-practices/)
+
+Anthropic 正式公布 Claude computer use 最佳实践，明确 1280x720 默认配置与 3.75M 像素硬性上限，完整拆解点击精度对齐、自适应思考阈值调度及工作流录制回放架构。
+
+[阅读全文 →](https://llmposts.com/models/claude-computer-use-best-practices/)
+
+#### [Claude 订阅计划将推 Agent SDK 专属月度额度](https://llmposts.com/models/claude-agent-sdk-monthly-credit/)
+
+6 月 15 日起 Claude 订阅套餐将引入 Claude Agent SDK 月度额度，Pro 套餐 $20 起，隔离交互与程序化计费，规避自动化脚本抢占订阅限额。
+
+[阅读全文 →](https://llmposts.com/models/claude-agent-sdk-monthly-credit/)
+
+#### [Claude Code 周限额临时提升 50% 至 7 月 13 日](https://llmposts.com/models/claude-code-weekly-limits-increase/)
+
+Anthropic 宣布 Claude Code 周使用限额临时提升 50%，覆盖 Pro、Max、Team 及企业用户，有效期至 7 月 13 日，可与上周 2 倍时长上限叠加生效。
+
+[阅读全文 →](https://llmposts.com/models/claude-code-weekly-limits-increase/)
+
+#### [Anthropic 收购 Stainless 或达 3 亿美元](https://llmposts.com/models/anthropic-stainless-acquisition/)
+
+Anthropic 收购 Stainless 的谈判被曝进入后期，The Information 称金额至少 3 亿美元；Stainless 为 OpenAI、谷歌和 Anthropic 提供 SDK、API 文档与 agent 接口。
+
+[阅读全文 →](https://llmposts.com/models/anthropic-stainless-acquisition/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
@@ -48,26 +63,26 @@
 ## ℹ️ 关于本仓库
 
 - **是什么** —— [大模型邮报](https://llmposts.com) 的要闻**摘要索引**,不是全文转载。
-- **怎么组织的** —— 每天一个文件,顶部带 YAML front matter(`title` / `description` / `date`,`description` 可直接作 SEO meta);当天要闻按分类(模型动态 / 研究前沿 / 教程指南 / 行业观察)分成编号小节,每节标注篇数。
-- **为什么只放摘要** —— 摘要帮你快速筛选,完整内容(含配图、评论)都在官网;同时避免搜索引擎把副本和官网原文相互稀释。
-- **怎么更新的** —— GitHub Action 每小时检查官网 RSS,有新文章就追加进当天归档并刷新本页。工作流见 [`.github/workflows/daily-digest.yml`](.github/workflows/daily-digest.yml)。
+- **怎么组织的** —— 每天一个文件,顶部带 YAML front matter(`title` / `description` / `date`,`description` 可直接作 SEO meta);当天要闻按分类(模型动态 / 研究前沿 / 工程实践 / 教程指南 / 行业观察)分成编号小节,每节标注篇数。
+- **摘要从哪来** —— 直接用文章自己的 Yoast meta description,完整且独立;完整内容(含配图、评论)都在官网,也避免搜索引擎把副本和官网原文相互稀释。
+- **怎么更新的** —— GitHub Action 每小时通过 WordPress REST API 检查官网,有新文章就追加进当天归档并刷新本页。工作流见 [`.github/workflows/daily-digest.yml`](.github/workflows/daily-digest.yml)。
 
 ## 🌐 关于大模型邮报
 
 [llmposts.com](https://llmposts.com) 是一个中文 AI 资讯站,聚焦大模型动态:
 
-**模型动态** · **研究前沿** · **教程指南** · **行业观察**
+**模型动态** · **研究前沿** · **工程实践** · **教程指南** · **行业观察**
 
 社交媒体(X / Twitter、小红书)入口见 [官网](https://llmposts.com) 页脚。
 
 ## ⚙️ 维护者备忘
 
-- 数据源已配好:`scripts/config.mjs` 的 `rssUrl` 指向 `https://llmposts.com/feed/`。
+- 数据源:`scripts/config.mjs` 的 `siteUrl` 指向 llmposts.com,经其 WordPress REST API 抓取。
 - 日常无需操作,GitHub Action 每小时自动跑 `generate.mjs`,有新内容才提交。
-- 本地手动更新:`npm install` 后 `npm run generate`。
-- 一次性回填历史文章:`npm run backfill`(走 WordPress REST API)。
+- 本地手动更新:`npm run generate`(零依赖,只用 Node 内置模块)。
+- 一次性回填全部历史文章:`npm run backfill`。
 - 全部数据存于 [`archive/posts.json`](archive/posts.json),每日 `.md` 由它生成。
-- 分类顺序、英文副标题、摘要长度等都在 [`scripts/config.mjs`](scripts/config.mjs) 调。
+- 分类顺序、英文副标题等都在 [`scripts/config.mjs`](scripts/config.mjs) 调。
 
 ---
 

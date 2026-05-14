@@ -1,5 +1,5 @@
-// 共享核心:数据层读写、文本清洗、按分类编号的每日归档与 README 生成。
-// generate.mjs(每小时 RSS 增量)和 backfill.mjs(一次性全量回填)都基于它。
+// 共享核心:WordPress REST API 抓取、数据层读写、按分类编号的归档与 README 生成。
+// generate.mjs(每小时增量)和 backfill.mjs(一次性全量回填)都基于它。
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
@@ -10,7 +10,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const ARCHIVE_DIR = path.join(ROOT, "archive");
 const DB_FILE = path.join(ARCHIVE_DIR, "posts.json");
 const README = path.join(ROOT, "README.md");
-const TZ = config.timeZone || "Asia/Shanghai";
+const API = config.siteUrl.replace(/\/+$/, "") + "/wp-json/wp/v2";
 
 export function fail(msg) {
   console.error(`\n✗ ${msg}\n`);
@@ -18,14 +18,6 @@ export function fail(msg) {
 }
 
 // ---------- 文本工具 ----------
-function dateKey(d) {
-  const parts = new Intl.DateTimeFormat("en-CA", {
-    timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit",
-  }).formatToParts(d);
-  const get = (t) => parts.find((p) => p.type === t).value;
-  return `${get("year")}-${get("month")}-${get("day")}`;
-}
-
 function safeCodePoint(n) {
   try {
     return String.fromCodePoint(n);
@@ -40,41 +32,90 @@ export function stripHtml(s) {
     .replace(/<style[\s\S]*?<\/style>/gi, "")
     .replace(/<script[\s\S]*?<\/script>/gi, "")
     .replace(/<[^>]+>/g, "")
-    // 去掉 WordPress RSS 自动附加的 "The post ... appeared first on ..." 尾巴
-    .replace(/\s*The post\b[\s\S]*?appeared first on[\s\S]*$/i, "")
-    // 常见命名实体
     .replace(/&nbsp;/g, " ").replace(/&amp;/g, "&")
     .replace(/&lt;/g, "<").replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"').replace(/&#39;/g, "'")
     .replace(/&hellip;/g, "…")
-    // 数字实体(&#8230; / &#x2026; 等)
     .replace(/&#(\d+);/g, (_, n) => safeCodePoint(Number(n)))
     .replace(/&#x([0-9a-f]+);/gi, (_, n) => safeCodePoint(parseInt(n, 16)))
-    // WordPress 截断标记 […] / [...] → 统一换成省略号
-    .replace(/\s*\[(?:…|\.{3,})\]/g, "…")
     .replace(/\s+/g, " ")
     .trim();
 }
 
-function teaser(s, max = config.summaryMaxLength || 110) {
-  const clean = stripHtml(s);
-  if (clean.length <= max) return clean;
-  let cut = clean.slice(0, max);
-  const stop = Math.max(
-    cut.lastIndexOf("。"), cut.lastIndexOf("!"), cut.lastIndexOf("?"),
-    cut.lastIndexOf("，"), cut.lastIndexOf(" ")
-  );
-  if (stop > max * 0.6) cut = cut.slice(0, stop + 1);
-  return cut.trim() + "…";
+// date 字段是站点本地时间字符串(如 2026-05-14T13:57:31),直接取日期部分
+function dateKey(d) {
+  return String(d || "").slice(0, 10);
+}
+
+// 按 date 字符串倒序(同一时区、定宽 ISO 格式,字符串比较即时间顺序)
+function byDateDesc(a, b) {
+  return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
 }
 
 function escapeMd(s) {
   return String(s).replace(/([[\]])/g, "\\$1").replace(/\s+/g, " ").trim();
 }
 
-// ---------- 数据层:archive/posts.json ----------
-// 每条记录:{ title, link, date(ISO 字符串), summary(已清洗), category }
+// ---------- WordPress REST API ----------
+async function getJson(url) {
+  let res;
+  try {
+    res = await fetch(url, { headers: { "User-Agent": "llmposts-daily" } });
+  } catch (e) {
+    fail(`请求失败:${e.message} — ${url}`);
+  }
+  if (res.status === 400) return { data: null, total: 0 }; // 翻过末页 WP 返回 400
+  if (!res.ok) fail(`请求失败:HTTP ${res.status} — ${url}`);
+  return { data: await res.json(), total: Number(res.headers.get("x-wp-total")) || 0 };
+}
 
+// 分类 id → 名称
+export async function fetchCategories() {
+  const map = new Map();
+  for (let page = 1; ; page++) {
+    const { data } = await getJson(`${API}/categories?per_page=100&page=${page}&_fields=id,name`);
+    if (!data || !data.length) break;
+    for (const c of data) map.set(c.id, stripHtml(c.name));
+    if (data.length < 100) break;
+  }
+  return map;
+}
+
+const POST_FIELDS =
+  "date,link,title,categories,excerpt,yoast_head_json.description,yoast_head_json.og_description";
+
+// 抓文章:{ all:true } 翻完所有页;否则只抓第一页 perPage 篇(按发布时间倒序)
+export async function fetchPosts({ perPage = 100, all = false } = {}) {
+  const posts = [];
+  let total = 0;
+  for (let page = 1; ; page++) {
+    const { data, total: t } = await getJson(
+      `${API}/posts?per_page=${perPage}&page=${page}&orderby=date&order=desc&_fields=${POST_FIELDS}`
+    );
+    if (t) total = t;
+    if (!data || !data.length) break;
+    posts.push(...data);
+    if (!all || data.length < perPage) break;
+  }
+  return { posts, total };
+}
+
+// WP 文章 → 数据层记录。summary 优先用 Yoast meta description(完整、独立的摘要)。
+export function normalizePost(p, catMap) {
+  const yoast = p.yoast_head_json || {};
+  const catId = (p.categories || [])[0];
+  return {
+    title: stripHtml(p.title && p.title.rendered),
+    link: p.link || "",
+    date: typeof p.date === "string" ? p.date : "", // 站点本地时间,如 2026-05-14T13:57:31
+    summary: stripHtml(
+      yoast.description || yoast.og_description || (p.excerpt && p.excerpt.rendered) || ""
+    ),
+    category: (catId && catMap.get(catId)) || "",
+  };
+}
+
+// ---------- 数据层:archive/posts.json ----------
 export async function loadDB() {
   if (!existsSync(DB_FILE)) return [];
   try {
@@ -92,7 +133,7 @@ export function mergeDB(existing, incoming) {
   for (const it of incoming) if (it && it.link) byLink.set(it.link, it);
   return [...byLink.values()]
     .filter((it) => it.title && it.link && it.date)
-    .sort((a, b) => new Date(b.date) - new Date(a.date));
+    .sort(byDateDesc);
 }
 
 export async function saveDB(items) {
@@ -106,36 +147,49 @@ function categoryRank(name) {
   return i === -1 ? Number.MAX_SAFE_INTEGER : i;
 }
 
-// 单条要闻:标题链接 + 摘要钩子 + 回原文链接(都指向 llmposts.com)
-function renderItem(item) {
-  const t = teaser(item.summary);
+// 单条要闻:标题链接 + 摘要 + 回原文链接(都指向 llmposts.com)
+function renderItem(item, level) {
+  const h = "#".repeat(level);
   return (
-    `### [${escapeMd(item.title)}](${item.link})\n\n` +
-    (t ? `${t}\n\n` : "") +
+    `${h} [${escapeMd(item.title)}](${item.link})\n\n` +
+    (item.summary ? `${item.summary}\n\n` : "") +
     `[阅读全文 →](${item.link})`
   );
 }
 
 // 一个分类小节:## 01 · 模型动态 · Model Updates · 5 篇
-function renderSection(index, category, items) {
+function renderSection(index, category, items, level) {
   const num = String(index).padStart(2, "0");
   const en = (config.categoryLabels || {})[category];
-  const heading = `## ${num} · ${category}${en ? ` · ${en}` : ""} · ${items.length} 篇`;
+  const heading =
+    `${"#".repeat(level)} ${num} · ${category}${en ? ` · ${en}` : ""} · ${items.length} 篇`;
   const body = items
     .slice()
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .map(renderItem)
+    .sort(byDateDesc)
+    .map((it) => renderItem(it, level + 1))
     .join("\n\n");
   return `${heading}\n\n${body}`;
+}
+
+// 把一组要闻按分类分成编号小节。level = 分类标题的 markdown 级别。
+function renderSections(items, level = 2) {
+  const byCat = new Map();
+  for (const it of items) {
+    const cat = it.category || "未分类";
+    if (!byCat.has(cat)) byCat.set(cat, []);
+    byCat.get(cat).push(it);
+  }
+  const cats = [...byCat.keys()].sort((a, b) => {
+    const r = categoryRank(a) - categoryRank(b);
+    return r !== 0 ? r : byCat.get(b).length - byCat.get(a).length;
+  });
+  return cats.map((cat, i) => renderSection(i + 1, cat, byCat.get(cat), level)).join("\n\n");
 }
 
 // meta description:日期 + 篇数 + 标题串,截到约定字数
 function buildDescription(key, items) {
   const max = config.metaDescriptionMaxLength || 150;
-  const titles = items
-    .slice()
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .map((it) => stripHtml(it.title));
+  const titles = items.slice().sort(byDateDesc).map((it) => stripHtml(it.title));
   let desc = `${key} AI 要闻汇总(${items.length} 篇):`;
   for (let i = 0; i < titles.length; i++) {
     const piece = (i === 0 ? "" : ";") + titles[i];
@@ -156,20 +210,6 @@ function yamlString(s) {
 async function writeDailyFile(key, items) {
   const file = path.join(ARCHIVE_DIR, key.slice(0, 4), `${key}.md`);
   await mkdir(path.dirname(file), { recursive: true });
-
-  // 按分类分组
-  const byCat = new Map();
-  for (const it of items) {
-    const cat = it.category || "未分类";
-    if (!byCat.has(cat)) byCat.set(cat, []);
-    byCat.get(cat).push(it);
-  }
-  // 分类按 config.categoryOrder 排;同序按条数多→少
-  const cats = [...byCat.keys()].sort((a, b) => {
-    const r = categoryRank(a) - categoryRank(b);
-    return r !== 0 ? r : byCat.get(b).length - byCat.get(a).length;
-  });
-
   const frontMatter =
     `---\n` +
     `title: ${yamlString(`${config.siteName} · ${key}`)}\n` +
@@ -180,9 +220,8 @@ async function writeDailyFile(key, items) {
     `<!-- 此文件由脚本自动生成(scripts/),请勿手动编辑 -->\n` +
     `# ${config.siteName} · ${key}\n\n` +
     `> 当日 AI 要闻汇总 · 共 ${items.length} 篇 · 点「阅读全文」看完整内容 👉 [${config.siteName}](${config.siteUrl})`;
-  const sections = cats.map((cat, i) => renderSection(i + 1, cat, byCat.get(cat))).join("\n\n");
+  const sections = renderSections(items, 2);
   const footer = `📮 [返回首页](../../README.md) · 🌐 [${config.siteName}](${config.siteUrl})`;
-
   await writeFile(file, `${frontMatter}\n${header}\n\n${sections}\n\n---\n\n${footer}\n`, "utf8");
 }
 
@@ -190,20 +229,19 @@ async function updateReadme(items) {
   if (!existsSync(README)) fail("找不到 README.md");
   let md = await readFile(README, "utf8");
 
-  // 「最近要闻」:最新 N 条(扁平列表,方便快速扫)
-  const recentList = items
-    .slice(0, config.recentCount || 12)
-    .map((it) => {
-      const tag = it.category ? ` \`${it.category}\`` : "";
-      return `- \`${dateKey(new Date(it.date))}\` [${escapeMd(it.title)}](${it.link})${tag}`;
-    })
-    .join("\n");
+  // 「最新汇总」:最新一天的完整简报(分类编号小节)
+  const latestKey = items.length ? dateKey(items[0].date) : "";
+  const latestItems = items.filter((it) => dateKey(it.date) === latestKey);
+  const briefing = latestItems.length
+    ? `**${latestKey} · 共 ${latestItems.length} 篇**\n\n${renderSections(latestItems, 3)}`
+    : "_暂无内容_";
   const recentRe = /<!-- RECENT:START -->[\s\S]*?<!-- RECENT:END -->/;
   if (!recentRe.test(md)) fail("README.md 缺少 <!-- RECENT:START --> ... <!-- RECENT:END --> 标记");
-  md = md.replace(recentRe, `<!-- RECENT:START -->\n${recentList}\n<!-- RECENT:END -->`);
+  md = md.replace(recentRe, `<!-- RECENT:START -->\n${briefing}\n<!-- RECENT:END -->`);
 
   // 「历史归档」:按年份列出(根据实际数据)
-  const years = [...new Set(items.map((it) => dateKey(new Date(it.date)).slice(0, 4)))]
+  const years = [...new Set(items.map((it) => dateKey(it.date).slice(0, 4)))]
+    .filter(Boolean)
     .sort()
     .reverse();
   const archiveList = years.map((y) => `- [\`archive/${y}/\`](archive/${y}/) — ${y} 年`).join("\n");
@@ -212,10 +250,10 @@ async function updateReadme(items) {
     md = md.replace(archiveRe, `<!-- ARCHIVE:START -->\n${archiveList}\n<!-- ARCHIVE:END -->`);
   }
 
-  // 最后更新时间
+  // 最后更新:用最新一篇的日期(只有真有新内容时 README 才会变 → 不会每小时空提交)
   const updatedRe = /<!-- UPDATED:START -->[\s\S]*?<!-- UPDATED:END -->/;
   if (updatedRe.test(md)) {
-    md = md.replace(updatedRe, `<!-- UPDATED:START -->${dateKey(new Date())}<!-- UPDATED:END -->`);
+    md = md.replace(updatedRe, `<!-- UPDATED:START -->${latestKey || "—"}<!-- UPDATED:END -->`);
   }
   await writeFile(README, md, "utf8");
 }
@@ -225,7 +263,7 @@ async function updateReadme(items) {
 export async function rebuildAll(items) {
   const byDate = new Map();
   for (const it of items) {
-    const key = dateKey(new Date(it.date));
+    const key = dateKey(it.date);
     if (!byDate.has(key)) byDate.set(key, []);
     byDate.get(key).push(it);
   }

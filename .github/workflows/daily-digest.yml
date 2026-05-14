@@ -2,7 +2,7 @@ name: 要闻汇总(每小时检查)
 
 on:
   schedule:
-    # 每小时检查一次 llmposts.com 的 RSS,有新文章才提交 —— 近似「有更新就追加」。
+    # 每小时检查一次 llmposts.com 的 WordPress REST API,有新文章才提交。
     # 公开仓库的 Actions 时长不计费,每小时跑无压力。
     - cron: "0 * * * *"
   workflow_dispatch: {} # 也可在 Actions 页面手动触发
@@ -27,10 +27,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: npm
 
-      - name: 安装依赖
-        run: npm ci --no-audit --no-fund
+      # 脚本零依赖,只用 Node 内置模块,无需 npm install
 
       - name: 抓取并更新归档
         run: node scripts/generate.mjs
