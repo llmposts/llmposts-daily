@@ -1,5 +1,12 @@
 [
   {
+    "title": "ChatGPT 个人财务功能预览：接入账户与 GPT‑5.5 推理分析",
+    "link": "https://llmposts.com/models/chatgpt-personal-finance-gpt55/",
+    "date": "2026-05-16T00:47:28",
+    "summary": "OpenAI 向美国 ChatGPT Pro 用户推出个人财务功能预览，支持通过 Plaid 安全接入 1.2 万家金融机构账户，默认调用 GPT‑5.5 Thinking 模型进行收支分析与场景规划。",
+    "category": "模型动态"
+  },
+  {
     "title": "OpenRouter BYOK 功能升级：多 Key 分组、精细过滤与分层触发",
     "link": "https://llmposts.com/models/openrouter-byok-key-routing/",
     "date": "2026-05-15T23:26:55",
