@@ -1,5 +1,19 @@
 [
   {
+    "title": "Anthropic Mythos 5 天发现 macOS 安全漏洞",
+    "link": "https://llmposts.com/models/anthropic-mythos-macos-vulnerability/",
+    "date": "2026-05-15T22:32:33",
+    "summary": "据华尔街日报报道，安全公司 Calif 使用 Anthropic Mythos AI 于 2026 年 4 月发现 macOS 权限提升漏洞，利用链可绕过 Apple MIE 内存保护机制，相关 55 页技术报告已提交 Apple 审阅。",
+    "category": "模型动态"
+  },
+  {
+    "title": "微软取消 Claude Code 许可证，数千名开发者将转用 Copilot CLI",
+    "link": "https://llmposts.com/models/microsoft-claude-code-license-canceled/",
+    "date": "2026-05-15T21:59:21",
+    "summary": "据 The Verge 报道，微软计划取消数千名开发者的 Claude Code 许可证，6 月 30 日前统一转向 GitHub Copilot CLI。该决策涉及 Experiences + Devices 团队，财务考量与产品整合双重因素驱动。",
+    "category": "模型动态"
+  },
+  {
     "title": "Grok Build CLI 早期测试开放：面向终端的全栈编码代理",
     "link": "https://llmposts.com/models/grok-build-cli-agent/",
     "date": "2026-05-15T19:07:30",
