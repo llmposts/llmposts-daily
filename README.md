@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-15 · 共 10 篇
+## 🔥 最新汇总 · 2026-05-15 · 共 11 篇
 
-### 01 · 模型动态 · Model Updates · 9 篇
+### 01 · 模型动态 · Model Updates · 10 篇
+
+#### [OpenRouter BYOK 功能升级：多 Key 分组、精细过滤与分层触发](https://llmposts.com/models/openrouter-byok-key-routing/)
+
+OpenRouter 宣布 BYOK 支持多 Key 优先分组、按模型或用户过滤与分层触发逻辑。使用自定义 Provider Key 费率降至原价 5%，每月 1M 请求免收手续费。
+
+[阅读全文 →](https://llmposts.com/models/openrouter-byok-key-routing/)
 
 #### [Anthropic Mythos 5 天发现 macOS 安全漏洞](https://llmposts.com/models/anthropic-mythos-macos-vulnerability/)
 

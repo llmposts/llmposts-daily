@@ -1,5 +1,12 @@
 [
   {
+    "title": "OpenRouter BYOK 功能升级：多 Key 分组、精细过滤与分层触发",
+    "link": "https://llmposts.com/models/openrouter-byok-key-routing/",
+    "date": "2026-05-15T23:26:55",
+    "summary": "OpenRouter 宣布 BYOK 支持多 Key 优先分组、按模型或用户过滤与分层触发逻辑。使用自定义 Provider Key 费率降至原价 5%，每月 1M 请求免收手续费。",
+    "category": "模型动态"
+  },
+  {
     "title": "Anthropic Mythos 5 天发现 macOS 安全漏洞",
     "link": "https://llmposts.com/models/anthropic-mythos-macos-vulnerability/",
     "date": "2026-05-15T22:32:33",
