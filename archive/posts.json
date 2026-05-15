@@ -1,5 +1,19 @@
 [
   {
+    "title": "OpenAI 确认 npm 供应链攻击事件，强制更新代码签名证书",
+    "link": "https://llmposts.com/models/openai-npm-supply-chain-attack-response/",
+    "date": "2026-05-15T14:06:47",
+    "summary": "OpenAI 供应链攻击事件曝光，TeamPCP 通过恶意 npm 包入侵两名员工设备。为阻断潜在恶意代码分发，官方强制 macOS 用户在 2026 年 6 月 12 日前完成应用更新，核心业务与客户数据未受影响。",
+    "category": "模型动态"
+  },
+  {
+    "title": "Anthropic 2028 AI 竞争报告: 中美算力优势与未来推演",
+    "link": "https://llmposts.com/industry/anthropic-2028-ai-leadership-report/",
+    "date": "2026-05-15T11:14:17",
+    "summary": "Anthropic 发布 2028 AI 竞争报告, 提出民主国家领先与中国追平两种推演情景。报告指出 compute 是核心瓶颈, 建议收紧出口管制以锁定 12 至 24 个月优势。",
+    "category": "行业观察"
+  },
+  {
     "title": "Codex 上线 ChatGPT 移动端：手机远程开发预览版开放",
     "link": "https://llmposts.com/models/codex-chatgpt-mobile-remote-preview/",
     "date": "2026-05-15T09:30:07",
