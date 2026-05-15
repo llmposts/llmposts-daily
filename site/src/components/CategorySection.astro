@@ -1,0 +1,33 @@
+---
+import type { CategoryGroup } from "../lib/data";
+import { categoryColorVar } from "../lib/categories";
+import EntryCard from "./EntryCard.astro";
+
+interface Props {
+  group: CategoryGroup;
+  /** anchor id for inline TOC jumping */
+  anchorId?: string;
+}
+
+const { group, anchorId } = Astro.props;
+const colorVar = categoryColorVar(group.category);
+---
+
+<div
+  class="cat"
+  id={anchorId}
+  style={`--cat-color: var(${colorVar})`}
+  aria-label={group.category}
+>
+  {group.posts.map((p, i) => <EntryCard post={p} index={i + 1} />)}
+</div>
+
+<style>
+  .cat {
+    margin: 0 0 28px;
+    scroll-margin-top: 80px;
+  }
+  .cat:last-child {
+    margin-bottom: 0;
+  }
+</style>

@@ -1,0 +1,145 @@
+---
+import ThemeToggle from "./ThemeToggle.astro";
+import { CATEGORIES } from "../lib/categories";
+
+interface Props {
+  /** 当前激活的分类 slug,'all' 或 category slug */
+  active?: string;
+}
+
+const { active = "all" } = Astro.props;
+---
+
+<header class="site">
+  <a href="/" class="brand" aria-label="LLM 日报 首页">
+    <span class="brand-mark">LLM</span><span class="brand-sep">·</span><span class="brand-rhs">DAILY</span>
+  </a>
+  <nav class="chips" aria-label="分类筛选">
+    <a class={`chip${active === "all" ? " active" : ""}`} href="/">全部</a>
+    {
+      CATEGORIES.map((c) => (
+        <a
+          class={`chip${active === c.slug ? " active" : ""}`}
+          href={`/category/${c.slug}/`}
+        >
+          {c.zh}
+        </a>
+      ))
+    }
+  </nav>
+  <div class="actions">
+    <button class="icon-btn" aria-label="搜索" title="搜索 (⌘K)">⌘K</button>
+    <ThemeToggle />
+    <a class="icon-btn rss" href="/rss.xml" aria-label="RSS" title="RSS">RSS</a>
+  </div>
+</header>
+
+<style>
+  .site {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: color-mix(in oklab, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(180%) blur(10px);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 14px 24px;
+    margin: 0 -24px;
+  }
+  .brand {
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: -0.005em;
+    color: var(--text);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: baseline;
+    flex-shrink: 0;
+  }
+  .brand-sep {
+    color: var(--muted);
+    margin: 0 1px;
+  }
+  .brand-rhs {
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .chips {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    flex: 1;
+    scrollbar-width: none;
+  }
+  .chips::-webkit-scrollbar {
+    display: none;
+  }
+  .chip {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--chip-text);
+    background: var(--chip-bg);
+    padding: 5px 12px;
+    border-radius: 999px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    transition: background-color 0.15s, color 0.15s;
+  }
+  .chip.active {
+    background: var(--text);
+    color: var(--bg);
+    font-weight: 600;
+  }
+  .chip:not(.active):hover {
+    color: var(--text);
+  }
+  .actions {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .icon-btn {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--muted);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .icon-btn:hover {
+    background: var(--chip-bg);
+    color: var(--text);
+  }
+  .icon-btn.rss {
+    font-size: 12px;
+  }
+
+  @media (max-width: 760px) {
+    .site {
+      padding: 12px 18px;
+      margin: 0 -18px;
+      gap: 16px;
+    }
+    .chips {
+      gap: 4px;
+    }
+    .brand-rhs {
+      display: none;
+    }
+    .brand-sep {
+      display: none;
+    }
+  }
+</style>

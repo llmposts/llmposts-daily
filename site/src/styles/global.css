@@ -1,0 +1,80 @@
+/* ===== Tokens ===== */
+:root {
+  --bg: #fafaf7;
+  --surface: #ffffff;
+  --text: #0f0f0e;
+  --text-soft: #2a2a28;
+  --muted: #6e6c63;
+  --border: #ebe7dd;
+  --border-soft: #f4f1e9;
+  --link: #2862c4;
+  --chip-bg: #f1ede2;
+  --chip-text: #44423a;
+
+  --max-w: 900px;
+  --col-date: 144px;
+  --col-gap: 36px;
+
+  --c-model: #2862c4;
+  --c-research: #7c3aed;
+  --c-eng: #15803d;
+  --c-tut: #c2410c;
+  --c-industry: #b91c1c;
+
+  --font-sans: "IBM Plex Sans", "Helvetica Neue", Arial, "PingFang SC",
+    "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  /* 全站统一用 Plex Sans;condensed/mono/serif 别名都指向 sans,
+     需要差异化时改字号 + 字重 + tnum 数字,不靠换字族 */
+  --font-condensed: var(--font-sans);
+  --font-mono: var(--font-sans);
+  --font-serif: var(--font-sans);
+}
+
+[data-theme="dark"] {
+  --bg: #0c0c0b;
+  --surface: #161614;
+  --text: #f5f3ed;
+  --text-soft: #d8d5cc;
+  --muted: #8b887e;
+  --border: #1f1e1a;
+  --border-soft: rgba(245, 243, 237, 0.06);
+  --link: #6ba1ff;
+  --chip-bg: #1a1a17;
+  --chip-text: #b9b6ab;
+}
+
+/* ===== Reset / Base ===== */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "tnum" 1, "kern" 1;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+a {
+  color: var(--link);
+}
+
+.page {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 760px) {
+  .page {
+    padding: 0 18px;
+  }
+}

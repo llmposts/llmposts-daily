@@ -1,0 +1,122 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import DayBlock from "../components/DayBlock.astro";
+import PosterButton from "../components/PosterButton.astro";
+import { recentDays } from "../lib/data";
+import { formatCnLongDate, weekdayCn } from "../lib/dates";
+
+const days = recentDays(7);
+const latest = days[0];
+const siteOrigin = Astro.site?.toString() ?? "https://archive.llmposts.com";
+const posterData = latest
+  ? {
+      dateKey: latest.key,
+      formalDate: formatCnLongDate(latest.key),
+      weekday: weekdayCn(latest.key),
+      vol: latest.key.replace(/-/g, "."),
+      posts: latest.posts.map((p) => ({
+        title: p.title,
+        summary: p.summary,
+        link: p.link,
+        category: p.category,
+      })),
+      categoryCounts: latest.categories.map((c) => ({
+        category: c.category,
+        count: c.posts.length,
+      })),
+      url: `${siteOrigin.replace(/\/$/, "")}/daily/${latest.key}/`,
+    }
+  : null;
+---
+
+<BaseLayout title="LLM 日报">
+  <SiteHeader active="all" />
+  <main>
+    {posterData && (
+      <div class="page-actions">
+        <span class="action-hint">为最新一期生成可分享海报</span>
+        <PosterButton data={posterData} />
+      </div>
+    )}
+    {days.map((d, i) => <DayBlock day={d} isFirst={i === 0} />)}
+    <nav class="older">
+      <a href="/daily/archive/">查看全部历史 ↓</a>
+    </nav>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-meta">
+      <span>LLM 日报 · 大模型邮报每日要闻汇总 · 仅摘要,完整文章在官网</span>
+      <a class="right" href="https://llmposts.com">→ llmposts.com</a>
+    </div>
+  </footer>
+</BaseLayout>
+
+<style>
+  main {
+    padding: 8px 0 64px;
+  }
+  .page-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    padding: 20px 0 8px;
+  }
+  .action-hint {
+    font-size: 13px;
+    color: var(--muted);
+  }
+  @media (max-width: 760px) {
+    .page-actions { justify-content: space-between; }
+    .action-hint { font-size: 12px; }
+  }
+  .older {
+    margin-top: 80px;
+    text-align: center;
+  }
+  .older a {
+    display: inline-block;
+    padding: 9px 22px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    background: var(--surface);
+    transition: background-color 0.15s, border-color 0.15s;
+  }
+  .older a:hover {
+    background: var(--chip-bg);
+    border-color: var(--muted);
+  }
+
+  .site-footer {
+    border-top: 1px solid var(--border);
+    margin-top: 96px;
+    padding: 56px 0 72px;
+  }
+  .footer-meta {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .footer-meta a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .footer-meta a.right {
+    color: var(--link);
+    font-weight: 500;
+  }
+  .footer-meta a:hover {
+    color: var(--text);
+  }
+  .footer-meta a.right:hover {
+    text-decoration: underline;
+  }
+</style>

@@ -1,0 +1,124 @@
+---
+import type { Post } from "../lib/data";
+
+interface Props {
+  post: Post;
+  index: number;
+}
+
+const { post, index } = Astro.props;
+const num = String(index).padStart(2, "0");
+---
+
+<article class="entry">
+  <div class="entry-num">{num}</div>
+  <div class="entry-body">
+    <h3 class="entry-title">
+      <a href={post.link} target="_blank" rel="noopener">{post.title}</a>
+    </h3>
+    <p class="entry-summary">
+      {post.summary}<span class="cta-spacer" aria-hidden="true"></span>
+    </p>
+    <a class="cta" href={post.link} target="_blank" rel="noopener">阅读原文</a>
+  </div>
+</article>
+
+<style>
+  .entry {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    column-gap: 16px;
+    padding: 22px 0;
+    border-top: 1px solid var(--border);
+  }
+  .entry:first-of-type {
+    border-top: none;
+    padding-top: 4px;
+  }
+  .entry-num {
+    font-size: 14px;
+    color: var(--cat-color, var(--muted));
+    font-weight: 600;
+    padding-top: 8px;
+    font-feature-settings: "tnum" 1;
+  }
+  .entry-body {
+    min-width: 0;
+  }
+  .entry-title {
+    margin: 0 0 10px;
+    font-family: var(--font-sans);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.45;
+    letter-spacing: -0.005em;
+  }
+  .entry-title a {
+    color: var(--text);
+    text-decoration: none;
+    background-image: linear-gradient(var(--link), var(--link));
+    background-size: 0 1.5px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease;
+  }
+  .entry-title a:hover {
+    background-size: 100% 1.5px;
+  }
+
+  /* 摘要 — 默认左对齐;末尾用 .cta-spacer 占位给按钮腾右下角 */
+  .entry-summary {
+    margin: 0;
+    color: var(--text-soft);
+    font-size: 17.5px;
+    line-height: 1.75;
+  }
+  .cta-spacer {
+    display: inline-block;
+    width: 96px; /* 与 .cta 宽度匹配 */
+    height: 1em;
+    visibility: hidden;
+  }
+  .entry-body {
+    position: relative;
+  }
+
+  /* "阅读原文" — 绝对定位到 entry-body 右下角,跟 .cta-spacer 共享同一坐标 */
+  .cta {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 15.5px;
+    font-weight: 400;
+    color: var(--bg);
+    text-decoration: none;
+    padding: 1px 12px;
+    border: 1px solid var(--text);
+    border-radius: 5px;
+    background: var(--text);
+    line-height: 1.6;
+    white-space: nowrap;
+    transition: background-color 0.15s, color 0.15s, transform 0.05s,
+      border-color 0.15s;
+  }
+  .cta:hover {
+    background: transparent;
+    color: var(--text);
+  }
+  .cta:active {
+    transform: translateY(0.5px);
+  }
+
+  @media (max-width: 760px) {
+    .entry {
+      grid-template-columns: 24px 1fr;
+      column-gap: 12px;
+    }
+    .entry-title {
+      font-size: 17.5px;
+    }
+    .entry-summary {
+      font-size: 15.5px;
+    }
+  }
+</style>
