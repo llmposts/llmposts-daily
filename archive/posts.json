@@ -1,5 +1,19 @@
 [
   {
+    "title": "Gemini 3.2 Flash 将更名为 Gemini 3.5 Flash，内部参数已曝光",
+    "link": "https://llmposts.com/models/gemini-3-5-flash-leak/",
+    "date": "2026-05-15T15:28:49",
+    "summary": "谷歌或推出重命名版 Gemini 3.5 Flash 模型，定价泄露至 0.25 美元每百万 token 且响应延迟传闻压至 200 毫秒内，性能逼近 Pro 级水平，预计 5 月前后亮相。",
+    "category": "模型动态"
+  },
+  {
+    "title": "Claude Code 部署模式的正确用法：分层配置与大代码库工作流",
+    "link": "https://llmposts.com/models/claude-code-deployment-patterns/",
+    "date": "2026-05-15T15:28:37",
+    "summary": "百万行 monorepo 环境中决定工具效率的关键并非基准跑分，而是工程配置层。掌握 CLAUDE.md 分层、Hooks 等技巧，构建稳定高效的 Claude Code 部署模式。",
+    "category": "模型动态"
+  },
+  {
     "title": "OpenAI 确认 npm 供应链攻击事件，强制更新代码签名证书",
     "link": "https://llmposts.com/models/openai-npm-supply-chain-attack-response/",
     "date": "2026-05-15T14:06:47",

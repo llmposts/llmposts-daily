@@ -13,9 +13,21 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-15 · 共 4 篇
+## 🔥 最新汇总 · 2026-05-15 · 共 6 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 5 篇
+
+#### [Gemini 3.2 Flash 将更名为 Gemini 3.5 Flash，内部参数已曝光](https://llmposts.com/models/gemini-3-5-flash-leak/)
+
+谷歌或推出重命名版 Gemini 3.5 Flash 模型，定价泄露至 0.25 美元每百万 token 且响应延迟传闻压至 200 毫秒内，性能逼近 Pro 级水平，预计 5 月前后亮相。
+
+[阅读全文 →](https://llmposts.com/models/gemini-3-5-flash-leak/)
+
+#### [Claude Code 部署模式的正确用法：分层配置与大代码库工作流](https://llmposts.com/models/claude-code-deployment-patterns/)
+
+百万行 monorepo 环境中决定工具效率的关键并非基准跑分，而是工程配置层。掌握 CLAUDE.md 分层、Hooks 等技巧，构建稳定高效的 Claude Code 部署模式。
+
+[阅读全文 →](https://llmposts.com/models/claude-code-deployment-patterns/)
 
 #### [OpenAI 确认 npm 供应链攻击事件，强制更新代码签名证书](https://llmposts.com/models/openai-npm-supply-chain-attack-response/)
 
