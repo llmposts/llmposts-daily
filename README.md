@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-15 · 共 1 篇
+## 🔥 最新汇总 · 2026-05-15 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [Codex 上线 ChatGPT 移动端：手机远程开发预览版开放](https://llmposts.com/models/codex-chatgpt-mobile-remote-preview/)
+
+OpenAI 宣布 Codex 接入 ChatGPT 移动应用，iOS 与 Android 预览版已向所有套餐用户开放。支持远程 SSH 连接与实时状态同步，Windows 版手机连接支持即将推出。
+
+[阅读全文 →](https://llmposts.com/models/codex-chatgpt-mobile-remote-preview/)
 
 #### [Kimi Web Bridge 浏览器扩展发布：支持 Claude Code 与 Cursor 本地网页自动化](https://llmposts.com/models/kimi-web-bridge-browser-extension-2/)
 
