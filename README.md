@@ -13,9 +13,27 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-16 · 共 3 篇
+## 🔥 最新汇总 · 2026-05-16 · 共 6 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 6 篇
+
+#### [OpenAI 与马耳他合作：ChatGPT Plus 将向全民免费开放](https://llmposts.com/models/openai-malta-chatgpt-plus-partnership/)
+
+OpenAI 与马耳他政府达成全球首个国家级合作，向完成 AI 素养课程的所有公民提供一年免费 ChatGPT Plus。首批将于 2026 年 5 月启动。
+
+[阅读全文 →](https://llmposts.com/models/openai-malta-chatgpt-plus-partnership/)
+
+#### [OpenAI Codex 团队修复 GPT-5.5 性能异常，系统已恢复稳定运行](https://llmposts.com/models/openai-codex-team-fixes-gpt-5-5-performance-issues/)
+
+OpenAI Codex 团队于 2026 年 5 月 16 日确认修复两项导致 GPT-5.5 性能下降的技术问题，系统已恢复稳定运行，使用限制将在晚间验证完成后重置。
+
+[阅读全文 →](https://llmposts.com/models/openai-codex-team-fixes-gpt-5-5-performance-issues/)
+
+#### [Anthropic 与盖茨基金会达成 2 亿美元合作，聚焦全球健康与教育](https://llmposts.com/models/anthropic-gates-foundation-200m-partnership/)
+
+Anthropic 与盖茨基金会达成 2 亿美元合作，未来四年聚焦全球健康、教育及经济流动性领域，目标惠及 46 亿缺乏基本医疗服务的人口。
+
+[阅读全文 →](https://llmposts.com/models/anthropic-gates-foundation-200m-partnership/)
 
 #### [SpaceXAI 研发骨干持续流失 预训练团队仅剩个位数](https://llmposts.com/models/spacexai-talent-bleeding/)
 

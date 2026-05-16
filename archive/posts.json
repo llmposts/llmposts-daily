@@ -1,5 +1,26 @@
 [
   {
+    "title": "OpenAI 与马耳他合作：ChatGPT Plus 将向全民免费开放",
+    "link": "https://llmposts.com/models/openai-malta-chatgpt-plus-partnership/",
+    "date": "2026-05-16T22:40:04",
+    "summary": "OpenAI 与马耳他政府达成全球首个国家级合作，向完成 AI 素养课程的所有公民提供一年免费 ChatGPT Plus。首批将于 2026 年 5 月启动。",
+    "category": "模型动态"
+  },
+  {
+    "title": "OpenAI Codex 团队修复 GPT-5.5 性能异常，系统已恢复稳定运行",
+    "link": "https://llmposts.com/models/openai-codex-team-fixes-gpt-5-5-performance-issues/",
+    "date": "2026-05-16T21:41:59",
+    "summary": "OpenAI Codex 团队于 2026 年 5 月 16 日确认修复两项导致 GPT-5.5 性能下降的技术问题，系统已恢复稳定运行，使用限制将在晚间验证完成后重置。",
+    "category": "模型动态"
+  },
+  {
+    "title": "Anthropic 与盖茨基金会达成 2 亿美元合作，聚焦全球健康与教育",
+    "link": "https://llmposts.com/models/anthropic-gates-foundation-200m-partnership/",
+    "date": "2026-05-16T20:40:55",
+    "summary": "Anthropic 与盖茨基金会达成 2 亿美元合作，未来四年聚焦全球健康、教育及经济流动性领域，目标惠及 46 亿缺乏基本医疗服务的人口。",
+    "category": "模型动态"
+  },
+  {
     "title": "SpaceXAI 研发骨干持续流失 预训练团队仅剩个位数",
     "link": "https://llmposts.com/models/spacexai-talent-bleeding/",
     "date": "2026-05-16T15:29:47",
