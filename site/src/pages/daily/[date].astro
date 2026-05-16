@@ -4,7 +4,12 @@ import SiteHeader from "../../components/SiteHeader.astro";
 import DayBlock from "../../components/DayBlock.astro";
 import PosterButton from "../../components/PosterButton.astro";
 import { dayGroup, getAvailableDateKeys } from "../../lib/data";
-import { formatCnLongDate, weekdayCn } from "../../lib/dates";
+import {
+  formatCnLongDate,
+  formalChineseDate,
+  weekdayCn,
+  relativeLabel,
+} from "../../lib/dates";
 
 export async function getStaticPaths() {
   const keys = getAvailableDateKeys();
@@ -14,6 +19,7 @@ export async function getStaticPaths() {
       date,
       prev: keys[i + 1] ?? null, // older (列表是新→旧)
       next: keys[i - 1] ?? null, // newer
+      issueNumber: keys.length - i,
     },
   }));
 }
@@ -22,11 +28,18 @@ interface Props {
   date: string;
   prev: string | null;
   next: string | null;
+  issueNumber: number;
 }
 
-const { date, prev, next } = Astro.props;
+const { date, prev, next, issueNumber } = Astro.props;
 const day = dayGroup(date);
 const longDate = formatCnLongDate(date);
+const formal = formalChineseDate(date);
+const wk = weekdayCn(date);
+const rel = relativeLabel(date);
+const [, m, d] = date.split("-");
+const edition = `VOL.${date.slice(2, 4)}`;
+const readTime = day.posts.length * 4;
 const pageTitle = `LLM 日报 · ${date}`;
 const desc = `${longDate} · 共 ${day.posts.length} 篇 AI 要闻汇总`;
 const siteOrigin = Astro.site?.toString() ?? "https://archive.llmposts.com";
@@ -52,36 +65,59 @@ const posterData = {
 <BaseLayout title={pageTitle} description={desc}>
   <SiteHeader active="all" />
   <main>
-    <div class="page-actions">
-      <span class="action-hint">为 {longDate} 生成可分享海报</span>
-      <PosterButton data={posterData} />
-    </div>
+    <header class="issue-mast">
+      <div class="issue-row">
+        {edition} <span class="dot">·</span> #{issueNumber}
+        <span class="dot">·</span> {formal} <span class="dot">·</span> {wk}
+        {rel && <><span class="dot">·</span> <span class="rel">{rel}</span></>}
+      </div>
+      <h1 class="issue-title">
+        <span class="num">{parseInt(m, 10)}.{parseInt(d, 10)}</span> 日邮报
+      </h1>
+      <p class="issue-sub">
+        本期 <strong>{day.posts.length}</strong> 篇要闻 · 约 <strong>{readTime}</strong> 分钟阅读 · 覆盖 <strong>{day.categories.length}</strong> 类
+      </p>
+      <div class="issue-actions">
+        <PosterButton data={posterData} />
+        <a class="btn" href="/">回到首页</a>
+      </div>
+    </header>
+
     <DayBlock day={day} isFirst={true} />
+
     <nav class="prev-next" aria-label="前后日导航">
       {
         prev ? (
-          <a href={`/daily/${prev}/`} class="link prev">
-            ← {prev}
+          <a href={`/daily/${prev}/`} class="pn-card">
+            <div class="pn-label">← 上一期</div>
+            <div class="pn-date">{prev}</div>
           </a>
         ) : (
-          <span class="link disabled">已是最早</span>
+          <span class="pn-card disabled">
+            <div class="pn-label">上一期</div>
+            <div class="pn-date">已是最早</div>
+          </span>
         )
       }
-      <a href="/" class="link home">回到首页</a>
       {
         next ? (
-          <a href={`/daily/${next}/`} class="link next">
-            {next} →
+          <a href={`/daily/${next}/`} class="pn-card right">
+            <div class="pn-label">下一期 →</div>
+            <div class="pn-date">{next}</div>
           </a>
         ) : (
-          <span class="link disabled">已是最新</span>
+          <span class="pn-card right disabled">
+            <div class="pn-label">下一期</div>
+            <div class="pn-date">已是最新</div>
+          </span>
         )
       }
     </nav>
   </main>
+
   <footer class="site-footer">
-    <div class="footer-meta">
-      <span>LLM 日报 · 大模型邮报每日要闻汇总 · 仅摘要,完整文章在官网</span>
+    <div class="foot-bot">
+      <span>© {new Date().getFullYear()} LLM 日报 · 仅作存档</span>
       <a class="right" href="https://llmposts.com">→ llmposts.com</a>
     </div>
   </footer>
@@ -89,104 +125,147 @@ const posterData = {
 
 <style>
   main {
-    padding: 8px 0 64px;
+    padding: 0 0 64px;
   }
-  .page-actions {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 14px;
-    padding: 20px 0 8px;
+  .issue-mast {
+    padding: 48px 0 36px;
+    text-align: center;
+    border-bottom: 1px solid var(--text);
+    margin-bottom: 8px;
   }
-  .action-hint {
-    font-size: 13px;
+  .issue-row {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
     color: var(--muted);
+    margin-bottom: 18px;
   }
-  @media (max-width: 760px) {
-    .page-actions { justify-content: space-between; }
-    .action-hint { font-size: 12px; }
+  .issue-row .dot {
+    color: var(--accent);
+    margin: 0 8px;
   }
+  .issue-row .rel {
+    color: var(--accent);
+  }
+  .issue-title {
+    font-family: var(--font-serif);
+    font-size: 64px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 0.98;
+    margin: 0;
+    color: var(--text);
+  }
+  .issue-title .num {
+    color: var(--accent);
+    font-style: italic;
+    font-weight: 500;
+    font-feature-settings: "tnum" 1;
+  }
+  .issue-sub {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 17px;
+    color: var(--text-soft);
+    margin: 18px auto 0;
+    max-width: 540px;
+    line-height: 1.6;
+  }
+  .issue-sub strong {
+    font-style: normal;
+    color: var(--text);
+    font-weight: 600;
+  }
+  .issue-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+
   .prev-next {
     margin-top: 80px;
+    padding-top: 36px;
+    border-top: 1px solid var(--border);
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 16px;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 500;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
   }
-  .link {
-    color: var(--text);
-    text-decoration: none;
-    padding: 9px 16px;
+  .pn-card {
+    display: block;
+    padding: 20px;
     border: 1px solid var(--border);
-    border-radius: 999px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text);
     background: var(--surface);
-    transition: background-color 0.15s, border-color 0.15s;
-    text-align: center;
+    transition: border-color 0.15s, background-color 0.15s;
   }
-  .link:hover {
+  .pn-card:hover {
+    border-color: var(--border-strong);
     background: var(--chip-bg);
-    border-color: var(--muted);
   }
-  .link.disabled {
-    color: var(--muted);
+  .pn-card.right {
+    text-align: right;
+  }
+  .pn-card.disabled {
     opacity: 0.5;
-    cursor: default;
+    pointer-events: none;
   }
-  .link.disabled:hover {
-    background: var(--surface);
-    border-color: var(--border);
-  }
-  .prev {
-    justify-self: start;
-    font-feature-settings: "tnum" 1;
-  }
-  .next {
-    justify-self: end;
-    font-feature-settings: "tnum" 1;
-  }
-  .home {
+  .pn-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
     color: var(--muted);
-    border-color: transparent;
-    background: transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+  .pn-date {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    font-weight: 600;
+    font-feature-settings: "tnum" 1;
   }
 
   .site-footer {
     border-top: 1px solid var(--border);
     margin-top: 96px;
-    padding: 56px 0 72px;
+    padding: 32px 0 60px;
   }
-  .footer-meta {
+  .foot-bot {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 12px;
-    font-size: 14px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     color: var(--muted);
   }
-  .footer-meta a {
+  .foot-bot a {
     color: var(--muted);
     text-decoration: none;
   }
-  .footer-meta a.right {
-    color: var(--link);
+  .foot-bot a.right {
+    color: var(--accent);
     font-weight: 500;
   }
-  .footer-meta a:hover {
+  .foot-bot a:hover {
     color: var(--text);
-  }
-  .footer-meta a.right:hover {
-    text-decoration: underline;
   }
 
   @media (max-width: 760px) {
-    .prev-next {
-      grid-template-columns: 1fr 1fr;
+    .issue-title {
+      font-size: 44px;
     }
-    .home {
-      grid-column: 1 / -1;
-      order: -1;
+    .prev-next {
+      grid-template-columns: 1fr;
+    }
+    .pn-card.right {
+      text-align: left;
     }
   }
 </style>

@@ -25,16 +25,17 @@ const desc = `${cat.zh} 分类下全部 AI 要闻 · 共 ${total} 篇`;
 <BaseLayout title={pageTitle} description={desc}>
   <SiteHeader active={cat.slug} />
   <main>
-    <section class="cat-hero">
-      <div class="cat-eyebrow">分类</div>
+    <header class="cat-hero">
+      <div class="cat-eyebrow">─── 分类 / Category</div>
       <h1 class="cat-h1">
         <span class="dot" style={`background: var(${cat.colorVar})`}></span>
         {cat.zh}
+        <span class="cat-en">{cat.en}</span>
       </h1>
-      <div class="cat-meta">
-        共 {total} 篇 · 覆盖 {days.length} 天
-      </div>
-    </section>
+      <p class="cat-meta">
+        共 <strong>{total}</strong> 篇 · 覆盖 <strong>{days.length}</strong> 天
+      </p>
+    </header>
 
     {days.map((d, i) => <DayBlock day={d} isFirst={i === 0} />)}
 
@@ -48,9 +49,10 @@ const desc = `${cat.zh} 分类下全部 AI 要闻 · 共 ${total} 篇`;
       <a href="/">← 回到首页</a>
     </nav>
   </main>
+
   <footer class="site-footer">
-    <div class="footer-meta">
-      <span>LLM 日报 · 大模型邮报每日要闻汇总 · 仅摘要,完整文章在官网</span>
+    <div class="foot-bot">
+      <span>© {new Date().getFullYear()} LLM 日报 · 仅作存档</span>
       <a class="right" href="https://llmposts.com">→ llmposts.com</a>
     </div>
   </footer>
@@ -58,40 +60,63 @@ const desc = `${cat.zh} 分类下全部 AI 要闻 · 共 ${total} 篇`;
 
 <style>
   main {
-    padding: 8px 0 64px;
+    padding: 0 0 64px;
   }
   .cat-hero {
-    padding: 40px 0 24px;
+    padding: 40px 0 28px;
     border-bottom: 1px solid var(--border);
-    margin-bottom: 16px;
+    margin-bottom: 8px;
   }
   .cat-eyebrow {
-    font-size: 14px;
-    color: var(--muted);
-    margin-bottom: 10px;
-    font-weight: 600;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 12px;
   }
   .cat-h1 {
-    margin: 0 0 10px;
-    font-size: 36px;
-    font-weight: 700;
-    letter-spacing: -0.015em;
-    line-height: 1.1;
+    margin: 0 0 14px;
+    font-family: var(--font-serif);
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1;
     color: var(--text);
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
+    flex-wrap: wrap;
   }
   .cat-h1 .dot {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     display: inline-block;
   }
-  .cat-meta {
+  .cat-en {
+    font-family: var(--font-mono);
     font-size: 14px;
     color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    align-self: center;
+    margin-left: 6px;
   }
+  .cat-meta {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 17px;
+    color: var(--text-soft);
+    margin: 0;
+  }
+  .cat-meta strong {
+    font-style: normal;
+    color: var(--text);
+    font-feature-settings: "tnum" 1;
+  }
+
   .empty {
     margin: 80px 0;
     text-align: center;
@@ -103,8 +128,8 @@ const desc = `${cat.zh} 分类下全部 AI 要闻 · 共 ${total} 篇`;
   }
   .back a {
     display: inline-block;
-    padding: 9px 20px;
-    border: 1px solid var(--border);
+    padding: 10px 26px;
+    border: 1px solid var(--border-strong);
     border-radius: 999px;
     color: var(--text);
     text-decoration: none;
@@ -121,28 +146,34 @@ const desc = `${cat.zh} 分类下全部 AI 要闻 · 共 ${total} 篇`;
   .site-footer {
     border-top: 1px solid var(--border);
     margin-top: 96px;
-    padding: 56px 0 72px;
+    padding: 32px 0 60px;
   }
-  .footer-meta {
+  .foot-bot {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 12px;
-    font-size: 14px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     color: var(--muted);
   }
-  .footer-meta a {
+  .foot-bot a {
     color: var(--muted);
     text-decoration: none;
   }
-  .footer-meta a.right {
-    color: var(--link);
+  .foot-bot a.right {
+    color: var(--accent);
     font-weight: 500;
   }
-  .footer-meta a:hover {
+  .foot-bot a:hover {
     color: var(--text);
   }
-  .footer-meta a.right:hover {
-    text-decoration: underline;
+
+  @media (max-width: 760px) {
+    .cat-h1 {
+      font-size: 36px;
+    }
   }
 </style>

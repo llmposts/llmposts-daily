@@ -1,5 +1,6 @@
 ---
 import type { Post } from "../lib/data";
+import { CATEGORY_BY_ZH, categoryColorVar } from "../lib/categories";
 
 interface Props {
   post: Post;
@@ -8,18 +9,39 @@ interface Props {
 
 const { post, index } = Astro.props;
 const num = String(index).padStart(2, "0");
+const cat = CATEGORY_BY_ZH.get(post.category);
+const catShort = cat?.short ?? post.category;
+const colorVar = categoryColorVar(post.category);
+
+// 从原文链接里抽个简短的域名作为来源标签
+let source = "";
+try {
+  const host = new URL(post.link).hostname.replace(/^www\./, "");
+  source = host;
+} catch {
+  source = "";
+}
 ---
 
-<article class="entry">
+<article class="entry" style={`--c: var(${colorVar})`}>
   <div class="entry-num">{num}</div>
   <div class="entry-body">
     <h3 class="entry-title">
       <a href={post.link} target="_blank" rel="noopener">{post.title}</a>
     </h3>
-    <p class="entry-summary">
-      {post.summary}<span class="cta-spacer" aria-hidden="true"></span>
-    </p>
-    <a class="cta" href={post.link} target="_blank" rel="noopener">阅读原文</a>
+    <p class="entry-summary">{post.summary}</p>
+    <div class="entry-foot">
+      <span class="meta">
+        <span class="cat">{catShort}</span>
+        {source && <>
+          <span class="sep">/</span>
+          <span class="src">{source}</span>
+        </>}
+      </span>
+      <a class="read" href={post.link} target="_blank" rel="noopener">
+        阅读原文 <span class="arr" aria-hidden="true">↗</span>
+      </a>
+    </div>
   </div>
 </article>
 
@@ -27,19 +49,21 @@ const num = String(index).padStart(2, "0");
   .entry {
     display: grid;
     grid-template-columns: 36px 1fr;
-    column-gap: 16px;
-    padding: 22px 0;
+    column-gap: 18px;
+    padding: 24px 0;
     border-top: 1px solid var(--border);
+    position: relative;
   }
   .entry:first-of-type {
     border-top: none;
     padding-top: 4px;
   }
   .entry-num {
-    font-size: 14px;
-    color: var(--cat-color, var(--muted));
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--c, var(--muted));
     font-weight: 600;
-    padding-top: 8px;
+    padding-top: 6px;
     font-feature-settings: "tnum" 1;
   }
   .entry-body {
@@ -47,78 +71,112 @@ const num = String(index).padStart(2, "0");
   }
   .entry-title {
     margin: 0 0 10px;
-    font-family: var(--font-sans);
-    font-size: 20px;
+    font-family: var(--font-serif);
+    font-size: 22px;
     font-weight: 600;
-    line-height: 1.45;
-    letter-spacing: -0.005em;
+    line-height: 1.32;
+    letter-spacing: -0.01em;
   }
   .entry-title a {
     color: var(--text);
     text-decoration: none;
-    background-image: linear-gradient(var(--link), var(--link));
-    background-size: 0 1.5px;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0 1px;
     background-position: 0 100%;
     background-repeat: no-repeat;
     transition: background-size 0.2s ease;
   }
   .entry-title a:hover {
-    background-size: 100% 1.5px;
+    background-size: 100% 1px;
   }
-
-  /* 摘要 — 默认左对齐;末尾用 .cta-spacer 占位给按钮腾右下角 */
   .entry-summary {
-    margin: 0;
+    margin: 0 0 12px;
     color: var(--text-soft);
-    font-size: 17.5px;
-    line-height: 1.75;
-  }
-  .cta-spacer {
-    display: inline-block;
-    width: 96px; /* 与 .cta 宽度匹配 */
-    height: 1em;
-    visibility: hidden;
-  }
-  .entry-body {
-    position: relative;
+    font-size: 15.5px;
+    line-height: 1.7;
+    text-wrap: pretty;
   }
 
-  /* "阅读原文" — 绝对定位到 entry-body 右下角,跟 .cta-spacer 共享同一坐标 */
-  .cta {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    font-size: 15.5px;
-    font-weight: 400;
-    color: var(--bg);
-    text-decoration: none;
-    padding: 1px 12px;
-    border: 1px solid var(--text);
-    border-radius: 5px;
-    background: var(--text);
-    line-height: 1.6;
-    white-space: nowrap;
-    transition: background-color 0.15s, color 0.15s, transform 0.05s,
-      border-color 0.15s;
+  /* Entry footer — mono meta left, sans 阅读原文 right */
+  .entry-foot {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 4px;
+    flex-wrap: wrap;
   }
-  .cta:hover {
-    background: transparent;
+  .entry-foot .meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    font-feature-settings: "tnum" 1;
+  }
+  .entry-foot .meta .sep {
+    color: var(--border-strong);
+  }
+  .entry-foot .meta .src {
+    color: var(--text-soft);
+  }
+  .entry-foot .meta .cat {
+    color: var(--c, var(--accent));
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .entry-foot .meta .cat::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--c, var(--accent));
+  }
+  .entry-foot .read {
+    margin-left: auto;
+    font-family: var(--font-sans);
+    font-size: 13.5px;
+    font-weight: 500;
     color: var(--text);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 0;
+    border-bottom: 1px solid var(--text);
+    transition: color 0.15s, border-color 0.15s;
   }
-  .cta:active {
-    transform: translateY(0.5px);
+  .entry-foot .read .arr {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    transition: transform 0.15s ease;
+  }
+  .entry-foot .read:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .entry-foot .read:hover .arr {
+    transform: translate(2px, -1px);
   }
 
   @media (max-width: 760px) {
     .entry {
-      grid-template-columns: 24px 1fr;
+      grid-template-columns: 28px 1fr;
       column-gap: 12px;
     }
     .entry-title {
-      font-size: 17.5px;
+      font-size: 19px;
     }
     .entry-summary {
-      font-size: 15.5px;
+      font-size: 15px;
+    }
+    .entry-foot .read {
+      margin-left: 0;
     }
   }
 </style>

@@ -1,6 +1,6 @@
 ---
 import type { DayGroup } from "../lib/data";
-import { categoryColorVar } from "../lib/categories";
+import { CATEGORY_BY_ZH, categoryColorVar } from "../lib/categories";
 import { weekdayCn, yearOf, relativeLabel } from "../lib/dates";
 import CategorySection from "./CategorySection.astro";
 
@@ -19,7 +19,7 @@ const month = parseInt(monthStr, 10);
 const dayOfMonth = parseInt(dayStr, 10);
 // 主打分类(篇数最多的)→ 决定当天的强调色
 const dominantCat = day.categories[0]?.category;
-const dayAccent = dominantCat ? categoryColorVar(dominantCat) : "--link";
+const dayAccent = dominantCat ? categoryColorVar(dominantCat) : "--accent";
 ---
 
 <section
@@ -27,43 +27,43 @@ const dayAccent = dominantCat ? categoryColorVar(dominantCat) : "--link";
   id={dayAnchor}
   style={`--day-accent: var(${dayAccent})`}
 >
-  <header class="day-header">
+  <header class="day-head">
     <div class="day-year">
       <span class="yr">{yearOf(day.key)}</span>
-      {rel && <span class="rel">· {rel}</span>}
+      {rel && <span class="rel"> · {rel}</span>}
     </div>
-    <h1 class="day-date">
+    <h2 class="day-date">
       <a href={`/daily/${day.key}/`}>
-        <span class="num">{month}</span> 月 <span class="num">{dayOfMonth}</span> 日
+        <span class="num">{month}</span><span class="unit">月</span><span class="num">{dayOfMonth}</span><span class="unit">日</span>
       </a>
       <span class="wk">{weekdayCn(day.key)}</span>
-    </h1>
-    <div class="day-meta">共 <span class="num">{day.posts.length}</span> 篇</div>
+    </h2>
+    <div class="day-meta">共 <span class="n">{day.posts.length}</span> 篇</div>
   </header>
 
   <div class="day-content">
     {
       showCatsNav && (
         <nav class="day-cats" aria-label="本日分类">
-          {day.categories.map((g) => (
-            <a
-              href={`#c-${day.key}-${g.category}`}
-              style={`--cat-color: var(${categoryColorVar(g.category)})`}
-            >
-              <span class="dot" />
-              {g.category}
-              <span class="cnt">{g.posts.length}</span>
-            </a>
-          ))}
+          {day.categories.map((g) => {
+            const meta = CATEGORY_BY_ZH.get(g.category);
+            return (
+              <a
+                href={`#c-${day.key}-${g.category}`}
+                style={`--c: var(${categoryColorVar(g.category)})`}
+              >
+                <span class="dot" />
+                {meta?.short ?? g.category}
+                <span class="cnt">{g.posts.length}</span>
+              </a>
+            );
+          })}
         </nav>
       )
     }
     {
       day.categories.map((g) => (
-        <CategorySection
-          group={g}
-          anchorId={`c-${day.key}-${g.category}`}
-        />
+        <CategorySection group={g} anchorId={`c-${day.key}-${g.category}`} />
       ))
     }
   </div>
@@ -87,7 +87,7 @@ const dayAccent = dominantCat ? categoryColorVar(dominantCat) : "--link";
     border-top: none;
   }
 
-  /* 垂直 rail */
+  /* Vertical rail (timeline) */
   .day::before {
     content: "";
     position: absolute;
@@ -99,17 +99,16 @@ const dayAccent = dominantCat ? categoryColorVar(dominantCat) : "--link";
     background: var(--border);
   }
 
-  .day-header {
+  .day-head {
     grid-column: 1;
     text-align: right;
     position: relative;
   }
-  /* 圆点 */
-  .day-header::after {
+  .day-head::after {
     content: "";
     position: absolute;
     right: calc(-1 * (var(--col-gap) / 2) - 5.5px);
-    top: 28px;
+    top: 30px;
     width: 11px;
     height: 11px;
     border-radius: 50%;
@@ -117,28 +116,29 @@ const dayAccent = dominantCat ? categoryColorVar(dominantCat) : "--link";
     border: 2px solid var(--muted);
     box-sizing: border-box;
   }
-  .day.is-first .day-header::after {
-    background: var(--day-accent, var(--text));
-    border-color: var(--day-accent, var(--text));
+  .day.is-first .day-head::after {
+    background: var(--day-accent, var(--accent));
+    border-color: var(--day-accent, var(--accent));
   }
 
   .day-year {
-    font-size: 14px;
-    color: var(--text-soft);
-    font-weight: 500;
-    margin-bottom: 8px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    margin-bottom: 6px;
   }
   .day-year .rel {
-    color: var(--day-accent, var(--link));
-    font-weight: 500;
-    margin-left: 4px;
+    color: var(--accent);
   }
   .day-date {
     margin: 0;
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: -0.015em;
-    line-height: 1.2;
+    font-family: var(--font-serif);
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1;
     color: var(--text);
     white-space: nowrap;
   }
@@ -146,30 +146,39 @@ const dayAccent = dominantCat ? categoryColorVar(dominantCat) : "--link";
     color: inherit;
     text-decoration: none;
   }
-  .day-date a:hover {
-    color: var(--link);
+  .day-date a:hover .num {
+    color: var(--accent);
   }
   .day-date .num {
-    color: var(--day-accent, var(--link));
+    color: var(--day-accent, var(--accent));
     font-feature-settings: "tnum" 1;
+    transition: color 0.15s;
+  }
+  .day-date .unit {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    color: var(--text);
   }
   .day-date .wk {
     display: block;
-    font-size: 14px;
+    font-family: var(--font-sans);
+    font-size: 13px;
     color: var(--text-soft);
     font-weight: 500;
-    margin-top: 6px;
+    margin-top: 8px;
+    letter-spacing: 0;
   }
   .day-meta {
-    font-size: 14px;
-    color: var(--text-soft);
-    font-weight: 500;
-    margin-top: 10px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    margin-top: 12px;
   }
-  .day-meta .num {
-    color: var(--day-accent, var(--link));
+  .day-meta .n {
+    color: var(--text);
     font-weight: 600;
-    font-feature-settings: "tnum" 1;
   }
 
   .day-content {
@@ -180,66 +189,64 @@ const dayAccent = dominantCat ? categoryColorVar(dominantCat) : "--link";
   .day-cats {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin: 0 0 28px;
+    gap: 6px;
+    margin: 0 0 24px;
   }
   .day-cats a {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-size: 14px;
+    gap: 7px;
+    font-size: 12.5px;
     font-weight: 500;
     color: var(--text-soft);
     text-decoration: none;
-    padding: 4px 12px 4px 10px;
+    padding: 4px 11px 4px 9px;
     background: var(--chip-bg);
     border-radius: 999px;
     border: 1px solid transparent;
     transition: border-color 0.15s;
   }
   .day-cats a:hover {
-    border-color: var(--muted);
-  }
-  .day-cats .cnt {
-    color: var(--muted);
-    font-size: 13px;
-    margin-left: 2px;
+    border-color: var(--border-strong);
+    color: var(--text);
   }
   .day-cats .dot {
-    display: inline-block;
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: var(--cat-color, var(--muted));
+    background: var(--c, var(--muted));
     flex-shrink: 0;
+  }
+  .day-cats .cnt {
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
   }
 
   @media (max-width: 760px) {
     .day {
       display: block;
-      padding-top: 56px;
+      padding-top: 40px;
+      margin-top: 40px;
     }
     .day::before {
       display: none;
     }
-    .day-header {
+    .day-head {
       text-align: left;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
-    .day-header::after {
+    .day-head::after {
       display: none;
     }
     .day-date {
-      font-size: 26px;
+      font-size: 32px;
     }
     .day-date .wk {
       display: inline;
       margin-top: 0;
-      font-size: 14px;
-    }
-    .day-date .wk::before {
-      content: " · ";
-      color: var(--muted);
+      font-size: 13px;
+      margin-left: 10px;
     }
   }
 </style>

@@ -2,12 +2,36 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import DayBlock from "../components/DayBlock.astro";
+import EntryCard from "../components/EntryCard.astro";
 import PosterButton from "../components/PosterButton.astro";
-import { recentDays } from "../lib/data";
-import { formatCnLongDate, weekdayCn } from "../lib/dates";
+import { recentDays, getAvailableDateKeys } from "../lib/data";
+import { CATEGORY_BY_ZH, categoryColorVar } from "../lib/categories";
+import {
+  formatCnLongDate,
+  formalChineseDate,
+  weekdayCn,
+  relativeLabel,
+} from "../lib/dates";
 
-const days = recentDays(7);
+const days = recentDays(8);
 const latest = days[0];
+const rest = days.slice(1);
+const allKeys = getAvailableDateKeys();
+const totalIssues = allKeys.length;
+const issueNumber = latest
+  ? totalIssues - Math.max(allKeys.indexOf(latest.key), 0)
+  : 0;
+
+const latestPostCount = latest?.posts.length ?? 0;
+const latestCatCount = latest?.categories.length ?? 0;
+// 粗略阅读时长:每条 ~4 分钟
+const readTime = latestPostCount * 4;
+
+// Cover = 第一条要闻
+const cover = latest?.posts[0];
+const coverCat = cover ? CATEGORY_BY_ZH.get(cover.category) : null;
+const coverList = latest ? latest.posts.slice(0, 3) : [];
+
 const siteOrigin = Astro.site?.toString() ?? "https://archive.llmposts.com";
 const posterData = latest
   ? {
@@ -28,25 +52,124 @@ const posterData = latest
       url: `${siteOrigin.replace(/\/$/, "")}/daily/${latest.key}/`,
     }
   : null;
+
+const masthead = latest
+  ? {
+      edition: `VOL.${String(new Date(latest.key).getFullYear()).slice(2)}`,
+      issue: `#${issueNumber}`,
+      date: formalChineseDate(latest.key),
+      weekday: weekdayCn(latest.key),
+      rel: relativeLabel(latest.key),
+      subtitle: `今日 ${latestPostCount} 篇要闻 · 约 ${readTime} 分钟阅读`,
+    }
+  : null;
 ---
 
-<BaseLayout title="LLM 日报">
-  <SiteHeader active="all" />
-  <main>
-    {posterData && (
-      <div class="page-actions">
-        <span class="action-hint">为最新一期生成可分享海报</span>
-        <PosterButton data={posterData} />
+<BaseLayout title="LLM 日报 · 大模型邮报">
+  {masthead && (
+    <header class="mast">
+      <div class="mast-row">
+        <span>LLM Daily <span class="dot">·</span> 大模型邮报</span>
+        <span>{masthead.edition} <span class="dot">·</span> {masthead.issue}</span>
       </div>
+      <h1 class="mast-title">
+        大模型<span class="amp">·</span>邮报
+      </h1>
+      <p class="mast-tagline">每日精选 · 由编辑团队与 AI 协同摘要 · 仅作存档</p>
+      <div class="mast-meta">
+        <span>
+          <strong>{masthead.date}</strong> · {masthead.weekday}
+          {masthead.rel && <span class="rel"> · {masthead.rel}</span>}
+        </span>
+        <span>{masthead.subtitle}</span>
+      </div>
+    </header>
+  )}
+
+  <SiteHeader active="all" />
+
+  <main>
+    {latest && cover && (
+      <section class="hero">
+        <div>
+          <div class="hero-meta">今日号外 · TODAY'S COVER</div>
+          <h2 class="hero-title">
+            <a href={cover.link} target="_blank" rel="noopener">{cover.title}</a>
+          </h2>
+          <p class="hero-lede">{cover.summary}</p>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="n">{latestPostCount}</span>
+              <span class="l">篇要闻</span>
+            </div>
+            <div class="hero-stat">
+              <span class="n">{readTime}<span class="sub">min</span></span>
+              <span class="l">阅读时长</span>
+            </div>
+            <div class="hero-stat">
+              <span class="n">{latestCatCount}</span>
+              <span class="l">个类别</span>
+            </div>
+            <div class="hero-stat">
+              <span class="n">{totalIssues}</span>
+              <span class="l">期累计</span>
+            </div>
+          </div>
+          <div class="hero-cta">
+            <a class="btn primary" href={`/daily/${latest.key}/`}>
+              阅读今日 <span class="arr">→</span>
+            </a>
+            {posterData && <PosterButton data={posterData} />}
+          </div>
+        </div>
+
+        <div class="hero-list">
+          {coverList.map((p, i) => {
+            const meta = CATEGORY_BY_ZH.get(p.category);
+            const cv = categoryColorVar(p.category);
+            return (
+              <a
+                class="hero-li"
+                href={p.link}
+                target="_blank"
+                rel="noopener"
+                style={`--c: var(${cv})`}
+              >
+                <span class="num">{String(i + 1).padStart(2, "0")}</span>
+                <div>
+                  <h3>{p.title}</h3>
+                  <p>{p.summary}</p>
+                  <div class="meta">
+                    <span class="c">{meta?.short ?? p.category}</span>
+                    <span> · </span>
+                    <span>{meta?.en ?? ""}</span>
+                  </div>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </section>
     )}
-    {days.map((d, i) => <DayBlock day={d} isFirst={i === 0} />)}
+
+    <div class="section-rule">
+      <h3 class="section-title">
+        本周邮报
+        <span class="section-en">This Week</span>
+      </h3>
+      <a class="section-link" href="/daily/archive/">查看完整归档 →</a>
+    </div>
+
+    {rest.map((d) => <DayBlock day={d} />)}
+
     <nav class="older">
-      <a href="/daily/archive/">查看全部历史 ↓</a>
+      <a href="/daily/archive/">查看全部历史 →</a>
     </nav>
   </main>
+
   <footer class="site-footer">
-    <div class="footer-meta">
-      <span>LLM 日报 · 大模型邮报每日要闻汇总 · 仅摘要,完整文章在官网</span>
+    <div class="foot-bot">
+      <span>© {new Date().getFullYear()} LLM 日报 · 大模型邮报每日要闻汇总 · 仅作存档</span>
       <a class="right" href="https://llmposts.com">→ llmposts.com</a>
     </div>
   </footer>
@@ -54,31 +177,53 @@ const posterData = latest
 
 <style>
   main {
-    padding: 8px 0 64px;
+    padding: 0 0 64px;
   }
-  .page-actions {
+  .section-rule {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 14px;
-    padding: 20px 0 8px;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 44px 0 8px;
+    gap: 16px;
+    flex-wrap: wrap;
   }
-  .action-hint {
-    font-size: 13px;
+  .section-title {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .section-en {
+    font-family: var(--font-mono);
+    font-size: 12px;
     color: var(--muted);
+    margin-left: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
   }
-  @media (max-width: 760px) {
-    .page-actions { justify-content: space-between; }
-    .action-hint { font-size: 12px; }
+  .section-link {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: color 0.15s;
   }
+  .section-link:hover {
+    color: var(--accent);
+  }
+
   .older {
     margin-top: 80px;
     text-align: center;
   }
   .older a {
     display: inline-block;
-    padding: 9px 22px;
-    border: 1px solid var(--border);
+    padding: 10px 26px;
+    border: 1px solid var(--border-strong);
     border-radius: 999px;
     color: var(--text);
     text-decoration: none;
@@ -95,28 +240,31 @@ const posterData = latest
   .site-footer {
     border-top: 1px solid var(--border);
     margin-top: 96px;
-    padding: 56px 0 72px;
+    padding: 32px 0 60px;
   }
-  .footer-meta {
+  .foot-bot {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 12px;
-    font-size: 14px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     color: var(--muted);
   }
-  .footer-meta a {
+  .foot-bot a {
     color: var(--muted);
     text-decoration: none;
   }
-  .footer-meta a.right {
-    color: var(--link);
+  .foot-bot a.right {
+    color: var(--accent);
     font-weight: 500;
   }
-  .footer-meta a:hover {
+  .foot-bot a:hover {
     color: var(--text);
   }
-  .footer-meta a.right:hover {
-    text-decoration: underline;
+  .mast-meta .rel {
+    color: var(--accent);
   }
 </style>

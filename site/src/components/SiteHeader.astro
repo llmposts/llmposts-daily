@@ -10,135 +10,239 @@ interface Props {
 const { active = "all" } = Astro.props;
 ---
 
-<header class="site">
-  <a href="/" class="brand" aria-label="LLM 日报 首页">
-    <span class="brand-mark">LLM</span><span class="brand-sep">·</span><span class="brand-rhs">DAILY</span>
-  </a>
-  <nav class="chips" aria-label="分类筛选">
+<nav class="nav" aria-label="主导航">
+  <a class="nav-brand" href="/">LLM<span class="em">·</span>Daily</a>
+
+  <div class="nav-chips" aria-label="分类筛选">
     <a class={`chip${active === "all" ? " active" : ""}`} href="/">全部</a>
     {
       CATEGORIES.map((c) => (
         <a
           class={`chip${active === c.slug ? " active" : ""}`}
           href={`/category/${c.slug}/`}
+          style={`--c: var(${c.colorVar})`}
+          title={c.zh}
         >
-          {c.zh}
+          <span class="dot" />
+          {c.short}
         </a>
       ))
     }
-  </nav>
-  <div class="actions">
-    <button class="icon-btn" aria-label="搜索" title="搜索 (⌘K)">⌘K</button>
-    <ThemeToggle />
-    <a class="icon-btn rss" href="/rss.xml" aria-label="RSS" title="RSS">RSS</a>
   </div>
-</header>
+
+  <div class="nav-actions">
+    <button class="search-btn" type="button" title="搜索 (⌘K · 即将推出)" aria-label="搜索">
+      <span class="ico" aria-hidden="true">⌕</span>
+      <span class="lbl">搜索邮报、主题、机构</span>
+      <span class="kbd" aria-hidden="true">⌘K</span>
+    </button>
+    <ThemeToggle />
+    <a class="text-btn" href="/rss.xml" title="RSS 订阅">RSS</a>
+    <a class="sub-btn" href="https://llmposts.com" title="访问主站订阅">
+      订阅 <span class="arr" aria-hidden="true">→</span>
+    </a>
+  </div>
+</nav>
 
 <style>
-  .site {
+  .nav {
     position: sticky;
     top: 0;
     z-index: 10;
-    background: color-mix(in oklab, var(--bg) 88%, transparent);
+    background: color-mix(in oklab, var(--bg) 90%, transparent);
     backdrop-filter: saturate(180%) blur(10px);
     -webkit-backdrop-filter: saturate(180%) blur(10px);
     border-bottom: 1px solid var(--border);
     display: flex;
     align-items: center;
-    gap: 24px;
-    padding: 14px 24px;
-    margin: 0 -24px;
+    gap: 20px;
+    padding: 12px 32px;
+    margin: 0 -32px;
   }
-  .brand {
-    font-weight: 700;
-    font-size: 17px;
-    letter-spacing: -0.005em;
+  .nav-brand {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: -0.01em;
     color: var(--text);
     text-decoration: none;
-    display: inline-flex;
-    align-items: baseline;
     flex-shrink: 0;
   }
-  .brand-sep {
-    color: var(--muted);
+  .nav-brand .em {
+    color: var(--accent);
+    font-style: italic;
+    font-weight: 500;
     margin: 0 1px;
   }
-  .brand-rhs {
-    color: var(--muted);
-    font-weight: 600;
-  }
-  .chips {
+
+  .nav-chips {
     display: flex;
-    gap: 6px;
-    overflow-x: auto;
+    gap: 4px;
     flex: 1;
+    overflow-x: auto;
     scrollbar-width: none;
   }
-  .chips::-webkit-scrollbar {
+  .nav-chips::-webkit-scrollbar {
     display: none;
   }
   .chip {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     color: var(--chip-text);
-    background: var(--chip-bg);
+    background: transparent;
     padding: 5px 12px;
     border-radius: 999px;
-    text-decoration: none;
     border: 1px solid transparent;
     white-space: nowrap;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     transition: background-color 0.15s, color 0.15s;
+  }
+  .chip:hover {
+    background: var(--chip-bg);
+    color: var(--text);
   }
   .chip.active {
     background: var(--text);
     color: var(--bg);
     font-weight: 600;
   }
-  .chip:not(.active):hover {
-    color: var(--text);
+  .chip .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--c, var(--muted));
+    display: inline-block;
+    flex-shrink: 0;
   }
-  .actions {
+
+  .nav-actions {
     display: flex;
-    gap: 4px;
+    gap: 6px;
     align-items: center;
     flex-shrink: 0;
   }
-  .icon-btn {
-    width: 32px;
-    height: 32px;
+
+  /* Search trigger — pill with icon + label + kbd */
+  .search-btn {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    color: var(--muted);
-    border-radius: 8px;
+    gap: 8px;
+    height: 32px;
+    padding: 0 6px 0 12px;
+    background: var(--chip-bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text-soft);
+    font-family: var(--font-sans);
     font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    min-width: 220px;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .search-btn:hover {
+    border-color: var(--border-strong);
+    color: var(--text);
+  }
+  .search-btn .ico {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .search-btn .lbl {
+    flex: 1;
+    text-align: left;
+    color: var(--muted);
+  }
+  .search-btn .kbd {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 6px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    color: var(--text-soft);
+  }
+
+  /* Compact mono label (RSS) */
+  .text-btn {
+    height: 32px;
+    padding: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    color: var(--text-soft);
+    font-family: var(--font-mono);
+    font-size: 11px;
     font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
     text-decoration: none;
   }
-  .icon-btn:hover {
+  .text-btn:hover {
     background: var(--chip-bg);
     color: var(--text);
   }
-  .icon-btn.rss {
+
+  /* Subscribe — primary CTA in nav */
+  .sub-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    height: 32px;
+    padding: 0 14px;
+    background: var(--text);
+    color: var(--bg);
+    border: 1px solid var(--text);
+    border-radius: 999px;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.15s, border-color 0.15s;
+  }
+  .sub-btn:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  .sub-btn .arr {
+    font-family: var(--font-mono);
     font-size: 12px;
   }
 
-  @media (max-width: 760px) {
-    .site {
-      padding: 12px 18px;
-      margin: 0 -18px;
-      gap: 16px;
+  @media (max-width: 900px) {
+    .search-btn {
+      min-width: 0;
+      padding: 0 10px;
     }
-    .chips {
-      gap: 4px;
-    }
-    .brand-rhs {
+    .search-btn .lbl {
       display: none;
     }
-    .brand-sep {
+    .search-btn .kbd {
+      display: none;
+    }
+  }
+  @media (max-width: 760px) {
+    .nav {
+      padding: 12px 18px;
+      margin: 0 -18px;
+      gap: 12px;
+    }
+    .nav-chips {
+      order: 3;
+      flex-basis: 100%;
+      margin-top: 6px;
+    }
+    .text-btn {
       display: none;
     }
   }

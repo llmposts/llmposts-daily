@@ -1,16 +1,18 @@
 export interface CategoryMeta {
   zh: string;
+  /** 2-char chip label */
+  short: string;
   slug: string;
   en: string;
   colorVar: string;
 }
 
 export const CATEGORIES: CategoryMeta[] = [
-  { zh: "模型动态", slug: "model-updates", en: "Model Updates",  colorVar: "--c-model" },
-  { zh: "研究前沿", slug: "research",      en: "Research",       colorVar: "--c-research" },
-  { zh: "工程实践", slug: "engineering",   en: "Engineering",    colorVar: "--c-eng" },
-  { zh: "教程指南", slug: "tutorials",     en: "Tutorials",      colorVar: "--c-tut" },
-  { zh: "行业观察", slug: "industry",      en: "Industry Watch", colorVar: "--c-industry" },
+  { zh: "模型动态", short: "模型", slug: "model-updates", en: "Models",     colorVar: "--c-model" },
+  { zh: "研究前沿", short: "研究", slug: "research",      en: "Research",   colorVar: "--c-research" },
+  { zh: "工程实践", short: "工程", slug: "engineering",   en: "Engineering", colorVar: "--c-eng" },
+  { zh: "教程指南", short: "教程", slug: "tutorials",     en: "Tutorials",  colorVar: "--c-tut" },
+  { zh: "行业观察", short: "行业", slug: "industry",      en: "Industry",   colorVar: "--c-industry" },
 ];
 
 export const CATEGORY_BY_ZH: Map<string, CategoryMeta> = new Map(
