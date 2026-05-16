@@ -33,13 +33,8 @@ const dataId = `poster-data-${data.dateKey}`;
     type PosterTheme,
   } from "../scripts/poster";
 
-  interface Variant {
-    blob: Blob;
-    objectUrl: string;
-    showQr: boolean;
-  }
-  let variants: Variant[] = [];
-  let currentIndex = 0;
+  let currentBlob: Blob | null = null;
+  let currentUrl: string | null = null;
   let currentData: PosterData | null = null;
   let currentTheme: PosterTheme = "light";
 
@@ -57,10 +52,6 @@ const dataId = `poster-data-${data.dateKey}`;
         <div class="lp-poster-modal__preview">
           <img alt="海报预览" />
         </div>
-        <div class="lp-poster-modal__variants">
-          <button type="button" class="lp-poster-modal__chip" data-poster-variant="0">有二维码</button>
-          <button type="button" class="lp-poster-modal__chip" data-poster-variant="1">无二维码</button>
-        </div>
         <div class="lp-poster-modal__actions">
           <button type="button" class="lp-poster-modal__btn" data-poster-theme>切换深浅</button>
           <button type="button" class="lp-poster-modal__btn" data-poster-copy>复制图片</button>
@@ -72,43 +63,36 @@ const dataId = `poster-data-${data.dateKey}`;
     return modal;
   }
 
-  function disposeVariants(): void {
-    variants.forEach((v) => URL.revokeObjectURL(v.objectUrl));
-    variants = [];
+  function disposeCurrent(): void {
+    if (currentUrl) {
+      URL.revokeObjectURL(currentUrl);
+      currentUrl = null;
+    }
+    currentBlob = null;
   }
 
-  function applyVariant(idx: number): void {
-    if (!variants.length || !currentData) return;
-    currentIndex = ((idx % variants.length) + variants.length) % variants.length;
-    const v = variants[currentIndex];
+  function applyCurrent(): void {
+    if (!currentBlob || !currentUrl || !currentData) return;
     const modal = ensureModal();
     const img = modal.querySelector("img") as HTMLImageElement;
     const dl = modal.querySelector(
       "[data-poster-download]",
     ) as HTMLAnchorElement;
-    img.src = v.objectUrl;
-    dl.href = v.objectUrl;
-    const qrSuffix = v.showQr ? "qr" : "noqr";
-    dl.download = `llm-daily-${currentData.dateKey}-${currentTheme}-${qrSuffix}.png`;
-    modal.querySelectorAll<HTMLElement>("[data-poster-variant]").forEach((b) => {
-      const i = Number(b.dataset.posterVariant);
-      b.classList.toggle("is-active", i === currentIndex);
-    });
+    img.src = currentUrl;
+    dl.href = currentUrl;
+    dl.download = `llm-daily-${currentData.dateKey}-${currentTheme}.png`;
   }
 
-  async function generateAll(theme: PosterTheme): Promise<void> {
+  async function generate(theme: PosterTheme): Promise<void> {
     if (!currentData) return;
-    const newVariants: Variant[] = [];
-    for (const showQr of [true, false]) {
-      const canvas = await renderPoster(currentData, { theme, showQr });
-      const blob = await canvasToBlob(canvas);
-      if (blob) {
-        newVariants.push({ blob, objectUrl: URL.createObjectURL(blob), showQr });
-      }
+    const canvas = await renderPoster(currentData, { theme, showQr: true });
+    const blob = await canvasToBlob(canvas);
+    disposeCurrent();
+    if (blob) {
+      currentBlob = blob;
+      currentUrl = URL.createObjectURL(blob);
+      applyCurrent();
     }
-    disposeVariants();
-    variants = newVariants;
-    applyVariant(currentIndex);
   }
 
   function showModal(): void {
@@ -154,12 +138,11 @@ const dataId = `poster-data-${data.dateKey}`;
           return;
         }
         currentTheme = getInitialTheme();
-        currentIndex = 0;
         trigger.disabled = true;
         const orig = trigger.textContent;
         trigger.textContent = "生成中…";
         try {
-          await generateAll(currentTheme);
+          await generate(currentTheme);
           showModal();
         } catch (err) {
           alert("海报生成失败,请刷新后重试。");
@@ -176,26 +159,19 @@ const dataId = `poster-data-${data.dateKey}`;
       }
       if (target.closest("[data-poster-theme]")) {
         currentTheme = currentTheme === "light" ? "dark" : "light";
-        await generateAll(currentTheme);
-        return;
-      }
-      const variantBtn = target.closest("[data-poster-variant]") as HTMLElement | null;
-      if (variantBtn) {
-        const idx = Number(variantBtn.dataset.posterVariant ?? "0");
-        applyVariant(idx);
+        await generate(currentTheme);
         return;
       }
       const copyBtn = target.closest("[data-poster-copy]") as HTMLButtonElement | null;
       if (copyBtn) {
-        const v = variants[currentIndex];
-        if (!v || !navigator.clipboard || !window.ClipboardItem) {
+        if (!currentBlob || !navigator.clipboard || !window.ClipboardItem) {
           copyBtn.textContent = "请下载";
           return;
         }
         const orig = copyBtn.textContent;
         try {
           await navigator.clipboard.write([
-            new ClipboardItem({ "image/png": v.blob }),
+            new ClipboardItem({ "image/png": currentBlob }),
           ]);
           copyBtn.textContent = "已复制";
         } catch {
@@ -218,20 +194,22 @@ const dataId = `poster-data-${data.dateKey}`;
 
 <style>
   .poster-trigger {
-    font-family: inherit;
-    font-size: 14px;
+    font-family: var(--font-sans);
+    font-size: 13.5px;
     font-weight: 500;
-    padding: 7px 16px;
-    border: 1px solid var(--border);
-    border-radius: 999px;
+    padding: 8px 16px;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--r-sm);
     background: var(--surface);
     color: var(--text);
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     transition: background-color 0.15s, border-color 0.15s;
   }
   .poster-trigger:hover {
     background: var(--chip-bg);
-    border-color: var(--muted);
   }
   .poster-trigger:disabled {
     opacity: 0.55;
@@ -307,33 +285,6 @@ const dataId = `poster-data-${data.dateKey}`;
     height: auto;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-  }
-  .lp-poster-modal__variants {
-    display: flex;
-    gap: 6px;
-    padding: 10px 16px 0;
-    justify-content: center;
-  }
-  .lp-poster-modal__chip {
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: 500;
-    padding: 5px 13px;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    background: var(--surface);
-    color: var(--text-soft);
-    cursor: pointer;
-    transition: background-color 0.15s, color 0.15s, border-color 0.15s;
-  }
-  .lp-poster-modal__chip:hover {
-    border-color: var(--muted);
-  }
-  .lp-poster-modal__chip.is-active {
-    background: var(--text);
-    color: var(--bg);
-    border-color: var(--text);
-    font-weight: 600;
   }
   .lp-poster-modal__actions {
     display: flex;
