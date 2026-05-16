@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-16 · 共 6 篇
+## 🔥 最新汇总 · 2026-05-16 · 共 7 篇
 
-### 01 · 模型动态 · Model Updates · 6 篇
+### 01 · 模型动态 · Model Updates · 7 篇
+
+#### [Veo 4 被曝支持多机位场景生成：动态视角切换、9 秒 720p 输出](https://llmposts.com/models/veo-4-multi-camera-leak-google-io/)
+
+Veo 4 视频生成模型在 Google I/O 前夕被曝支持多机位场景生成与动态视角切换，单条视频输出规格为 9 秒 720p，原生音频同步能力同步升级，或定位为 Seedance 2.0 的竞品。
+
+[阅读全文 →](https://llmposts.com/models/veo-4-multi-camera-leak-google-io/)
 
 #### [OpenAI 与马耳他合作：ChatGPT Plus 将向全民免费开放](https://llmposts.com/models/openai-malta-chatgpt-plus-partnership/)
 
