@@ -126,23 +126,6 @@ a {
   position: relative;
   margin: 0 -32px;
 }
-.mast-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  font-family: var(--font-sans);
-  font-size: 13px;
-  letter-spacing: 0.01em;
-  color: var(--text-soft);
-  margin-bottom: 18px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--border);
-  font-feature-settings: "tnum" 1;
-}
-.mast-row .dot {
-  color: var(--accent);
-  margin: 0 6px;
-}
 .mast-body {
   display: grid;
   grid-template-columns: 1fr auto;
