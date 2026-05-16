@@ -489,9 +489,6 @@ const CAT_META = CATEGORIES.map((c) => ({
     border-radius: 12px;
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    max-height: calc(100vh - 96px);
   }
   .lp-search-modal__bar {
     display: flex;
@@ -585,8 +582,9 @@ const CAT_META = CATEGORIES.map((c) => ({
     flex-shrink: 0;
   }
   .lp-search-modal__results {
-    overflow: auto;
-    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 460px;
     min-height: 80px;
   }
   .lp-search-modal__group {

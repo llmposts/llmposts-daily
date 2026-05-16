@@ -357,6 +357,28 @@ a {
   color: var(--c, var(--accent));
 }
 
+.hero-more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-soft);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.hero-more:hover {
+  color: var(--accent);
+}
+.hero-more .arr {
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
 @media (max-width: 860px) {
   .hero {
     grid-template-columns: 1fr;

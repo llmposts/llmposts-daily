@@ -26,10 +26,11 @@ const latestCatCount = latest?.categories.length ?? 0;
 // 粗略阅读时长:每条 ~4 分钟
 const readTime = latestPostCount * 4;
 
-// Cover = 第一条要闻
+// Cover = 第一条要闻;右侧预览列表显示后续 (最多 3 条),并提示还有几条
 const cover = latest?.posts[0];
 const coverCat = cover ? CATEGORY_BY_ZH.get(cover.category) : null;
-const coverList = latest ? latest.posts.slice(0, 3) : [];
+const coverList = latest ? latest.posts.slice(1, 4) : [];
+const restCount = latest ? Math.max(latest.posts.length - 1 - coverList.length, 0) : 0;
 
 const siteOrigin = Astro.site?.toString() ?? "https://archive.llmposts.com";
 const posterData = latest
@@ -134,7 +135,7 @@ const masthead = latest
                 rel="noopener"
                 style={`--c: var(${cv})`}
               >
-                <span class="num">{String(i + 1).padStart(2, "0")}</span>
+                <span class="num">{String(i + 2).padStart(2, "0")}</span>
                 <div>
                   <h3>{p.title}</h3>
                   <p>{p.summary}</p>
@@ -147,6 +148,12 @@ const masthead = latest
               </a>
             );
           })}
+          {restCount > 0 && (
+            <a class="hero-more" href={latest && `/daily/${latest.key}/`}>
+              还有 {restCount} 篇 · 查看本期全部
+              <span class="arr" aria-hidden="true"> →</span>
+            </a>
+          )}
         </div>
       </section>
     )}
@@ -194,20 +201,17 @@ const masthead = latest
     margin: 0;
   }
   .section-en {
-    font-family: var(--font-mono);
-    font-size: 12px;
+    font-family: var(--font-sans);
+    font-size: 13px;
     color: var(--muted);
-    margin-left: 8px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    margin-left: 10px;
     font-weight: 500;
+    font-style: italic;
   }
   .section-link {
-    font-family: var(--font-mono);
-    font-size: 11px;
+    font-family: var(--font-sans);
+    font-size: 13px;
     color: var(--text-soft);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
     text-decoration: none;
     transition: color 0.15s;
   }
