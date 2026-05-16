@@ -1,5 +1,19 @@
 [
   {
+    "title": "SpaceXAI 研发骨干持续流失 预训练团队仅剩个位数",
+    "link": "https://llmposts.com/models/spacexai-talent-bleeding/",
+    "date": "2026-05-16T15:29:47",
+    "summary": "第三方媒体披露，SpaceXAI 人员流失态势严峻，超 50 名研发工程师自合并离任，核心预训练团队仅余个位数。此现象与高压工作文化叠加员工套现离场密切相关，恐影响模型迭代进度。",
+    "category": "模型动态"
+  },
+  {
+    "title": "OpenAI 宣布 Greg Brockman 接管产品战略与整合业务",
+    "link": "https://llmposts.com/models/openai-product-restructuring/",
+    "date": "2026-05-16T10:20:01",
+    "summary": "据 WIRED 报道，OpenAI 宣布 Greg Brockman 正式接管产品战略，主导 ChatGPT 与 Codex 核心业务合并。此次 OpenAI 产品重组将多条团队整合为单一产品线，目标在年底完成 IPO 前统一智能体架构。",
+    "category": "模型动态"
+  },
+  {
     "title": "ChatGPT 个人财务功能预览：接入账户与 GPT‑5.5 推理分析",
     "link": "https://llmposts.com/models/chatgpt-personal-finance-gpt55/",
     "date": "2026-05-16T00:47:28",
