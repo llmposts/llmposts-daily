@@ -519,9 +519,10 @@ export async function renderPoster(
     }
   }
 
-  // Footer text block — left of QR, or centered when no QR
-  const footerCenter = footerTop + footerH / 2 + 6;
-  const kickerText = BRAND_KICKER + (qrDrawn ? "" : "  ·  大模型邮报每日要闻");
+  // Footer text block — left of QR, or centered when no QR.
+  // Just the serif brand + italic tail; no mono kicker (redundant with the
+  // poster's top-of-card masthead row).
+  const footerCenter = footerTop + footerH / 2 + 12;
   const tailText = qrDrawn
     ? "扫码查看本期完整内容"
     : "每日精选 · 由编辑团队与 AI 协同摘要 · 仅作存档";
@@ -530,32 +531,24 @@ export async function renderPoster(
     ctx.textAlign = "left";
     const blockX = contentX;
 
-    ctx.font = `500 14px ${MONO_STACK}`;
-    ctx.fillStyle = pal.muted;
-    ctx.fillText(kickerText, blockX, footerCenter - 38);
-
-    ctx.font = `600 40px ${SERIF_STACK}`;
+    ctx.font = `600 44px ${SERIF_STACK}`;
     ctx.fillStyle = pal.text;
     ctx.fillText(BRAND_PRIMARY, blockX, footerCenter);
 
     ctx.font = `italic 400 20px ${SERIF_STACK}`;
     ctx.fillStyle = pal.textSoft;
-    ctx.fillText(tailText, blockX, footerCenter + 32);
+    ctx.fillText(tailText, blockX, footerCenter + 36);
   } else {
     ctx.textAlign = "center";
     const cx = cardX + cardW / 2;
 
-    ctx.font = `500 14px ${MONO_STACK}`;
-    ctx.fillStyle = pal.muted;
-    ctx.fillText(kickerText, cx, footerCenter - 38);
-
-    ctx.font = `600 44px ${SERIF_STACK}`;
+    ctx.font = `600 48px ${SERIF_STACK}`;
     ctx.fillStyle = pal.text;
     ctx.fillText(BRAND_PRIMARY, cx, footerCenter);
 
-    ctx.font = `italic 400 20px ${SERIF_STACK}`;
+    ctx.font = `italic 400 22px ${SERIF_STACK}`;
     ctx.fillStyle = pal.textSoft;
-    ctx.fillText(tailText, cx, footerCenter + 36);
+    ctx.fillText(tailText, cx, footerCenter + 40);
 
     ctx.textAlign = "left";
   }
