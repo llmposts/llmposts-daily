@@ -1,6 +1,8 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
 import { CATEGORIES } from "../lib/categories";
+import { allPosts } from "../lib/data";
+import { dateKey } from "../lib/dates";
 
 interface Props {
   /** 当前激活的分类 slug,'all' 或 category slug */
@@ -8,6 +10,24 @@ interface Props {
 }
 
 const { active = "all" } = Astro.props;
+
+// Build-time search index — compact field names to minimize page weight.
+// t=title, s=summary, l=link, d=dateKey, c=category (zh)
+const SEARCH_INDEX = allPosts().map((p) => ({
+  t: p.title,
+  s: p.summary,
+  l: p.link,
+  d: dateKey(p.date),
+  c: p.category,
+}));
+
+// Category palette for client-side rendering
+const CAT_META = CATEGORIES.map((c) => ({
+  zh: c.zh,
+  short: c.short,
+  slug: c.slug,
+  colorVar: c.colorVar,
+}));
 ---
 
 <nav class="nav" aria-label="主导航">
@@ -35,11 +55,11 @@ const { active = "all" } = Astro.props;
       class="search-btn"
       type="button"
       id="lp-search-trigger"
-      title="搜索本页要闻 (⌘K)"
+      title="搜索全部档案 (⌘K)"
       aria-label="搜索"
     >
       <span class="ico" aria-hidden="true">⌕</span>
-      <span class="lbl">搜索本页要闻</span>
+      <span class="lbl">搜索邮报、主题、机构</span>
       <span class="kbd" aria-hidden="true">⌘K</span>
     </button>
     <ThemeToggle />
@@ -50,6 +70,9 @@ const { active = "all" } = Astro.props;
   </div>
 </nav>
 
+<script id="lp-search-index" type="application/json" set:html={JSON.stringify(SEARCH_INDEX)}></script>
+<script id="lp-search-cats" type="application/json" set:html={JSON.stringify(CAT_META)}></script>
+
 <script is:inline>
   (() => {
     if (window.__lpSearchBound) return;
@@ -58,240 +81,425 @@ const { active = "all" } = Astro.props;
     const trigger = document.getElementById("lp-search-trigger");
     if (!trigger) return;
 
+    var INDEX = [];
+    var CATS = [];
+    var CAT_BY_ZH = {};
+    try {
+      INDEX = JSON.parse(
+        document.getElementById("lp-search-index").textContent || "[]",
+      );
+    } catch (_) {}
+    try {
+      CATS = JSON.parse(
+        document.getElementById("lp-search-cats").textContent || "[]",
+      );
+    } catch (_) {}
+    CATS.forEach(function (c) {
+      CAT_BY_ZH[c.zh] = c;
+    });
+
+    var WEEKDAYS = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
+    function weekdayOf(d) {
+      return WEEKDAYS[new Date(d + "T00:00:00").getDay()];
+    }
+    function shortDate(d) {
+      var parts = d.split("-");
+      return parseInt(parts[1], 10) + "." + parseInt(parts[2], 10);
+    }
+    function escapeHtml(s) {
+      return String(s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+    function highlightHtml(text, q) {
+      if (!q) return escapeHtml(text);
+      var lower = text.toLowerCase();
+      var ql = q.toLowerCase();
+      var idx = lower.indexOf(ql);
+      if (idx < 0) return escapeHtml(text);
+      return (
+        escapeHtml(text.slice(0, idx)) +
+        '<mark class="lp-search-hit">' +
+        escapeHtml(text.slice(idx, idx + q.length)) +
+        "</mark>" +
+        escapeHtml(text.slice(idx + q.length))
+      );
+    }
+    function excerptHtml(summary, q, maxLen) {
+      maxLen = maxLen || 90;
+      if (!q) {
+        var clipped =
+          summary.length > maxLen ? summary.slice(0, maxLen) + "…" : summary;
+        return escapeHtml(clipped);
+      }
+      var lower = summary.toLowerCase();
+      var idx = lower.indexOf(q.toLowerCase());
+      if (idx < 0) {
+        var c =
+          summary.length > maxLen ? summary.slice(0, maxLen) + "…" : summary;
+        return escapeHtml(c);
+      }
+      // Take a context window around the match
+      var start = Math.max(0, idx - 24);
+      var end = Math.min(summary.length, idx + q.length + 60);
+      var prefix = start > 0 ? "…" : "";
+      var suffix = end < summary.length ? "…" : "";
+      var slice = summary.slice(start, end);
+      return prefix + highlightHtml(slice, q) + suffix;
+    }
+
+    var state = {
+      query: "",
+      scope: "all", // "all" | "7" | "30"
+      cats: [], // array of zh names
+      selectedIndex: 0,
+      results: [],
+    };
+
+    function inScope(dateKey, scope) {
+      if (scope === "all") return true;
+      var days = scope === "7" ? 7 : 30;
+      var d = new Date(dateKey + "T00:00:00");
+      var diffMs = Date.now() - d.getTime();
+      return diffMs <= days * 86400000;
+    }
+
+    function applyFilters() {
+      var q = state.query.trim().toLowerCase();
+      var arr = INDEX.filter(function (p) {
+        if (state.cats.length && state.cats.indexOf(p.c) < 0) return false;
+        if (!inScope(p.d, state.scope)) return false;
+        if (!q) return true;
+        var hay = (p.t + " " + p.s + " " + p.c).toLowerCase();
+        return hay.indexOf(q) >= 0;
+      });
+      // Newest first
+      arr.sort(function (a, b) {
+        return a.d < b.d ? 1 : a.d > b.d ? -1 : 0;
+      });
+      state.results = arr.slice(0, 60);
+      state.selectedIndex = 0;
+    }
+
+    function renderResults() {
+      var box = document.querySelector("[data-search-results]");
+      if (!box) return;
+      var q = state.query.trim();
+      if (!state.results.length) {
+        box.innerHTML =
+          '<div class="lp-search-modal__empty">' +
+          (q
+            ? "没有命中,试试更短的关键词或切换范围"
+            : "输入关键词以搜索全部档案 · 中英文皆可") +
+          "</div>";
+        return;
+      }
+      var groupLabel =
+        '<div class="lp-search-modal__group">邮报 · ISSUES ' +
+        "(" +
+        state.results.length +
+        ")" +
+        "</div>";
+      var rows = state.results
+        .map(function (r, i) {
+          var meta = CAT_BY_ZH[r.c];
+          var cv = meta ? meta.colorVar : "--muted";
+          var short = meta ? meta.short : r.c;
+          var active = i === state.selectedIndex ? " is-active" : "";
+          return (
+            '<a class="lp-search-modal__row' +
+            active +
+            '" data-search-row="' +
+            i +
+            '" data-href="' +
+            escapeHtml(r.l) +
+            '" href="' +
+            escapeHtml(r.l) +
+            '" target="_blank" rel="noopener" style="--c: var(' +
+            cv +
+            ')">' +
+            '<div class="lp-search-modal__date">' +
+            '<div class="lp-search-modal__date-num">' +
+            shortDate(r.d) +
+            "</div>" +
+            '<div class="lp-search-modal__date-wk">' +
+            weekdayOf(r.d) +
+            "</div>" +
+            "</div>" +
+            '<div class="lp-search-modal__body">' +
+            '<div class="lp-search-modal__title">' +
+            highlightHtml(r.t, q) +
+            "</div>" +
+            '<div class="lp-search-modal__excerpt">' +
+            excerptHtml(r.s, q) +
+            "</div>" +
+            "</div>" +
+            '<span class="lp-search-modal__cat-pill">' +
+            '<span class="dot"></span>' +
+            short +
+            "</span>" +
+            "</a>"
+          );
+        })
+        .join("");
+      box.innerHTML = groupLabel + rows;
+    }
+
+    function renderCount() {
+      var el = document.querySelector("[data-search-count]");
+      if (!el) return;
+      el.textContent = state.results.length + " 个匹配";
+    }
+
+    function renderChips() {
+      // scope chips
+      document
+        .querySelectorAll("[data-search-scope]")
+        .forEach(function (b) {
+          b.classList.toggle(
+            "is-active",
+            b.getAttribute("data-search-scope") === state.scope,
+          );
+        });
+      // cat chips
+      document
+        .querySelectorAll("[data-search-cat]")
+        .forEach(function (b) {
+          var zh = b.getAttribute("data-search-cat");
+          b.classList.toggle("is-active", state.cats.indexOf(zh) >= 0);
+        });
+    }
+
+    function update() {
+      applyFilters();
+      renderResults();
+      renderCount();
+      renderChips();
+    }
+
     function ensureModal() {
-      let modal = document.getElementById("lp-search-modal");
+      var modal = document.getElementById("lp-search-modal");
       if (modal) return modal;
       modal = document.createElement("div");
       modal.id = "lp-search-modal";
       modal.className = "lp-search-modal";
       modal.hidden = true;
-      modal.innerHTML = [
-        '<div class="lp-search-modal__backdrop" data-search-close></div>',
-        '<div class="lp-search-modal__panel" role="dialog" aria-modal="true" aria-label="搜索">',
-        '  <div class="lp-search-modal__bar">',
-        '    <span class="lp-search-modal__ico" aria-hidden="true">⌕</span>',
-        '    <input class="lp-search-modal__input" type="text" placeholder="搜索本页要闻、标题、摘要…" autocomplete="off" />',
-        '    <kbd class="lp-search-modal__kbd">ESC</kbd>',
-        '  </div>',
-        '  <div class="lp-search-modal__status" data-search-status></div>',
-        '</div>',
-      ].join("");
+      var catChips = CATS.map(function (c) {
+        return (
+          '<button class="lp-chip" type="button" data-search-cat="' +
+          escapeHtml(c.zh) +
+          '" style="--c: var(' +
+          c.colorVar +
+          ')">' +
+          '<span class="dot"></span>' +
+          c.short +
+          "</button>"
+        );
+      }).join("");
+      modal.innerHTML =
+        '<div class="lp-search-modal__backdrop" data-search-close></div>' +
+        '<div class="lp-search-modal__panel" role="dialog" aria-modal="true" aria-label="搜索">' +
+        '  <div class="lp-search-modal__bar">' +
+        '    <span class="lp-search-modal__ico" aria-hidden="true">⌕</span>' +
+        '    <input class="lp-search-modal__input" type="text" placeholder="搜索邮报、标题、摘要…" autocomplete="off" />' +
+        '    <span class="lp-search-modal__count" data-search-count>0 个匹配</span>' +
+        '    <kbd class="kbd-key">ESC</kbd>' +
+        "  </div>" +
+        '  <div class="lp-search-modal__filters">' +
+        '    <span class="lp-search-modal__filt-label">范围</span>' +
+        '    <button class="lp-chip is-active" type="button" data-search-scope="all">全部</button>' +
+        '    <button class="lp-chip" type="button" data-search-scope="30">近 30 天</button>' +
+        '    <button class="lp-chip" type="button" data-search-scope="7">近 7 天</button>' +
+        '    <span class="lp-search-modal__divider" aria-hidden="true"></span>' +
+        catChips +
+        "  </div>" +
+        '  <div class="lp-search-modal__results" data-search-results></div>' +
+        '  <div class="lp-search-modal__footer">' +
+        '    <div class="lp-search-modal__shortcuts">' +
+        '      <span><kbd class="kbd-key">↑↓</kbd> 选择</span>' +
+        '      <span><kbd class="kbd-key">↵</kbd> 打开</span>' +
+        '      <span><kbd class="kbd-key">ESC</kbd> 关闭</span>' +
+        "    </div>" +
+        '    <span class="lp-search-modal__credit">由 LLM 日报本地索引提供</span>' +
+        "  </div>" +
+        "</div>";
       document.body.appendChild(modal);
       return modal;
     }
 
-    function getEntries() {
-      return Array.from(document.querySelectorAll("main .entry"));
-    }
-    function getDays() {
-      return Array.from(document.querySelectorAll("main .day"));
-    }
-    // Page chrome that should hide while a search filter is active,
-    // so the result list isn't pushed below the fold.
-    var CHROME_SELECTOR =
-      ".mast, .hero, .section-rule, .older, .prev-next, .issue-mast, .cat-hero";
-    function getChrome() {
-      return Array.from(document.querySelectorAll(CHROME_SELECTOR));
-    }
-
-    function highlight(el, query) {
-      const titleEl = el.querySelector(".entry-title a");
-      const sumEl = el.querySelector(".entry-summary");
-      [titleEl, sumEl].forEach((node) => {
-        if (!node) return;
-        if (!node.dataset.origText) node.dataset.origText = node.textContent;
-        const text = node.dataset.origText;
-        if (!query) {
-          node.textContent = text;
-          return;
-        }
-        const idx = text.toLowerCase().indexOf(query.toLowerCase());
-        if (idx < 0) {
-          node.textContent = text;
-          return;
-        }
-        node.innerHTML = "";
-        node.appendChild(document.createTextNode(text.slice(0, idx)));
-        const mark = document.createElement("mark");
-        mark.className = "lp-search-hit";
-        mark.textContent = text.slice(idx, idx + query.length);
-        node.appendChild(mark);
-        node.appendChild(document.createTextNode(text.slice(idx + query.length)));
-      });
-    }
-
-    function applyFilter(query) {
-      const q = query.trim().toLowerCase();
-      const entries = getEntries();
-      let visible = 0;
-      let firstHit = null;
-      entries.forEach((el) => {
-        if (!q) {
-          el.style.display = "";
-          highlight(el, "");
-          visible += 1;
-          return;
-        }
-        const hay = (el.textContent || "").toLowerCase();
-        const match = hay.indexOf(q) >= 0;
-        el.style.display = match ? "" : "none";
-        highlight(el, match ? query.trim() : "");
-        if (match) {
-          visible += 1;
-          if (!firstHit) firstHit = el;
-        }
-      });
-      // Hide day blocks whose entries are all filtered out
-      getDays().forEach((day) => {
-        const dayHasMatch = !!day.querySelector(".entry:not([data-hidden])");
-        let anyVisible = false;
-        day.querySelectorAll(".entry").forEach((e) => {
-          if (e.style.display !== "none") anyVisible = true;
-        });
-        day.style.display = q ? (anyVisible ? "" : "none") : "";
-      });
-      // Hide hero/masthead/section-header while searching, so the result
-      // list sits at the top of the viewport.
-      getChrome().forEach((el) => {
-        el.style.display = q ? "none" : "";
-      });
-      // Bring the first hit into view (so the user doesn't have to scroll
-      // through hidden space to find results).
-      if (q && firstHit) {
-        firstHit.scrollIntoView({ block: "center", behavior: "auto" });
-      } else if (!q) {
-        window.scrollTo({ top: 0, behavior: "auto" });
-      }
-      return visible;
-    }
-
-    function clearFilter() {
-      getEntries().forEach((el) => {
-        el.style.display = "";
-        highlight(el, "");
-      });
-      getDays().forEach((el) => {
-        el.style.display = "";
-      });
-      getChrome().forEach((el) => {
-        el.style.display = "";
-      });
-    }
-
     function openModal() {
-      const modal = ensureModal();
+      var modal = ensureModal();
       modal.hidden = false;
-      const input = modal.querySelector(".lp-search-modal__input");
-      setTimeout(() => input && input.focus(), 0);
+      document.documentElement.classList.add("lp-search-open");
+      var input = modal.querySelector(".lp-search-modal__input");
+      if (input) {
+        // Don't reset query — let the user resume their last search.
+        input.value = state.query;
+        setTimeout(function () {
+          input.focus();
+          input.select();
+        }, 0);
+      }
+      update();
     }
 
     function closeModal() {
-      const modal = document.getElementById("lp-search-modal");
+      var modal = document.getElementById("lp-search-modal");
       if (modal) modal.hidden = true;
-      clearFilter();
+      document.documentElement.classList.remove("lp-search-open");
     }
 
     function isOpen() {
-      const modal = document.getElementById("lp-search-modal");
+      var modal = document.getElementById("lp-search-modal");
       return !!modal && !modal.hidden;
     }
 
-    trigger.addEventListener("click", (e) => {
+    function selectIndex(i) {
+      var n = state.results.length;
+      if (!n) return;
+      state.selectedIndex = ((i % n) + n) % n;
+      // Light re-render of just the active class to avoid losing input focus
+      document
+        .querySelectorAll("[data-search-row]")
+        .forEach(function (row) {
+          var idx = parseInt(row.getAttribute("data-search-row"), 10);
+          row.classList.toggle("is-active", idx === state.selectedIndex);
+          if (idx === state.selectedIndex) {
+            row.scrollIntoView({ block: "nearest" });
+          }
+        });
+    }
+
+    function activate(i) {
+      var r = state.results[i];
+      if (!r) return;
+      window.open(r.l, "_blank", "noopener");
+    }
+
+    trigger.addEventListener("click", function (e) {
       e.stopPropagation();
       openModal();
     });
 
-    document.addEventListener("click", (e) => {
+    document.addEventListener("click", function (e) {
       if (!isOpen()) return;
-      const t = e.target;
+      var t = e.target;
       if (!t || !t.closest) return;
       if (t.closest("[data-search-close]")) {
         closeModal();
         return;
       }
-      // Click anywhere outside the panel → close (filter clears too)
-      if (!t.closest(".lp-search-modal__panel") && !t.closest("#lp-search-trigger")) {
-        closeModal();
-      }
-    });
-
-    document.addEventListener("input", (e) => {
-      const t = e.target;
-      if (!t || !t.classList || !t.classList.contains("lp-search-modal__input")) return;
-      const visible = applyFilter(t.value);
-      const status = document.querySelector("[data-search-status]");
-      if (!status) return;
-      const q = t.value.trim();
-      if (!q) status.textContent = "输入关键词以筛选本页要闻 · 支持中英文。";
-      else status.textContent = visible
-        ? "命中 " + visible + " 条 · 按 ESC 关闭并清除筛选"
-        : "没有匹配项 · 试试更短的关键词";
-    });
-
-    document.addEventListener("keydown", (e) => {
-      const isMac = navigator.platform.toLowerCase().includes("mac");
-      const meta = isMac ? e.metaKey : e.ctrlKey;
-      if (meta && (e.key === "k" || e.key === "K")) {
-        e.preventDefault();
-        openModal();
+      var scopeBtn = t.closest("[data-search-scope]");
+      if (scopeBtn) {
+        state.scope = scopeBtn.getAttribute("data-search-scope");
+        update();
         return;
       }
-      const modal = document.getElementById("lp-search-modal");
-      const open = modal && !modal.hidden;
-      if (open && e.key === "Escape") {
+      var catBtn = t.closest("[data-search-cat]");
+      if (catBtn) {
+        var zh = catBtn.getAttribute("data-search-cat");
+        var i = state.cats.indexOf(zh);
+        if (i >= 0) state.cats.splice(i, 1);
+        else state.cats.push(zh);
+        update();
+        return;
+      }
+      // Row click — allow native link behavior (target=_blank)
+    });
+
+    document.addEventListener("input", function (e) {
+      var t = e.target;
+      if (!t || !t.classList) return;
+      if (!t.classList.contains("lp-search-modal__input")) return;
+      state.query = t.value;
+      update();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      var isMac = navigator.platform.toLowerCase().indexOf("mac") >= 0;
+      var meta = isMac ? e.metaKey : e.ctrlKey;
+      if (meta && (e.key === "k" || e.key === "K")) {
+        e.preventDefault();
+        if (isOpen()) closeModal();
+        else openModal();
+        return;
+      }
+      if (!isOpen()) {
+        if (e.key === "/" && document.activeElement === document.body) {
+          e.preventDefault();
+          openModal();
+        }
+        return;
+      }
+      if (e.key === "Escape") {
         e.preventDefault();
         closeModal();
+        return;
       }
-      if (!open && e.key === "/" && document.activeElement === document.body) {
+      if (e.key === "ArrowDown") {
         e.preventDefault();
-        openModal();
+        selectIndex(state.selectedIndex + 1);
+        return;
+      }
+      if (e.key === "ArrowUp") {
+        e.preventDefault();
+        selectIndex(state.selectedIndex - 1);
+        return;
+      }
+      if (e.key === "Enter") {
+        e.preventDefault();
+        activate(state.selectedIndex);
       }
     });
   })();
 </script>
 
 <style is:global>
-  /* Search panel — anchored top-center, no opaque backdrop so the
-     filtered page stays visible behind it. */
+  html.lp-search-open {
+    overflow: hidden;
+  }
   .lp-search-modal {
     position: fixed;
-    top: 16px;
-    left: 0;
-    right: 0;
+    inset: 0;
     z-index: 60;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: 0 16px;
-    pointer-events: none;
+    padding: 64px 16px 16px;
   }
   .lp-search-modal[hidden] {
     display: none;
   }
   .lp-search-modal__backdrop {
-    /* Tiny invisible click target above the page; the panel is small
-       enough that scrolling/clicking elsewhere on the page works as
-       implicit dismiss. We avoid covering the page so filter results
-       remain visible while typing. */
-    display: none;
+    position: absolute;
+    inset: 0;
+    background: color-mix(in oklab, var(--text) 50%, transparent);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
   }
   .lp-search-modal__panel {
     position: relative;
     width: 100%;
-    max-width: 560px;
+    max-width: 720px;
     background: var(--surface);
-    border: 1px solid var(--border-strong);
+    border: 1px solid var(--border);
     border-radius: 12px;
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
     overflow: hidden;
-    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 96px);
   }
   .lp-search-modal__bar {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 14px 16px;
+    padding: 16px 20px;
     border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
   }
   .lp-search-modal__ico {
     font-family: var(--font-mono);
@@ -305,36 +513,216 @@ const { active = "all" } = Astro.props;
     background: transparent;
     color: var(--text);
     font-family: var(--font-sans);
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.4;
   }
   .lp-search-modal__input::placeholder {
     color: var(--muted);
   }
-  .lp-search-modal__kbd {
-    display: inline-flex;
-    align-items: center;
-    padding: 2px 8px;
-    background: var(--chip-bg);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--text-soft);
-  }
-  .lp-search-modal__status {
-    padding: 12px 16px;
+  .lp-search-modal__count {
     font-family: var(--font-mono);
     font-size: 11px;
     color: var(--muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+  .lp-search-modal__filters {
+    display: flex;
+    gap: 6px;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--border);
+    align-items: center;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+  }
+  .lp-search-modal__filt-label {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    margin-right: 4px;
+  }
+  .lp-search-modal__divider {
+    width: 1px;
+    height: 16px;
+    background: var(--border);
+    margin: 0 6px;
+    display: inline-block;
+  }
+  .lp-chip {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--chip-text);
+    background: transparent;
+    padding: 5px 12px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+  }
+  .lp-chip:hover {
+    background: var(--chip-bg);
+    color: var(--text);
+  }
+  .lp-chip.is-active {
+    background: var(--text);
+    color: var(--bg);
+    font-weight: 600;
+  }
+  .lp-chip .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--c, var(--muted));
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .lp-search-modal__results {
+    overflow: auto;
+    flex: 1;
+    min-height: 80px;
+  }
+  .lp-search-modal__group {
+    padding: 12px 20px 6px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    background: var(--surface-2);
+    border-bottom: 1px solid var(--border);
+  }
+  .lp-search-modal__row {
+    display: grid;
+    grid-template-columns: 70px 1fr 80px;
+    gap: 16px;
+    padding: 12px 20px;
+    border-top: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--text);
+    align-items: center;
+    border-left: 2px solid transparent;
+    transition: background-color 0.1s;
+  }
+  .lp-search-modal__row:first-of-type {
+    border-top: 0;
+  }
+  .lp-search-modal__row:hover,
+  .lp-search-modal__row.is-active {
+    background: var(--accent-soft);
+    border-left-color: var(--accent);
+  }
+  .lp-search-modal__date-num {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+    font-feature-settings: "tnum" 1;
+  }
+  .lp-search-modal__date-wk {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 2px;
+  }
+  .lp-search-modal__title {
+    font-family: var(--font-serif);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 4px;
+    color: var(--text);
+  }
+  .lp-search-modal__excerpt {
+    font-size: 12.5px;
+    color: var(--text-soft);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .lp-search-modal__cat-pill {
+    justify-self: end;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: color-mix(in oklab, var(--c, var(--muted)) 12%, transparent);
+    color: var(--c, var(--text-soft));
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .lp-search-modal__cat-pill .dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--c, var(--muted));
+  }
+  .lp-search-modal__empty {
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .lp-search-modal__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-top: 1px solid var(--border);
+    background: var(--surface-2);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .lp-search-modal__shortcuts {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
   }
   .lp-search-hit {
-    background: var(--accent-soft);
-    color: var(--accent);
+    background: color-mix(in oklab, var(--accent) 30%, transparent);
+    color: inherit;
     border-radius: 2px;
     padding: 0 2px;
+  }
+
+  @media (max-width: 640px) {
+    .lp-search-modal {
+      padding: 24px 8px 8px;
+    }
+    .lp-search-modal__panel {
+      max-height: calc(100vh - 32px);
+    }
+    .lp-search-modal__row {
+      grid-template-columns: 56px 1fr;
+    }
+    .lp-search-modal__cat-pill {
+      grid-column: 2;
+      justify-self: start;
+      margin-top: 4px;
+    }
+    .lp-search-modal__count {
+      display: none;
+    }
   }
 </style>
 

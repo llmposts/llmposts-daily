@@ -300,13 +300,11 @@ export async function renderPoster(
   // ===== Masthead =====
   let y = cardY + 56;
 
-  // Top mono row: LLM DAILY · 大模型邮报         VOL.xxxx.xx.xx
+  // Top row: just VOL number on the right (no kicker — redundant with the
+  // big serif headline below)
   ctx.font = `500 18px ${MONO_STACK}`;
-  ctx.fillStyle = pal.textSoft;
-  ctx.textAlign = "left";
-  ctx.fillText(`${BRAND_KICKER}  ·  大模型邮报`, contentX, y);
-  ctx.textAlign = "right";
   ctx.fillStyle = pal.muted;
+  ctx.textAlign = "right";
   ctx.fillText(`VOL.${data.vol}`, contentRight, y);
   ctx.textAlign = "left";
   y += 28;
@@ -393,8 +391,10 @@ export async function renderPoster(
   const N = Math.min(data.posts.length, maxItems);
   const overflow = data.posts.length - N;
 
+  // Extra bottom padding so footer text doesn't crowd the card edge
   const footerH = 200;
-  const footerTop = cardY + cardH - footerH - 32;
+  const footerBottomPad = 64;
+  const footerTop = cardY + cardH - footerH - footerBottomPad;
   const contentBottom = footerTop - 22;
   const availableContent = contentBottom - y;
 
