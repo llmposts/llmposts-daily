@@ -6,7 +6,6 @@ import PosterButton from "../../components/PosterButton.astro";
 import { dayGroup, getAvailableDateKeys } from "../../lib/data";
 import {
   formatCnLongDate,
-  formalChineseDate,
   weekdayCn,
   relativeLabel,
 } from "../../lib/dates";
@@ -34,7 +33,6 @@ interface Props {
 const { date, prev, next, issueNumber } = Astro.props;
 const day = dayGroup(date);
 const longDate = formatCnLongDate(date);
-const formal = formalChineseDate(date);
 const wk = weekdayCn(date);
 const rel = relativeLabel(date);
 const [, m, d] = date.split("-");
@@ -68,7 +66,7 @@ const posterData = {
     <header class="issue-mast">
       <div class="issue-row">
         {edition} <span class="dot">·</span> #{issueNumber}
-        <span class="dot">·</span> {formal} <span class="dot">·</span> {wk}
+        <span class="dot">·</span> {longDate} <span class="dot">·</span> {wk}
         {rel && <><span class="dot">·</span> <span class="rel">{rel}</span></>}
       </div>
       <h1 class="issue-title">
@@ -117,7 +115,7 @@ const posterData = {
 
   <footer class="site-footer">
     <div class="foot-bot">
-      <span>© {new Date().getFullYear()} LLM 日报 · 仅作存档</span>
+      <span>© {new Date().getFullYear()} LLM 日报(大模型日报) · 仅作存档</span>
       <a class="right" href="https://llmposts.com">→ llmposts.com</a>
     </div>
   </footer>
@@ -239,10 +237,9 @@ const posterData = {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 12px;
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    letter-spacing: 0.01em;
     color: var(--muted);
   }
   .foot-bot a {

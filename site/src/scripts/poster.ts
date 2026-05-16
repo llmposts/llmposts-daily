@@ -503,34 +503,62 @@ export async function renderPoster(
   ctx.lineTo(contentRight, footerTop + 0.5);
   ctx.stroke();
 
-  // QR on the right — always shown
-  const qrSize = 140;
-  const qrPad = 10;
-  const qrX = contentRight - qrSize;
-  const qrY = footerTop + (footerH - qrSize) / 2 + 6;
-  const qrMat = createQrMatrix(data.url);
-  if (qrMat) {
-    // QR with subtle background to ensure contrast in dark mode
-    ctx.fillStyle = pal.qrBg;
-    ctx.fillRect(qrX - qrPad, qrY - qrPad, qrSize + qrPad * 2, qrSize + qrPad * 2);
-    drawQr(ctx, qrMat, qrX, qrY, qrSize, pal.qrModule);
+  let qrDrawn = false;
+  if (options.showQr) {
+    const qrSize = 140;
+    const qrPad = 10;
+    const qrX = contentRight - qrSize;
+    const qrY = footerTop + (footerH - qrSize) / 2 + 6;
+    const qrMat = createQrMatrix(data.url);
+    if (qrMat) {
+      // QR with light tile for contrast (especially in dark mode)
+      ctx.fillStyle = pal.qrBg;
+      ctx.fillRect(qrX - qrPad, qrY - qrPad, qrSize + qrPad * 2, qrSize + qrPad * 2);
+      drawQr(ctx, qrMat, qrX, qrY, qrSize, pal.qrModule);
+      qrDrawn = true;
+    }
   }
 
-  // Footer text block on the left
+  // Footer text block — left of QR, or centered when no QR
   const footerCenter = footerTop + footerH / 2 + 6;
-  ctx.textAlign = "left";
+  const kickerText = BRAND_KICKER + (qrDrawn ? "" : "  ·  大模型邮报每日要闻");
+  const tailText = qrDrawn
+    ? "扫码查看本期完整内容"
+    : "每日精选 · 由编辑团队与 AI 协同摘要 · 仅作存档";
 
-  ctx.font = `500 14px ${MONO_STACK}`;
-  ctx.fillStyle = pal.muted;
-  ctx.fillText(BRAND_KICKER, contentX, footerCenter - 38);
+  if (qrDrawn) {
+    ctx.textAlign = "left";
+    const blockX = contentX;
 
-  ctx.font = `600 40px ${SERIF_STACK}`;
-  ctx.fillStyle = pal.text;
-  ctx.fillText(BRAND_PRIMARY, contentX, footerCenter);
+    ctx.font = `500 14px ${MONO_STACK}`;
+    ctx.fillStyle = pal.muted;
+    ctx.fillText(kickerText, blockX, footerCenter - 38);
 
-  ctx.font = `italic 400 20px ${SERIF_STACK}`;
-  ctx.fillStyle = pal.textSoft;
-  ctx.fillText("扫码查看本期完整内容", contentX, footerCenter + 32);
+    ctx.font = `600 40px ${SERIF_STACK}`;
+    ctx.fillStyle = pal.text;
+    ctx.fillText(BRAND_PRIMARY, blockX, footerCenter);
+
+    ctx.font = `italic 400 20px ${SERIF_STACK}`;
+    ctx.fillStyle = pal.textSoft;
+    ctx.fillText(tailText, blockX, footerCenter + 32);
+  } else {
+    ctx.textAlign = "center";
+    const cx = cardX + cardW / 2;
+
+    ctx.font = `500 14px ${MONO_STACK}`;
+    ctx.fillStyle = pal.muted;
+    ctx.fillText(kickerText, cx, footerCenter - 38);
+
+    ctx.font = `600 44px ${SERIF_STACK}`;
+    ctx.fillStyle = pal.text;
+    ctx.fillText(BRAND_PRIMARY, cx, footerCenter);
+
+    ctx.font = `italic 400 20px ${SERIF_STACK}`;
+    ctx.fillStyle = pal.textSoft;
+    ctx.fillText(tailText, cx, footerCenter + 36);
+
+    ctx.textAlign = "left";
+  }
 
   return canvas;
 }

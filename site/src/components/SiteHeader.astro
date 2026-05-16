@@ -11,7 +11,7 @@ const { active = "all" } = Astro.props;
 ---
 
 <nav class="nav" aria-label="主导航">
-  <a class="nav-brand" href="/">LLM<span class="em">·</span>Daily</a>
+  <a class="nav-brand" href="/">LLM<span class="em">·</span>日报</a>
 
   <div class="nav-chips" aria-label="分类筛选">
     <a class={`chip${active === "all" ? " active" : ""}`} href="/">全部</a>
@@ -153,24 +153,36 @@ const { active = "all" } = Astro.props;
     function openModal() {
       const modal = ensureModal();
       modal.hidden = false;
-      document.documentElement.classList.add("lp-search-open");
       const input = modal.querySelector(".lp-search-modal__input");
       setTimeout(() => input && input.focus(), 0);
     }
 
     function closeModal() {
       const modal = document.getElementById("lp-search-modal");
-      if (modal) {
-        modal.hidden = true;
-        document.documentElement.classList.remove("lp-search-open");
-      }
+      if (modal) modal.hidden = true;
       clearFilter();
     }
 
-    trigger.addEventListener("click", openModal);
+    function isOpen() {
+      const modal = document.getElementById("lp-search-modal");
+      return !!modal && !modal.hidden;
+    }
+
+    trigger.addEventListener("click", (e) => {
+      e.stopPropagation();
+      openModal();
+    });
 
     document.addEventListener("click", (e) => {
-      if (e.target && e.target.closest && e.target.closest("[data-search-close]")) {
+      if (!isOpen()) return;
+      const t = e.target;
+      if (!t || !t.closest) return;
+      if (t.closest("[data-search-close]")) {
+        closeModal();
+        return;
+      }
+      // Click anywhere outside the panel → close (filter clears too)
+      if (!t.closest(".lp-search-modal__panel") && !t.closest("#lp-search-trigger")) {
         closeModal();
       }
     });
@@ -211,36 +223,40 @@ const { active = "all" } = Astro.props;
 </script>
 
 <style is:global>
-  html.lp-search-open {
-    overflow: hidden;
-  }
+  /* Search panel — anchored top-center, no opaque backdrop so the
+     filtered page stays visible behind it. */
   .lp-search-modal {
     position: fixed;
-    inset: 0;
+    top: 16px;
+    left: 0;
+    right: 0;
     z-index: 60;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: 18vh 16px 16px;
+    padding: 0 16px;
+    pointer-events: none;
   }
   .lp-search-modal[hidden] {
     display: none;
   }
   .lp-search-modal__backdrop {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(6px);
+    /* Tiny invisible click target above the page; the panel is small
+       enough that scrolling/clicking elsewhere on the page works as
+       implicit dismiss. We avoid covering the page so filter results
+       remain visible while typing. */
+    display: none;
   }
   .lp-search-modal__panel {
     position: relative;
     width: 100%;
     max-width: 560px;
-    background: var(--bg);
+    background: var(--surface);
     border: 1px solid var(--border-strong);
     border-radius: 12px;
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
     overflow: hidden;
+    pointer-events: auto;
   }
   .lp-search-modal__bar {
     display: flex;

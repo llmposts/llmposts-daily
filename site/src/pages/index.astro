@@ -8,7 +8,6 @@ import { recentDays, getAvailableDateKeys } from "../lib/data";
 import { CATEGORY_BY_ZH, categoryColorVar } from "../lib/categories";
 import {
   formatCnLongDate,
-  formalChineseDate,
   weekdayCn,
   relativeLabel,
 } from "../lib/dates";
@@ -57,7 +56,7 @@ const masthead = latest
   ? {
       edition: `VOL.${String(new Date(latest.key).getFullYear()).slice(2)}`,
       issue: `#${issueNumber}`,
-      date: formalChineseDate(latest.key),
+      date: formatCnLongDate(latest.key),
       weekday: weekdayCn(latest.key),
       rel: relativeLabel(latest.key),
       subtitle: `今日 ${latestPostCount} 篇要闻 · 约 ${readTime} 分钟阅读`,
@@ -66,27 +65,31 @@ const masthead = latest
 ---
 
 <BaseLayout title="LLM 日报 · 大模型邮报">
+  <SiteHeader active="all" />
+
   {masthead && (
     <header class="mast">
       <div class="mast-row">
-        <span>LLM Daily <span class="dot">·</span> 大模型邮报</span>
+        <span>LLM 日报 <span class="dot">·</span> 大模型邮报</span>
         <span>{masthead.edition} <span class="dot">·</span> {masthead.issue}</span>
       </div>
-      <h1 class="mast-title">
-        大模型<span class="amp">·</span>邮报
-      </h1>
-      <p class="mast-tagline">每日精选 · 由编辑团队与 AI 协同摘要 · 仅作存档</p>
-      <div class="mast-meta">
-        <span>
-          <strong>{masthead.date}</strong> · {masthead.weekday}
-          {masthead.rel && <span class="rel"> · {masthead.rel}</span>}
-        </span>
-        <span>{masthead.subtitle}</span>
+      <div class="mast-body">
+        <div class="mast-left">
+          <h1 class="mast-title">
+            大模型<span class="amp">·</span>邮报
+          </h1>
+          <p class="mast-tagline">每日精选 · 由编辑团队与 AI 协同摘要 · 仅作存档</p>
+        </div>
+        <div class="mast-right">
+          <div class="mast-date">
+            <strong>{masthead.date}</strong> · {masthead.weekday}
+            {masthead.rel && <span class="rel"> · {masthead.rel}</span>}
+          </div>
+          <div class="mast-subtitle">{masthead.subtitle}</div>
+        </div>
       </div>
     </header>
   )}
-
-  <SiteHeader active="all" />
 
   <main>
     {latest && cover && (
@@ -169,7 +172,7 @@ const masthead = latest
 
   <footer class="site-footer">
     <div class="foot-bot">
-      <span>© {new Date().getFullYear()} LLM 日报 · 大模型邮报每日要闻汇总 · 仅作存档</span>
+      <span>© {new Date().getFullYear()} LLM 日报(大模型日报) · 仅作存档</span>
       <a class="right" href="https://llmposts.com">→ llmposts.com</a>
     </div>
   </footer>
@@ -247,10 +250,9 @@ const masthead = latest
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 12px;
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    letter-spacing: 0.01em;
     color: var(--muted);
   }
   .foot-bot a {

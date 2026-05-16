@@ -122,11 +122,9 @@ a {
 /* ===== Masthead ===== */
 .mast {
   border-bottom: 1px solid var(--text);
-  padding: 28px 0 22px;
+  padding: 28px 32px 26px;
   position: relative;
   margin: 0 -32px;
-  padding-left: 32px;
-  padding-right: 32px;
 }
 .mast-row {
   display: flex;
@@ -136,12 +134,26 @@ a {
   font-size: 13px;
   letter-spacing: 0.01em;
   color: var(--text-soft);
-  margin-bottom: 14px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
   font-feature-settings: "tnum" 1;
 }
 .mast-row .dot {
   color: var(--accent);
   margin: 0 6px;
+}
+.mast-body {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: end;
+}
+.mast-right {
+  text-align: right;
+  font-family: var(--font-sans);
+  font-feature-settings: "tnum" 1;
+  white-space: nowrap;
 }
 .mast-title {
   font-family: var(--font-serif);
@@ -162,22 +174,24 @@ a {
   font-size: 17px;
   font-style: italic;
   color: var(--text-soft);
-  margin-top: 10px;
+  margin: 10px 0 0;
   letter-spacing: 0.01em;
 }
-.mast-meta {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 18px;
-  padding-top: 14px;
-  border-top: 1px solid var(--border);
-  font-family: var(--font-sans);
+.mast-date {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+.mast-date .rel {
+  color: var(--accent);
+  font-weight: 600;
+}
+.mast-subtitle {
   font-size: 13px;
   color: var(--text-soft);
+  margin-top: 6px;
   letter-spacing: 0.01em;
-  font-feature-settings: "tnum" 1;
 }
 .mast-meta strong {
   color: var(--text);
@@ -187,13 +201,23 @@ a {
 @media (max-width: 760px) {
   .mast {
     margin: 0 -18px;
-    padding: 22px 18px 18px;
+    padding: 22px 18px 20px;
   }
   .mast-title {
-    font-size: 44px;
+    font-size: 40px;
   }
   .mast-tagline {
     font-size: 15px;
+  }
+  .mast-body {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .mast-right {
+    text-align: left;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    white-space: normal;
   }
 }
 
