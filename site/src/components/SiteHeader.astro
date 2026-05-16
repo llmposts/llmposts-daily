@@ -86,6 +86,13 @@ const { active = "all" } = Astro.props;
     function getDays() {
       return Array.from(document.querySelectorAll("main .day"));
     }
+    // Page chrome that should hide while a search filter is active,
+    // so the result list isn't pushed below the fold.
+    var CHROME_SELECTOR =
+      ".mast, .hero, .section-rule, .older, .prev-next, .issue-mast, .cat-hero";
+    function getChrome() {
+      return Array.from(document.querySelectorAll(CHROME_SELECTOR));
+    }
 
     function highlight(el, query) {
       const titleEl = el.querySelector(".entry-title a");
@@ -117,6 +124,7 @@ const { active = "all" } = Astro.props;
       const q = query.trim().toLowerCase();
       const entries = getEntries();
       let visible = 0;
+      let firstHit = null;
       entries.forEach((el) => {
         if (!q) {
           el.style.display = "";
@@ -128,15 +136,32 @@ const { active = "all" } = Astro.props;
         const match = hay.indexOf(q) >= 0;
         el.style.display = match ? "" : "none";
         highlight(el, match ? query.trim() : "");
-        if (match) visible += 1;
+        if (match) {
+          visible += 1;
+          if (!firstHit) firstHit = el;
+        }
       });
       // Hide day blocks whose entries are all filtered out
       getDays().forEach((day) => {
-        const anyVisible = day.querySelector('.entry[style*="display: none"]')
-          ? day.querySelectorAll(".entry:not([style*='display: none'])").length > 0
-          : true;
+        const dayHasMatch = !!day.querySelector(".entry:not([data-hidden])");
+        let anyVisible = false;
+        day.querySelectorAll(".entry").forEach((e) => {
+          if (e.style.display !== "none") anyVisible = true;
+        });
         day.style.display = q ? (anyVisible ? "" : "none") : "";
       });
+      // Hide hero/masthead/section-header while searching, so the result
+      // list sits at the top of the viewport.
+      getChrome().forEach((el) => {
+        el.style.display = q ? "none" : "";
+      });
+      // Bring the first hit into view (so the user doesn't have to scroll
+      // through hidden space to find results).
+      if (q && firstHit) {
+        firstHit.scrollIntoView({ block: "center", behavior: "auto" });
+      } else if (!q) {
+        window.scrollTo({ top: 0, behavior: "auto" });
+      }
       return visible;
     }
 
@@ -146,6 +171,9 @@ const { active = "all" } = Astro.props;
         highlight(el, "");
       });
       getDays().forEach((el) => {
+        el.style.display = "";
+      });
+      getChrome().forEach((el) => {
         el.style.display = "";
       });
     }
