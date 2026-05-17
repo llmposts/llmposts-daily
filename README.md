@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-17 · 共 6 篇
+## 🔥 最新汇总 · 2026-05-17 · 共 7 篇
 
-### 01 · 模型动态 · Model Updates · 5 篇
+### 01 · 模型动态 · Model Updates · 6 篇
+
+#### [Claude Sonnet 4.5 下架日期被曝改为 5 月 18 日 用户反馈未获官方回应](https://llmposts.com/models/claude-sonnet-4-5-deprecation-date-changed/)
+
+Claude Sonnet 4.5 下架日期被曝从 5 月 15 日悄然改为 5 月 18 日，Anthropic 未发布官方说明。用户过去一周积极反馈该模型不可替代性，未获回应。行业沟通透明度问题引发开发者社区关注。
+
+[阅读全文 →](https://llmposts.com/models/claude-sonnet-4-5-deprecation-date-changed/)
 
 #### [Microsoft AI CEO 预警：白领工作或在 18 个月内被 AI 全面自动化](https://llmposts.com/models/microsoft-ai-ceo-white-collar-automation-18-months/)
 
