@@ -1,5 +1,12 @@
 [
   {
+    "title": "Claude Mythos 现身 Google Cloud 控制台，Anthropic 或调整访问策略",
+    "link": "https://llmposts.com/models/claude-mythos-google-cloud-console-appearance/",
+    "date": "2026-05-17T07:54:14",
+    "summary": "Claude Mythos 被曝现身 Google Cloud 控制台且配置有跨区域配额，该模型此前由 Anthropic 限制仅向 Google、Microsoft 等合作伙伴开放用于防御性漏洞挖掘，社区对其是否会转向更广泛发布存在分歧。",
+    "category": "模型动态"
+  },
+  {
     "title": "Veo 4 被曝支持多机位场景生成：动态视角切换、9 秒 720p 输出",
     "link": "https://llmposts.com/models/veo-4-multi-camera-leak-google-io/",
     "date": "2026-05-16T23:48:58",

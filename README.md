@@ -8,56 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-05-16<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-05-17<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-16 · 共 7 篇
+## 🔥 最新汇总 · 2026-05-17 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 7 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Veo 4 被曝支持多机位场景生成：动态视角切换、9 秒 720p 输出](https://llmposts.com/models/veo-4-multi-camera-leak-google-io/)
+#### [Claude Mythos 现身 Google Cloud 控制台，Anthropic 或调整访问策略](https://llmposts.com/models/claude-mythos-google-cloud-console-appearance/)
 
-Veo 4 视频生成模型在 Google I/O 前夕被曝支持多机位场景生成与动态视角切换，单条视频输出规格为 9 秒 720p，原生音频同步能力同步升级，或定位为 Seedance 2.0 的竞品。
+Claude Mythos 被曝现身 Google Cloud 控制台且配置有跨区域配额，该模型此前由 Anthropic 限制仅向 Google、Microsoft 等合作伙伴开放用于防御性漏洞挖掘，社区对其是否会转向更广泛发布存在分歧。
 
-[阅读全文 →](https://llmposts.com/models/veo-4-multi-camera-leak-google-io/)
-
-#### [OpenAI 与马耳他合作：ChatGPT Plus 将向全民免费开放](https://llmposts.com/models/openai-malta-chatgpt-plus-partnership/)
-
-OpenAI 与马耳他政府达成全球首个国家级合作，向完成 AI 素养课程的所有公民提供一年免费 ChatGPT Plus。首批将于 2026 年 5 月启动。
-
-[阅读全文 →](https://llmposts.com/models/openai-malta-chatgpt-plus-partnership/)
-
-#### [OpenAI Codex 团队修复 GPT-5.5 性能异常，系统已恢复稳定运行](https://llmposts.com/models/openai-codex-team-fixes-gpt-5-5-performance-issues/)
-
-OpenAI Codex 团队于 2026 年 5 月 16 日确认修复两项导致 GPT-5.5 性能下降的技术问题，系统已恢复稳定运行，使用限制将在晚间验证完成后重置。
-
-[阅读全文 →](https://llmposts.com/models/openai-codex-team-fixes-gpt-5-5-performance-issues/)
-
-#### [Anthropic 与盖茨基金会达成 2 亿美元合作，聚焦全球健康与教育](https://llmposts.com/models/anthropic-gates-foundation-200m-partnership/)
-
-Anthropic 与盖茨基金会达成 2 亿美元合作，未来四年聚焦全球健康、教育及经济流动性领域，目标惠及 46 亿缺乏基本医疗服务的人口。
-
-[阅读全文 →](https://llmposts.com/models/anthropic-gates-foundation-200m-partnership/)
-
-#### [SpaceXAI 研发骨干持续流失 预训练团队仅剩个位数](https://llmposts.com/models/spacexai-talent-bleeding/)
-
-第三方媒体披露，SpaceXAI 人员流失态势严峻，超 50 名研发工程师自合并离任，核心预训练团队仅余个位数。此现象与高压工作文化叠加员工套现离场密切相关，恐影响模型迭代进度。
-
-[阅读全文 →](https://llmposts.com/models/spacexai-talent-bleeding/)
-
-#### [OpenAI 宣布 Greg Brockman 接管产品战略与整合业务](https://llmposts.com/models/openai-product-restructuring/)
-
-据 WIRED 报道，OpenAI 宣布 Greg Brockman 正式接管产品战略，主导 ChatGPT 与 Codex 核心业务合并。此次 OpenAI 产品重组将多条团队整合为单一产品线，目标在年底完成 IPO 前统一智能体架构。
-
-[阅读全文 →](https://llmposts.com/models/openai-product-restructuring/)
-
-#### [ChatGPT 个人财务功能预览：接入账户与 GPT‑5.5 推理分析](https://llmposts.com/models/chatgpt-personal-finance-gpt55/)
-
-OpenAI 向美国 ChatGPT Pro 用户推出个人财务功能预览，支持通过 Plaid 安全接入 1.2 万家金融机构账户，默认调用 GPT‑5.5 Thinking 模型进行收支分析与场景规划。
-
-[阅读全文 →](https://llmposts.com/models/chatgpt-personal-finance-gpt55/)
+[阅读全文 →](https://llmposts.com/models/claude-mythos-google-cloud-console-appearance/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
