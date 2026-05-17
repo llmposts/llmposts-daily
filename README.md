@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-17 · 共 3 篇
+## 🔥 最新汇总 · 2026-05-17 · 共 5 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 4 篇
+
+#### [Grok V9 1.5T 模型或将于夏季发布：xAI 完成基础训练并进入补充训练阶段](https://llmposts.com/models/grok-v9-1-5t-model-summer-release/)
+
+xAI 创始人 Elon Musk 披露 Grok V9 1.5T 模型已完成基础训练，参数量达 1.5T，预计 3 至 4 周后发布。该版本将整合 Cursor 数据进行补充训练，随后进入 SFT 与 RL 阶段。
+
+[阅读全文 →](https://llmposts.com/models/grok-v9-1-5t-model-summer-release/)
 
 #### [GitHub Copilot app 技术预览发布：桌面端 agentic 开发工作流](https://llmposts.com/models/github-copilot-app-technical-preview/)
 
@@ -34,6 +40,14 @@ OpenAI 宣布修复 Codex GPT-5.5 模型能力衰减问题，并于 5 月 16 日
 Claude Mythos 被曝现身 Google Cloud 控制台且配置有跨区域配额，该模型此前由 Anthropic 限制仅向 Google、Microsoft 等合作伙伴开放用于防御性漏洞挖掘，社区对其是否会转向更广泛发布存在分歧。
 
 [阅读全文 →](https://llmposts.com/models/claude-mythos-google-cloud-console-appearance/)
+
+### 02 · 工程实践 · Engineering · 1 篇
+
+#### [Claude Code 避坑指南:8 个最容易翻车的使用误区与解法](https://llmposts.com/engineering/claude-code-beginner-pitfalls-guide/)
+
+使用 Claude Code 最容易翻车的 8 个踩坑点:把它当 ChatGPT 用、忽视 /clear、不建 CLAUDE.md、报错只说"修一下"等,每个坑配具体解法,帮新手绕过最常见的失败模式。
+
+[阅读全文 →](https://llmposts.com/engineering/claude-code-beginner-pitfalls-guide/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**

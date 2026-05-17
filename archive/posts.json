@@ -1,5 +1,19 @@
 [
   {
+    "title": "Grok V9 1.5T 模型或将于夏季发布：xAI 完成基础训练并进入补充训练阶段",
+    "link": "https://llmposts.com/models/grok-v9-1-5t-model-summer-release/",
+    "date": "2026-05-17T17:00:10",
+    "summary": "xAI 创始人 Elon Musk 披露 Grok V9 1.5T 模型已完成基础训练，参数量达 1.5T，预计 3 至 4 周后发布。该版本将整合 Cursor 数据进行补充训练，随后进入 SFT 与 RL 阶段。",
+    "category": "模型动态"
+  },
+  {
+    "title": "Claude Code 避坑指南:8 个最容易翻车的使用误区与解法",
+    "link": "https://llmposts.com/engineering/claude-code-beginner-pitfalls-guide/",
+    "date": "2026-05-17T16:49:43",
+    "summary": "使用 Claude Code 最容易翻车的 8 个踩坑点:把它当 ChatGPT 用、忽视 /clear、不建 CLAUDE.md、报错只说\"修一下\"等,每个坑配具体解法,帮新手绕过最常见的失败模式。",
+    "category": "工程实践"
+  },
+  {
     "title": "GitHub Copilot app 技术预览发布：桌面端 agentic 开发工作流",
     "link": "https://llmposts.com/models/github-copilot-app-technical-preview/",
     "date": "2026-05-17T14:55:27",
