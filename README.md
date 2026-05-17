@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-17 · 共 1 篇
+## 🔥 最新汇总 · 2026-05-17 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [OpenAI 修复 Codex 中 GPT-5.5 性能衰减 重置付费计划用量限制](https://llmposts.com/models/codex-gpt-5-5-fix/)
+
+OpenAI 宣布修复 Codex GPT-5.5 模型能力衰减问题，并于 5 月 16 日重置全量付费计划用量限制。此次修复耗时不足 10 小时，涉及底层路由策略优化，直接提振了数百万周活跃用户的代码生成效率。
+
+[阅读全文 →](https://llmposts.com/models/codex-gpt-5-5-fix/)
 
 #### [Claude Mythos 现身 Google Cloud 控制台，Anthropic 或调整访问策略](https://llmposts.com/models/claude-mythos-google-cloud-console-appearance/)
 

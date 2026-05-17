@@ -1,5 +1,12 @@
 [
   {
+    "title": "OpenAI 修复 Codex 中 GPT-5.5 性能衰减 重置付费计划用量限制",
+    "link": "https://llmposts.com/models/codex-gpt-5-5-fix/",
+    "date": "2026-05-17T08:36:13",
+    "summary": "OpenAI 宣布修复 Codex GPT-5.5 模型能力衰减问题，并于 5 月 16 日重置全量付费计划用量限制。此次修复耗时不足 10 小时，涉及底层路由策略优化，直接提振了数百万周活跃用户的代码生成效率。",
+    "category": "模型动态"
+  },
+  {
     "title": "Claude Mythos 现身 Google Cloud 控制台，Anthropic 或调整访问策略",
     "link": "https://llmposts.com/models/claude-mythos-google-cloud-console-appearance/",
     "date": "2026-05-17T07:54:14",
