@@ -17,7 +17,7 @@
 
 ### 01 · 模型动态 · Model Updates · 6 篇
 
-#### [Claude Sonnet 4.5 下架日期被曝改为 5 月 18 日 用户反馈未获官方回应](https://llmposts.com/models/claude-sonnet-4-5-deprecation-date-changed/)
+#### [Claude Sonnet 4.5 下架日期延期为 5 月 18 日](https://llmposts.com/models/claude-sonnet-4-5-deprecation-date-changed/)
 
 Claude Sonnet 4.5 下架日期被曝从 5 月 15 日悄然改为 5 月 18 日，Anthropic 未发布官方说明。用户过去一周积极反馈该模型不可替代性，未获回应。行业沟通透明度问题引发开发者社区关注。
 
