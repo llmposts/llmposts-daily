@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-17 · 共 5 篇
+## 🔥 最新汇总 · 2026-05-17 · 共 6 篇
 
-### 01 · 模型动态 · Model Updates · 4 篇
+### 01 · 模型动态 · Model Updates · 5 篇
+
+#### [Microsoft AI CEO 预警：白领工作或在 18 个月内被 AI 全面自动化](https://llmposts.com/models/microsoft-ai-ceo-white-collar-automation-18-months/)
+
+Microsoft AI CEO Mustafa Suleyman 预测 18 个月内 AI 将全面自动化白领工作，涵盖会计、法律、营销等领域。然而 METR 研究显示 AI 使开发者效率下降 20%，2026 年至今已有 49,135 个 AI 相关岗位被裁。该预测与实体经济数据存在显著落差，实际影响有待验证。
+
+[阅读全文 →](https://llmposts.com/models/microsoft-ai-ceo-white-collar-automation-18-months/)
 
 #### [Grok V9 1.5T 模型或将于夏季发布：xAI 完成基础训练并进入补充训练阶段](https://llmposts.com/models/grok-v9-1-5t-model-summer-release/)
 
