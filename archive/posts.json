@@ -1,5 +1,12 @@
 [
   {
+    "title": "了解 Harness-engineering：让 Claude Code、Codex 更可靠",
+    "link": "https://llmposts.com/engineering/learn-harness-engineering-course-review/",
+    "date": "2026-05-18T21:26:47",
+    "summary": "开源课程 learn-harness-engineering（GitHub 4.6k stars）可以为 AI 编程 agent 设计可靠运行环境。12 讲座 + 6 项目，援引 Anthropic 对照实验——同模型同 prompt，有无 harness 的产出差距从\"不可用\"到\"可玩游戏\"。",
+    "category": "工程实践"
+  },
+  {
     "title": "oh-my-openagent 深度解读与上手：ultrawork、Hashline、多 agent 编排全拆解",
     "link": "https://llmposts.com/guides/oh-my-openagent-deep-dive-guide/",
     "date": "2026-05-18T16:59:45",
