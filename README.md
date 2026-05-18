@@ -13,9 +13,21 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-19 · 共 1 篇
+## 🔥 最新汇总 · 2026-05-19 · 共 3 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 3 篇
+
+#### [Claude 提示词缓存诊断功能上线：精准定位缓存未命中分歧点](https://llmposts.com/models/claude-prompt-cache-diagnostics-beta/)
+
+Claude 推出 Prompt cache diagnostics 测试版，传入 beta header cache-diagnosis-2026-04-07 与上一条响应 ID 即可对比请求指纹，精准定位模型参数、system prompt、工具或消息历史中的首次分歧点，帮助开发者修复缓存未命中根因。
+
+[阅读全文 →](https://llmposts.com/models/claude-prompt-cache-diagnostics-beta/)
+
+#### [Qwen3.6 MTP GGUF 发布：本地推理 1.4-2.2 倍加速，精度无损](https://llmposts.com/models/qwen3-6-mtp-gguf-speed-up/)
+
+Unsloth 为 Qwen3.6 发布 MTP（Multi Token Prediction）GGUF 量化版本，据官方测试本地推理速度提升 1.4-2.2 倍、精度无损。27B 在 RTX 6000 跑 160 tokens/s，35B-A3B 跑 240 tokens/s。Qwen3.5 全家族也补齐 MTP，已有用户可直接迁移。
+
+[阅读全文 →](https://llmposts.com/models/qwen3-6-mtp-gguf-speed-up/)
 
 #### [Anthropic 收购 Stainless 补强开发者工具链，交易或达 3 亿美元](https://llmposts.com/models/anthropic-acquires-stainless-mcp-sdk/)
 
