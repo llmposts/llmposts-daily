@@ -1,5 +1,12 @@
 [
   {
+    "title": "Cursor 发布 Composer 2.5：定向 RL 文本反馈与 Sharded Muon 优化器详解",
+    "link": "https://llmposts.com/models/cursor-composer-2-5-targeted-rl-sharded-muon/",
+    "date": "2026-05-19T04:40:36",
+    "summary": "Cursor 发布 Composer 2.5，基于 Kimi K2.5 开源检查点，采用定向 RL 文本反馈与 Sharded Muon 优化器，合成数据扩展 25 倍，输入定价 $0.50/百万 tokens，快速版本 $15/百万输出 tokens。",
+    "category": "模型动态"
+  },
+  {
     "title": "Claude 提示词缓存诊断功能上线：精准定位缓存未命中分歧点",
     "link": "https://llmposts.com/models/claude-prompt-cache-diagnostics-beta/",
     "date": "2026-05-19T04:32:12",

@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-19 · 共 3 篇
+## 🔥 最新汇总 · 2026-05-19 · 共 4 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 4 篇
+
+#### [Cursor 发布 Composer 2.5：定向 RL 文本反馈与 Sharded Muon 优化器详解](https://llmposts.com/models/cursor-composer-2-5-targeted-rl-sharded-muon/)
+
+Cursor 发布 Composer 2.5，基于 Kimi K2.5 开源检查点，采用定向 RL 文本反馈与 Sharded Muon 优化器，合成数据扩展 25 倍，输入定价 $0.50/百万 tokens，快速版本 $15/百万输出 tokens。
+
+[阅读全文 →](https://llmposts.com/models/cursor-composer-2-5-targeted-rl-sharded-muon/)
 
 #### [Claude 提示词缓存诊断功能上线：精准定位缓存未命中分歧点](https://llmposts.com/models/claude-prompt-cache-diagnostics-beta/)
 
