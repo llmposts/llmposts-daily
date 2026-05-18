@@ -1,5 +1,12 @@
 [
   {
+    "title": "Anthropic 收购 Stainless 补强开发者工具链，交易或达 3 亿美元",
+    "link": "https://llmposts.com/models/anthropic-acquires-stainless-mcp-sdk/",
+    "date": "2026-05-19T03:19:52",
+    "summary": "Anthropic 于 2026 年 5 月 18 日宣布收购 SDK 工具商 Stainless，交易金额据 The Information 报道或达 3 亿美元。Stainless 将为 Claude 的 MCP 生态与 agent 连接能力提供工具链支持。",
+    "category": "模型动态"
+  },
+  {
     "title": "了解 Harness-engineering：让 Claude Code、Codex 更可靠",
     "link": "https://llmposts.com/engineering/learn-harness-engineering-course-review/",
     "date": "2026-05-18T21:26:47",

@@ -8,42 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-05-18<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-05-19<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-18 · 共 4 篇
+## 🔥 最新汇总 · 2026-05-19 · 共 1 篇
 
 ### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [OpenAI Codex 限额故障 2 小时, 用户额度全额回退](https://llmposts.com/models/openai-codex-quota-glitch/)
+#### [Anthropic 收购 Stainless 补强开发者工具链，交易或达 3 亿美元](https://llmposts.com/models/anthropic-acquires-stainless-mcp-sdk/)
 
-OpenAI 的 Codex 编码智能体出现 OpenAI Codex 限额故障, 错误提示订阅用户余额仅剩 0%. 官方确认故障持续两小时, 期间被扣除的 token 将全额回退, 厂商已恢复限制并建议重用户精简提示词以稳定额度.
+Anthropic 于 2026 年 5 月 18 日宣布收购 SDK 工具商 Stainless，交易金额据 The Information 报道或达 3 亿美元。Stainless 将为 Claude 的 MCP 生态与 agent 连接能力提供工具链支持。
 
-[阅读全文 →](https://llmposts.com/models/openai-codex-quota-glitch/)
-
-### 02 · 工程实践 · Engineering · 1 篇
-
-#### [了解 Harness-engineering：让 Claude Code、Codex 更可靠](https://llmposts.com/engineering/learn-harness-engineering-course-review/)
-
-开源课程 learn-harness-engineering（GitHub 4.6k stars）可以为 AI 编程 agent 设计可靠运行环境。12 讲座 + 6 项目，援引 Anthropic 对照实验——同模型同 prompt，有无 harness 的产出差距从"不可用"到"可玩游戏"。
-
-[阅读全文 →](https://llmposts.com/engineering/learn-harness-engineering-course-review/)
-
-### 03 · 教程指南 · Tutorials · 2 篇
-
-#### [oh-my-openagent 深度解读与上手：ultrawork、Hashline、多 agent 编排全拆解](https://llmposts.com/guides/oh-my-openagent-deep-dive-guide/)
-
-oh-my-openagent（omo）是基于 OpenCode 的 agent harness 增强层，GitHub 54.9k stars。本文拆 ultrawork 一键编排、Hashline 哈希锚定编辑（据项目方 6.7%→68.3%）、Agent 类别路由、Team Mode 多 agent 并行四大设计，并附完整上手方式。
-
-[阅读全文 →](https://llmposts.com/guides/oh-my-openagent-deep-dive-guide/)
-
-#### [Claude Code Setup：一条命令搞定 Claude Code 配置](https://llmposts.com/guides/claude-code-setup-anthropic-plugin/)
-
-Anthropic 官方插件 Claude Code Setup 可以扫描你的项目代码，自动推荐适配的 MCP servers、Skills、Hooks、Subagents 和 Slash commands。整个过程只读不改文件，React 项目自动推 Playwright MCP，认证代码自动推 security-reviewer。安装量已破 11.7 万次。
-
-[阅读全文 →](https://llmposts.com/guides/claude-code-setup-anthropic-plugin/)
+[阅读全文 →](https://llmposts.com/models/anthropic-acquires-stainless-mcp-sdk/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
