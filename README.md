@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-19 · 共 4 篇
+## 🔥 最新汇总 · 2026-05-19 · 共 5 篇
 
-### 01 · 模型动态 · Model Updates · 4 篇
+### 01 · 模型动态 · Model Updates · 5 篇
+
+#### [Manus 发布 Scheduled Tasks 2.0：定时任务进入上下文感知时代](https://llmposts.com/models/manus-scheduled-tasks-2-0-context-aware/)
+
+Manus 于 2025 年 5 月 19 日发布 Scheduled Tasks 2.0，支持在同任务中延续上下文、为 Web 应用配置后台定时操作，并提供独立的调度视图与运行历史追踪。该功能已面向所有用户开放。
+
+[阅读全文 →](https://llmposts.com/models/manus-scheduled-tasks-2-0-context-aware/)
 
 #### [Cursor 发布 Composer 2.5：定向 RL 文本反馈与 Sharded Muon 优化器详解](https://llmposts.com/models/cursor-composer-2-5-targeted-rl-sharded-muon/)
 

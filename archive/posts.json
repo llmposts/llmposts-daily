@@ -1,5 +1,12 @@
 [
   {
+    "title": "Manus 发布 Scheduled Tasks 2.0：定时任务进入上下文感知时代",
+    "link": "https://llmposts.com/models/manus-scheduled-tasks-2-0-context-aware/",
+    "date": "2026-05-19T05:00:05",
+    "summary": "Manus 于 2025 年 5 月 19 日发布 Scheduled Tasks 2.0，支持在同任务中延续上下文、为 Web 应用配置后台定时操作，并提供独立的调度视图与运行历史追踪。该功能已面向所有用户开放。",
+    "category": "模型动态"
+  },
+  {
     "title": "Cursor 发布 Composer 2.5：定向 RL 文本反馈与 Sharded Muon 优化器详解",
     "link": "https://llmposts.com/models/cursor-composer-2-5-targeted-rl-sharded-muon/",
     "date": "2026-05-19T04:40:36",
