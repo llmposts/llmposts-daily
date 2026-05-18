@@ -734,6 +734,7 @@ const CAT_META = CATEGORIES.map((c) => ({
     -webkit-backdrop-filter: saturate(180%) blur(10px);
     border-bottom: 1px solid var(--border);
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 20px;
     padding: 12px 32px;
@@ -766,11 +767,12 @@ const CAT_META = CATEGORIES.map((c) => ({
     display: none;
   }
   .chip {
+    height: 32px;
     font-size: 13px;
     font-weight: 500;
     color: var(--chip-text);
     background: transparent;
-    padding: 5px 12px;
+    padding: 0 12px;
     border-radius: 999px;
     border: 1px solid transparent;
     white-space: nowrap;
