@@ -1,5 +1,12 @@
 [
   {
+    "title": "oh-my-openagent 深度解读与上手：ultrawork、Hashline、多 agent 编排全拆解",
+    "link": "https://llmposts.com/guides/oh-my-openagent-deep-dive-guide/",
+    "date": "2026-05-18T16:59:45",
+    "summary": "oh-my-openagent（omo）是基于 OpenCode 的 agent harness 增强层，GitHub 54.9k stars。本文拆 ultrawork 一键编排、Hashline 哈希锚定编辑（据项目方 6.7%→68.3%）、Agent 类别路由、Team Mode 多 agent 并行四大设计，并附完整上手方式。",
+    "category": "教程指南"
+  },
+  {
     "title": "OpenAI Codex 限额故障 2 小时, 用户额度全额回退",
     "link": "https://llmposts.com/models/openai-codex-quota-glitch/",
     "date": "2026-05-18T14:57:04",
