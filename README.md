@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-19 · 共 5 篇
+## 🔥 最新汇总 · 2026-05-19 · 共 6 篇
 
-### 01 · 模型动态 · Model Updates · 5 篇
+### 01 · 模型动态 · Model Updates · 6 篇
+
+#### [Claude Code Fast mode 默认启用 Opus 4.7，响应速度提升 2.5 倍](https://llmposts.com/models/claude-code-fast-mode-opus-4-7/)
+
+Claude Code Fast mode 现已默认启用 Opus 4.7，响应速度约为标准模式的 2.5 倍，输入/输出定价均为 30 美元/百万 token，适用于快速迭代与实时调试等延迟敏感场景。
+
+[阅读全文 →](https://llmposts.com/models/claude-code-fast-mode-opus-4-7/)
 
 #### [Manus 发布 Scheduled Tasks 2.0：定时任务进入上下文感知时代](https://llmposts.com/models/manus-scheduled-tasks-2-0-context-aware/)
 
