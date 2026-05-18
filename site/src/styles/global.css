@@ -6,7 +6,9 @@
     "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
   --font-serif: "Source Serif 4", "Noto Serif SC", "Songti SC", "STSong",
     Georgia, serif;
-  --font-mono: "IBM Plex Mono", "SF Mono", Menlo, ui-monospace, monospace;
+  --font-mono: "IBM Plex Mono", "SF Mono", Menlo, ui-monospace,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC",
+    monospace;
 
   /* Paper palette (light) */
   --bg: #fbfaf7;
