@@ -8,58 +8,28 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-05-17<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-05-18<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-17 · 共 7 篇
+## 🔥 最新汇总 · 2026-05-18 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 6 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Claude Sonnet 4.5 下架日期延期为 5 月 18 日](https://llmposts.com/models/claude-sonnet-4-5-deprecation-date-changed/)
+#### [OpenAI Codex 限额故障 2 小时, 用户额度全额回退](https://llmposts.com/models/openai-codex-quota-glitch/)
 
-Claude Sonnet 4.5 下架日期被曝从 5 月 15 日悄然改为 5 月 18 日，Anthropic 未发布官方说明。用户过去一周积极反馈该模型不可替代性，未获回应。行业沟通透明度问题引发开发者社区关注。
+OpenAI 的 Codex 编码智能体出现 OpenAI Codex 限额故障, 错误提示订阅用户余额仅剩 0%. 官方确认故障持续两小时, 期间被扣除的 token 将全额回退, 厂商已恢复限制并建议重用户精简提示词以稳定额度.
 
-[阅读全文 →](https://llmposts.com/models/claude-sonnet-4-5-deprecation-date-changed/)
+[阅读全文 →](https://llmposts.com/models/openai-codex-quota-glitch/)
 
-#### [Microsoft AI CEO 预警：白领工作或在 18 个月内被 AI 全面自动化](https://llmposts.com/models/microsoft-ai-ceo-white-collar-automation-18-months/)
+### 02 · 教程指南 · Tutorials · 1 篇
 
-Microsoft AI CEO Mustafa Suleyman 预测 18 个月内 AI 将全面自动化白领工作，涵盖会计、法律、营销等领域。然而 METR 研究显示 AI 使开发者效率下降 20%，2026 年至今已有 49,135 个 AI 相关岗位被裁。该预测与实体经济数据存在显著落差，实际影响有待验证。
+#### [Claude Code Setup：一条命令搞定 Claude Code 配置](https://llmposts.com/guides/claude-code-setup-anthropic-plugin/)
 
-[阅读全文 →](https://llmposts.com/models/microsoft-ai-ceo-white-collar-automation-18-months/)
+Anthropic 官方插件 Claude Code Setup 可以扫描你的项目代码，自动推荐适配的 MCP servers、Skills、Hooks、Subagents 和 Slash commands。整个过程只读不改文件，React 项目自动推 Playwright MCP，认证代码自动推 security-reviewer。安装量已破 11.7 万次。
 
-#### [Grok V9 1.5T 模型或将于夏季发布：xAI 完成基础训练并进入补充训练阶段](https://llmposts.com/models/grok-v9-1-5t-model-summer-release/)
-
-xAI 创始人 Elon Musk 披露 Grok V9 1.5T 模型已完成基础训练，参数量达 1.5T，预计 3 至 4 周后发布。该版本将整合 Cursor 数据进行补充训练，随后进入 SFT 与 RL 阶段。
-
-[阅读全文 →](https://llmposts.com/models/grok-v9-1-5t-model-summer-release/)
-
-#### [GitHub Copilot app 技术预览发布：桌面端 agentic 开发工作流](https://llmposts.com/models/github-copilot-app-technical-preview/)
-
-GitHub 于 2026 年 5 月 14 日发布 Copilot app 技术预览，支持从 issue/PR 启动 agentic 会话、隔离分支工作区与 Agent Merge 自动合并，Pro/Pro+ 订阅者可申请早期访问。
-
-[阅读全文 →](https://llmposts.com/models/github-copilot-app-technical-preview/)
-
-#### [Codex 付费计划用量限制全量重置，OpenAI 补偿 GPT-5.5 异常期损耗](https://llmposts.com/models/codex-gpt-5-5-fix/)
-
-OpenAI 宣布修复 Codex GPT-5.5 模型能力衰减问题，并于 5 月 16 日重置全量付费计划用量限制。此次修复耗时不足 10 小时，涉及底层路由策略优化，直接提振了数百万周活跃用户的代码生成效率。
-
-[阅读全文 →](https://llmposts.com/models/codex-gpt-5-5-fix/)
-
-#### [Claude Mythos 现身 Google Cloud 控制台，Anthropic 或调整访问策略](https://llmposts.com/models/claude-mythos-google-cloud-console-appearance/)
-
-Claude Mythos 被曝现身 Google Cloud 控制台且配置有跨区域配额，该模型此前由 Anthropic 限制仅向 Google、Microsoft 等合作伙伴开放用于防御性漏洞挖掘，社区对其是否会转向更广泛发布存在分歧。
-
-[阅读全文 →](https://llmposts.com/models/claude-mythos-google-cloud-console-appearance/)
-
-### 02 · 工程实践 · Engineering · 1 篇
-
-#### [Claude Code 避坑指南:8 个最容易翻车的使用误区与解法](https://llmposts.com/engineering/claude-code-beginner-pitfalls-guide/)
-
-使用 Claude Code 最容易翻车的 8 个踩坑点:把它当 ChatGPT 用、忽视 /clear、不建 CLAUDE.md、报错只说"修一下"等,每个坑配具体解法,帮新手绕过最常见的失败模式。
-
-[阅读全文 →](https://llmposts.com/engineering/claude-code-beginner-pitfalls-guide/)
+[阅读全文 →](https://llmposts.com/guides/claude-code-setup-anthropic-plugin/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**

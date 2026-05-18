@@ -1,5 +1,19 @@
 [
   {
+    "title": "OpenAI Codex 限额故障 2 小时, 用户额度全额回退",
+    "link": "https://llmposts.com/models/openai-codex-quota-glitch/",
+    "date": "2026-05-18T14:57:04",
+    "summary": "OpenAI 的 Codex 编码智能体出现 OpenAI Codex 限额故障, 错误提示订阅用户余额仅剩 0%. 官方确认故障持续两小时, 期间被扣除的 token 将全额回退, 厂商已恢复限制并建议重用户精简提示词以稳定额度.",
+    "category": "模型动态"
+  },
+  {
+    "title": "Claude Code Setup：一条命令搞定 Claude Code 配置",
+    "link": "https://llmposts.com/guides/claude-code-setup-anthropic-plugin/",
+    "date": "2026-05-18T14:36:50",
+    "summary": "Anthropic 官方插件 Claude Code Setup 可以扫描你的项目代码，自动推荐适配的 MCP servers、Skills、Hooks、Subagents 和 Slash commands。整个过程只读不改文件，React 项目自动推 Playwright MCP，认证代码自动推 security-reviewer。安装量已破 11.7 万次。",
+    "category": "教程指南"
+  },
+  {
     "title": "Claude Sonnet 4.5 下架日期延期为 5 月 18 日",
     "link": "https://llmposts.com/models/claude-sonnet-4-5-deprecation-date-changed/",
     "date": "2026-05-17T23:44:57",
