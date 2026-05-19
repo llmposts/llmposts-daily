@@ -13,11 +13,17 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-20 · 共 1 篇
+## 🔥 最新汇总 · 2026-05-20 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
 
-#### [Google DeepMind 发布 Gemini 3.5 Flash：主打 agent 与 coding，定价低于竞品](https://llmposts.com/models/gemini-3-5-flash-agent-coding-release/)
+#### [Google 发布 Antigravity 2.0 桌面应用 多 Agent 编排构建操作系统](https://llmposts.com/models/google-antigravity-2-desktop-agent-os/)
+
+据 Google 官方披露, Antigravity 2.0 独立桌面应用今日上线, 集成 CLI、SDK 与原生语音支持。演示中 93 个并行 Agent 12 小时内构建完整操作系统, API 成本低于 1000 美元, 标志着多智能体编排进入工程化阶段。
+
+[阅读全文 →](https://llmposts.com/models/google-antigravity-2-desktop-agent-os/)
+
+#### [Google 发布 Gemini 3.5 Flash：主打 agent 与 coding，定价低于竞品](https://llmposts.com/models/gemini-3-5-flash-agent-coding-release/)
 
 Google DeepMind 发布 Gemini 3.5 Flash 模型，在 coding 与 agentic 任务上超越 3.1 Pro，支持子代理并行处理大规模代码库，定价仅为竞品的一部分。已上线 Gemini App 与 Google AI Studio。
 
