@@ -1,5 +1,12 @@
 [
   {
+    "title": "Google DeepMind 发布 Gemini 3.5 Flash：主打 agent 与 coding，定价低于竞品",
+    "link": "https://llmposts.com/models/gemini-3-5-flash-agent-coding-release/",
+    "date": "2026-05-20T01:31:18",
+    "summary": "Google DeepMind 发布 Gemini 3.5 Flash 模型，在 coding 与 agentic 任务上超越 3.1 Pro，支持子代理并行处理大规模代码库，定价仅为竞品的一部分。已上线 Gemini App 与 Google AI Studio。",
+    "category": "模型动态"
+  },
+  {
     "title": "Andrej Karpathy 加入 Anthropic，曾主导 Tesla Autopilot 视觉系统",
     "link": "https://llmposts.com/models/andrej-karpathy-joins-anthropic/",
     "date": "2026-05-19T23:45:32",

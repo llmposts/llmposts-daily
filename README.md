@@ -8,82 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-05-19<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-05-20<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-19 · 共 11 篇
+## 🔥 最新汇总 · 2026-05-20 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 9 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Andrej Karpathy 加入 Anthropic，曾主导 Tesla Autopilot 视觉系统](https://llmposts.com/models/andrej-karpathy-joins-anthropic/)
+#### [Google DeepMind 发布 Gemini 3.5 Flash：主打 agent 与 coding，定价低于竞品](https://llmposts.com/models/gemini-3-5-flash-agent-coding-release/)
 
-Andrej Karpathy 宣布加入 Anthropic，曾参与创立 OpenAI、主导 Tesla Autopilot 视觉系统。2024 年 7 月创立 Eureka Labs 专注 AI 教育，现重返 LLM 研发一线。
+Google DeepMind 发布 Gemini 3.5 Flash 模型，在 coding 与 agentic 任务上超越 3.1 Pro，支持子代理并行处理大规模代码库，定价仅为竞品的一部分。已上线 Gemini App 与 Google AI Studio。
 
-[阅读全文 →](https://llmposts.com/models/andrej-karpathy-joins-anthropic/)
-
-#### [Cloudflare 测试 Anthropic Mythos Preview 红队测试: 漏洞链式利用](https://llmposts.com/models/cloudflare-mythos-preview-red-team-test/)
-
-Cloudflare 在 Project Glasswing 项目中对 Anthropic Mythos Preview 完成安全红队测试,模型可将多处低危漏洞链式转换为真实利用链并自动生成 PoC。实测表明单纯追求缩短安全响应周期收效有限,防御架构需向纵深演进。
-
-[阅读全文 →](https://llmposts.com/models/cloudflare-mythos-preview-red-team-test/)
-
-#### [Claude Managed Agents 发布自托管沙箱与 MCP 隧道功能](https://llmposts.com/models/claude-managed-agents-sandbox-mcp-tunnels/)
-
-Anthropic 于 2026 年 5 月 19 日发布 Claude Managed Agents 自托管沙箱与 MCP 隧道功能。Self-hosted sandboxes 进入 public beta，支持 Cloudflare、Daytona、Modal、Vercel 四家提供商；MCP tunnels 处于 research preview，可安全连接私有网络服务。
-
-[阅读全文 →](https://llmposts.com/models/claude-managed-agents-sandbox-mcp-tunnels/)
-
-#### [Claude Code Fast mode 默认启用 Opus 4.7，响应速度提升 2.5 倍](https://llmposts.com/models/claude-code-fast-mode-opus-4-7/)
-
-Claude Code Fast mode 现已默认启用 Opus 4.7，响应速度约为标准模式的 2.5 倍，输入/输出定价均为 30 美元/百万 token，适用于快速迭代与实时调试等延迟敏感场景。
-
-[阅读全文 →](https://llmposts.com/models/claude-code-fast-mode-opus-4-7/)
-
-#### [Manus 发布 Scheduled Tasks 2.0：定时任务进入上下文感知时代](https://llmposts.com/models/manus-scheduled-tasks-2-0-context-aware/)
-
-Manus 于 2025 年 5 月 19 日发布 Scheduled Tasks 2.0，支持在同任务中延续上下文、为 Web 应用配置后台定时操作，并提供独立的调度视图与运行历史追踪。该功能已面向所有用户开放。
-
-[阅读全文 →](https://llmposts.com/models/manus-scheduled-tasks-2-0-context-aware/)
-
-#### [Cursor 发布 Composer 2.5：定向 RL 文本反馈与 Sharded Muon 优化器详解](https://llmposts.com/models/cursor-composer-2-5-targeted-rl-sharded-muon/)
-
-Cursor 发布 Composer 2.5，基于 Kimi K2.5 开源检查点，采用定向 RL 文本反馈与 Sharded Muon 优化器，合成数据扩展 25 倍，输入定价 $0.50/百万 tokens，快速版本 $15/百万输出 tokens。
-
-[阅读全文 →](https://llmposts.com/models/cursor-composer-2-5-targeted-rl-sharded-muon/)
-
-#### [Claude 提示词缓存诊断功能上线：精准定位缓存未命中分歧点](https://llmposts.com/models/claude-prompt-cache-diagnostics-beta/)
-
-Claude 推出 Prompt cache diagnostics 测试版，传入 beta header cache-diagnosis-2026-04-07 与上一条响应 ID 即可对比请求指纹，精准定位模型参数、system prompt、工具或消息历史中的首次分歧点，帮助开发者修复缓存未命中根因。
-
-[阅读全文 →](https://llmposts.com/models/claude-prompt-cache-diagnostics-beta/)
-
-#### [Qwen3.6 MTP GGUF 发布：本地推理 1.4-2.2 倍加速，精度无损](https://llmposts.com/models/qwen3-6-mtp-gguf-speed-up/)
-
-Unsloth 为 Qwen3.6 发布 MTP（Multi Token Prediction）GGUF 量化版本，据官方测试本地推理速度提升 1.4-2.2 倍、精度无损。27B 在 RTX 6000 跑 160 tokens/s，35B-A3B 跑 240 tokens/s。Qwen3.5 全家族也补齐 MTP，已有用户可直接迁移。
-
-[阅读全文 →](https://llmposts.com/models/qwen3-6-mtp-gguf-speed-up/)
-
-#### [Anthropic 收购 Stainless 补强开发者工具链，交易或达 3 亿美元](https://llmposts.com/models/anthropic-acquires-stainless-mcp-sdk/)
-
-Anthropic 于 2026 年 5 月 18 日宣布收购 SDK 工具商 Stainless，交易金额据 The Information 报道或达 3 亿美元。Stainless 将为 Claude 的 MCP 生态与 agent 连接能力提供工具链支持。
-
-[阅读全文 →](https://llmposts.com/models/anthropic-acquires-stainless-mcp-sdk/)
-
-### 02 · 工程实践 · Engineering · 2 篇
-
-#### [让 Codex 形成持续运转的工作循环：4 个核心实践](https://llmposts.com/guides/jason-liu-codex-maxxing-workflow/)
-
-OpenAI Codex 团队工程师 Jason Liu 发布博客 Codex-maxxing，复盘他怎么把 Codex 用成"工作持续运转的地方"。本文拆解其中四个工作流——Heartbeats 自驱动循环、Goals + verification、Memory as files、Steering 边干边说。
-
-[阅读全文 →](https://llmposts.com/guides/jason-liu-codex-maxxing-workflow/)
-
-#### [claude-smart 插件：CC/Codex 自我学习插件，把纠正变成下次会遵守的规则](https://llmposts.com/guides/claude-smart-reflexio-plugin/)
-
-Reflexio 推出 Claude Code 与 Codex 双 host 插件 claude-smart，通过 lifecycle hooks 把纠正和成功路径提炼为规则，在每个新 session 注入回 Claude。完全本地运行，产出 Preferences、Project-specific Skills、Shared Skills 三类产物。
-
-[阅读全文 →](https://llmposts.com/guides/claude-smart-reflexio-plugin/)
+[阅读全文 →](https://llmposts.com/models/gemini-3-5-flash-agent-coding-release/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
