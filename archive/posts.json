@@ -1,5 +1,12 @@
 [
   {
+    "title": "Cloudflare 测试 Anthropic Mythos Preview 红队测试: 漏洞链式利用",
+    "link": "https://llmposts.com/models/cloudflare-mythos-preview-red-team-test/",
+    "date": "2026-05-19T23:11:29",
+    "summary": "Cloudflare 在 Project Glasswing 项目中对 Anthropic Mythos Preview 完成安全红队测试,模型可将多处低危漏洞链式转换为真实利用链并自动生成 PoC。实测表明单纯追求缩短安全响应周期收效有限,防御架构需向纵深演进。",
+    "category": "模型动态"
+  },
+  {
     "title": "Claude Managed Agents 发布自托管沙箱与 MCP 隧道功能",
     "link": "https://llmposts.com/models/claude-managed-agents-sandbox-mcp-tunnels/",
     "date": "2026-05-19T16:31:48",

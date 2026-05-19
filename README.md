@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-19 · 共 9 篇
+## 🔥 最新汇总 · 2026-05-19 · 共 10 篇
 
-### 01 · 模型动态 · Model Updates · 7 篇
+### 01 · 模型动态 · Model Updates · 8 篇
+
+#### [Cloudflare 测试 Anthropic Mythos Preview 红队测试: 漏洞链式利用](https://llmposts.com/models/cloudflare-mythos-preview-red-team-test/)
+
+Cloudflare 在 Project Glasswing 项目中对 Anthropic Mythos Preview 完成安全红队测试,模型可将多处低危漏洞链式转换为真实利用链并自动生成 PoC。实测表明单纯追求缩短安全响应周期收效有限,防御架构需向纵深演进。
+
+[阅读全文 →](https://llmposts.com/models/cloudflare-mythos-preview-red-team-test/)
 
 #### [Claude Managed Agents 发布自托管沙箱与 MCP 隧道功能](https://llmposts.com/models/claude-managed-agents-sandbox-mcp-tunnels/)
 
