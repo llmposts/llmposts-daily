@@ -1,6 +1,13 @@
 [
   {
-    "title": "Gemini 3.5 Flash 跑分出炉：Agentic 能力逼近 GPT-5.4，但成本暴涨 5 倍",
+    "title": "Gemini Omni 模型发布，首发 Flash 版主打自然语言视频编辑",
+    "link": "https://llmposts.com/models/gemini-omni-model-launch/",
+    "date": "2026-05-20T02:31:06",
+    "summary": "Google 正式发布新一代多模态旗舰模型 Gemini Omni。首发变体 Gemini Omni Flash 登陆 Gemini app 与 Google Flow,主打自然语言视频编辑。该模型支持多模态输入生成视频,内置 SynthID 数字水印与可验证数字分身。",
+    "category": "模型动态"
+  },
+  {
+    "title": "Gemini 3.5 Flash 跑分出炉：Agentic 能力逼近 GPT-5.4",
     "link": "https://llmposts.com/models/gemini-3-5-flash-cost-and-performance/",
     "date": "2026-05-20T02:09:19",
     "summary": "Google 发布新款 Flash 系列模型 Gemini 3.5 Flash，在 Intelligence Index 综合评测中斩获 55 分。该模型支持全模态输入与 1M tokens 上下文窗口，定价高达输入端 1.50 美元、输出端 9.00 美元，实际运行成本较上代增加 5.5 倍。",
