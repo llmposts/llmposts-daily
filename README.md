@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-20 · 共 3 篇
+## 🔥 最新汇总 · 2026-05-20 · 共 4 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 4 篇
+
+#### [Gemini 3.5 Flash 跑分出炉：Agentic 能力逼近 GPT-5.4，但成本暴涨 5 倍](https://llmposts.com/models/gemini-3-5-flash-cost-and-performance/)
+
+Google 发布新款 Flash 系列模型 Gemini 3.5 Flash，在 Intelligence Index 综合评测中斩获 55 分。该模型支持全模态输入与 1M tokens 上下文窗口，定价高达输入端 1.50 美元、输出端 9.00 美元，实际运行成本较上代增加 5.5 倍。
+
+[阅读全文 →](https://llmposts.com/models/gemini-3-5-flash-cost-and-performance/)
 
 #### [Google 发布 Gemini 3.5 Flash：面向智能体工作流与代码生成的前沿推理模型](https://llmposts.com/models/gemini-3-5-flash-agentic-model/)
 
