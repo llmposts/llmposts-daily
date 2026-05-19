@@ -1,5 +1,26 @@
 [
   {
+    "title": "Claude Managed Agents 发布自托管沙箱与 MCP 隧道功能",
+    "link": "https://llmposts.com/models/claude-managed-agents-sandbox-mcp-tunnels/",
+    "date": "2026-05-19T16:31:48",
+    "summary": "Anthropic 于 2026 年 5 月 19 日发布 Claude Managed Agents 自托管沙箱与 MCP 隧道功能。Self-hosted sandboxes 进入 public beta，支持 Cloudflare、Daytona、Modal、Vercel 四家提供商；MCP tunnels 处于 research preview，可安全连接私有网络服务。",
+    "category": "模型动态"
+  },
+  {
+    "title": "让 Codex 形成持续运转的工作循环：4 个核心实践",
+    "link": "https://llmposts.com/guides/jason-liu-codex-maxxing-workflow/",
+    "date": "2026-05-19T13:02:42",
+    "summary": "OpenAI Codex 团队工程师 Jason Liu 发布博客 Codex-maxxing，复盘他怎么把 Codex 用成\"工作持续运转的地方\"。本文拆解其中四个工作流——Heartbeats 自驱动循环、Goals + verification、Memory as files、Steering 边干边说。",
+    "category": "工程实践"
+  },
+  {
+    "title": "claude-smart 插件：CC/Codex 自我学习插件，把纠正变成下次会遵守的规则",
+    "link": "https://llmposts.com/guides/claude-smart-reflexio-plugin/",
+    "date": "2026-05-19T11:06:15",
+    "summary": "Reflexio 推出 Claude Code 与 Codex 双 host 插件 claude-smart，通过 lifecycle hooks 把纠正和成功路径提炼为规则，在每个新 session 注入回 Claude。完全本地运行，产出 Preferences、Project-specific Skills、Shared Skills 三类产物。",
+    "category": "工程实践"
+  },
+  {
     "title": "Claude Code Fast mode 默认启用 Opus 4.7，响应速度提升 2.5 倍",
     "link": "https://llmposts.com/models/claude-code-fast-mode-opus-4-7/",
     "date": "2026-05-19T05:18:33",
