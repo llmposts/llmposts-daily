@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-19 · 共 10 篇
+## 🔥 最新汇总 · 2026-05-19 · 共 11 篇
 
-### 01 · 模型动态 · Model Updates · 8 篇
+### 01 · 模型动态 · Model Updates · 9 篇
+
+#### [Andrej Karpathy 加入 Anthropic，曾主导 Tesla Autopilot 视觉系统](https://llmposts.com/models/andrej-karpathy-joins-anthropic/)
+
+Andrej Karpathy 宣布加入 Anthropic，曾参与创立 OpenAI、主导 Tesla Autopilot 视觉系统。2024 年 7 月创立 Eureka Labs 专注 AI 教育，现重返 LLM 研发一线。
+
+[阅读全文 →](https://llmposts.com/models/andrej-karpathy-joins-anthropic/)
 
 #### [Cloudflare 测试 Anthropic Mythos Preview 红队测试: 漏洞链式利用](https://llmposts.com/models/cloudflare-mythos-preview-red-team-test/)
 

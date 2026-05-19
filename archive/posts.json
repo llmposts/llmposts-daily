@@ -1,5 +1,12 @@
 [
   {
+    "title": "Andrej Karpathy 加入 Anthropic，曾主导 Tesla Autopilot 视觉系统",
+    "link": "https://llmposts.com/models/andrej-karpathy-joins-anthropic/",
+    "date": "2026-05-19T23:45:32",
+    "summary": "Andrej Karpathy 宣布加入 Anthropic，曾参与创立 OpenAI、主导 Tesla Autopilot 视觉系统。2024 年 7 月创立 Eureka Labs 专注 AI 教育，现重返 LLM 研发一线。",
+    "category": "模型动态"
+  },
+  {
     "title": "Cloudflare 测试 Anthropic Mythos Preview 红队测试: 漏洞链式利用",
     "link": "https://llmposts.com/models/cloudflare-mythos-preview-red-team-test/",
     "date": "2026-05-19T23:11:29",
