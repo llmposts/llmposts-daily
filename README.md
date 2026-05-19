@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-20 · 共 2 篇
+## 🔥 最新汇总 · 2026-05-20 · 共 3 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 3 篇
+
+#### [Google 发布 Gemini 3.5 Flash：面向智能体工作流与代码生成的前沿推理模型](https://llmposts.com/models/gemini-3-5-flash-agentic-model/)
+
+Google 发布 Gemini 3.5 Flash，基准测试在智能体任务上得分达 1656 Elo，推理速度为其他前沿模型 4 倍。该模型将作为 Gemini Spark 默认架构全面部署，并于 6 月中旬推出 Pro 版本。
+
+[阅读全文 →](https://llmposts.com/models/gemini-3-5-flash-agentic-model/)
 
 #### [Google 发布 Antigravity 2.0 桌面应用 多 Agent 编排构建操作系统](https://llmposts.com/models/google-antigravity-2-desktop-agent-os/)
 
