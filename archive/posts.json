@@ -1,5 +1,12 @@
 [
   {
+    "title": "cc-switch：一键管理 Claude Code、Codex 等 AI 工具",
+    "link": "https://llmposts.com/guides/cc-switch-claude-code-codex-ai-switcher/",
+    "date": "2026-05-21T00:01:51",
+    "summary": "cc-switch 是一个跨平台桌面应用，用来管理 Claude Code、Codex、Gemini CLI、OpenCode、OpenClaw 这五个 AI 编程命令行工具的配置。常见用途是一键切换 Claude Code 的 API 供应商，还能跨工具管理 MCP、Skills、Prompts 与查看用量。",
+    "category": "教程指南"
+  },
+  {
     "title": "Qwen3.7-Max 发布：重构智能体长程自主执行",
     "link": "https://llmposts.com/models/qwen3-7-max-agent-model-release/",
     "date": "2026-05-20T22:12:55",

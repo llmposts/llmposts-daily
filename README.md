@@ -8,56 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-05-20<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-05-21<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-20 · 共 7 篇
+## 🔥 最新汇总 · 2026-05-21 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 7 篇
+### 01 · 教程指南 · Tutorials · 1 篇
 
-#### [Qwen3.7-Max 发布：重构智能体长程自主执行](https://llmposts.com/models/qwen3-7-max-agent-model-release/)
+#### [cc-switch：一键管理 Claude Code、Codex 等 AI 工具](https://llmposts.com/guides/cc-switch-claude-code-codex-ai-switcher/)
 
-阿里云正式发布 Qwen3.7-Max 模型，面向智能体时代。该模型支持长周期自主执行，在 35 小时无中断任务中跨越千次工具调用，编程基准 SWE-Pro 达 60.6，即将通过阿里云百炼 API 上线。
+cc-switch 是一个跨平台桌面应用，用来管理 Claude Code、Codex、Gemini CLI、OpenCode、OpenClaw 这五个 AI 编程命令行工具的配置。常见用途是一键切换 Claude Code 的 API 供应商，还能跨工具管理 MCP、Skills、Prompts 与查看用量。
 
-[阅读全文 →](https://llmposts.com/models/qwen3-7-max-agent-model-release/)
-
-#### [Google Gemini App 升级推出 Gemini Spark 智能体与 Daily Brief](https://llmposts.com/models/gemini-app-spark-agent-daily-brief/)
-
-Google 推出 Gemini App 重大升级，基于 Gemini 3.5 与 Antigravity Harness 构建 Gemini Spark 智能体，支持 7×24 小时云端常驻及多工具工作流自动化。该功能将于下周面向美国 Google AI Ultra 用户推送 Beta，反映云端长周期智能体在意图驱动自动化领域的工程演进。
-
-[阅读全文 →](https://llmposts.com/models/gemini-app-spark-agent-daily-brief/)
-
-#### [Gemini Omni 模型发布，首发 Flash 版主打自然语言视频编辑](https://llmposts.com/models/gemini-omni-model-launch/)
-
-Google 正式发布新一代多模态旗舰模型 Gemini Omni。首发变体 Gemini Omni Flash 登陆 Gemini app 与 Google Flow,主打自然语言视频编辑。该模型支持多模态输入生成视频,内置 SynthID 数字水印与可验证数字分身。
-
-[阅读全文 →](https://llmposts.com/models/gemini-omni-model-launch/)
-
-#### [Gemini 3.5 Flash 跑分出炉：Agentic 能力逼近 GPT-5.4](https://llmposts.com/models/gemini-3-5-flash-cost-and-performance/)
-
-Google 发布新款 Flash 系列模型 Gemini 3.5 Flash，在 Intelligence Index 综合评测中斩获 55 分。该模型支持全模态输入与 1M tokens 上下文窗口，定价高达输入端 1.50 美元、输出端 9.00 美元，实际运行成本较上代增加 5.5 倍。
-
-[阅读全文 →](https://llmposts.com/models/gemini-3-5-flash-cost-and-performance/)
-
-#### [Google 发布 Gemini 3.5 Flash：面向智能体工作流与代码生成的前沿推理模型](https://llmposts.com/models/gemini-3-5-flash-agentic-model/)
-
-Google 发布 Gemini 3.5 Flash，基准测试在智能体任务上得分达 1656 Elo，推理速度为其他前沿模型 4 倍。该模型将作为 Gemini Spark 默认架构全面部署，并于 6 月中旬推出 Pro 版本。
-
-[阅读全文 →](https://llmposts.com/models/gemini-3-5-flash-agentic-model/)
-
-#### [Google 发布 Antigravity 2.0 桌面应用 多 Agent 编排构建操作系统](https://llmposts.com/models/google-antigravity-2-desktop-agent-os/)
-
-据 Google 官方披露, Antigravity 2.0 独立桌面应用今日上线, 集成 CLI、SDK 与原生语音支持。演示中 93 个并行 Agent 12 小时内构建完整操作系统, API 成本低于 1000 美元, 标志着多智能体编排进入工程化阶段。
-
-[阅读全文 →](https://llmposts.com/models/google-antigravity-2-desktop-agent-os/)
-
-#### [Google 发布 Gemini 3.5 Flash：主打 agent 与 coding，定价低于竞品](https://llmposts.com/models/gemini-3-5-flash-agent-coding-release/)
-
-Google DeepMind 发布 Gemini 3.5 Flash 模型，在 coding 与 agentic 任务上超越 3.1 Pro，支持子代理并行处理大规模代码库，定价仅为竞品的一部分。已上线 Gemini App 与 Google AI Studio。
-
-[阅读全文 →](https://llmposts.com/models/gemini-3-5-flash-agent-coding-release/)
+[阅读全文 →](https://llmposts.com/guides/cc-switch-claude-code-codex-ai-switcher/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
