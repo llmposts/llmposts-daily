@@ -1,5 +1,12 @@
 [
   {
+    "title": "Qwen3.7-Max 发布：重构智能体长程自主执行",
+    "link": "https://llmposts.com/models/qwen3-7-max-agent-model-release/",
+    "date": "2026-05-20T22:12:55",
+    "summary": "阿里云正式发布 Qwen3.7-Max 模型，面向智能体时代。该模型支持长周期自主执行，在 35 小时无中断任务中跨越千次工具调用，编程基准 SWE-Pro 达 60.6，即将通过阿里云百炼 API 上线。",
+    "category": "模型动态"
+  },
+  {
     "title": "Google Gemini App 升级推出 Gemini Spark 智能体与 Daily Brief",
     "link": "https://llmposts.com/models/gemini-app-spark-agent-daily-brief/",
     "date": "2026-05-20T10:56:18",

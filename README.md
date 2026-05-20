@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-20 · 共 6 篇
+## 🔥 最新汇总 · 2026-05-20 · 共 7 篇
 
-### 01 · 模型动态 · Model Updates · 6 篇
+### 01 · 模型动态 · Model Updates · 7 篇
+
+#### [Qwen3.7-Max 发布：重构智能体长程自主执行](https://llmposts.com/models/qwen3-7-max-agent-model-release/)
+
+阿里云正式发布 Qwen3.7-Max 模型，面向智能体时代。该模型支持长周期自主执行，在 35 小时无中断任务中跨越千次工具调用，编程基准 SWE-Pro 达 60.6，即将通过阿里云百炼 API 上线。
+
+[阅读全文 →](https://llmposts.com/models/qwen3-7-max-agent-model-release/)
 
 #### [Google Gemini App 升级推出 Gemini Spark 智能体与 Daily Brief](https://llmposts.com/models/gemini-app-spark-agent-daily-brief/)
 
