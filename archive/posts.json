@@ -1,5 +1,12 @@
 [
   {
+    "title": "Google Gemini App 升级推出 Gemini Spark 智能体与 Daily Brief",
+    "link": "https://llmposts.com/models/gemini-app-spark-agent-daily-brief/",
+    "date": "2026-05-20T10:56:18",
+    "summary": "Google 推出 Gemini App 重大升级，基于 Gemini 3.5 与 Antigravity Harness 构建 Gemini Spark 智能体，支持 7×24 小时云端常驻及多工具工作流自动化。该功能将于下周面向美国 Google AI Ultra 用户推送 Beta，反映云端长周期智能体在意图驱动自动化领域的工程演进。",
+    "category": "模型动态"
+  },
+  {
     "title": "Gemini Omni 模型发布，首发 Flash 版主打自然语言视频编辑",
     "link": "https://llmposts.com/models/gemini-omni-model-launch/",
     "date": "2026-05-20T02:31:06",

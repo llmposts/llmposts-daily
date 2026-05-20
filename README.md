@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-20 · 共 5 篇
+## 🔥 最新汇总 · 2026-05-20 · 共 6 篇
 
-### 01 · 模型动态 · Model Updates · 5 篇
+### 01 · 模型动态 · Model Updates · 6 篇
+
+#### [Google Gemini App 升级推出 Gemini Spark 智能体与 Daily Brief](https://llmposts.com/models/gemini-app-spark-agent-daily-brief/)
+
+Google 推出 Gemini App 重大升级，基于 Gemini 3.5 与 Antigravity Harness 构建 Gemini Spark 智能体，支持 7×24 小时云端常驻及多工具工作流自动化。该功能将于下周面向美国 Google AI Ultra 用户推送 Beta，反映云端长周期智能体在意图驱动自动化领域的工程演进。
+
+[阅读全文 →](https://llmposts.com/models/gemini-app-spark-agent-daily-brief/)
 
 #### [Gemini Omni 模型发布，首发 Flash 版主打自然语言视频编辑](https://llmposts.com/models/gemini-omni-model-launch/)
 
