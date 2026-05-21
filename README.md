@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-21 · 共 2 篇
+## 🔥 最新汇总 · 2026-05-21 · 共 3 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [Anthropic 营收增速超预期, 二季度预计达 109 亿美元并首次盈利](https://llmposts.com/models/anthropic-q2-revenue-profit-forecast/)
+
+据《华尔街日报》最新披露, Anthropic 预计二季度营收增速将超预期, 财报显示营收将达 109 亿美元。在扣除算力成本后, 运营利润将转正至 5.59 亿美元, 首次实现季度盈利。
+
+[阅读全文 →](https://llmposts.com/models/anthropic-q2-revenue-profit-forecast/)
 
 #### [OpenAI 通用推理模型证明 1946 年单位距离猜想](https://llmposts.com/models/openai-general-reasoning-model-math-proof/)
 
