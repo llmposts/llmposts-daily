@@ -1,5 +1,12 @@
 [
   {
+    "title": "Gemini 3.5 Pro 泄露预告：定位类 GPT-5.5 旗舰，强化 Coding 与 Agent 工作流",
+    "link": "https://llmposts.com/models/gemini-3-5-pro-leak-preview/",
+    "date": "2026-05-21T13:41:50",
+    "summary": "据泄露信息，Gemini 3.5 Pro 将于 6 月下旬发布，定位 GPT-5.5 级旗舰，强化 Coding 能力与长周期 agent 工作流。定价延续 1.5 倍浮动策略，重点引入 grounding 机制抑制幻觉。",
+    "category": "模型动态"
+  },
+  {
     "title": "Anthropic 营收增速超预期, 二季度预计达 109 亿美元并首次盈利",
     "link": "https://llmposts.com/models/anthropic-q2-revenue-profit-forecast/",
     "date": "2026-05-21T09:49:37",

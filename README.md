@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-21 · 共 3 篇
+## 🔥 最新汇总 · 2026-05-21 · 共 4 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 3 篇
+
+#### [Gemini 3.5 Pro 泄露预告：定位类 GPT-5.5 旗舰，强化 Coding 与 Agent 工作流](https://llmposts.com/models/gemini-3-5-pro-leak-preview/)
+
+据泄露信息，Gemini 3.5 Pro 将于 6 月下旬发布，定位 GPT-5.5 级旗舰，强化 Coding 能力与长周期 agent 工作流。定价延续 1.5 倍浮动策略，重点引入 grounding 机制抑制幻觉。
+
+[阅读全文 →](https://llmposts.com/models/gemini-3-5-pro-leak-preview/)
 
 #### [Anthropic 营收增速超预期, 二季度预计达 109 亿美元并首次盈利](https://llmposts.com/models/anthropic-q2-revenue-profit-forecast/)
 
