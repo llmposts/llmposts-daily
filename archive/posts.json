@@ -1,5 +1,12 @@
 [
   {
+    "title": "OpenAI 通用推理模型证明 1946 年单位距离猜想",
+    "link": "https://llmposts.com/models/openai-general-reasoning-model-math-proof/",
+    "date": "2026-05-21T09:48:51",
+    "summary": "据 OpenAI 披露，其通用推理模型自主破解 1946 年平面单位距离猜想，构建至少 n^{1+δ} (δ≈0.014) 个单位对点，经多位国际顶尖数学家验证，展现了跨领域科研推理能力。",
+    "category": "模型动态"
+  },
+  {
     "title": "cc-switch：一键管理 Claude Code、Codex 等 AI 工具",
     "link": "https://llmposts.com/guides/cc-switch-claude-code-codex-ai-switcher/",
     "date": "2026-05-21T00:01:51",

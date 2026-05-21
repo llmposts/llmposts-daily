@@ -13,9 +13,17 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-21 · 共 1 篇
+## 🔥 最新汇总 · 2026-05-21 · 共 2 篇
 
-### 01 · 教程指南 · Tutorials · 1 篇
+### 01 · 模型动态 · Model Updates · 1 篇
+
+#### [OpenAI 通用推理模型证明 1946 年单位距离猜想](https://llmposts.com/models/openai-general-reasoning-model-math-proof/)
+
+据 OpenAI 披露，其通用推理模型自主破解 1946 年平面单位距离猜想，构建至少 n^{1+δ} (δ≈0.014) 个单位对点，经多位国际顶尖数学家验证，展现了跨领域科研推理能力。
+
+[阅读全文 →](https://llmposts.com/models/openai-general-reasoning-model-math-proof/)
+
+### 02 · 教程指南 · Tutorials · 1 篇
 
 #### [cc-switch：一键管理 Claude Code、Codex 等 AI 工具](https://llmposts.com/guides/cc-switch-claude-code-codex-ai-switcher/)
 
