@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-21 · 共 4 篇
+## 🔥 最新汇总 · 2026-05-21 · 共 5 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 4 篇
+
+#### [Manus 创始人或将斥资 10 亿美元回购 Meta 股权](https://llmposts.com/models/manus-share-buyback-meta-takeover/)
+
+Manus 三位创始人正磋商约 10 亿美元融资轮次，拟回购 Meta 旗下智能体 AI 业务，重组为中外合资企业并筹备港股上市，该 Manus 股权回购方案或需创始人注资补足差额。
+
+[阅读全文 →](https://llmposts.com/models/manus-share-buyback-meta-takeover/)
 
 #### [Gemini 3.5 Pro 泄露预告：定位类 GPT-5.5 旗舰，强化 Coding 与 Agent 工作流](https://llmposts.com/models/gemini-3-5-pro-leak-preview/)
 
