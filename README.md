@@ -13,11 +13,17 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-21 · 共 5 篇
+## 🔥 最新汇总 · 2026-05-21 · 共 6 篇
 
-### 01 · 模型动态 · Model Updates · 4 篇
+### 01 · 模型动态 · Model Updates · 5 篇
 
-#### [Manus 创始人或将斥资 10 亿美元回购 Meta 股权](https://llmposts.com/models/manus-share-buyback-meta-takeover/)
+#### [Qwen3.7 Max 跑分超上一版 4.8 分，闭源旗舰逼近技术前沿](https://llmposts.com/models/qwen3-7-max-intelligence-index/)
+
+阿里发布闭源旗舰模型 Qwen3.7 Max，在 Artificial Analysis Intelligence Index 跑分达 56.6，较上一版提升 4.8 分。核心提升来自科学推理与代码任务，通过降低幻觉率策略缩小与第一梯队差距。
+
+[阅读全文 →](https://llmposts.com/models/qwen3-7-max-intelligence-index/)
+
+#### [Manus 创始人团队将筹集 10 亿美元回购 Meta 股权](https://llmposts.com/models/manus-share-buyback-meta-takeover/)
 
 Manus 三位创始人正磋商约 10 亿美元融资轮次，拟回购 Meta 旗下智能体 AI 业务，重组为中外合资企业并筹备港股上市，该 Manus 股权回购方案或需创始人注资补足差额。
 
