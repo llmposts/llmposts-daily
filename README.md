@@ -8,52 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-05-21<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-05-22<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-21 · 共 6 篇
+## 🔥 最新汇总 · 2026-05-22 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 5 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Qwen3.7 Max 跑分超上一版 4.8 分，闭源旗舰逼近技术前沿](https://llmposts.com/models/qwen3-7-max-intelligence-index/)
+#### [Codex 锁定电脑使用支持 Mac 锁屏后远程操作](https://llmposts.com/models/codex-locked-computer-use-mac/)
 
-阿里发布闭源旗舰模型 Qwen3.7 Max，在 Artificial Analysis Intelligence Index 跑分达 56.6，较上一版提升 4.8 分。核心提升来自科学推理与代码任务，通过降低幻觉率策略缩小与第一梯队差距。
+OpenAI 更新 Codex 电脑控制功能，锁定电脑使用支持 Mac 锁屏后远程操作桌面应用。内置授权插件与临时解锁窗口，提供输入监测与审批机制。
 
-[阅读全文 →](https://llmposts.com/models/qwen3-7-max-intelligence-index/)
-
-#### [Manus 创始人团队将筹集 10 亿美元回购 Meta 股权](https://llmposts.com/models/manus-share-buyback-meta-takeover/)
-
-Manus 三位创始人正磋商约 10 亿美元融资轮次，拟回购 Meta 旗下智能体 AI 业务，重组为中外合资企业并筹备港股上市，该 Manus 股权回购方案或需创始人注资补足差额。
-
-[阅读全文 →](https://llmposts.com/models/manus-share-buyback-meta-takeover/)
-
-#### [Gemini 3.5 Pro 泄露预告：定位类 GPT-5.5 旗舰，强化 Coding 与 Agent 工作流](https://llmposts.com/models/gemini-3-5-pro-leak-preview/)
-
-据泄露信息，Gemini 3.5 Pro 将于 6 月下旬发布，定位 GPT-5.5 级旗舰，强化 Coding 能力与长周期 agent 工作流。定价延续 1.5 倍浮动策略，重点引入 grounding 机制抑制幻觉。
-
-[阅读全文 →](https://llmposts.com/models/gemini-3-5-pro-leak-preview/)
-
-#### [Anthropic 营收增速超预期, 二季度预计达 109 亿美元并首次盈利](https://llmposts.com/models/anthropic-q2-revenue-profit-forecast/)
-
-据《华尔街日报》最新披露, Anthropic 预计二季度营收增速将超预期, 财报显示营收将达 109 亿美元。在扣除算力成本后, 运营利润将转正至 5.59 亿美元, 首次实现季度盈利。
-
-[阅读全文 →](https://llmposts.com/models/anthropic-q2-revenue-profit-forecast/)
-
-#### [OpenAI 通用推理模型证明 1946 年单位距离猜想](https://llmposts.com/models/openai-general-reasoning-model-math-proof/)
-
-据 OpenAI 披露，其通用推理模型自主破解 1946 年平面单位距离猜想，构建至少 n^{1+δ} (δ≈0.014) 个单位对点，经多位国际顶尖数学家验证，展现了跨领域科研推理能力。
-
-[阅读全文 →](https://llmposts.com/models/openai-general-reasoning-model-math-proof/)
-
-### 02 · 教程指南 · Tutorials · 1 篇
-
-#### [cc-switch：一键管理 Claude Code、Codex 等 AI 工具](https://llmposts.com/guides/cc-switch-claude-code-codex-ai-switcher/)
-
-cc-switch 是一个跨平台桌面应用，用来管理 Claude Code、Codex、Gemini CLI、OpenCode、OpenClaw 这五个 AI 编程命令行工具的配置。常见用途是一键切换 Claude Code 的 API 供应商，还能跨工具管理 MCP、Skills、Prompts 与查看用量。
-
-[阅读全文 →](https://llmposts.com/guides/cc-switch-claude-code-codex-ai-switcher/)
+[阅读全文 →](https://llmposts.com/models/codex-locked-computer-use-mac/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**

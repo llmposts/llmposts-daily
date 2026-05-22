@@ -1,5 +1,12 @@
 [
   {
+    "title": "Codex 锁定电脑使用支持 Mac 锁屏后远程操作",
+    "link": "https://llmposts.com/models/codex-locked-computer-use-mac/",
+    "date": "2026-05-22T09:23:05",
+    "summary": "OpenAI 更新 Codex 电脑控制功能，锁定电脑使用支持 Mac 锁屏后远程操作桌面应用。内置授权插件与临时解锁窗口，提供输入监测与审批机制。",
+    "category": "模型动态"
+  },
+  {
     "title": "Qwen3.7 Max 跑分超上一版 4.8 分，闭源旗舰逼近技术前沿",
     "link": "https://llmposts.com/models/qwen3-7-max-intelligence-index/",
     "date": "2026-05-21T21:45:19",
