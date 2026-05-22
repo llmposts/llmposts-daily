@@ -341,20 +341,34 @@ function buildIncrementalBlocks(newItems) {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-// 飞书 wiki 侧边栏按标题字典序 ASC 排,而我们希望新日期在顶部。
-// 解决:在标题前加一个反向日期前缀 —— 新日期前缀小、字典序排前。
-// 前缀 = (9999-Y, 12-M, 31-D) 逐组件减,看起来像一个奇怪未来日期,但是 lex-sortable
-// 且能正确处理跨年/跨月边界。
-function antiDateForSort(date) {
+// 当前期望的标题格式
+function buildNodeTitle(date) {
+  return `${date} 日报(${config.siteName})`;
+}
+
+// 历史用过的格式(用于按标题查找/迁移已存在的节点)
+function antiDatePrefixedTitle(date) {
   const [y, m, d] = date.split("-").map(Number);
   const ay = String(9999 - y).padStart(4, "0");
   const am = String(12 - m).padStart(2, "0");
   const ad = String(31 - d).padStart(2, "0");
-  return `${ay}-${am}-${ad}`;
+  return `[${ay}-${am}-${ad}] ${config.siteName} · ${date}`;
 }
 
-function buildNodeTitle(date) {
-  return `[${antiDateForSort(date)}] ${config.siteName} · ${date}`;
+function legacyTitlesFor(date) {
+  return [
+    buildNodeTitle(date),
+    antiDatePrefixedTitle(date),
+    `${config.siteName} · ${date}`, // 最初格式
+  ];
+}
+
+// 飞书 wiki 改节点标题
+async function updateWikiNodeTitle(env, spaceId, nodeToken, newTitle) {
+  await feishu(
+    `/open-apis/wiki/v2/spaces/${encodeURIComponent(spaceId)}/nodes/${nodeToken}/update_title`,
+    { method: "POST", body: { title: newTitle }, env }
+  );
 }
 
 // ---------- 同步单日 ----------
@@ -412,14 +426,23 @@ async function syncOneDay(env, date, items, state, spaceId, force) {
     let existing = null;
     if (!force) {
       const children = await listChildren(env, spaceId, env.parentNodeToken);
-      // 兼容旧标题(无反序前缀)和新标题(带前缀)
-      const oldTitle = `${config.siteName} · ${date}`;
-      existing = children.find((n) => n.title === title || n.title === oldTitle);
+      const candidates = new Set(legacyTitlesFor(date));
+      existing = children.find((n) => candidates.has(n.title));
     }
     if (existing) {
-      console.log(`  · ${date}: 复用已存在的子节点 "${title}"`);
       nodeToken = existing.node_token;
       objToken = existing.obj_token;
+      // 历史标题格式不一致 → 改名,迁移到当前期望格式
+      if (existing.title !== title) {
+        console.log(`  · ${date}: 改名 "${existing.title}" → "${title}"`);
+        try {
+          await updateWikiNodeTitle(env, spaceId, nodeToken, title);
+        } catch (e) {
+          console.warn(`  ! ${date}: 改名失败 (${e.message}); 继续使用旧标题`);
+        }
+      } else {
+        console.log(`  · ${date}: 复用已存在的子节点 "${title}"`);
+      }
     } else {
       console.log(`  · ${date}: 创建 wiki 子节点 "${title}" ...`);
       const node = await createChildNode(env, spaceId, env.parentNodeToken, title);
