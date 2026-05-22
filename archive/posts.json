@@ -1,5 +1,12 @@
 [
   {
+    "title": "智谱发布 GLM-5.1-HighSpeed：400 tokens/s 刷新大模型速度上限",
+    "link": "https://llmposts.com/models/glm-51-highspeed-speed-optimization/",
+    "date": "2026-05-22T20:07:57",
+    "summary": "智谱发布 GLM-5.1-HighSpeed 速度表现达 400 tokens/s 的旗舰模型，采用自研 TileRT 推理引擎重构底层架构，在 8 块 H200 GPU 环境下实现极低首字延迟与生产级稳定输出。",
+    "category": "模型动态"
+  },
+  {
     "title": "Cloudflare AI 裁员：高增长下的 20% 人员优化策略",
     "link": "https://llmposts.com/models/cloudflare-ai-layoffs-measurers/",
     "date": "2026-05-22T17:03:51",

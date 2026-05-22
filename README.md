@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-22 · 共 3 篇
+## 🔥 最新汇总 · 2026-05-22 · 共 4 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 4 篇
+
+#### [智谱发布 GLM-5.1-HighSpeed：400 tokens/s 刷新大模型速度上限](https://llmposts.com/models/glm-51-highspeed-speed-optimization/)
+
+智谱发布 GLM-5.1-HighSpeed 速度表现达 400 tokens/s 的旗舰模型，采用自研 TileRT 推理引擎重构底层架构，在 8 块 H200 GPU 环境下实现极低首字延迟与生产级稳定输出。
+
+[阅读全文 →](https://llmposts.com/models/glm-51-highspeed-speed-optimization/)
 
 #### [Cloudflare AI 裁员：高增长下的 20% 人员优化策略](https://llmposts.com/models/cloudflare-ai-layoffs-measurers/)
 
