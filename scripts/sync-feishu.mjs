@@ -341,6 +341,22 @@ function buildIncrementalBlocks(newItems) {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// 飞书 wiki 侧边栏按标题字典序 ASC 排,而我们希望新日期在顶部。
+// 解决:在标题前加一个反向日期前缀 —— 新日期前缀小、字典序排前。
+// 前缀 = (9999-Y, 12-M, 31-D) 逐组件减,看起来像一个奇怪未来日期,但是 lex-sortable
+// 且能正确处理跨年/跨月边界。
+function antiDateForSort(date) {
+  const [y, m, d] = date.split("-").map(Number);
+  const ay = String(9999 - y).padStart(4, "0");
+  const am = String(12 - m).padStart(2, "0");
+  const ad = String(31 - d).padStart(2, "0");
+  return `${ay}-${am}-${ad}`;
+}
+
+function buildNodeTitle(date) {
+  return `[${antiDateForSort(date)}] ${config.siteName} · ${date}`;
+}
+
 // ---------- 同步单日 ----------
 async function syncOneDay(env, date, items, state, spaceId, force) {
   if (!items || items.length === 0) {
@@ -391,12 +407,14 @@ async function syncOneDay(env, date, items, state, spaceId, force) {
   let objToken = entry && entry.obj_token;
 
   if (!nodeToken) {
-    const title = `${config.siteName} · ${date}`;
+    const title = buildNodeTitle(date);
     // --force 模式刚删过节点,跳过 listChildren 复用分支(防止 cascade 延迟拿到无效节点)
     let existing = null;
     if (!force) {
       const children = await listChildren(env, spaceId, env.parentNodeToken);
-      existing = children.find((n) => n.title === title);
+      // 兼容旧标题(无反序前缀)和新标题(带前缀)
+      const oldTitle = `${config.siteName} · ${date}`;
+      existing = children.find((n) => n.title === title || n.title === oldTitle);
     }
     if (existing) {
       console.log(`  · ${date}: 复用已存在的子节点 "${title}"`);
