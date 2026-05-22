@@ -349,10 +349,15 @@ async function syncOneDay(env, date, items, state, spaceId, force) {
   }
 
   const entry = state[date];
-  const syncedLinks = new Set((entry && entry.synced_links) || []);
+  // 旧 schema(只有 last_synced_count,没有 synced_links)视作未同步,本次走全量重写以补齐 link 列表
+  const hasNewFormat = entry && Array.isArray(entry.synced_links);
+  if (entry && !hasNewFormat) {
+    console.log(`  · ${date}: 旧 state 格式,本次执行全量重写以建立 synced_links`);
+  }
+  const syncedLinks = new Set(hasNewFormat ? entry.synced_links : []);
   const newItems = items.filter((it) => !syncedLinks.has(it.link));
 
-  if (!force && entry && newItems.length === 0) {
+  if (!force && hasNewFormat && newItems.length === 0) {
     console.log(`  ↳ ${date}: 无新文章(${items.length} 篇都已写入),跳过`);
     return "skip";
   }
@@ -376,8 +381,8 @@ async function syncOneDay(env, date, items, state, spaceId, force) {
     }
   }
 
-  // 决策:首次(无 entry)或 force → 全量重写;否则 → 增量 prepend
-  const isFullRender = force || !entry;
+  // 决策:首次 / force / 旧 state 格式 → 全量重写;否则 → 增量 prepend
+  const isFullRender = force || !hasNewFormat;
   let finalLinks;
 
   if (isFullRender) {
