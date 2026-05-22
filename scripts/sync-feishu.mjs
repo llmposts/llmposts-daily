@@ -272,10 +272,6 @@ function headingBlock(level, elements) {
   return { block_type: blockType, [key]: { elements, style: {} } };
 }
 
-function dividerBlock() {
-  return { block_type: 22, divider: {} };
-}
-
 function byDateDesc(a, b) {
   return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
 }
@@ -288,17 +284,10 @@ function postBlocks(it) {
   return blocks;
 }
 
-// 首次/强制时的全量渲染,结构同 archive/.md
+// 首次/强制时的全量渲染:纯文章列表,无 intro / 分类小标题 / 分割线 / 站点链接,
+// 避免任何含计数的内容随增量同步过时。分类顺序仍按 config.categoryOrder 决定文章排列。
 function buildDailyBlocks(date, items) {
   const sorted = items.slice().sort(byDateDesc);
-  const blocks = [];
-
-  blocks.push(
-    paragraphBlock([
-      textRun(`当日 AI 要闻汇总 · 共 ${sorted.length} 篇 · 点「阅读全文」看完整内容 👉 `),
-      linkRun(config.siteName, config.siteUrl),
-    ])
-  );
 
   const byCat = new Map();
   for (const it of sorted) {
@@ -316,18 +305,11 @@ function buildDailyBlocks(date, items) {
     return byCat.get(b).length - byCat.get(a).length;
   });
 
-  cats.forEach((cat, idx) => {
+  const blocks = [];
+  for (const cat of cats) {
     const arr = byCat.get(cat).slice().sort(byDateDesc);
-    const en = (config.categoryLabels || {})[cat];
-    const num = String(idx + 1).padStart(2, "0");
-    blocks.push(
-      headingBlock(2, [textRun(`${num} · ${cat}${en ? ` · ${en}` : ""} · ${arr.length} 篇`)])
-    );
     for (const it of arr) blocks.push(...postBlocks(it));
-  });
-
-  blocks.push(dividerBlock());
-  blocks.push(paragraphBlock([textRun("🌐 "), linkRun(config.siteName, config.siteUrl)]));
+  }
   return blocks;
 }
 
