@@ -486,10 +486,12 @@ async function syncOneDay(env, date, items, state, spaceId, force) {
 
 // ---------- 主流程 ----------
 function pickDates(args, byDate) {
-  const keys = [...byDate.keys()].sort(); // 全局按日期升序
-  if (args.all) return keys; // 升序,从最早开始 —— 让最新日期最后创建,飞书侧边栏自然显示在顶部
+  const keys = [...byDate.keys()].sort(); // 日期 ASC
+  // 飞书 wiki 侧边栏按节点 create_time ASC 排(最早创建的在顶)。
+  // 要让「最新日期在顶」,就得让它最先被创建 → 迭代顺序用日期 DESC(新→旧)。
+  if (args.all) return keys.slice().reverse();
   if (args.date) return [args.date];
-  return keys.slice(-3); // 最近 3 个,仍是升序(同上,保证创建顺序一致)
+  return keys.slice(-3).reverse(); // 最近 3 天,新→旧
 }
 
 async function main() {
