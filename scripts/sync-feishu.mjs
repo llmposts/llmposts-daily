@@ -348,12 +348,30 @@ async function syncOneDay(env, date, items, state, spaceId, force) {
     return "skip";
   }
 
-  const entry = state[date];
-  // 旧 schema(只有 last_synced_count,没有 synced_links)视作未同步,本次走全量重写以补齐 link 列表
-  const hasNewFormat = entry && Array.isArray(entry.synced_links);
-  if (entry && !hasNewFormat) {
-    console.log(`  · ${date}: 旧 state 格式,本次执行全量重写以建立 synced_links`);
+  // 旧 schema 自动清理:删除底层 docx(飞书 origin 类节点会随 docx 删除一起从侧边栏移除)
+  // + 清状态,让后续走「新建节点」分支。这样 ASC 迭代里日期越新 create_time 越大,
+  // 飞书侧边栏按 create_time DESC 排,新日期自然落到顶部。
+  if (state[date] && !Array.isArray(state[date].synced_links)) {
+    console.log(`  · ${date}: 旧 state schema → 删除旧 docx 重置(按 ASC 重建以修正侧边栏顺序)`);
+    if (state[date].obj_token) {
+      try {
+        await feishu(`/open-apis/drive/v1/files/${state[date].obj_token}?type=docx`, {
+          method: "DELETE",
+          env,
+        });
+        console.log(`  · ${date}: 旧 docx 已删除`);
+      } catch (e) {
+        console.warn(
+          `  ! ${date}: 删除旧 docx 失败 (${e.message}); 可能需手动在飞书 UI 删除该节点`
+        );
+      }
+    }
+    delete state[date];
+    await saveState(state);
   }
+
+  const entry = state[date];
+  const hasNewFormat = entry && Array.isArray(entry.synced_links);
   const syncedLinks = new Set(hasNewFormat ? entry.synced_links : []);
   const newItems = items.filter((it) => !syncedLinks.has(it.link));
 
@@ -416,10 +434,10 @@ async function syncOneDay(env, date, items, state, spaceId, force) {
 
 // ---------- 主流程 ----------
 function pickDates(args, byDate) {
-  const keys = [...byDate.keys()].sort();
-  if (args.all) return keys; // 升序,从最早开始,断点续传友好
+  const keys = [...byDate.keys()].sort(); // 全局按日期升序
+  if (args.all) return keys; // 升序,从最早开始 —— 让最新日期最后创建,飞书侧边栏自然显示在顶部
   if (args.date) return [args.date];
-  return keys.slice(-3).reverse(); // 最近 3 个(新→旧)
+  return keys.slice(-3); // 最近 3 个,仍是升序(同上,保证创建顺序一致)
 }
 
 async function main() {
