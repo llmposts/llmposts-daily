@@ -371,6 +371,36 @@ async function updateWikiNodeTitle(env, spaceId, nodeToken, newTitle) {
   );
 }
 
+// 把 docx 设为「获得链接的人可阅读」(任何人凭链接均可访问)
+// 需要 drive:drive 权限。个人版飞书可能不允许 external_access=open,会返回错误,
+// 上层捕获后只打 warning 不中断同步。
+async function setDocPublicReadable(env, docToken) {
+  await feishu(`/open-apis/drive/v2/permissions/${docToken}/public?type=docx`, {
+    method: "PATCH",
+    body: {
+      external_access_entity: "open",
+      link_share_entity: "anyone_readable",
+    },
+    env,
+  });
+}
+
+// 已设过公开权限的节点不重复 PATCH(state.public_access_set 兜底)
+async function ensurePublicAccess(env, state, date) {
+  const entry = state[date];
+  if (!entry || !entry.obj_token || entry.public_access_set) return;
+  try {
+    await setDocPublicReadable(env, entry.obj_token);
+    state[date].public_access_set = true;
+    await saveState(state);
+    console.log(`  · ${date}: 已开启「获得链接的人可阅读」`);
+  } catch (e) {
+    console.warn(
+      `  ! ${date}: 设置公开访问失败(${e.message});个人版飞书可能不支持 external_access`
+    );
+  }
+}
+
 // ---------- 同步单日 ----------
 async function syncOneDay(env, date, items, state, spaceId, force) {
   if (!items || items.length === 0) {
@@ -411,6 +441,9 @@ async function syncOneDay(env, date, items, state, spaceId, force) {
   const hasNewFormat = entry && Array.isArray(entry.synced_links);
   const syncedLinks = new Set(hasNewFormat ? entry.synced_links : []);
   const newItems = items.filter((it) => !syncedLinks.has(it.link));
+
+  // 节点已存在但还没设过公开权限 → 顺手补一下,再决定要不要跳
+  if (hasNewFormat) await ensurePublicAccess(env, state, date);
 
   if (!force && hasNewFormat && newItems.length === 0) {
     console.log(`  ↳ ${date}: 无新文章(${items.length} 篇都已写入),跳过`);
@@ -481,6 +514,10 @@ async function syncOneDay(env, date, items, state, spaceId, force) {
   console.log(
     `  ✓ ${date}: ${isFullRender ? "完整写入" : "增量更新"},累计 ${finalLinks.size} 篇`
   );
+
+  // 新建/重建后开启公开访问
+  await ensurePublicAccess(env, state, date);
+
   return "done";
 }
 
