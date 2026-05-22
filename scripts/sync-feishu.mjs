@@ -1,13 +1,17 @@
-// 把每日要闻同步成飞书 Wiki 子节点 —— 父节点 FEISHU_WIKI_PARENT_NODE_TOKEN 下每天一篇 docx,
-// 标题为「大模型邮报 · YYYY-MM-DD」,内容与 archive/YYYY/YYYY-MM-DD.md 结构一致:
-// 顶部一句话引导 → 按分类分组的编号小节 → 每篇 H3 标题(超链)+ 摘要 + 阅读全文 → 底部分割线 + 官网链接。
+// 把每日要闻同步成飞书 Wiki 子节点 —— 父节点 FEISHU_WIKI_PARENT_NODE_TOKEN 下每天一篇 docx。
 //
-// 行为:每次 sync 重写当天节点的全部内容(idempotent;内容数未变则跳过)。
+// 行为:
+//   - 首次同步某天:在父节点下创建一个 wiki 子节点(标题「大模型邮报 · YYYY-MM-DD」),
+//     底层 docx 写入与 archive/YYYY/YYYY-MM-DD.md 一致结构的全量内容。
+//   - 增量同步同一天:只把 posts.json 里出现的新文章(状态文件没记录过的 link)
+//     prepend 到该节点顶端,**不动**旧内容(包括你手动加的批注)。
+//   - --force 强制对目标日期重写。
 //
 // 用法:
 //   node scripts/sync-feishu.mjs                     # 默认同步最近 3 天
-//   node scripts/sync-feishu.mjs --all               # 全量回填所有历史日期
+//   node scripts/sync-feishu.mjs --all               # 全量回填所有历史日期(首次跑或要补)
 //   node scripts/sync-feishu.mjs --date=YYYY-MM-DD   # 只同步指定某天
+//   node scripts/sync-feishu.mjs --force             # 配合上面任一,强制重写而非增量
 // 需要环境变量:FEISHU_APP_ID / FEISHU_APP_SECRET / FEISHU_WIKI_PARENT_NODE_TOKEN
 import { readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
@@ -22,9 +26,10 @@ const FEISHU_BASE = "https://open.feishu.cn";
 
 // ---------- CLI ----------
 function parseArgs(argv) {
-  const args = { all: false, date: null };
+  const args = { all: false, date: null, force: false };
   for (const a of argv) {
     if (a === "--all") args.all = true;
+    else if (a === "--force") args.force = true;
     else if (a.startsWith("--date=")) args.date = a.slice("--date=".length);
     else throw new Error(`未知参数: ${a}`);
   }
@@ -39,9 +44,10 @@ function parseArgs(argv) {
 // {
 //   "_meta": { "space_id": "...", "parent_node_token": "..." },
 //   "2026-05-22": {
-//     "node_token": "...",      // wiki 节点 token
-//     "obj_token": "...",        // 底层 docx token
-//     "last_synced_count": 6,
+//     "node_token": "...",
+//     "obj_token": "...",
+//     "synced_links": ["url1", "url2", ...],  // 已写入 wiki 的文章链接
+//     "first_synced_at": "...",
 //     "last_synced_at": "..."
 //   }
 // }
@@ -165,7 +171,7 @@ async function createChildNode(env, spaceId, parentNodeToken, title) {
 }
 
 // ---------- Docx blocks API ----------
-// Feishu docx 中,根 page block 的 block_id 等于 document_id(即 obj_token)
+// Feishu docx 中根 page block 的 block_id 等于 document_id(即 obj_token)
 async function listRootChildren(env, docToken) {
   const out = [];
   let pageToken = "";
@@ -187,8 +193,8 @@ async function listRootChildren(env, docToken) {
 async function wipeRootChildren(env, docToken) {
   const children = await listRootChildren(env, docToken);
   if (children.length === 0) return;
-  // batch_delete 一次最多 50 个 —— 分批从尾往前删,避免 index 漂移
   const BATCH = 50;
+  // 分批从尾往前删,避免 index 漂移
   for (let end = children.length; end > 0; end -= BATCH) {
     const start = Math.max(0, end - BATCH);
     await feishu(
@@ -217,8 +223,26 @@ async function appendRootChildren(env, docToken, blocks) {
   }
 }
 
+// 把 blocks prepend 到根块顶端;index: 0 = 插到最前
+// 多批时从最后一批往前插,保证最终顺序与 blocks 输入顺序一致
+async function prependRootChildren(env, docToken, blocks) {
+  const BATCH = 50;
+  const batches = [];
+  for (let i = 0; i < blocks.length; i += BATCH) batches.push(blocks.slice(i, i + BATCH));
+  for (let i = batches.length - 1; i >= 0; i--) {
+    await feishu(
+      `/open-apis/docx/v1/documents/${docToken}/blocks/${docToken}/children?document_revision_id=-1`,
+      {
+        method: "POST",
+        body: { children: batches[i], index: 0 },
+        env,
+      }
+    );
+  }
+}
+
 // ---------- Block builders ----------
-// 飞书 link.url 必须 URL 编码,否则有概率被截断或解析错
+// 飞书 link.url 必须 URL 编码,否则会被截断或解析错
 function encodeUrl(u) {
   return encodeURIComponent(String(u || ""));
 }
@@ -240,7 +264,7 @@ function paragraphBlock(elements) {
   return { block_type: 2, text: { elements, style: {} } };
 }
 
-// level 1 -> block_type 3 (heading1), level 2 -> 4, level 3 -> 5
+// level 1 -> block_type 3 (heading1), 2 -> 4, 3 -> 5
 function headingBlock(level, elements) {
   const map = { 1: 3, 2: 4, 3: 5 };
   const blockType = map[level] || 5;
@@ -256,13 +280,19 @@ function byDateDesc(a, b) {
   return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
 }
 
-// 全量渲染当天内容,与 archive/YYYY/YYYY-MM-DD.md 结构一致
-// (不包含 H1 顶层标题 —— wiki 节点的 title 已经承担了该作用)
+// 渲染一篇文章的三个 block:标题(超链)+ 摘要 + 阅读全文
+function postBlocks(it) {
+  const blocks = [headingBlock(3, [linkRun(it.title, it.link)])];
+  if (it.summary) blocks.push(paragraphBlock([textRun(it.summary)]));
+  blocks.push(paragraphBlock([linkRun("阅读全文 →", it.link)]));
+  return blocks;
+}
+
+// 首次/强制时的全量渲染,结构同 archive/.md
 function buildDailyBlocks(date, items) {
   const sorted = items.slice().sort(byDateDesc);
   const blocks = [];
 
-  // 顶部引导
   blocks.push(
     paragraphBlock([
       textRun(`当日 AI 要闻汇总 · 共 ${sorted.length} 篇 · 点「阅读全文」看完整内容 👉 `),
@@ -270,7 +300,6 @@ function buildDailyBlocks(date, items) {
     ])
   );
 
-  // 按分类分组,沿用 config.categoryOrder 的排序
   const byCat = new Map();
   for (const it of sorted) {
     const c = it.category || "未分类";
@@ -291,46 +320,46 @@ function buildDailyBlocks(date, items) {
     const arr = byCat.get(cat).slice().sort(byDateDesc);
     const en = (config.categoryLabels || {})[cat];
     const num = String(idx + 1).padStart(2, "0");
-    // H2: 01 · 模型动态 · Model Updates · 5 篇
     blocks.push(
       headingBlock(2, [textRun(`${num} · ${cat}${en ? ` · ${en}` : ""} · ${arr.length} 篇`)])
     );
-    for (const it of arr) {
-      // H3 [标题](链接)
-      blocks.push(headingBlock(3, [linkRun(it.title, it.link)]));
-      if (it.summary) {
-        blocks.push(paragraphBlock([textRun(it.summary)]));
-      }
-      blocks.push(paragraphBlock([linkRun("阅读全文 →", it.link)]));
-    }
+    for (const it of arr) blocks.push(...postBlocks(it));
   });
 
-  // 底部
   blocks.push(dividerBlock());
   blocks.push(paragraphBlock([textRun("🌐 "), linkRun(config.siteName, config.siteUrl)]));
+  return blocks;
+}
 
+// 增量 prepend 用:只渲染新文章本身,不带 intro / 分类小节 / 分割线
+function buildIncrementalBlocks(newItems) {
+  const sorted = newItems.slice().sort(byDateDesc); // 最新的最先 prepend → 永远在最顶
+  const blocks = [];
+  for (const it of sorted) blocks.push(...postBlocks(it));
   return blocks;
 }
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 // ---------- 同步单日 ----------
-async function syncOneDay(env, date, items, state, spaceId) {
+async function syncOneDay(env, date, items, state, spaceId, force) {
   if (!items || items.length === 0) {
     console.log(`  ↳ ${date}: 当天无内容,跳过`);
     return "skip";
   }
 
-  let entry = state[date];
-  if (entry && entry.last_synced_count === items.length && entry.node_token) {
-    console.log(`  ↳ ${date}: 内容无变化(${items.length} 篇),跳过`);
+  const entry = state[date];
+  const syncedLinks = new Set((entry && entry.synced_links) || []);
+  const newItems = items.filter((it) => !syncedLinks.has(it.link));
+
+  if (!force && entry && newItems.length === 0) {
+    console.log(`  ↳ ${date}: 无新文章(${items.length} 篇都已写入),跳过`);
     return "skip";
   }
 
   let nodeToken = entry && entry.node_token;
   let objToken = entry && entry.obj_token;
 
-  // 状态丢失或首次:看父节点下有没有同名 child
   if (!nodeToken) {
     const title = `${config.siteName} · ${date}`;
     const children = await listChildren(env, spaceId, env.parentNodeToken);
@@ -347,30 +376,45 @@ async function syncOneDay(env, date, items, state, spaceId) {
     }
   }
 
-  console.log(`  · ${date}: 清空旧内容 ...`);
-  await wipeRootChildren(env, objToken);
+  // 决策:首次(无 entry)或 force → 全量重写;否则 → 增量 prepend
+  const isFullRender = force || !entry;
+  let finalLinks;
 
-  const blocks = buildDailyBlocks(date, items);
-  console.log(`  · ${date}: 写入 ${blocks.length} 个 block ...`);
-  await appendRootChildren(env, objToken, blocks);
+  if (isFullRender) {
+    console.log(`  · ${date}: ${force ? "强制" : "首次"}全量写入 ${items.length} 篇 ...`);
+    await wipeRootChildren(env, objToken);
+    const blocks = buildDailyBlocks(date, items);
+    console.log(`  · ${date}: 写入 ${blocks.length} 个 block`);
+    await appendRootChildren(env, objToken, blocks);
+    finalLinks = new Set(items.map((it) => it.link));
+  } else {
+    const blocks = buildIncrementalBlocks(newItems);
+    console.log(`  · ${date}: 增量追加 ${newItems.length} 篇 -> ${blocks.length} 个 block 到顶端`);
+    await prependRootChildren(env, objToken, blocks);
+    finalLinks = new Set(syncedLinks);
+    for (const it of newItems) finalLinks.add(it.link);
+  }
 
   state[date] = {
     node_token: nodeToken,
     obj_token: objToken,
-    last_synced_count: items.length,
+    synced_links: [...finalLinks],
+    first_synced_at: (entry && entry.first_synced_at) || new Date().toISOString(),
     last_synced_at: new Date().toISOString(),
   };
   await saveState(state);
-  console.log(`  ✓ ${date}: 已同步 ${items.length} 篇`);
+  console.log(
+    `  ✓ ${date}: ${isFullRender ? "完整写入" : "增量更新"},累计 ${finalLinks.size} 篇`
+  );
   return "done";
 }
 
 // ---------- 主流程 ----------
 function pickDates(args, byDate) {
   const keys = [...byDate.keys()].sort();
-  if (args.all) return keys;
+  if (args.all) return keys; // 升序,从最早开始,断点续传友好
   if (args.date) return [args.date];
-  return keys.slice(-3).reverse();
+  return keys.slice(-3).reverse(); // 最近 3 个(新→旧)
 }
 
 async function main() {
@@ -399,7 +443,6 @@ async function main() {
 
   const state = await loadState();
 
-  // 取/缓存 space_id
   let spaceId = state._meta && state._meta.space_id;
   if (!spaceId || (state._meta && state._meta.parent_node_token !== env.parentNodeToken)) {
     console.log(`→ 解析 wiki space_id(parent=${env.parentNodeToken}) ...`);
@@ -413,7 +456,8 @@ async function main() {
 
   const dates = pickDates(args, byDate);
   const mode = args.all ? "--all" : args.date ? `--date=${args.date}` : "最近 3 天";
-  console.log(`→ 模式:${mode},计划同步 ${dates.length} 个日期`);
+  const flags = args.force ? " (--force)" : "";
+  console.log(`→ 模式:${mode}${flags},计划同步 ${dates.length} 个日期`);
 
   let done = 0;
   let skip = 0;
@@ -422,7 +466,7 @@ async function main() {
     const date = dates[i];
     const items = byDate.get(date) || [];
     try {
-      const r = await syncOneDay(env, date, items, state, spaceId);
+      const r = await syncOneDay(env, date, items, state, spaceId, args.force);
       if (r === "done") done++;
       else skip++;
     } catch (e) {

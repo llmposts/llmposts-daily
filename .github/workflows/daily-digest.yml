@@ -5,7 +5,17 @@ on:
     # ⚠️ 临时:cron 改为每 5 分钟,用于测试 GitHub 是否会识别并触发定时任务。
     # 确认 schedule 能触发后,改回 "26 * * * *"(每小时第 26 分,避开整点高负载)。
     - cron: "*/5 * * * *"
-  workflow_dispatch: {} # 也可在 Actions 页面手动触发
+  workflow_dispatch:
+    inputs:
+      feishu_sync_mode:
+        description: '飞书同步模式'
+        type: choice
+        required: false
+        default: 'recent'
+        options:
+          - recent  # 最近 3 天(默认)
+          - all     # 全量回填所有历史日期
+          - all-force  # 全量回填并强制重写
 
 # 让 Action 有权限把生成的文件提交回仓库
 permissions:
@@ -50,8 +60,14 @@ jobs:
           FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
           FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
           FEISHU_WIKI_PARENT_NODE_TOKEN: ${{ secrets.FEISHU_WIKI_PARENT_NODE_TOKEN }}
+          FEISHU_SYNC_MODE: ${{ inputs.feishu_sync_mode || 'recent' }}
         continue-on-error: true
-        run: node scripts/sync-feishu.mjs
+        run: |
+          case "$FEISHU_SYNC_MODE" in
+            all)        node scripts/sync-feishu.mjs --all ;;
+            all-force)  node scripts/sync-feishu.mjs --all --force ;;
+            *)          node scripts/sync-feishu.mjs ;;
+          esac
 
       - name: 提交飞书同步状态
         if: always()
