@@ -348,11 +348,18 @@ async function syncOneDay(env, date, items, state, spaceId, force) {
     return "skip";
   }
 
-  // 旧 schema 自动清理:删除底层 docx(飞书 origin 类节点会随 docx 删除一起从侧边栏移除)
-  // + 清状态,让后续走「新建节点」分支。这样 ASC 迭代里日期越新 create_time 越大,
+  // 需要重置已有节点的情形:
+  //   (a) --force —— 用户主动要求重建当日节点(常见于修复侧边栏顺序)
+  //   (b) 旧 schema 残留 —— 自动迁移
+  // 处理方式:删除底层 docx(飞书 origin 类节点会随 docx 删除一起从侧边栏移除)+ 清状态,
+  // 让后续走「新建节点」分支。这样 ASC 迭代里日期越新 create_time 越大,
   // 飞书侧边栏按 create_time DESC 排,新日期自然落到顶部。
-  if (state[date] && !Array.isArray(state[date].synced_links)) {
-    console.log(`  · ${date}: 旧 state schema → 删除旧 docx 重置(按 ASC 重建以修正侧边栏顺序)`);
+  const needsReset =
+    state[date] &&
+    (force || !Array.isArray(state[date].synced_links));
+  if (needsReset) {
+    const reason = force ? "--force" : "旧 state schema";
+    console.log(`  · ${date}: ${reason} → 删除旧 docx 让飞书移除节点,重新创建`);
     if (state[date].obj_token) {
       try {
         await feishu(`/open-apis/drive/v1/files/${state[date].obj_token}?type=docx`, {
@@ -362,7 +369,7 @@ async function syncOneDay(env, date, items, state, spaceId, force) {
         console.log(`  · ${date}: 旧 docx 已删除`);
       } catch (e) {
         console.warn(
-          `  ! ${date}: 删除旧 docx 失败 (${e.message}); 可能需手动在飞书 UI 删除该节点`
+          `  ! ${date}: 删除旧 docx 失败 (${e.message}); 可能需手动在飞书 UI 删除`
         );
       }
     }
@@ -385,8 +392,12 @@ async function syncOneDay(env, date, items, state, spaceId, force) {
 
   if (!nodeToken) {
     const title = `${config.siteName} · ${date}`;
-    const children = await listChildren(env, spaceId, env.parentNodeToken);
-    const existing = children.find((n) => n.title === title);
+    // --force 模式刚删过节点,跳过 listChildren 复用分支(防止 cascade 延迟拿到无效节点)
+    let existing = null;
+    if (!force) {
+      const children = await listChildren(env, spaceId, env.parentNodeToken);
+      existing = children.find((n) => n.title === title);
+    }
     if (existing) {
       console.log(`  · ${date}: 复用已存在的子节点 "${title}"`);
       nodeToken = existing.node_token;
