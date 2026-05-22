@@ -13,11 +13,17 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-22 · 共 1 篇
+## 🔥 最新汇总 · 2026-05-22 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
 
-#### [Codex 锁定电脑使用支持 Mac 锁屏后远程操作](https://llmposts.com/models/codex-locked-computer-use-mac/)
+#### [Cursor Composer 2.5 评测: 编码智能体性价比新标杆，SWE-Bench 跃升 35 分](https://llmposts.com/models/cursor-composer-2-5-benchmark/)
+
+Artificial Analysis 发布 Cursor Composer 2.5 评测报告，该模型在 Coding Agent Index 获 62 分位列第三，SWE-Bench 得分跃升 35 分，单任务成本仅 0.07 美元，显著低于 Opus 4.7 与 GPT-5.5 变体。
+
+[阅读全文 →](https://llmposts.com/models/cursor-composer-2-5-benchmark/)
+
+#### [Codex “锁定使用”现已推出，支持 Mac 锁屏后远程操作](https://llmposts.com/models/codex-locked-computer-use-mac/)
 
 OpenAI 更新 Codex 电脑控制功能，锁定电脑使用支持 Mac 锁屏后远程操作桌面应用。内置授权插件与临时解锁窗口，提供输入监测与审批机制。
 

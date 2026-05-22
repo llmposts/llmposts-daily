@@ -1,6 +1,13 @@
 [
   {
-    "title": "Codex 锁定电脑使用支持 Mac 锁屏后远程操作",
+    "title": "Cursor Composer 2.5 评测: 编码智能体性价比新标杆，SWE-Bench 跃升 35 分",
+    "link": "https://llmposts.com/models/cursor-composer-2-5-benchmark/",
+    "date": "2026-05-22T11:06:42",
+    "summary": "Artificial Analysis 发布 Cursor Composer 2.5 评测报告，该模型在 Coding Agent Index 获 62 分位列第三，SWE-Bench 得分跃升 35 分，单任务成本仅 0.07 美元，显著低于 Opus 4.7 与 GPT-5.5 变体。",
+    "category": "模型动态"
+  },
+  {
+    "title": "Codex “锁定使用”现已推出，支持 Mac 锁屏后远程操作",
     "link": "https://llmposts.com/models/codex-locked-computer-use-mac/",
     "date": "2026-05-22T09:23:05",
     "summary": "OpenAI 更新 Codex 电脑控制功能，锁定电脑使用支持 Mac 锁屏后远程操作桌面应用。内置授权插件与临时解锁窗口，提供输入监测与审批机制。",
