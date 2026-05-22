@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-22 · 共 2 篇
+## 🔥 最新汇总 · 2026-05-22 · 共 3 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 3 篇
+
+#### [Cloudflare AI 裁员：高增长下的 20% 人员优化策略](https://llmposts.com/models/cloudflare-ai-layoffs-measurers/)
+
+Cloudflare 在营收创纪录背景下裁掉超 20% 员工，CEO 撰文详解 AI 正逐步替代内部测量岗位。此举不仅未缩减招聘规模，反而将资源集中于核心构建与销售人才。
+
+[阅读全文 →](https://llmposts.com/models/cloudflare-ai-layoffs-measurers/)
 
 #### [Cursor Composer 2.5 评测: 编码智能体性价比新标杆，SWE-Bench 跃升 35 分](https://llmposts.com/models/cursor-composer-2-5-benchmark/)
 
