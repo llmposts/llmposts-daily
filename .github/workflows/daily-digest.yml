@@ -49,7 +49,7 @@ jobs:
         env:
           FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
           FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
-          FEISHU_FOLDER_TOKEN: ${{ secrets.FEISHU_FOLDER_TOKEN }}
+          FEISHU_WIKI_PARENT_NODE_TOKEN: ${{ secrets.FEISHU_WIKI_PARENT_NODE_TOKEN }}
         continue-on-error: true
         run: node scripts/sync-feishu.mjs
 

@@ -1,9 +1,14 @@
-// 把每日要闻同步成飞书 Docx,挂载到 FEISHU_FOLDER_TOKEN 指定的文件夹下。
+// 把每日要闻同步成飞书 Wiki 子节点 —— 父节点 FEISHU_WIKI_PARENT_NODE_TOKEN 下每天一篇 docx,
+// 标题为「大模型邮报 · YYYY-MM-DD」,内容与 archive/YYYY/YYYY-MM-DD.md 结构一致:
+// 顶部一句话引导 → 按分类分组的编号小节 → 每篇 H3 标题(超链)+ 摘要 + 阅读全文 → 底部分割线 + 官网链接。
+//
+// 行为:每次 sync 重写当天节点的全部内容(idempotent;内容数未变则跳过)。
+//
 // 用法:
-//   node scripts/sync-feishu.mjs                     # 默认同步最近 3 天(防漏补发)
+//   node scripts/sync-feishu.mjs                     # 默认同步最近 3 天
 //   node scripts/sync-feishu.mjs --all               # 全量回填所有历史日期
 //   node scripts/sync-feishu.mjs --date=YYYY-MM-DD   # 只同步指定某天
-// 需要环境变量:FEISHU_APP_ID / FEISHU_APP_SECRET / FEISHU_FOLDER_TOKEN。
+// 需要环境变量:FEISHU_APP_ID / FEISHU_APP_SECRET / FEISHU_WIKI_PARENT_NODE_TOKEN
 import { readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
@@ -31,6 +36,15 @@ function parseArgs(argv) {
 }
 
 // ---------- 状态文件 ----------
+// {
+//   "_meta": { "space_id": "...", "parent_node_token": "..." },
+//   "2026-05-22": {
+//     "node_token": "...",      // wiki 节点 token
+//     "obj_token": "...",        // 底层 docx token
+//     "last_synced_count": 6,
+//     "last_synced_at": "..."
+//   }
+// }
 async function loadState() {
   if (!existsSync(STATE_FILE)) return {};
   try {
@@ -42,17 +56,20 @@ async function loadState() {
 }
 
 async function saveState(state) {
-  const ordered = {};
-  for (const k of Object.keys(state).sort().reverse()) ordered[k] = state[k];
+  const meta = state._meta || {};
+  const dateKeys = Object.keys(state).filter((k) => k !== "_meta").sort().reverse();
+  const ordered = { _meta: meta };
+  for (const k of dateKeys) ordered[k] = state[k];
   await writeFile(STATE_FILE, JSON.stringify(ordered, null, 2) + "\n", "utf8");
 }
 
 // ---------- 飞书认证(token 复用) ----------
 function readEnv() {
-  const appId = process.env.FEISHU_APP_ID || "";
-  const appSecret = process.env.FEISHU_APP_SECRET || "";
-  const folderToken = process.env.FEISHU_FOLDER_TOKEN || "";
-  return { appId, appSecret, folderToken };
+  return {
+    appId: process.env.FEISHU_APP_ID || "",
+    appSecret: process.env.FEISHU_APP_SECRET || "",
+    parentNodeToken: process.env.FEISHU_WIKI_PARENT_NODE_TOKEN || "",
+  };
 }
 
 let _token = null;
@@ -66,24 +83,25 @@ async function getToken(appId, appSecret) {
   });
   const json = await res.json().catch(() => ({}));
   if (!res.ok || json.code !== 0) {
-    throw new Error(`获取 tenant_access_token 失败:${res.status} code=${json.code} msg=${json.msg || ""}`);
+    throw new Error(
+      `获取 tenant_access_token 失败:${res.status} code=${json.code} msg=${json.msg || ""}`
+    );
   }
   _token = json.tenant_access_token;
-  // 提前 60s 视为过期,避免临界刷新
   _tokenExpiresAt = Date.now() + Math.max(60, (json.expire || 7200) - 60) * 1000;
   return _token;
 }
 
-// ---------- 飞书 HTTP 封装 ----------
-async function feishu(apiPath, { method = "GET", body, headers = {}, env } = {}) {
+// ---------- 飞书 HTTP ----------
+async function feishu(apiPath, { method = "GET", body, env } = {}) {
   const token = await getToken(env.appId, env.appSecret);
-  const finalHeaders = { Authorization: `Bearer ${token}`, ...headers };
-  let finalBody = body;
-  if (body !== undefined && !(body instanceof FormData)) {
-    finalHeaders["Content-Type"] = finalHeaders["Content-Type"] || "application/json; charset=utf-8";
-    if (typeof body !== "string") finalBody = JSON.stringify(body);
+  const headers = { Authorization: `Bearer ${token}` };
+  let finalBody;
+  if (body !== undefined) {
+    headers["Content-Type"] = "application/json; charset=utf-8";
+    finalBody = typeof body === "string" ? body : JSON.stringify(body);
   }
-  const res = await fetch(`${FEISHU_BASE}${apiPath}`, { method, headers: finalHeaders, body: finalBody });
+  const res = await fetch(`${FEISHU_BASE}${apiPath}`, { method, headers, body: finalBody });
   const text = await res.text();
   if (!res.ok) {
     throw new Error(`HTTP ${res.status} ${method} ${apiPath}: ${text.slice(0, 300)}`);
@@ -100,28 +118,159 @@ async function feishu(apiPath, { method = "GET", body, headers = {}, env } = {})
   return json.data || {};
 }
 
-// ---------- Markdown 渲染 ----------
-function escapeMd(s) {
-  return String(s).replace(/([[\]])/g, "\\$1").replace(/\s+/g, " ").trim();
+// ---------- Wiki API ----------
+async function getWikiNodeInfo(env, nodeToken) {
+  const data = await feishu(
+    `/open-apis/wiki/v2/spaces/get_node?token=${encodeURIComponent(nodeToken)}&obj_type=wiki`,
+    { env }
+  );
+  if (!data.node) throw new Error(`get_node 未返回 node:${JSON.stringify(data)}`);
+  return data.node;
+}
+
+async function listChildren(env, spaceId, parentNodeToken) {
+  const out = [];
+  let pageToken = "";
+  for (let i = 0; i < 20; i++) {
+    const qs = new URLSearchParams({
+      parent_node_token: parentNodeToken,
+      page_size: "50",
+    });
+    if (pageToken) qs.set("page_token", pageToken);
+    const data = await feishu(
+      `/open-apis/wiki/v2/spaces/${encodeURIComponent(spaceId)}/nodes?${qs.toString()}`,
+      { env }
+    );
+    out.push(...(data.items || []));
+    if (!data.has_more) break;
+    pageToken = data.page_token || "";
+    if (!pageToken) break;
+  }
+  return out;
+}
+
+async function createChildNode(env, spaceId, parentNodeToken, title) {
+  const data = await feishu(`/open-apis/wiki/v2/spaces/${encodeURIComponent(spaceId)}/nodes`, {
+    method: "POST",
+    body: {
+      obj_type: "docx",
+      parent_node_token: parentNodeToken,
+      node_type: "origin",
+      title,
+    },
+    env,
+  });
+  if (!data.node) throw new Error(`创建 wiki 节点失败:${JSON.stringify(data)}`);
+  return data.node;
+}
+
+// ---------- Docx blocks API ----------
+// Feishu docx 中,根 page block 的 block_id 等于 document_id(即 obj_token)
+async function listRootChildren(env, docToken) {
+  const out = [];
+  let pageToken = "";
+  for (let i = 0; i < 20; i++) {
+    const qs = new URLSearchParams({ page_size: "500", document_revision_id: "-1" });
+    if (pageToken) qs.set("page_token", pageToken);
+    const data = await feishu(
+      `/open-apis/docx/v1/documents/${docToken}/blocks/${docToken}/children?${qs.toString()}`,
+      { env }
+    );
+    out.push(...(data.items || []));
+    if (!data.has_more) break;
+    pageToken = data.page_token || "";
+    if (!pageToken) break;
+  }
+  return out;
+}
+
+async function wipeRootChildren(env, docToken) {
+  const children = await listRootChildren(env, docToken);
+  if (children.length === 0) return;
+  // batch_delete 一次最多 50 个 —— 分批从尾往前删,避免 index 漂移
+  const BATCH = 50;
+  for (let end = children.length; end > 0; end -= BATCH) {
+    const start = Math.max(0, end - BATCH);
+    await feishu(
+      `/open-apis/docx/v1/documents/${docToken}/blocks/${docToken}/children/batch_delete?document_revision_id=-1`,
+      {
+        method: "DELETE",
+        body: { start_index: start, end_index: end },
+        env,
+      }
+    );
+  }
+}
+
+async function appendRootChildren(env, docToken, blocks) {
+  const BATCH = 50;
+  for (let i = 0; i < blocks.length; i += BATCH) {
+    const chunk = blocks.slice(i, i + BATCH);
+    await feishu(
+      `/open-apis/docx/v1/documents/${docToken}/blocks/${docToken}/children?document_revision_id=-1`,
+      {
+        method: "POST",
+        body: { children: chunk, index: -1 },
+        env,
+      }
+    );
+  }
+}
+
+// ---------- Block builders ----------
+// 飞书 link.url 必须 URL 编码,否则有概率被截断或解析错
+function encodeUrl(u) {
+  return encodeURIComponent(String(u || ""));
+}
+
+function textRun(content) {
+  return { text_run: { content: String(content || "") } };
+}
+
+function linkRun(text, url) {
+  return {
+    text_run: {
+      content: String(text || ""),
+      text_element_style: { link: { url: encodeUrl(url) } },
+    },
+  };
+}
+
+function paragraphBlock(elements) {
+  return { block_type: 2, text: { elements, style: {} } };
+}
+
+// level 1 -> block_type 3 (heading1), level 2 -> 4, level 3 -> 5
+function headingBlock(level, elements) {
+  const map = { 1: 3, 2: 4, 3: 5 };
+  const blockType = map[level] || 5;
+  const key = `heading${level}`;
+  return { block_type: blockType, [key]: { elements, style: {} } };
+}
+
+function dividerBlock() {
+  return { block_type: 22, divider: {} };
 }
 
 function byDateDesc(a, b) {
   return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
 }
 
-// 把当天要闻渲染成 Markdown。结构与 archive/YYYY/YYYY-MM-DD.md 风格一致。
-// 摘要只放 summary(Yoast description),不放全文,避免成为主站内容副本。
-function renderDailyMarkdown(date, items) {
-  const lines = [];
-  lines.push(`# ${config.siteName} · ${date}`);
-  lines.push("");
+// 全量渲染当天内容,与 archive/YYYY/YYYY-MM-DD.md 结构一致
+// (不包含 H1 顶层标题 —— wiki 节点的 title 已经承担了该作用)
+function buildDailyBlocks(date, items) {
   const sorted = items.slice().sort(byDateDesc);
-  lines.push(
-    `> 本日 AI 要闻 ${sorted.length} 篇 · 完整内容见 [${config.siteName}](${config.siteUrl}) · 历史归档见 [archive.llmposts.com](https://archive.llmposts.com)`
-  );
-  lines.push("");
+  const blocks = [];
 
-  // 按分类分组,缺分类的归入「未分类」(与 archive 渲染保持一致)
+  // 顶部引导
+  blocks.push(
+    paragraphBlock([
+      textRun(`当日 AI 要闻汇总 · 共 ${sorted.length} 篇 · 点「阅读全文」看完整内容 👉 `),
+      linkRun(config.siteName, config.siteUrl),
+    ])
+  );
+
+  // 按分类分组,沿用 config.categoryOrder 的排序
   const byCat = new Map();
   for (const it of sorted) {
     const c = it.category || "未分类";
@@ -138,142 +287,99 @@ function renderDailyMarkdown(date, items) {
     return byCat.get(b).length - byCat.get(a).length;
   });
 
-  for (const cat of cats) {
-    const arr = byCat.get(cat);
+  cats.forEach((cat, idx) => {
+    const arr = byCat.get(cat).slice().sort(byDateDesc);
     const en = (config.categoryLabels || {})[cat];
-    lines.push(`## ${cat}${en ? ` · ${en}` : ""} · ${arr.length} 篇`);
-    lines.push("");
+    const num = String(idx + 1).padStart(2, "0");
+    // H2: 01 · 模型动态 · Model Updates · 5 篇
+    blocks.push(
+      headingBlock(2, [textRun(`${num} · ${cat}${en ? ` · ${en}` : ""} · ${arr.length} 篇`)])
+    );
     for (const it of arr) {
-      lines.push(`### ${escapeMd(it.title)}`);
-      lines.push("");
+      // H3 [标题](链接)
+      blocks.push(headingBlock(3, [linkRun(it.title, it.link)]));
       if (it.summary) {
-        lines.push(it.summary);
-        lines.push("");
+        blocks.push(paragraphBlock([textRun(it.summary)]));
       }
-      lines.push(`[阅读全文 →](${it.link})`);
-      lines.push("");
+      blocks.push(paragraphBlock([linkRun("阅读全文 →", it.link)]));
     }
-  }
-
-  lines.push("---");
-  lines.push("");
-  lines.push(
-    `> 由 [llmposts-daily](https://github.com/llmposts/llmposts-daily) 自动生成 · 完整内容请访问 [${config.siteName}](${config.siteUrl})`
-  );
-  lines.push("");
-  return lines.join("\n");
-}
-
-// ---------- Feishu:upload → import → poll → delete ----------
-// 把 Markdown 上传到云空间(parent_type=ccm_import_open),返回上传 file_token。
-async function uploadMarkdown(env, name, markdown) {
-  const buf = Buffer.from(markdown, "utf8");
-  const form = new FormData();
-  form.append("file_name", name);
-  form.append("parent_type", "ccm_import_open");
-  form.append("parent_node", env.folderToken);
-  form.append("size", String(buf.length));
-  // Node 20 原生 FormData 支持 Blob;Feishu 接收 multipart/form-data
-  form.append("file", new Blob([buf], { type: "text/markdown" }), name);
-  const data = await feishu("/open-apis/drive/v1/medias/upload_all", {
-    method: "POST",
-    body: form,
-    env,
   });
-  if (!data.file_token) throw new Error(`upload_all 未返回 file_token:${JSON.stringify(data)}`);
-  return data.file_token;
-}
 
-// 创建导入任务,挂载点为目标文件夹(mount_type=1)。
-async function createImportTask(env, fileToken, docTitle) {
-  const data = await feishu("/open-apis/drive/v1/import_tasks", {
-    method: "POST",
-    body: {
-      file_extension: "md",
-      file_token: fileToken,
-      type: "docx",
-      file_name: docTitle,
-      point: { mount_type: 1, mount_key: env.folderToken },
-    },
-    env,
-  });
-  if (!data.ticket) throw new Error(`import_tasks 未返回 ticket:${JSON.stringify(data)}`);
-  return data.ticket;
+  // 底部
+  blocks.push(dividerBlock());
+  blocks.push(paragraphBlock([textRun("🌐 "), linkRun(config.siteName, config.siteUrl)]));
+
+  return blocks;
 }
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-// 轮询导入任务:最多 30 次 × 2s = 60s。成功标志是 result.token 非空。
-async function pollImportTask(env, ticket, { maxAttempts = 30, intervalMs = 2000 } = {}) {
-  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
-    await sleep(intervalMs);
-    const data = await feishu(`/open-apis/drive/v1/import_tasks/${ticket}`, { env });
-    const r = data && data.result;
-    if (r && r.token) return { token: r.token, url: r.url || "" };
-    if (r && r.job_error_msg) {
-      throw new Error(`导入失败(job_status=${r.job_status}):${r.job_error_msg}`);
-    }
-    // 仍在处理,继续
-  }
-  throw new Error(`导入任务轮询超时(${(maxAttempts * intervalMs) / 1000}s,ticket=${ticket})`);
-}
-
-// 删除旧 Docx(覆盖更新时调用)。失败不抛,只记录,避免阻塞主流程。
-async function deleteDocx(env, docToken) {
-  await feishu(`/open-apis/drive/v1/files/${docToken}?type=docx`, { method: "DELETE", env });
-}
-
 // ---------- 同步单日 ----------
-function pickDates(args, byDate) {
-  const keys = [...byDate.keys()].sort(); // 升序
-  if (args.all) return keys; // 全量按时间从早到晚同步,便于断点续传
-  if (args.date) return [args.date]; // 显式日期允许同步空集(后面会过滤)
-  return keys.slice(-3).reverse(); // 最近 3 个有内容的日期(新→旧)
-}
-
-async function syncOneDay(env, date, items, state) {
+async function syncOneDay(env, date, items, state, spaceId) {
   if (!items || items.length === 0) {
     console.log(`  ↳ ${date}: 当天无内容,跳过`);
     return "skip";
   }
-  const prev = state[date];
-  if (prev && prev.last_synced_count === items.length && prev.doc_token) {
+
+  let entry = state[date];
+  if (entry && entry.last_synced_count === items.length && entry.node_token) {
     console.log(`  ↳ ${date}: 内容无变化(${items.length} 篇),跳过`);
     return "skip";
   }
-  const docTitle = `${config.siteName} · ${date}`;
-  const md = renderDailyMarkdown(date, items);
-  console.log(`  · ${date}: 上传 Markdown(${Buffer.byteLength(md, "utf8")} 字节)...`);
-  const mediaToken = await uploadMarkdown(env, `${docTitle}.md`, md);
-  console.log(`  · ${date}: 创建导入任务...`);
-  const ticket = await createImportTask(env, mediaToken, docTitle);
-  console.log(`  · ${date}: 轮询任务 ${ticket} ...`);
-  const result = await pollImportTask(env, ticket);
+
+  let nodeToken = entry && entry.node_token;
+  let objToken = entry && entry.obj_token;
+
+  // 状态丢失或首次:看父节点下有没有同名 child
+  if (!nodeToken) {
+    const title = `${config.siteName} · ${date}`;
+    const children = await listChildren(env, spaceId, env.parentNodeToken);
+    const existing = children.find((n) => n.title === title);
+    if (existing) {
+      console.log(`  · ${date}: 复用已存在的子节点 "${title}"`);
+      nodeToken = existing.node_token;
+      objToken = existing.obj_token;
+    } else {
+      console.log(`  · ${date}: 创建 wiki 子节点 "${title}" ...`);
+      const node = await createChildNode(env, spaceId, env.parentNodeToken, title);
+      nodeToken = node.node_token;
+      objToken = node.obj_token;
+    }
+  }
+
+  console.log(`  · ${date}: 清空旧内容 ...`);
+  await wipeRootChildren(env, objToken);
+
+  const blocks = buildDailyBlocks(date, items);
+  console.log(`  · ${date}: 写入 ${blocks.length} 个 block ...`);
+  await appendRootChildren(env, objToken, blocks);
+
   state[date] = {
-    doc_token: result.token,
-    url: result.url,
+    node_token: nodeToken,
+    obj_token: objToken,
     last_synced_count: items.length,
     last_synced_at: new Date().toISOString(),
   };
-  await saveState(state); // 立即落盘,防止后续失败丢进度
-  console.log(`  ✓ ${date}: 已生成 ${result.url || result.token}`);
-  if (prev && prev.doc_token && prev.doc_token !== result.token) {
-    try {
-      await deleteDocx(env, prev.doc_token);
-      console.log(`  · ${date}: 已删除旧 Docx ${prev.doc_token}`);
-    } catch (e) {
-      console.warn(`  ! ${date}: 删除旧 Docx 失败(可忽略,需人工清理):${e.message}`);
-    }
-  }
+  await saveState(state);
+  console.log(`  ✓ ${date}: 已同步 ${items.length} 篇`);
   return "done";
 }
 
 // ---------- 主流程 ----------
+function pickDates(args, byDate) {
+  const keys = [...byDate.keys()].sort();
+  if (args.all) return keys;
+  if (args.date) return [args.date];
+  return keys.slice(-3).reverse();
+}
+
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   const env = readEnv();
-  if (!env.appId || !env.appSecret || !env.folderToken) {
-    console.log("→ 未配置 FEISHU_APP_ID / FEISHU_APP_SECRET / FEISHU_FOLDER_TOKEN,跳过飞书同步");
+  if (!env.appId || !env.appSecret || !env.parentNodeToken) {
+    console.log(
+      "→ 未配置 FEISHU_APP_ID / FEISHU_APP_SECRET / FEISHU_WIKI_PARENT_NODE_TOKEN,跳过飞书同步"
+    );
     return;
   }
 
@@ -283,7 +389,6 @@ async function main() {
     return;
   }
 
-  // 按 YYYY-MM-DD 分组
   const byDate = new Map();
   for (const it of db) {
     const key = String(it.date || "").slice(0, 10);
@@ -293,6 +398,19 @@ async function main() {
   }
 
   const state = await loadState();
+
+  // 取/缓存 space_id
+  let spaceId = state._meta && state._meta.space_id;
+  if (!spaceId || (state._meta && state._meta.parent_node_token !== env.parentNodeToken)) {
+    console.log(`→ 解析 wiki space_id(parent=${env.parentNodeToken}) ...`);
+    const node = await getWikiNodeInfo(env, env.parentNodeToken);
+    spaceId = node.space_id;
+    if (!spaceId) throw new Error(`get_node 没返回 space_id`);
+    state._meta = { space_id: spaceId, parent_node_token: env.parentNodeToken };
+    await saveState(state);
+  }
+  console.log(`→ space_id: ${spaceId}`);
+
   const dates = pickDates(args, byDate);
   const mode = args.all ? "--all" : args.date ? `--date=${args.date}` : "最近 3 天";
   console.log(`→ 模式:${mode},计划同步 ${dates.length} 个日期`);
@@ -304,19 +422,17 @@ async function main() {
     const date = dates[i];
     const items = byDate.get(date) || [];
     try {
-      const r = await syncOneDay(env, date, items, state);
+      const r = await syncOneDay(env, date, items, state, spaceId);
       if (r === "done") done++;
       else skip++;
     } catch (e) {
       failed++;
       console.error(`  ✗ ${date}: ${e.message}`);
     }
-    // 导入任务有配额,日与日之间留 2.5s 缓冲
     if (i < dates.length - 1) await sleep(2500);
   }
 
   console.log(`✓ 完成:同步 ${done},跳过 ${skip},失败 ${failed}`);
-  // 单天失败不让整个流程 fail —— 但若一篇都没成功且至少一篇失败,以非零退出
   if (failed > 0 && done === 0 && skip === 0) process.exit(1);
 }
 
