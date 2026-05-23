@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-23 · 共 5 篇
+## 🔥 最新汇总 · 2026-05-23 · 共 6 篇
 
-### 01 · 模型动态 · Model Updates · 5 篇
+### 01 · 模型动态 · Model Updates · 6 篇
+
+#### [OpenAI Codex 流量分配转向开源终端工具访问](https://llmposts.com/models/openai-codex-open-source-traffic/)
+
+OpenAI Codex 流量分配出现新动向，团队工程师披露约 10% 生产流量流转至 Pi 与 OpenCode。得益于开放 app server 与 SDK，开发者复用 ChatGPT 账号免额外成本。
+
+[阅读全文 →](https://llmposts.com/models/openai-codex-open-source-traffic/)
 
 #### [DeepSeek-V4-Pro 永久降价, 折后价成常态](https://llmposts.com/models/deepseek-v4-pro-permanent-price-cut/)
 

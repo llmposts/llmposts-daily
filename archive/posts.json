@@ -1,5 +1,12 @@
 [
   {
+    "title": "OpenAI Codex 流量分配转向开源终端工具访问",
+    "link": "https://llmposts.com/models/openai-codex-open-source-traffic/",
+    "date": "2026-05-23T22:53:56",
+    "summary": "OpenAI Codex 流量分配出现新动向，团队工程师披露约 10% 生产流量流转至 Pi 与 OpenCode。得益于开放 app server 与 SDK，开发者复用 ChatGPT 账号免额外成本。",
+    "category": "模型动态"
+  },
+  {
     "title": "DeepSeek-V4-Pro 永久降价, 折后价成常态",
     "link": "https://llmposts.com/models/deepseek-v4-pro-permanent-price-cut/",
     "date": "2026-05-23T20:26:44",
