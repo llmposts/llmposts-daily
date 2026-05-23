@@ -8,38 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-05-22<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-05-23<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-22 · 共 4 篇
+## 🔥 最新汇总 · 2026-05-23 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 4 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [智谱发布 GLM-5.1-HighSpeed：400 tokens/s 刷新大模型速度上限](https://llmposts.com/models/glm-51-highspeed-speed-optimization/)
+#### [Anthropic 超 300 亿美元融资即将收官，估值逾 9000 亿美元超越 OpenAI](https://llmposts.com/models/anthropic-30-billion-funding-round/)
 
-智谱发布 GLM-5.1-HighSpeed 速度表现达 400 tokens/s 的旗舰模型，采用自研 TileRT 推理引擎重构底层架构，在 8 块 H200 GPU 环境下实现极低首字延迟与生产级稳定输出。
+Anthropic 即将完成超 300 亿美元融资，估值逾 9000 亿美元超越 OpenAI 成为全球最高估值 AI 初创。红杉等机构各投约 20 亿美元，Q2 收入预计 109 亿美元，年化收入即将突破 500 亿美元，公司有望首次实现盈利。
 
-[阅读全文 →](https://llmposts.com/models/glm-51-highspeed-speed-optimization/)
-
-#### [Cloudflare AI 裁员：高增长下的 20% 人员优化策略](https://llmposts.com/models/cloudflare-ai-layoffs-measurers/)
-
-Cloudflare 在营收创纪录背景下裁掉超 20% 员工，CEO 撰文详解 AI 正逐步替代内部测量岗位。此举不仅未缩减招聘规模，反而将资源集中于核心构建与销售人才。
-
-[阅读全文 →](https://llmposts.com/models/cloudflare-ai-layoffs-measurers/)
-
-#### [Cursor Composer 2.5 评测: 编码智能体性价比新标杆，SWE-Bench 跃升 35 分](https://llmposts.com/models/cursor-composer-2-5-benchmark/)
-
-Artificial Analysis 发布 Cursor Composer 2.5 评测报告，该模型在 Coding Agent Index 获 62 分位列第三，SWE-Bench 得分跃升 35 分，单任务成本仅 0.07 美元，显著低于 Opus 4.7 与 GPT-5.5 变体。
-
-[阅读全文 →](https://llmposts.com/models/cursor-composer-2-5-benchmark/)
-
-#### [Codex “锁定使用”现已推出，支持 Mac 锁屏后远程操作](https://llmposts.com/models/codex-locked-computer-use-mac/)
-
-OpenAI 更新 Codex 电脑控制功能，锁定电脑使用支持 Mac 锁屏后远程操作桌面应用。内置授权插件与临时解锁窗口，提供输入监测与审批机制。
-
-[阅读全文 →](https://llmposts.com/models/codex-locked-computer-use-mac/)
+[阅读全文 →](https://llmposts.com/models/anthropic-30-billion-funding-round/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
