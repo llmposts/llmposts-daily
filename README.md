@@ -8,56 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-05-23<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-05-24<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-23 · 共 7 篇
+## 🔥 最新汇总 · 2026-05-24 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 7 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [GPT-5.6 泄露：六月发布在即，iris-alpha 等三款变体曝光](https://llmposts.com/models/gpt-5-6-leak-june-2025/)
+#### [Google 宣布 Gemini CLI 关停，6 月 18 日整合至 Antigravity CLI](https://llmposts.com/models/gemini-cli-shutdown-antigravity-cli/)
 
-据 X 平台科技博主 Pankaj Kumar 最新 GPT-5.6 泄露信息，OpenAI 或于六月发布 GPT-5.6 与 GPT-5.6 Pro，含 iris-alpha 等三款变体，Sonnet 4.8 与 Gemini 3.5 Pro 也预计同期发布。
+Google 宣布 Gemini CLI 于 2026 年 6 月 18 日停止服务，功能整合至 Antigravity CLI 与 Antigravity 2.0 桌面应用，企业用户不受影响。
 
-[阅读全文 →](https://llmposts.com/models/gpt-5-6-leak-june-2025/)
-
-#### [约 10% 的 Codex 流量转向 Pi Harness 与 OpenCode](https://llmposts.com/models/openai-codex-open-source-traffic/)
-
-OpenAI Codex 流量分配出现新动向，团队工程师披露约 10% 生产流量流转至 Pi 与 OpenCode。得益于开放 app server 与 SDK，开发者复用 ChatGPT 账号免额外成本。
-
-[阅读全文 →](https://llmposts.com/models/openai-codex-open-source-traffic/)
-
-#### [DeepSeek-V4-Pro 永久降价, 折后价成常态](https://llmposts.com/models/deepseek-v4-pro-permanent-price-cut/)
-
-DeepSeek 宣布 DeepSeek-V4-Pro 永久降价，2026 年 5 月 31 日结束 2.5 折优惠后执行折后价，输入 3 元/百万 token、输出 6 元/百万 token，相当于原价 25%，Flash 版同步登顶 OpenRouter 周榜
-
-[阅读全文 →](https://llmposts.com/models/deepseek-v4-pro-permanent-price-cut/)
-
-#### [ChatGPT PowerPoint 集成上线，支持直接创建编辑演示文稿](https://llmposts.com/models/chatgpt-powerpoint-integration/)
-
-OpenAI 于 2026 年 5 月推出 ChatGPT for PowerPoint 测试版，该 ChatGPT PowerPoint 集成功能支持在演示软件中直接以自然语言创建、编辑和分析演示文稿，覆盖 Business、Enterprise、Free 等全部用户层级并内置图片生成。
-
-[阅读全文 →](https://llmposts.com/models/chatgpt-powerpoint-integration/)
-
-#### [Claude Mythos Preview 漏洞挖掘成果:Project Glasswing 首月发现逾万高危漏洞](https://llmposts.com/models/project-glasswing-claude-mythos-preview-vulnerabilities/)
-
-Anthropic Project Glasswing 首月报告显示，Claude Mythos Preview 漏洞挖掘能力已发现超万枚高危严重漏洞，Cloudflare 确认 2,000 枚含 400 枚高危，开源项目 1,752 枚评估准确率达 90.6%
-
-[阅读全文 →](https://llmposts.com/models/project-glasswing-claude-mythos-preview-vulnerabilities/)
-
-#### [Claude Sonnet 4.8 泄露:Anthropic 或跳过 4.7 升级视觉与编码](https://llmposts.com/models/claude-sonnet-4-8-leak/)
-
-Anthropic 的 Claude Sonnet 4.8 泄露事件由 Claude Code npm 更新意外曝光,源码包含 512,000 行调试信息。新模型或跳过 Sonnet 4.7,视觉准确率超 98%,引入 X high 推理层级,预计 2026 年 6 月中下旬发布。
-
-[阅读全文 →](https://llmposts.com/models/claude-sonnet-4-8-leak/)
-
-#### [Anthropic 超 300 亿美元融资即将收官，估值逾 9000 亿美元超越 OpenAI](https://llmposts.com/models/anthropic-30-billion-funding-round/)
-
-Anthropic 即将完成超 300 亿美元融资，估值逾 9000 亿美元超越 OpenAI 成为全球最高估值 AI 初创。红杉等机构各投约 20 亿美元，Q2 收入预计 109 亿美元，年化收入即将突破 500 亿美元，公司有望首次实现盈利。
-
-[阅读全文 →](https://llmposts.com/models/anthropic-30-billion-funding-round/)
+[阅读全文 →](https://llmposts.com/models/gemini-cli-shutdown-antigravity-cli/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
