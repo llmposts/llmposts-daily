@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-23 · 共 1 篇
+## 🔥 最新汇总 · 2026-05-23 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [Claude Sonnet 4.8 泄露:Anthropic 或跳过 4.7 升级视觉与编码](https://llmposts.com/models/claude-sonnet-4-8-leak/)
+
+Anthropic 的 Claude Sonnet 4.8 泄露事件由 Claude Code npm 更新意外曝光,源码包含 512,000 行调试信息。新模型或跳过 Sonnet 4.7,视觉准确率超 98%,引入 X high 推理层级,预计 2026 年 6 月中下旬发布。
+
+[阅读全文 →](https://llmposts.com/models/claude-sonnet-4-8-leak/)
 
 #### [Anthropic 超 300 亿美元融资即将收官，估值逾 9000 亿美元超越 OpenAI](https://llmposts.com/models/anthropic-30-billion-funding-round/)
 
