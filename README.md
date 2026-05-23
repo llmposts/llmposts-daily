@@ -13,11 +13,17 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-23 · 共 6 篇
+## 🔥 最新汇总 · 2026-05-23 · 共 7 篇
 
-### 01 · 模型动态 · Model Updates · 6 篇
+### 01 · 模型动态 · Model Updates · 7 篇
 
-#### [OpenAI Codex 流量分配转向开源终端工具访问](https://llmposts.com/models/openai-codex-open-source-traffic/)
+#### [GPT-5.6 泄露：六月发布在即，iris-alpha 等三款变体曝光](https://llmposts.com/models/gpt-5-6-leak-june-2025/)
+
+据 X 平台科技博主 Pankaj Kumar 最新 GPT-5.6 泄露信息，OpenAI 或于六月发布 GPT-5.6 与 GPT-5.6 Pro，含 iris-alpha 等三款变体，Sonnet 4.8 与 Gemini 3.5 Pro 也预计同期发布。
+
+[阅读全文 →](https://llmposts.com/models/gpt-5-6-leak-june-2025/)
+
+#### [约 10% 的 Codex 流量转向 Pi Harness 与 OpenCode](https://llmposts.com/models/openai-codex-open-source-traffic/)
 
 OpenAI Codex 流量分配出现新动向，团队工程师披露约 10% 生产流量流转至 Pi 与 OpenCode。得益于开放 app server 与 SDK，开发者复用 ChatGPT 账号免额外成本。
 
