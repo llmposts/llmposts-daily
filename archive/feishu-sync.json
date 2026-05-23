@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-05-23",
-      "node_token": "GaqOwwbD8iDb5OkvnHecWddjnDd",
-      "block_id": "doxcnSAVsziheEnV2dspnI1hckf"
+      "date": "2026-05-24",
+      "node_token": "XiEDw7vEViQw6dkI3kDcIqhSnfc",
+      "block_id": "doxcnXden0eN6in97jRxqW5sovm"
     }
+  },
+  "2026-05-24": {
+    "node_token": "XiEDw7vEViQw6dkI3kDcIqhSnfc",
+    "obj_token": "I4dLdyfFuoLUVXxuYejcLrU6n3d",
+    "synced_links": [
+      "https://llmposts.com/models/gemini-cli-shutdown-antigravity-cli/"
+    ],
+    "first_synced_at": "2026-05-23T16:49:11.823Z",
+    "last_synced_at": "2026-05-23T16:49:11.823Z",
+    "public_access_set": true
   },
   "2026-05-23": {
     "node_token": "GaqOwwbD8iDb5OkvnHecWddjnDd",
