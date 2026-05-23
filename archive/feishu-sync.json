@@ -1,7 +1,13 @@
 {
   "_meta": {
     "space_id": "7550176311366320129",
-    "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU"
+    "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
+    "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
+    "latest_pointer": {
+      "date": "2026-05-23",
+      "node_token": "GaqOwwbD8iDb5OkvnHecWddjnDd",
+      "block_id": "doxcnSAVsziheEnV2dspnI1hckf"
+    }
   },
   "2026-05-23": {
     "node_token": "GaqOwwbD8iDb5OkvnHecWddjnDd",
