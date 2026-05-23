@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-23 · 共 3 篇
+## 🔥 最新汇总 · 2026-05-23 · 共 4 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 4 篇
+
+#### [ChatGPT PowerPoint 集成上线，支持直接创建编辑演示文稿](https://llmposts.com/models/chatgpt-powerpoint-integration/)
+
+OpenAI 于 2026 年 5 月推出 ChatGPT for PowerPoint 测试版，该 ChatGPT PowerPoint 集成功能支持在演示软件中直接以自然语言创建、编辑和分析演示文稿，覆盖 Business、Enterprise、Free 等全部用户层级并内置图片生成。
+
+[阅读全文 →](https://llmposts.com/models/chatgpt-powerpoint-integration/)
 
 #### [Claude Mythos Preview 漏洞挖掘成果:Project Glasswing 首月发现逾万高危漏洞](https://llmposts.com/models/project-glasswing-claude-mythos-preview-vulnerabilities/)
 
