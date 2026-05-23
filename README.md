@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-23 · 共 2 篇
+## 🔥 最新汇总 · 2026-05-23 · 共 3 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 3 篇
+
+#### [Claude Mythos Preview 漏洞挖掘成果:Project Glasswing 首月发现逾万高危漏洞](https://llmposts.com/models/project-glasswing-claude-mythos-preview-vulnerabilities/)
+
+Anthropic Project Glasswing 首月报告显示，Claude Mythos Preview 漏洞挖掘能力已发现超万枚高危严重漏洞，Cloudflare 确认 2,000 枚含 400 枚高危，开源项目 1,752 枚评估准确率达 90.6%
+
+[阅读全文 →](https://llmposts.com/models/project-glasswing-claude-mythos-preview-vulnerabilities/)
 
 #### [Claude Sonnet 4.8 泄露:Anthropic 或跳过 4.7 升级视觉与编码](https://llmposts.com/models/claude-sonnet-4-8-leak/)
 
