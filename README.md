@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-23 · 共 4 篇
+## 🔥 最新汇总 · 2026-05-23 · 共 5 篇
 
-### 01 · 模型动态 · Model Updates · 4 篇
+### 01 · 模型动态 · Model Updates · 5 篇
+
+#### [DeepSeek-V4-Pro 永久降价, 折后价成常态](https://llmposts.com/models/deepseek-v4-pro-permanent-price-cut/)
+
+DeepSeek 宣布 DeepSeek-V4-Pro 永久降价，2026 年 5 月 31 日结束 2.5 折优惠后执行折后价，输入 3 元/百万 token、输出 6 元/百万 token，相当于原价 25%，Flash 版同步登顶 OpenRouter 周榜
+
+[阅读全文 →](https://llmposts.com/models/deepseek-v4-pro-permanent-price-cut/)
 
 #### [ChatGPT PowerPoint 集成上线，支持直接创建编辑演示文稿](https://llmposts.com/models/chatgpt-powerpoint-integration/)
 
