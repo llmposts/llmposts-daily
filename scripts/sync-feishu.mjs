@@ -383,6 +383,103 @@ async function ensurePublicAccess(env, state, date) {
   }
 }
 
+// ---------- 父节点「最新」指针 ----------
+// 飞书 wiki 侧栏按 create_time ASC 固定,新一天的子节点必然落底且无 reorder API。
+// 折中:在父节点 docx 顶部维护一个「最新:YYYY-MM-DD ...」链接块,每次同步指向最新日期。
+// 父 docx 其它内容不动;block_id 记录在 state._meta.latest_pointer 里以便下次替换。
+
+function wikiNodeUrl(nodeToken) {
+  return `https://www.feishu.cn/wiki/${nodeToken}`;
+}
+
+function buildLatestPointerBlock(date, nodeToken) {
+  return paragraphBlock([
+    textRun("最新:"),
+    linkRun(`${date} 日报(${config.siteName})`, wikiNodeUrl(nodeToken)),
+    textRun(" →"),
+  ]);
+}
+
+async function ensureParentObjToken(env, state) {
+  if (state._meta && state._meta.parent_obj_token) return state._meta.parent_obj_token;
+  const node = await getWikiNodeInfo(env, env.parentNodeToken);
+  if (!node.obj_token) throw new Error("get_node 未返回父节点 obj_token");
+  state._meta = { ...(state._meta || {}), parent_obj_token: node.obj_token };
+  await saveState(state);
+  return node.obj_token;
+}
+
+// 插入到根块顶端并返回新 block 的 block_id
+async function insertBlockAtTopReturningId(env, docToken, block) {
+  const data = await feishu(
+    `/open-apis/docx/v1/documents/${docToken}/blocks/${docToken}/children?document_revision_id=-1`,
+    { method: "POST", body: { children: [block], index: 0 }, env }
+  );
+  const child = (data.children || [])[0];
+  if (!child || !child.block_id) throw new Error("插入 block 后未返回 block_id");
+  return child.block_id;
+}
+
+// 按 block_id 在根块下找到并删掉(未找到则返回 false,不报错)
+async function deleteRootBlockById(env, docToken, blockId) {
+  const children = await listRootChildren(env, docToken);
+  const idx = children.findIndex((b) => b.block_id === blockId);
+  if (idx === -1) return false;
+  await feishu(
+    `/open-apis/docx/v1/documents/${docToken}/blocks/${docToken}/children/batch_delete?document_revision_id=-1`,
+    { method: "DELETE", body: { start_index: idx, end_index: idx + 1 }, env }
+  );
+  return true;
+}
+
+async function updateLatestPointer(env, state) {
+  // 选 state 里最大的日期(且已成功建过节点)
+  const dateKeys = Object.keys(state).filter((k) => k !== "_meta").sort();
+  let latest = null;
+  for (let i = dateKeys.length - 1; i >= 0; i--) {
+    const e = state[dateKeys[i]];
+    if (e && e.node_token) {
+      latest = { date: dateKeys[i], node_token: e.node_token };
+      break;
+    }
+  }
+  if (!latest) return;
+
+  const current = state._meta && state._meta.latest_pointer;
+  if (
+    current &&
+    current.block_id &&
+    current.date === latest.date &&
+    current.node_token === latest.node_token
+  ) {
+    return; // 已经指向最新,无需动
+  }
+
+  const parentObjToken = await ensureParentObjToken(env, state);
+
+  if (current && current.block_id) {
+    try {
+      await deleteRootBlockById(env, parentObjToken, current.block_id);
+    } catch (e) {
+      console.warn(`  ! 删除旧「最新」指针块失败(${e.message});继续插入新块`);
+    }
+  }
+
+  const block = buildLatestPointerBlock(latest.date, latest.node_token);
+  const newBlockId = await insertBlockAtTopReturningId(env, parentObjToken, block);
+
+  state._meta = {
+    ...(state._meta || {}),
+    latest_pointer: {
+      date: latest.date,
+      node_token: latest.node_token,
+      block_id: newBlockId,
+    },
+  };
+  await saveState(state);
+  console.log(`✓ 父节点「最新」指针已更新 → ${latest.date}`);
+}
+
 // ---------- 同步单日 ----------
 async function syncOneDay(env, date, items, state, spaceId, force) {
   if (!items || items.length === 0) {
@@ -570,6 +667,12 @@ async function main() {
       console.error(`  ✗ ${date}: ${e.message}`);
     }
     if (i < dates.length - 1) await sleep(2500);
+  }
+
+  try {
+    await updateLatestPointer(env, state);
+  } catch (e) {
+    console.warn(`! 更新父节点「最新」指针失败:${e.message}`);
   }
 
   console.log(`✓ 完成:同步 ${done},跳过 ${skip},失败 ${failed}`);
