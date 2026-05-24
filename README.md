@@ -17,7 +17,7 @@
 
 ### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Anthropic 或为 Claude 推出 Memory Files 结构化记忆系统](https://llmposts.com/models/claude-memory-files-dreams-update/)
+#### [Anthropic 将为 Claude 推出 Memory Files 结构化记忆系统](https://llmposts.com/models/claude-memory-files-dreams-update/)
 
 Anthropic 计划为 Claude 引入 Memory Files 记忆系统,支持按主题存储结构化文档并配合 Dreams 异步整合功能。目前 Dreams 仅在 Opus 4.7 与 Sonnet 4.6 中 beta 测试。
 
