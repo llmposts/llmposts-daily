@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-24 · 共 8 篇
+## 🔥 最新汇总 · 2026-05-24 · 共 9 篇
 
-### 01 · 模型动态 · Model Updates · 7 篇
+### 01 · 模型动态 · Model Updates · 8 篇
+
+#### [微软取消 Claude Code 许可, 揭示 AI 部署成本危机](https://llmposts.com/models/microsoft-ai-deployment-cost-crisis/)
+
+微软取消 Claude Code 许可揭示 AI 部署成本危机。报告显示 agentic AI 可能在 2030 年导致 token 消耗量增长 24 倍,即便单价下降 90%,总成本仍将大幅攀升。
+
+[阅读全文 →](https://llmposts.com/models/microsoft-ai-deployment-cost-crisis/)
 
 #### [Anthropic 将发布 Mythos 模型：此前曾称能力过强无法公开](https://llmposts.com/models/anthropic-mythos-model-release/)
 
