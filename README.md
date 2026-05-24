@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-24 · 共 6 篇
+## 🔥 最新汇总 · 2026-05-24 · 共 7 篇
 
-### 01 · 模型动态 · Model Updates · 5 篇
+### 01 · 模型动态 · Model Updates · 6 篇
+
+#### [白宫批准 90 亿美元秘密资金，应对美国政府 AI 芯片短缺](https://llmposts.com/models/us-government-ai-chips-shortage-nvidia-anthropic/)
+
+美国白宫批准 90 亿美元秘密申请以应对美国政府 AI 芯片短缺，旨在采购 Nvidia Grace Blackwell 芯片。此次行动旨在确保 NSA 等情报机构能运行 Anthropic Mythos 等顶级模型，避免在网络安全与间谍工作中落后。
+
+[阅读全文 →](https://llmposts.com/models/us-government-ai-chips-shortage-nvidia-anthropic/)
 
 #### [CodeGraph 代码图谱发布：用本地索引降低 AI Agent 检索成本](https://llmposts.com/models/codegraph-local-code-graph-agent-tool/)
 
