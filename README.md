@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-24 · 共 3 篇
+## 🔥 最新汇总 · 2026-05-24 · 共 4 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 4 篇
+
+#### [OpenAI Q1 2026 财务数据曝光：巨额亏损与用户增长停滞](https://llmposts.com/models/openai-q1-2026-financial-data/)
+
+《The Information》披露 OpenAI Q1 2026 财务数据，公司当季营收 57 亿美元，非 GAAP 运营利润率跌至 -122% 导致约 69.5 亿美元亏损。ChatGPT 周活用户增长停滞，付费转化仅 6%，公司面临算力经济账与 IPO 考量。
+
+[阅读全文 →](https://llmposts.com/models/openai-q1-2026-financial-data/)
 
 #### [Codex 速率限制问题已修复，所有账户额度已重置](https://llmposts.com/models/codex-rate-limits-fixed/)
 
