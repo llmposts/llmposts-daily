@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-24 · 共 7 篇
+## 🔥 最新汇总 · 2026-05-24 · 共 8 篇
 
-### 01 · 模型动态 · Model Updates · 6 篇
+### 01 · 模型动态 · Model Updates · 7 篇
+
+#### [Anthropic 将发布 Mythos 模型：此前曾称能力过强无法公开](https://llmposts.com/models/anthropic-mythos-model-release/)
+
+Anthropic 确认将发布内部代号为 Mythos 的模型。该模型此前被认为能力过强无法公开，但在 2026 年 5 月的更新中披露将通过 Project Glasswing 推进通用发布。
+
+[阅读全文 →](https://llmposts.com/models/anthropic-mythos-model-release/)
 
 #### [白宫批准 90 亿美元秘密资金，应对美国政府 AI 芯片短缺](https://llmposts.com/models/us-government-ai-chips-shortage-nvidia-anthropic/)
 

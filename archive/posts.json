@@ -1,5 +1,12 @@
 [
   {
+    "title": "Anthropic 将发布 Mythos 模型：此前曾称能力过强无法公开",
+    "link": "https://llmposts.com/models/anthropic-mythos-model-release/",
+    "date": "2026-05-24T17:21:41",
+    "summary": "Anthropic 确认将发布内部代号为 Mythos 的模型。该模型此前被认为能力过强无法公开，但在 2026 年 5 月的更新中披露将通过 Project Glasswing 推进通用发布。",
+    "category": "模型动态"
+  },
+  {
     "title": "白宫批准 90 亿美元秘密资金，应对美国政府 AI 芯片短缺",
     "link": "https://llmposts.com/models/us-government-ai-chips-shortage-nvidia-anthropic/",
     "date": "2026-05-24T16:52:31",
