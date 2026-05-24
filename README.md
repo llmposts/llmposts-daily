@@ -17,7 +17,7 @@
 
 ### 01 · 模型动态 · Model Updates · 8 篇
 
-#### [微软取消 Claude Code 许可, 揭示 AI 部署成本危机](https://llmposts.com/models/microsoft-ai-deployment-cost-crisis/)
+#### [AI 成本悖论：微软与 Uber 削减 AI 用量，算力开支或已超过人力成本](https://llmposts.com/models/microsoft-ai-deployment-cost-crisis/)
 
 微软取消 Claude Code 许可揭示 AI 部署成本危机。报告显示 agentic AI 可能在 2030 年导致 token 消耗量增长 24 倍,即便单价下降 90%,总成本仍将大幅攀升。
 
