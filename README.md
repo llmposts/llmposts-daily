@@ -8,70 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-05-24<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-05-25<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-24 · 共 9 篇
+## 🔥 最新汇总 · 2026-05-25 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 8 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [AI 成本悖论：微软与 Uber 削减 AI 用量，算力开支或已超过人力成本](https://llmposts.com/models/microsoft-ai-deployment-cost-crisis/)
+#### [Anthropic 或为 Claude 推出 Memory Files 结构化记忆系统](https://llmposts.com/models/claude-memory-files-dreams-update/)
 
-微软取消 Claude Code 许可揭示 AI 部署成本危机。报告显示 agentic AI 可能在 2030 年导致 token 消耗量增长 24 倍,即便单价下降 90%,总成本仍将大幅攀升。
+Anthropic 计划为 Claude 引入 Memory Files 记忆系统,支持按主题存储结构化文档并配合 Dreams 异步整合功能。目前 Dreams 仅在 Opus 4.7 与 Sonnet 4.6 中 beta 测试。
 
-[阅读全文 →](https://llmposts.com/models/microsoft-ai-deployment-cost-crisis/)
-
-#### [Anthropic 将发布 Mythos 模型：此前曾称能力过强无法公开](https://llmposts.com/models/anthropic-mythos-model-release/)
-
-Anthropic 确认将发布内部代号为 Mythos 的模型。该模型此前被认为能力过强无法公开，但在 2026 年 5 月的更新中披露将通过 Project Glasswing 推进通用发布。
-
-[阅读全文 →](https://llmposts.com/models/anthropic-mythos-model-release/)
-
-#### [白宫批准 90 亿美元秘密资金，应对美国政府 AI 芯片短缺](https://llmposts.com/models/us-government-ai-chips-shortage-nvidia-anthropic/)
-
-美国白宫批准 90 亿美元秘密申请以应对美国政府 AI 芯片短缺，旨在采购 Nvidia Grace Blackwell 芯片。此次行动旨在确保 NSA 等情报机构能运行 Anthropic Mythos 等顶级模型，避免在网络安全与间谍工作中落后。
-
-[阅读全文 →](https://llmposts.com/models/us-government-ai-chips-shortage-nvidia-anthropic/)
-
-#### [CodeGraph 代码图谱发布：用本地索引降低 AI Agent 检索成本](https://llmposts.com/models/codegraph-local-code-graph-agent-tool/)
-
-CodeGraph 代码图谱正式发布，通过本地 SQLite 构建符号调用关系，将 AI 编程 Agent 的 token 消耗降低 59%、工具调用减少 70%。支持 Claude Code 等主流工具。
-
-[阅读全文 →](https://llmposts.com/models/codegraph-local-code-graph-agent-tool/)
-
-#### [OpenAI Q1 2026 财务数据曝光：巨额亏损与用户增长停滞](https://llmposts.com/models/openai-q1-2026-financial-data/)
-
-《The Information》披露 OpenAI Q1 2026 财务数据，公司当季营收 57 亿美元，非 GAAP 运营利润率跌至 -122% 导致约 69.5 亿美元亏损。ChatGPT 周活用户增长停滞，付费转化仅 6%，公司面临算力经济账与 IPO 考量。
-
-[阅读全文 →](https://llmposts.com/models/openai-q1-2026-financial-data/)
-
-#### [Codex 速率限制问题已修复，所有账户额度已重置](https://llmposts.com/models/codex-rate-limits-fixed/)
-
-Codex 因缓存压缩优化导致速率限制异常消耗，OpenAI 已回滚该优化并重置所有账户额度。事件影响 Web、API 等 5 个组件，约 2.5 小时内完成修复。
-
-[阅读全文 →](https://llmposts.com/models/codex-rate-limits-fixed/)
-
-#### [Claude Mythos 1 将集成至 Claude Code 与 Security](https://llmposts.com/models/anthropic-mythos-1-claude-code-security/)
-
-据 TestingCatalog 曝料,Anthropic 正加速推进 Claude Mythos 发布,暂命名为 Mythos 1,用户界面已短暂出现该模型入口,代码字符串确认将集成至 Claude Code 与 Claude Security。
-
-[阅读全文 →](https://llmposts.com/models/anthropic-mythos-1-claude-code-security/)
-
-#### [Google 宣布 Gemini CLI 关停，6 月 18 日整合至 Antigravity CLI](https://llmposts.com/models/gemini-cli-shutdown-antigravity-cli/)
-
-Google 宣布 Gemini CLI 于 2026 年 6 月 18 日停止服务，功能整合至 Antigravity CLI 与 Antigravity 2.0 桌面应用，企业用户不受影响。
-
-[阅读全文 →](https://llmposts.com/models/gemini-cli-shutdown-antigravity-cli/)
-
-### 02 · 工程实践 · Engineering · 1 篇
-
-#### [CodeGraph：用本地索引降低 AI Agent 检索成本](https://llmposts.com/guides/codegraph-local-code-graph-agent-tool/)
-
-CodeGraph 代码图谱正式发布，通过本地 SQLite 构建符号调用关系，将 AI 编程 Agent 的 token 消耗降低 59%、工具调用减少 70%。支持 Claude Code 等主流工具。
-
-[阅读全文 →](https://llmposts.com/guides/codegraph-local-code-graph-agent-tool/)
+[阅读全文 →](https://llmposts.com/models/claude-memory-files-dreams-update/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**

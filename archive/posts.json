@@ -1,5 +1,12 @@
 [
   {
+    "title": "Anthropic 或为 Claude 推出 Memory Files 结构化记忆系统",
+    "link": "https://llmposts.com/models/claude-memory-files-dreams-update/",
+    "date": "2026-05-25T00:58:27",
+    "summary": "Anthropic 计划为 Claude 引入 Memory Files 记忆系统,支持按主题存储结构化文档并配合 Dreams 异步整合功能。目前 Dreams 仅在 Opus 4.7 与 Sonnet 4.6 中 beta 测试。",
+    "category": "模型动态"
+  },
+  {
     "title": "AI 成本悖论：微软与 Uber 削减 AI 用量，算力开支或已超过人力成本",
     "link": "https://llmposts.com/models/microsoft-ai-deployment-cost-crisis/",
     "date": "2026-05-24T20:49:43",
