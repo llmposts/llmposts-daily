@@ -13,11 +13,17 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-24 · 共 2 篇
+## 🔥 最新汇总 · 2026-05-24 · 共 3 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 3 篇
 
-#### [Anthropic 被曝筹备 Claude Mythos 1, 将集成至 Claude Code 与 Security](https://llmposts.com/models/anthropic-mythos-1-claude-code-security/)
+#### [Codex 速率限制问题已修复，所有账户额度已重置](https://llmposts.com/models/codex-rate-limits-fixed/)
+
+Codex 因缓存压缩优化导致速率限制异常消耗，OpenAI 已回滚该优化并重置所有账户额度。事件影响 Web、API 等 5 个组件，约 2.5 小时内完成修复。
+
+[阅读全文 →](https://llmposts.com/models/codex-rate-limits-fixed/)
+
+#### [Claude Mythos 1 将集成至 Claude Code 与 Security](https://llmposts.com/models/anthropic-mythos-1-claude-code-security/)
 
 据 TestingCatalog 曝料,Anthropic 正加速推进 Claude Mythos 发布,暂命名为 Mythos 1,用户界面已短暂出现该模型入口,代码字符串确认将集成至 Claude Code 与 Claude Security。
 
