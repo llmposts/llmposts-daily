@@ -1,5 +1,12 @@
 [
   {
+    "title": "Anthropic 被曝筹备 Claude Mythos 1, 将集成至 Claude Code 与 Security",
+    "link": "https://llmposts.com/models/anthropic-mythos-1-claude-code-security/",
+    "date": "2026-05-24T10:15:30",
+    "summary": "据 TestingCatalog 曝料,Anthropic 正加速推进 Claude Mythos 发布,暂命名为 Mythos 1,用户界面已短暂出现该模型入口,代码字符串确认将集成至 Claude Code 与 Claude Security。",
+    "category": "模型动态"
+  },
+  {
     "title": "Google 宣布 Gemini CLI 关停，6 月 18 日整合至 Antigravity CLI",
     "link": "https://llmposts.com/models/gemini-cli-shutdown-antigravity-cli/",
     "date": "2026-05-24T00:48:37",

@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-24 · 共 1 篇
+## 🔥 最新汇总 · 2026-05-24 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [Anthropic 被曝筹备 Claude Mythos 1, 将集成至 Claude Code 与 Security](https://llmposts.com/models/anthropic-mythos-1-claude-code-security/)
+
+据 TestingCatalog 曝料,Anthropic 正加速推进 Claude Mythos 发布,暂命名为 Mythos 1,用户界面已短暂出现该模型入口,代码字符串确认将集成至 Claude Code 与 Claude Security。
+
+[阅读全文 →](https://llmposts.com/models/anthropic-mythos-1-claude-code-security/)
 
 #### [Google 宣布 Gemini CLI 关停，6 月 18 日整合至 Antigravity CLI](https://llmposts.com/models/gemini-cli-shutdown-antigravity-cli/)
 
