@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-05-24",
-      "node_token": "XiEDw7vEViQw6dkI3kDcIqhSnfc",
-      "block_id": "doxcnXden0eN6in97jRxqW5sovm"
+      "date": "2026-05-25",
+      "node_token": "ZNmTwS67OixrY0kDT1mcETrunYk",
+      "block_id": "doxcn8QkDOLKgHqiS0XdSI5DN4p"
     }
+  },
+  "2026-05-25": {
+    "node_token": "ZNmTwS67OixrY0kDT1mcETrunYk",
+    "obj_token": "Qybvda72CoudmqxXEAac5FFvnab",
+    "synced_links": [
+      "https://llmposts.com/models/claude-memory-files-dreams-update/"
+    ],
+    "first_synced_at": "2026-05-24T16:59:02.168Z",
+    "last_synced_at": "2026-05-24T16:59:02.168Z",
+    "public_access_set": true
   },
   "2026-05-24": {
     "node_token": "XiEDw7vEViQw6dkI3kDcIqhSnfc",
