@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-24 · 共 4 篇
+## 🔥 最新汇总 · 2026-05-24 · 共 5 篇
 
-### 01 · 模型动态 · Model Updates · 4 篇
+### 01 · 模型动态 · Model Updates · 5 篇
+
+#### [CodeGraph 代码图谱发布：用本地索引降低 AI Agent 检索成本](https://llmposts.com/models/codegraph-local-code-graph-agent-tool/)
+
+CodeGraph 代码图谱正式发布，通过本地 SQLite 构建符号调用关系，将 AI 编程 Agent 的 token 消耗降低 59%、工具调用减少 70%。支持 Claude Code 等主流工具。
+
+[阅读全文 →](https://llmposts.com/models/codegraph-local-code-graph-agent-tool/)
 
 #### [OpenAI Q1 2026 财务数据曝光：巨额亏损与用户增长停滞](https://llmposts.com/models/openai-q1-2026-financial-data/)
 
