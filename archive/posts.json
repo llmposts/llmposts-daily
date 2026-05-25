@@ -1,5 +1,19 @@
 [
   {
+    "title": "Antigravity 引入 Gemini 3.5 Flash (Low) 档位, 简单任务 token 消耗降低 45%",
+    "link": "https://llmposts.com/models/antigravity-gemini-3-5-flash-low-token-optimization/",
+    "date": "2026-05-25T12:37:40",
+    "summary": "Antigravity 推出 Gemini 3.5 Flash (Low) 档位,在简单任务中可比 Medium 档位减少约 45% 的 token 生成量,并重置了所有用户的 Gemini 配额。",
+    "category": "模型动态"
+  },
+  {
+    "title": "Codex 自我审计提示词教程:一键沉淀 Skill 与自动化",
+    "link": "https://llmposts.com/guides/codex-self-audit-prompt-guide/",
+    "date": "2026-05-25T11:03:13",
+    "summary": "手把手教你用一条由 OpenAI Codex 团队成员分享、Greg Brockman 转发的提示词,让 Codex 回看会话历史与记忆,自动找出重复工作流并打包成 Skill、Subagent 或 Automation。含使用步骤、调参方法与常见问题。",
+    "category": "工程实践"
+  },
+  {
     "title": "Anthropic 将为 Claude 推出 Memory Files 结构化记忆系统",
     "link": "https://llmposts.com/models/claude-memory-files-dreams-update/",
     "date": "2026-05-25T00:58:27",

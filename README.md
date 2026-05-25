@@ -13,15 +13,29 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-25 · 共 1 篇
+## 🔥 最新汇总 · 2026-05-25 · 共 3 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [Antigravity 引入 Gemini 3.5 Flash (Low) 档位, 简单任务 token 消耗降低 45%](https://llmposts.com/models/antigravity-gemini-3-5-flash-low-token-optimization/)
+
+Antigravity 推出 Gemini 3.5 Flash (Low) 档位,在简单任务中可比 Medium 档位减少约 45% 的 token 生成量,并重置了所有用户的 Gemini 配额。
+
+[阅读全文 →](https://llmposts.com/models/antigravity-gemini-3-5-flash-low-token-optimization/)
 
 #### [Anthropic 将为 Claude 推出 Memory Files 结构化记忆系统](https://llmposts.com/models/claude-memory-files-dreams-update/)
 
 Anthropic 计划为 Claude 引入 Memory Files 记忆系统,支持按主题存储结构化文档并配合 Dreams 异步整合功能。目前 Dreams 仅在 Opus 4.7 与 Sonnet 4.6 中 beta 测试。
 
 [阅读全文 →](https://llmposts.com/models/claude-memory-files-dreams-update/)
+
+### 02 · 工程实践 · Engineering · 1 篇
+
+#### [Codex 自我审计提示词教程:一键沉淀 Skill 与自动化](https://llmposts.com/guides/codex-self-audit-prompt-guide/)
+
+手把手教你用一条由 OpenAI Codex 团队成员分享、Greg Brockman 转发的提示词,让 Codex 回看会话历史与记忆,自动找出重复工作流并打包成 Skill、Subagent 或 Automation。含使用步骤、调参方法与常见问题。
+
+[阅读全文 →](https://llmposts.com/guides/codex-self-audit-prompt-guide/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
