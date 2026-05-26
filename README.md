@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-27 · 共 1 篇
+## 🔥 最新汇总 · 2026-05-27 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [微软发布 MAI-Image-2.5 图像模型,Arena 评测排名第三](https://llmposts.com/models/microsoft-mai-image-2-5-arena-ranking/)
+
+微软发布 MAI-Image-2.5 图像生成模型,在 Arena text-to-image 榜单获得 1,254 分排名第三,较前代提升 72 分,重点强化了文本渲染与商业影像质量。
+
+[阅读全文 →](https://llmposts.com/models/microsoft-mai-image-2-5-arena-ranking/)
 
 #### [Anthropic 为 Claude Code 发布 security-guidance 插件, 实时拦截代码漏洞](https://llmposts.com/models/claude-code-security-guidance-plugin/)
 
