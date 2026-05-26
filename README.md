@@ -17,7 +17,7 @@
 
 ### 01 · 模型动态 · Model Updates · 3 篇
 
-#### [Qwen3.7-Max 编程能力突破,Code Arena 排名全球第二并超越 GPT-5.5](https://llmposts.com/models/qwen37-max-code-arena-ranking/)
+#### [Qwen3.7-Max 编程能力排名全球第二](https://llmposts.com/models/qwen37-max-code-arena-ranking/)
 
 阿里巴巴 Qwen3.7-Max 在 Code Arena 编程评测中获得 1541 分,排名全球第二并超越 GPT-5.5 与 Gemini-3.5-Flash,支持 35 小时会话中 1,000 次 tool calls。
 
