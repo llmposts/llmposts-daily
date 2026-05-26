@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-05-26",
-      "node_token": "Bqt8wV4nWijP0kkuTCHc1XfunPd",
-      "block_id": "doxcnrK7WCYUK9ED6se1AWM2GTe"
+      "date": "2026-05-27",
+      "node_token": "IC4qwEQVxilTXnkP2A9c1tJonkg",
+      "block_id": "doxcnIh38AhM8CYP78YWpftSRFb"
     }
+  },
+  "2026-05-27": {
+    "node_token": "IC4qwEQVxilTXnkP2A9c1tJonkg",
+    "obj_token": "NABEdTE8ioHQL7xguSxcY9gGnX6",
+    "synced_links": [
+      "https://llmposts.com/models/claude-code-security-guidance-plugin/"
+    ],
+    "first_synced_at": "2026-05-26T23:42:35.964Z",
+    "last_synced_at": "2026-05-26T23:42:35.964Z",
+    "public_access_set": true
   },
   "2026-05-26": {
     "node_token": "Bqt8wV4nWijP0kkuTCHc1XfunPd",
