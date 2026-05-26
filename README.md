@@ -8,32 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-05-26<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-05-27<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-26 · 共 3 篇
+## 🔥 最新汇总 · 2026-05-27 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Qwen3.7-Max 编程能力排名全球第二](https://llmposts.com/models/qwen37-max-code-arena-ranking/)
+#### [Anthropic 为 Claude Code 发布 security-guidance 插件, 实时拦截代码漏洞](https://llmposts.com/models/claude-code-security-guidance-plugin/)
 
-阿里巴巴 Qwen3.7-Max 在 Code Arena 编程评测中获得 1541 分,排名全球第二并超越 GPT-5.5 与 Gemini-3.5-Flash,支持 35 小时会话中 1,000 次 tool calls。
+Anthropic 发布 Claude Code security-guidance 插件,通过三层审查机制将 PR 安全评审意见减少 30-40%,支持 2.1.144 版本以上 CLI。
 
-[阅读全文 →](https://llmposts.com/models/qwen37-max-code-arena-ranking/)
-
-#### [中国扩大民营企业 AI 人才出境限制，要求关键人员出国须获批](https://llmposts.com/models/china-ai-talent-travel-restrictions/)
-
-中国政府于 2026 年 5 月 26 日起扩大对阿里巴巴、DeepSeek 等民营企业顶尖 AI 人才的出境限制，要求关键专业人士出国前须获批准，以防止战略性技术外流。
-
-[阅读全文 →](https://llmposts.com/models/china-ai-talent-travel-restrictions/)
-
-#### [Kimi K2.6 登顶 3D 设计榜单, 性能超越 GPT 5.5 与 Opus 4.7](https://llmposts.com/models/kimi-k2-6-3d-design-leaderboard-champion/)
-
-Kimi K2.6 在 Design Arena 3D 设计排行榜中夺冠,排名较 K2.5 提升 18 位,性能超越 GPT 5.5 和 Opus 4.7 等闭源模型。
-
-[阅读全文 →](https://llmposts.com/models/kimi-k2-6-3d-design-leaderboard-champion/)
+[阅读全文 →](https://llmposts.com/models/claude-code-security-guidance-plugin/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
