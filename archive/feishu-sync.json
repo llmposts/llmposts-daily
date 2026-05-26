@@ -13,10 +13,11 @@
     "node_token": "IC4qwEQVxilTXnkP2A9c1tJonkg",
     "obj_token": "NABEdTE8ioHQL7xguSxcY9gGnX6",
     "synced_links": [
-      "https://llmposts.com/models/claude-code-security-guidance-plugin/"
+      "https://llmposts.com/models/claude-code-security-guidance-plugin/",
+      "https://llmposts.com/models/microsoft-mai-image-2-5-arena-ranking/"
     ],
     "first_synced_at": "2026-05-26T23:42:35.964Z",
-    "last_synced_at": "2026-05-26T23:42:35.964Z",
+    "last_synced_at": "2026-05-26T23:49:22.416Z",
     "public_access_set": true
   },
   "2026-05-26": {
