@@ -13,10 +13,11 @@
     "node_token": "PjIqwM79ni81nWkBgYjc4zygnag",
     "obj_token": "TeVGdQFoNoIjc6xQoeGccGFmnAc",
     "synced_links": [
-      "https://llmposts.com/models/openai-codex-gpt-5-2-5-3-sunset/"
+      "https://llmposts.com/models/openai-codex-gpt-5-2-5-3-sunset/",
+      "https://llmposts.com/models/claude-code-workflows-multi-agent-orchestration/"
     ],
     "first_synced_at": "2026-05-27T16:35:02.064Z",
-    "last_synced_at": "2026-05-27T16:35:02.064Z",
+    "last_synced_at": "2026-05-27T17:00:31.302Z",
     "public_access_set": true
   },
   "2026-05-27": {
