@@ -1,5 +1,12 @@
 [
   {
+    "title": "OpenAI 将于 6 月 2 日在 Codex 中停用 GPT-5.2 与 GPT-5.3-Codex",
+    "link": "https://llmposts.com/models/openai-codex-gpt-5-2-5-3-sunset/",
+    "date": "2026-05-28T00:34:21",
+    "summary": "OpenAI 宣布将于 2026 年 6 月 2 日在 Codex 中停用 GPT-5.2 和 GPT-5.3-Codex。免费用户将默认切换至 GPT-5.5,但 API 渠道仍可继续使用旧版本。",
+    "category": "模型动态"
+  },
+  {
     "title": "DeepMind CEO 预测 AGI 或于 2029 至 2030 年到来",
     "link": "https://llmposts.com/models/deepmind-ceo-agi-prediction-2029/",
     "date": "2026-05-27T18:44:12",

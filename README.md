@@ -8,32 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-05-27<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-05-28<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-27 · 共 3 篇
+## 🔥 最新汇总 · 2026-05-28 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [DeepMind CEO 预测 AGI 或于 2029 至 2030 年到来](https://llmposts.com/models/deepmind-ceo-agi-prediction-2029/)
+#### [OpenAI 将于 6 月 2 日在 Codex 中停用 GPT-5.2 与 GPT-5.3-Codex](https://llmposts.com/models/openai-codex-gpt-5-2-5-3-sunset/)
 
-Google DeepMind CEO Demis Hassabis 预测 AGI 可能于 2029 至 2030 年到来,并将当前 AI agent 浪潮视为社会压力测试,呼吁政府加速安全治理。
+OpenAI 宣布将于 2026 年 6 月 2 日在 Codex 中停用 GPT-5.2 和 GPT-5.3-Codex。免费用户将默认切换至 GPT-5.5,但 API 渠道仍可继续使用旧版本。
 
-[阅读全文 →](https://llmposts.com/models/deepmind-ceo-agi-prediction-2029/)
-
-#### [微软发布 MAI-Image-2.5 图像模型,Arena 评测排名第三](https://llmposts.com/models/microsoft-mai-image-2-5-arena-ranking/)
-
-微软发布 MAI-Image-2.5 图像生成模型,在 Arena text-to-image 榜单获得 1,254 分排名第三,较前代提升 72 分,重点强化了文本渲染与商业影像质量。
-
-[阅读全文 →](https://llmposts.com/models/microsoft-mai-image-2-5-arena-ranking/)
-
-#### [Anthropic 为 Claude Code 发布 security-guidance 插件, 实时拦截代码漏洞](https://llmposts.com/models/claude-code-security-guidance-plugin/)
-
-Anthropic 发布 Claude Code security-guidance 插件,通过三层审查机制将 PR 安全评审意见减少 30-40%,支持 2.1.144 版本以上 CLI。
-
-[阅读全文 →](https://llmposts.com/models/claude-code-security-guidance-plugin/)
+[阅读全文 →](https://llmposts.com/models/openai-codex-gpt-5-2-5-3-sunset/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
