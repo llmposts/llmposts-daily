@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-05-27",
-      "node_token": "IC4qwEQVxilTXnkP2A9c1tJonkg",
-      "block_id": "doxcnIh38AhM8CYP78YWpftSRFb"
+      "date": "2026-05-28",
+      "node_token": "PjIqwM79ni81nWkBgYjc4zygnag",
+      "block_id": "doxcneAXpWWNOm1YBdsgkeQbuOf"
     }
+  },
+  "2026-05-28": {
+    "node_token": "PjIqwM79ni81nWkBgYjc4zygnag",
+    "obj_token": "TeVGdQFoNoIjc6xQoeGccGFmnAc",
+    "synced_links": [
+      "https://llmposts.com/models/openai-codex-gpt-5-2-5-3-sunset/"
+    ],
+    "first_synced_at": "2026-05-27T16:35:02.064Z",
+    "last_synced_at": "2026-05-27T16:35:02.064Z",
+    "public_access_set": true
   },
   "2026-05-27": {
     "node_token": "IC4qwEQVxilTXnkP2A9c1tJonkg",
