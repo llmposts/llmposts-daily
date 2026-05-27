@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-28 · 共 1 篇
+## 🔥 最新汇总 · 2026-05-28 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [Claude Code 推出 /workflows 功能:用代码逻辑替代 LLM 编排](https://llmposts.com/models/claude-code-workflows-multi-agent-orchestration/)
+
+Anthropic 在 Claude Code 2.1.147 版本中推出 /workflows 功能,利用 JS 代码替代 LLM 编排以降低 token 消耗,目前该功能疑似已被暂时下线。
+
+[阅读全文 →](https://llmposts.com/models/claude-code-workflows-multi-agent-orchestration/)
 
 #### [OpenAI 将于 6 月 2 日在 Codex 中停用 GPT-5.2 与 GPT-5.3-Codex](https://llmposts.com/models/openai-codex-gpt-5-2-5-3-sunset/)
 

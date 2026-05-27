@@ -1,5 +1,12 @@
 [
   {
+    "title": "Claude Code 推出 /workflows 功能:用代码逻辑替代 LLM 编排",
+    "link": "https://llmposts.com/models/claude-code-workflows-multi-agent-orchestration/",
+    "date": "2026-05-28T00:59:50",
+    "summary": "Anthropic 在 Claude Code 2.1.147 版本中推出 /workflows 功能,利用 JS 代码替代 LLM 编排以降低 token 消耗,目前该功能疑似已被暂时下线。",
+    "category": "模型动态"
+  },
+  {
     "title": "OpenAI 将于 6 月 2 日在 Codex 中停用 GPT-5.2 与 GPT-5.3-Codex",
     "link": "https://llmposts.com/models/openai-codex-gpt-5-2-5-3-sunset/",
     "date": "2026-05-28T00:34:21",
