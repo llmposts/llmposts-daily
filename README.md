@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-27 · 共 2 篇
+## 🔥 最新汇总 · 2026-05-27 · 共 3 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 3 篇
+
+#### [DeepMind CEO 预测 AGI 或于 2029 至 2030 年到来](https://llmposts.com/models/deepmind-ceo-agi-prediction-2029/)
+
+Google DeepMind CEO Demis Hassabis 预测 AGI 可能于 2029 至 2030 年到来,并将当前 AI agent 浪潮视为社会压力测试,呼吁政府加速安全治理。
+
+[阅读全文 →](https://llmposts.com/models/deepmind-ceo-agi-prediction-2029/)
 
 #### [微软发布 MAI-Image-2.5 图像模型,Arena 评测排名第三](https://llmposts.com/models/microsoft-mai-image-2-5-arena-ranking/)
 
