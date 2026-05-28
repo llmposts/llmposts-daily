@@ -1,5 +1,12 @@
 [
   {
+    "title": "Kimi K2.6 模型在 OpenRouter 开放免费调用，支持 300 个 Agent 协作",
+    "link": "https://llmposts.com/models/kimi-k2-6-openrouter-free/",
+    "date": "2026-05-28T13:39:38",
+    "summary": "Kimi K2.6 模型现已在 OpenRouter 平台免费上线，支持 262.1K tokens 上下文窗口，最高吞吐量达 117 tps，具备长视界编程与 300 个子 Agent 协作能力。",
+    "category": "模型动态"
+  },
+  {
     "title": "Moonshot AI 发布 Kimi K2.6 多模态模型，支持免费 API 接入",
     "link": "https://llmposts.com/models/kimi-k2-6-openrouter-free-api/",
     "date": "2026-05-28T13:32:25",
