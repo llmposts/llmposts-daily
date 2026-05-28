@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-28 · 共 5 篇
+## 🔥 最新汇总 · 2026-05-28 · 共 6 篇
 
-### 01 · 模型动态 · Model Updates · 5 篇
+### 01 · 模型动态 · Model Updates · 6 篇
+
+#### [OpenRouter 完成 1.13 亿美元 B 轮融资, 构建多模型路由网关层](https://llmposts.com/models/openrouter-series-b-funding-infrastructure/)
+
+OpenRouter 完成 1.13 亿美元 B 轮融资,由 CapitalG 领投。平台周处理量已达 25 万亿 token,服务 800 万开发者,定位为多模型 AI 时代的路由与网关层。
+
+[阅读全文 →](https://llmposts.com/models/openrouter-series-b-funding-infrastructure/)
 
 #### [Claude Voice Mode 或将支持中文，新增 Push-to-Talk 模式](https://llmposts.com/models/claude-voice-mode-chinese-language-support/)
 
