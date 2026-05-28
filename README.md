@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-28 · 共 6 篇
+## 🔥 最新汇总 · 2026-05-28 · 共 7 篇
 
-### 01 · 模型动态 · Model Updates · 6 篇
+### 01 · 模型动态 · Model Updates · 7 篇
+
+#### [Moonshot AI 发布 Kimi K2.6 多模态模型，支持免费 API 接入](https://llmposts.com/models/kimi-k2-6-openrouter-free-api/)
+
+Moonshot AI 发布多模态模型 Kimi K2.6，支持 262.1K tokens 上下文，目前在 OpenRouter API 免费开放，最高吞吐量达 117 tps。
+
+[阅读全文 →](https://llmposts.com/models/kimi-k2-6-openrouter-free-api/)
 
 #### [OpenRouter 完成 1.13 亿美元 B 轮融资, 构建多模型路由网关层](https://llmposts.com/models/openrouter-series-b-funding-infrastructure/)
 
