@@ -8,62 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-05-28<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-05-29<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-28 · 共 8 篇
+## 🔥 最新汇总 · 2026-05-29 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 8 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Kimi K2.6 模型在 OpenRouter 开放免费调用，支持 300 个 Agent 协作](https://llmposts.com/models/kimi-k2-6-openrouter-free/)
+#### [Anthropic 发布 Claude Opus 4.8: 提升诚实度并引入动态工作流](https://llmposts.com/models/claude-opus-4-8-release-features/)
 
-Kimi K2.6 模型现已在 OpenRouter 平台免费上线，支持 262.1K tokens 上下文窗口，最高吞吐量达 117 tps，具备长视界编程与 300 个子 Agent 协作能力。
+Anthropic 发布 Claude Opus 4.8,增强了模型的诚实度与独立工作能力,且代码缺陷漏检率降低为前代的 4 倍。该版本维持 5 美元/百万 input token 的定价,并同步推出快速模式。
 
-[阅读全文 →](https://llmposts.com/models/kimi-k2-6-openrouter-free/)
-
-#### [Moonshot AI 发布 Kimi K2.6 多模态模型，支持免费 API 接入](https://llmposts.com/models/kimi-k2-6-openrouter-free-api/)
-
-Moonshot AI 发布多模态模型 Kimi K2.6，支持 262.1K tokens 上下文，目前在 OpenRouter API 免费开放，最高吞吐量达 117 tps。
-
-[阅读全文 →](https://llmposts.com/models/kimi-k2-6-openrouter-free-api/)
-
-#### [OpenRouter 完成 1.13 亿美元 B 轮融资, 构建多模型路由网关层](https://llmposts.com/models/openrouter-series-b-funding-infrastructure/)
-
-OpenRouter 完成 1.13 亿美元 B 轮融资,由 CapitalG 领投。平台周处理量已达 25 万亿 token,服务 800 万开发者,定位为多模型 AI 时代的路由与网关层。
-
-[阅读全文 →](https://llmposts.com/models/openrouter-series-b-funding-infrastructure/)
-
-#### [Claude Voice Mode 或将支持中文，新增 Push-to-Talk 模式](https://llmposts.com/models/claude-voice-mode-chinese-language-support/)
-
-Anthropic 计划为 Claude Voice Mode 增加中文等多国语言支持，并引入 push-to-talk 模式。该更新预计将通过升级编排层实现多语言切换，以对标 ChatGPT 与 Gemini 的语音能力。
-
-[阅读全文 →](https://llmposts.com/models/claude-voice-mode-chinese-language-support/)
-
-#### [Claude Code 更新：优化全屏渲染与 MCP 稳定性, 引入流式思考输出](https://llmposts.com/models/claude-code-reliability-update-may-2026/)
-
-Claude Code 于 2026 年 5 月 28 日发布更新,重点修复 TUI 闪烁、优化 MCP 连接稳定性并引入流式 Thinking 输出,解决会话崩溃等可靠性问题。
-
-[阅读全文 →](https://llmposts.com/models/claude-code-reliability-update-may-2026/)
-
-#### [LLM Sleep 机制发布：通过类睡眠离线递归提升长上下文推理](https://llmposts.com/models/llm-sleep-offline-recurrence-memory/)
-
-卡内基梅隆大学等机构提出 LLM Sleep 机制,通过 N 次离线递归将上下文转换为持久权重,解决 Transformer 长上下文推理瓶颈,并在 GSM-Infinite 等任务中验证有效性。
-
-[阅读全文 →](https://llmposts.com/models/llm-sleep-offline-recurrence-memory/)
-
-#### [Claude Code 推出 /workflows 功能:用代码逻辑替代 LLM 编排](https://llmposts.com/models/claude-code-workflows-multi-agent-orchestration/)
-
-Anthropic 在 Claude Code 2.1.147 版本中推出 /workflows 功能,利用 JS 代码替代 LLM 编排以降低 token 消耗,目前该功能疑似已被暂时下线。
-
-[阅读全文 →](https://llmposts.com/models/claude-code-workflows-multi-agent-orchestration/)
-
-#### [OpenAI 将于 6 月 2 日在 Codex 中停用 GPT-5.2 与 GPT-5.3-Codex](https://llmposts.com/models/openai-codex-gpt-5-2-5-3-sunset/)
-
-OpenAI 宣布将于 2026 年 6 月 2 日在 Codex 中停用 GPT-5.2 和 GPT-5.3-Codex。免费用户将默认切换至 GPT-5.5,但 API 渠道仍可继续使用旧版本。
-
-[阅读全文 →](https://llmposts.com/models/openai-codex-gpt-5-2-5-3-sunset/)
+[阅读全文 →](https://llmposts.com/models/claude-opus-4-8-release-features/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**

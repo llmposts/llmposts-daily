@@ -1,5 +1,12 @@
 [
   {
+    "title": "Anthropic 发布 Claude Opus 4.8: 提升诚实度并引入动态工作流",
+    "link": "https://llmposts.com/models/claude-opus-4-8-release-features/",
+    "date": "2026-05-29T01:22:46",
+    "summary": "Anthropic 发布 Claude Opus 4.8,增强了模型的诚实度与独立工作能力,且代码缺陷漏检率降低为前代的 4 倍。该版本维持 5 美元/百万 input token 的定价,并同步推出快速模式。",
+    "category": "模型动态"
+  },
+  {
     "title": "Kimi K2.6 模型在 OpenRouter 开放免费调用，支持 300 个 Agent 协作",
     "link": "https://llmposts.com/models/kimi-k2-6-openrouter-free/",
     "date": "2026-05-28T13:39:38",
