@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-28 · 共 4 篇
+## 🔥 最新汇总 · 2026-05-28 · 共 5 篇
 
-### 01 · 模型动态 · Model Updates · 4 篇
+### 01 · 模型动态 · Model Updates · 5 篇
+
+#### [Claude Voice Mode 或将支持中文，新增 Push-to-Talk 模式](https://llmposts.com/models/claude-voice-mode-chinese-language-support/)
+
+Anthropic 计划为 Claude Voice Mode 增加中文等多国语言支持，并引入 push-to-talk 模式。该更新预计将通过升级编排层实现多语言切换，以对标 ChatGPT 与 Gemini 的语音能力。
+
+[阅读全文 →](https://llmposts.com/models/claude-voice-mode-chinese-language-support/)
 
 #### [Claude Code 更新：优化全屏渲染与 MCP 稳定性, 引入流式思考输出](https://llmposts.com/models/claude-code-reliability-update-may-2026/)
 
