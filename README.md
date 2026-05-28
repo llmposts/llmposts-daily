@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-28 · 共 2 篇
+## 🔥 最新汇总 · 2026-05-28 · 共 3 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 3 篇
+
+#### [LLM Sleep 机制发布：通过类睡眠离线递归提升长上下文推理](https://llmposts.com/models/llm-sleep-offline-recurrence-memory/)
+
+卡内基梅隆大学等机构提出 LLM Sleep 机制,通过 N 次离线递归将上下文转换为持久权重,解决 Transformer 长上下文推理瓶颈,并在 GSM-Infinite 等任务中验证有效性。
+
+[阅读全文 →](https://llmposts.com/models/llm-sleep-offline-recurrence-memory/)
 
 #### [Claude Code 推出 /workflows 功能:用代码逻辑替代 LLM 编排](https://llmposts.com/models/claude-code-workflows-multi-agent-orchestration/)
 
