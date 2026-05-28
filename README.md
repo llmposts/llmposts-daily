@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-29 · 共 1 篇
+## 🔥 最新汇总 · 2026-05-29 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [Claude Code 推出动态工作流:支持实时编排并行子智能体处理复杂任务](https://llmposts.com/models/claude-code-dynamic-workflows/)
+
+Claude Code 研究预览版发布动态工作流功能,支持实时编排并行子智能体处理大规模迁移等复杂任务,现已面向 Max、Team 及 Enterprise 计划开放。
+
+[阅读全文 →](https://llmposts.com/models/claude-code-dynamic-workflows/)
 
 #### [Anthropic 发布 Claude Opus 4.8: 提升诚实度并引入动态工作流](https://llmposts.com/models/claude-opus-4-8-release-features/)
 
