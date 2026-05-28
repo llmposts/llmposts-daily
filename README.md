@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-28 · 共 3 篇
+## 🔥 最新汇总 · 2026-05-28 · 共 4 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 4 篇
+
+#### [Claude Code 更新：优化全屏渲染与 MCP 稳定性, 引入流式思考输出](https://llmposts.com/models/claude-code-reliability-update-may-2026/)
+
+Claude Code 于 2026 年 5 月 28 日发布更新,重点修复 TUI 闪烁、优化 MCP 连接稳定性并引入流式 Thinking 输出,解决会话崩溃等可靠性问题。
+
+[阅读全文 →](https://llmposts.com/models/claude-code-reliability-update-may-2026/)
 
 #### [LLM Sleep 机制发布：通过类睡眠离线递归提升长上下文推理](https://llmposts.com/models/llm-sleep-offline-recurrence-memory/)
 
