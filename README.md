@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-29 · 共 2 篇
+## 🔥 最新汇总 · 2026-05-29 · 共 3 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 3 篇
+
+#### [Anthropic 完成 650 亿美元 H 轮融资, 投后估值达 9650 亿美元](https://llmposts.com/models/anthropic-series-h-funding-valuation/)
+
+Anthropic 完成 650 亿美元 H 轮融资,投后估值达 9650 亿美元。公司年度经常性收入已突破 470 亿美元,并与 Amazon、Google 及 SpaceX 签署大规模算力协议以支持 Claude 扩展。
+
+[阅读全文 →](https://llmposts.com/models/anthropic-series-h-funding-valuation/)
 
 #### [Claude Code 推出动态工作流:支持实时编排并行子智能体处理复杂任务](https://llmposts.com/models/claude-code-dynamic-workflows/)
 
