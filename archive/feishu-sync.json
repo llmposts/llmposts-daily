@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-05-29",
-      "node_token": "LaOXwuj4Niip5skCRNscUhARnOr",
-      "block_id": "doxcnfSigJtPgTIqUk6PD75CzEb"
+      "date": "2026-06-01",
+      "node_token": "XVC1wbu5UiXnK6ke17qcgUv9nYg",
+      "block_id": "doxcnw9VkFqbzGC5ClN7HRjolib"
     }
+  },
+  "2026-06-01": {
+    "node_token": "XVC1wbu5UiXnK6ke17qcgUv9nYg",
+    "obj_token": "D5GSdk3uxopqW6xRUZVcGVaZn0f",
+    "synced_links": [
+      "https://llmposts.com/models/minimax-m3-open-weights-msa-architecture/"
+    ],
+    "first_synced_at": "2026-06-01T13:59:48.034Z",
+    "last_synced_at": "2026-06-01T13:59:48.034Z",
+    "public_access_set": true
   },
   "2026-05-29": {
     "node_token": "LaOXwuj4Niip5skCRNscUhARnOr",
