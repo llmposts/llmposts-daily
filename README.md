@@ -8,32 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-05-29<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-06-01<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-05-29 · 共 3 篇
+## 🔥 最新汇总 · 2026-06-01 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Anthropic 完成 650 亿美元 H 轮融资, 投后估值达 9650 亿美元](https://llmposts.com/models/anthropic-series-h-funding-valuation/)
+#### [MiniMax 发布开源权重模型 M3: 引入 MSA 架构支持 1M 上下文与原生多模态](https://llmposts.com/models/minimax-m3-open-weights-msa-architecture/)
 
-Anthropic 完成 650 亿美元 H 轮融资,投后估值达 9650 亿美元。公司年度经常性收入已突破 470 亿美元,并与 Amazon、Google 及 SpaceX 签署大规模算力协议以支持 Claude 扩展。
+MiniMax 发布开源权重模型 MiniMax M3,采用全新的 MSA 稀疏注意力架构支持 1M tokens 上下文,在 SWE-Bench Pro 上达到 59.0% 评分,且原生支持多模态输入与电脑操作。
 
-[阅读全文 →](https://llmposts.com/models/anthropic-series-h-funding-valuation/)
-
-#### [Claude Code 推出动态工作流:支持实时编排并行子智能体处理复杂任务](https://llmposts.com/models/claude-code-dynamic-workflows/)
-
-Claude Code 研究预览版发布动态工作流功能,支持实时编排并行子智能体处理大规模迁移等复杂任务,现已面向 Max、Team 及 Enterprise 计划开放。
-
-[阅读全文 →](https://llmposts.com/models/claude-code-dynamic-workflows/)
-
-#### [Anthropic 发布 Claude Opus 4.8: 提升诚实度并引入动态工作流](https://llmposts.com/models/claude-opus-4-8-release-features/)
-
-Anthropic 发布 Claude Opus 4.8,增强了模型的诚实度与独立工作能力,且代码缺陷漏检率降低为前代的 4 倍。该版本维持 5 美元/百万 input token 的定价,并同步推出快速模式。
-
-[阅读全文 →](https://llmposts.com/models/claude-opus-4-8-release-features/)
+[阅读全文 →](https://llmposts.com/models/minimax-m3-open-weights-msa-architecture/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
