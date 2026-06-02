@@ -8,20 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-06-02<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-06-03<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-02 · 共 1 篇
+## 🔥 最新汇总 · 2026-06-03 · 共 1 篇
 
 ### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Anthropic 扩大 Project Glasswing 规模, 利用 Mythos 模型挖掘万级高危漏洞](https://llmposts.com/models/anthropic-project-glasswing-expansion-mythos/)
+#### [Codex 转型通用生产力工具：周活突破 500 万且非开发用户激增](https://llmposts.com/models/openai-codex-productivity-tool-report/)
 
-Anthropic 宣布扩大 Project Glasswing 规模至 150 家机构,利用 Claude Mythos Preview 漏洞扫描能力。该项目首批伙伴已发现逾 10,000 个高危漏洞,预计 6-12 个月内行业将迎来同类能力模型。
+OpenAI 发布报告称 Codex 周活跃用户突破 500 万，自 2 月桌面版发布后增长 6 倍。知识工作者占比达 20% 且增长速度快于开发者的 3 倍，标志着 Codex 转型为通用生产力工具。
 
-[阅读全文 →](https://llmposts.com/models/anthropic-project-glasswing-expansion-mythos/)
+[阅读全文 →](https://llmposts.com/models/openai-codex-productivity-tool-report/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
