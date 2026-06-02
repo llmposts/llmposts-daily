@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-06-01",
-      "node_token": "XVC1wbu5UiXnK6ke17qcgUv9nYg",
-      "block_id": "doxcnw9VkFqbzGC5ClN7HRjolib"
+      "date": "2026-06-02",
+      "node_token": "M6XVwQBOAi99y4k0zgTc4Wu7nKY",
+      "block_id": "doxcnn844PaxSvINEOs8exwNGOk"
     }
+  },
+  "2026-06-02": {
+    "node_token": "M6XVwQBOAi99y4k0zgTc4Wu7nKY",
+    "obj_token": "J1tRdoL7soSMU5xLykMcF4U8nNe",
+    "synced_links": [
+      "https://llmposts.com/models/anthropic-project-glasswing-expansion-mythos/"
+    ],
+    "first_synced_at": "2026-06-02T15:35:45.030Z",
+    "last_synced_at": "2026-06-02T15:35:45.030Z",
+    "public_access_set": true
   },
   "2026-06-01": {
     "node_token": "XVC1wbu5UiXnK6ke17qcgUv9nYg",
