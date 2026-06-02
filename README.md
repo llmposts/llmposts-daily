@@ -8,20 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-06-01<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-06-02<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-01 · 共 1 篇
+## 🔥 最新汇总 · 2026-06-02 · 共 1 篇
 
 ### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [MiniMax 发布开源权重模型 M3: 引入 MSA 架构支持 1M 上下文与原生多模态](https://llmposts.com/models/minimax-m3-open-weights-msa-architecture/)
+#### [Anthropic 扩大 Project Glasswing 规模, 利用 Mythos 模型挖掘万级高危漏洞](https://llmposts.com/models/anthropic-project-glasswing-expansion-mythos/)
 
-MiniMax 发布开源权重模型 MiniMax M3,采用全新的 MSA 稀疏注意力架构支持 1M tokens 上下文,在 SWE-Bench Pro 上达到 59.0% 评分,且原生支持多模态输入与电脑操作。
+Anthropic 宣布扩大 Project Glasswing 规模至 150 家机构,利用 Claude Mythos Preview 漏洞扫描能力。该项目首批伙伴已发现逾 10,000 个高危漏洞,预计 6-12 个月内行业将迎来同类能力模型。
 
-[阅读全文 →](https://llmposts.com/models/minimax-m3-open-weights-msa-architecture/)
+[阅读全文 →](https://llmposts.com/models/anthropic-project-glasswing-expansion-mythos/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
