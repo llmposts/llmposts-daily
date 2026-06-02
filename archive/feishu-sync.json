@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-06-02",
-      "node_token": "M6XVwQBOAi99y4k0zgTc4Wu7nKY",
-      "block_id": "doxcnn844PaxSvINEOs8exwNGOk"
+      "date": "2026-06-03",
+      "node_token": "NnyswlEGUiMGDWklJL9czZIwnVd",
+      "block_id": "doxcnmULJdClEoN41UBPHlRmOfb"
     }
+  },
+  "2026-06-03": {
+    "node_token": "NnyswlEGUiMGDWklJL9czZIwnVd",
+    "obj_token": "JQJDd7aTaoTKESxuBCEcBNidnhb",
+    "synced_links": [
+      "https://llmposts.com/models/openai-codex-productivity-tool-report/"
+    ],
+    "first_synced_at": "2026-06-02T18:19:13.901Z",
+    "last_synced_at": "2026-06-02T18:19:13.901Z",
+    "public_access_set": true
   },
   "2026-06-02": {
     "node_token": "M6XVwQBOAi99y4k0zgTc4Wu7nKY",
