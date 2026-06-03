@@ -1,5 +1,12 @@
 [
   {
+    "title": "微软发布 MAI-Thinking-1 推理模型: 35B 规模且无需蒸馏",
+    "link": "https://llmposts.com/models/microsoft-mai-thinking-1-reasoning-model/",
+    "date": "2026-06-03T10:52:06",
+    "summary": "微软发布推理模型 MAI-Thinking-1,采用 35B 激活参数的 MoE 架构,在 AIME 2026 上达到 94.5% 准确率,且在人类偏好盲测中优于 Claude Sonnet 4.6。",
+    "category": "模型动态"
+  },
+  {
     "title": "Codex 转型通用生产力工具：周活突破 500 万且非开发用户激增",
     "link": "https://llmposts.com/models/openai-codex-productivity-tool-report/",
     "date": "2026-06-03T02:18:33",

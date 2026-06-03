@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-03 · 共 1 篇
+## 🔥 最新汇总 · 2026-06-03 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [微软发布 MAI-Thinking-1 推理模型: 35B 规模且无需蒸馏](https://llmposts.com/models/microsoft-mai-thinking-1-reasoning-model/)
+
+微软发布推理模型 MAI-Thinking-1,采用 35B 激活参数的 MoE 架构,在 AIME 2026 上达到 94.5% 准确率,且在人类偏好盲测中优于 Claude Sonnet 4.6。
+
+[阅读全文 →](https://llmposts.com/models/microsoft-mai-thinking-1-reasoning-model/)
 
 #### [Codex 转型通用生产力工具：周活突破 500 万且非开发用户激增](https://llmposts.com/models/openai-codex-productivity-tool-report/)
 
