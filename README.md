@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-03 · 共 2 篇
+## 🔥 最新汇总 · 2026-06-03 · 共 3 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 3 篇
+
+#### [微软发布 MAI-Code-1-Flash 编程模型:性能超越 Claude Haiku 4.5 且更省 token](https://llmposts.com/models/microsoft-mai-code-1-flash-release/)
+
+微软发布 MAI-Code-1-Flash 编程模型,在 SWE-bench Pro 上通过率达 51.2%,领先 Claude Haiku 4.5 达 16 个百分点,并能降低最高 60% 的 token 消耗。
+
+[阅读全文 →](https://llmposts.com/models/microsoft-mai-code-1-flash-release/)
 
 #### [微软发布 MAI-Thinking-1 推理模型: 35B 规模且无需蒸馏](https://llmposts.com/models/microsoft-mai-thinking-1-reasoning-model/)
 
