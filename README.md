@@ -8,32 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-06-03<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-06-04<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-03 · 共 3 篇
+## 🔥 最新汇总 · 2026-06-04 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [微软发布 MAI-Code-1-Flash 编程模型:性能超越 Claude Haiku 4.5 且更省 token](https://llmposts.com/models/microsoft-mai-code-1-flash-release/)
+#### [谷歌发布 Gemma 4 12B 模型:采用无编码器架构支持笔记本本地运行](https://llmposts.com/models/gemma-4-12b-unified-multimodal-model/)
 
-微软发布 MAI-Code-1-Flash 编程模型,在 SWE-bench Pro 上通过率达 51.2%,领先 Claude Haiku 4.5 达 16 个百分点,并能降低最高 60% 的 token 消耗。
+谷歌发布 Gemma 4 12B 多模态模型,采用无编码器统一架构,仅需 16 GB 显存即可在笔记本本地运行,性能接近 26B MoE 模型并支持原生音频输入。
 
-[阅读全文 →](https://llmposts.com/models/microsoft-mai-code-1-flash-release/)
-
-#### [微软发布 MAI-Thinking-1 推理模型: 35B 规模且无需蒸馏](https://llmposts.com/models/microsoft-mai-thinking-1-reasoning-model/)
-
-微软发布推理模型 MAI-Thinking-1,采用 35B 激活参数的 MoE 架构,在 AIME 2026 上达到 94.5% 准确率,且在人类偏好盲测中优于 Claude Sonnet 4.6。
-
-[阅读全文 →](https://llmposts.com/models/microsoft-mai-thinking-1-reasoning-model/)
-
-#### [Codex 转型通用生产力工具：周活突破 500 万且非开发用户激增](https://llmposts.com/models/openai-codex-productivity-tool-report/)
-
-OpenAI 发布报告称 Codex 周活跃用户突破 500 万，自 2 月桌面版发布后增长 6 倍。知识工作者占比达 20% 且增长速度快于开发者的 3 倍，标志着 Codex 转型为通用生产力工具。
-
-[阅读全文 →](https://llmposts.com/models/openai-codex-productivity-tool-report/)
+[阅读全文 →](https://llmposts.com/models/gemma-4-12b-unified-multimodal-model/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
