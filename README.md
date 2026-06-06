@@ -8,20 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-06-04<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-06-06<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-04 · 共 1 篇
+## 🔥 最新汇总 · 2026-06-06 · 共 1 篇
 
 ### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [谷歌发布 Gemma 4 12B 模型:采用无编码器架构支持笔记本本地运行](https://llmposts.com/models/gemma-4-12b-unified-multimodal-model/)
+#### [谷歌发布 Gemma 4 QAT 模型:优化端侧量化,E2B 内存占用降至 1 GB](https://llmposts.com/models/gemma-4-qat-model-compression-mobile/)
 
-谷歌发布 Gemma 4 12B 多模态模型,采用无编码器统一架构,仅需 16 GB 显存即可在笔记本本地运行,性能接近 26B MoE 模型并支持原生音频输入。
+谷歌发布 Gemma 4 QAT 模型版本,通过量化感知训练将 E2B 模型内存占用降低至 1 GB 以下,支持 Q4_0 及移动端专用量化格式,旨在提升手机与笔记本的本地运行效率。
 
-[阅读全文 →](https://llmposts.com/models/gemma-4-12b-unified-multimodal-model/)
+[阅读全文 →](https://llmposts.com/models/gemma-4-qat-model-compression-mobile/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
