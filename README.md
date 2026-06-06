@@ -8,26 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-06-06<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-06-07<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-06 · 共 2 篇
+## 🔥 最新汇总 · 2026-06-07 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Anthropic 或将发布新版 Mythos 模型, 内部红队代号 Oceanus](https://llmposts.com/models/anthropic-mythos-oceanus-red-team-leak/)
+#### [Anthropic 披露 AI 递归自我改进趋势:代码产出增 8 倍, 正逐步接管自身研发](https://llmposts.com/models/anthropic-recursive-self-improvement-report/)
 
-Anthropic 或将发布新版 Mythos 模型,内部红队测试代号为 Oceanus。预计定价为 16 美元/百万 input tokens 和 80 美元/百万 output tokens,测试于 6 月 5 日启动。
+Anthropic 披露 AI 正在加速自身开发,工程师代码产出达以往 8 倍,且 80% 以上代码由 Claude 编写。报告探讨了递归自我改进的路径,指出任务处理时长每 4 个月翻倍,并警示完全自主迭代模型带来的对齐风险。
 
-[阅读全文 →](https://llmposts.com/models/anthropic-mythos-oceanus-red-team-leak/)
-
-#### [谷歌发布 Gemma 4 QAT 模型:优化端侧量化,E2B 内存占用降至 1 GB](https://llmposts.com/models/gemma-4-qat-model-compression-mobile/)
-
-谷歌发布 Gemma 4 QAT 模型版本,通过量化感知训练将 E2B 模型内存占用降低至 1 GB 以下,支持 Q4_0 及移动端专用量化格式,旨在提升手机与笔记本的本地运行效率。
-
-[阅读全文 →](https://llmposts.com/models/gemma-4-qat-model-compression-mobile/)
+[阅读全文 →](https://llmposts.com/models/anthropic-recursive-self-improvement-report/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
