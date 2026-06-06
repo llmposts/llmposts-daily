@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-06-06",
-      "node_token": "ORNWwYDqciuhsSk0KkNcvks0nje",
-      "block_id": "doxcninvZYCDxwdwvq34tX2oWLg"
+      "date": "2026-06-07",
+      "node_token": "JaftwnIAHiW5U0k5falcfV4jnWf",
+      "block_id": "doxcn9HkawV9diO0gtb6p7NCF7f"
     }
+  },
+  "2026-06-07": {
+    "node_token": "JaftwnIAHiW5U0k5falcfV4jnWf",
+    "obj_token": "KD08dJOLVoCvHaxzLYhchYJonag",
+    "synced_links": [
+      "https://llmposts.com/models/anthropic-recursive-self-improvement-report/"
+    ],
+    "first_synced_at": "2026-06-06T18:32:26.526Z",
+    "last_synced_at": "2026-06-06T18:32:26.527Z",
+    "public_access_set": true
   },
   "2026-06-06": {
     "node_token": "ORNWwYDqciuhsSk0KkNcvks0nje",
