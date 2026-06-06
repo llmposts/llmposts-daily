@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-06-04",
-      "node_token": "ArGBwI2zQibGAnkTWSnc0zcKnah",
-      "block_id": "doxcnGniW0EbRhfQnsS5De2IYFd"
+      "date": "2026-06-06",
+      "node_token": "ORNWwYDqciuhsSk0KkNcvks0nje",
+      "block_id": "doxcninvZYCDxwdwvq34tX2oWLg"
     }
+  },
+  "2026-06-06": {
+    "node_token": "ORNWwYDqciuhsSk0KkNcvks0nje",
+    "obj_token": "KZJEdN3i0oBeUkxtGJWcfGVknLb",
+    "synced_links": [
+      "https://llmposts.com/models/gemma-4-qat-model-compression-mobile/"
+    ],
+    "first_synced_at": "2026-06-06T07:59:41.513Z",
+    "last_synced_at": "2026-06-06T07:59:41.513Z",
+    "public_access_set": true
   },
   "2026-06-04": {
     "node_token": "ArGBwI2zQibGAnkTWSnc0zcKnah",
