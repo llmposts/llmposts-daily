@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-06 · 共 1 篇
+## 🔥 最新汇总 · 2026-06-06 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [Anthropic 或将发布新版 Mythos 模型, 内部红队代号 Oceanus](https://llmposts.com/models/anthropic-mythos-oceanus-red-team-leak/)
+
+Anthropic 或将发布新版 Mythos 模型,内部红队测试代号为 Oceanus。预计定价为 16 美元/百万 input tokens 和 80 美元/百万 output tokens,测试于 6 月 5 日启动。
+
+[阅读全文 →](https://llmposts.com/models/anthropic-mythos-oceanus-red-team-leak/)
 
 #### [谷歌发布 Gemma 4 QAT 模型:优化端侧量化,E2B 内存占用降至 1 GB](https://llmposts.com/models/gemma-4-qat-model-compression-mobile/)
 
