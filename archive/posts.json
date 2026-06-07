@@ -1,5 +1,12 @@
 [
   {
+    "title": "Anthropic 内部模型 Mythos 5 曝出强悍前端能力, 代码优化可达 52 倍加速",
+    "link": "https://llmposts.com/models/anthropic-mythos-5-leak-capabilities/",
+    "date": "2026-06-08T07:55:02",
+    "summary": "据爆料 Anthropic 内部测试模型 Mythos 5 在代码优化任务中可实现最高 52 倍加速,且在 SVG 与前端生成领域表现强劲,但因成本过高公开版或被削弱。",
+    "category": "模型动态"
+  },
+  {
     "title": "谷歌每月支付 9.2 亿美元租用 SpaceX 算力以支持 Gemini agent 平台",
     "link": "https://llmposts.com/models/google-spacex-compute-deal-gpu/",
     "date": "2026-06-07T23:59:16",

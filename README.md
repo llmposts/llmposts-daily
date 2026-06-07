@@ -8,32 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-06-07<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-06-08<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-07 · 共 3 篇
+## 🔥 最新汇总 · 2026-06-08 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [谷歌每月支付 9.2 亿美元租用 SpaceX 算力以支持 Gemini agent 平台](https://llmposts.com/models/google-spacex-compute-deal-gpu/)
+#### [Anthropic 内部模型 Mythos 5 曝出强悍前端能力, 代码优化可达 52 倍加速](https://llmposts.com/models/anthropic-mythos-5-leak-capabilities/)
 
-谷歌与 SpaceX 达成协议,每月支付 9.2 亿美元租用 11 万块 NVIDIA GPU,租期从 2026 年 10 月至 2029 年 6 月,旨在支持 Gemini Enterprise 的 agent 平台需求。
+据爆料 Anthropic 内部测试模型 Mythos 5 在代码优化任务中可实现最高 52 倍加速,且在 SVG 与前端生成领域表现强劲,但因成本过高公开版或被削弱。
 
-[阅读全文 →](https://llmposts.com/models/google-spacex-compute-deal-gpu/)
-
-#### [OpenAI 计划对 ChatGPT 进行最大规模重组, 将其转型为超级应用](https://llmposts.com/models/openai-chatgpt-superapp-overhaul-ipo/)
-
-OpenAI 计划将 ChatGPT 转型为集成编程工具与 AI agents 的超级应用,以提升高利润产品占比。目前企业客户贡献约 40% 营收,Codex 周活用户已超 500 万,旨在为今年 IPO 驱动增长。
-
-[阅读全文 →](https://llmposts.com/models/openai-chatgpt-superapp-overhaul-ipo/)
-
-#### [Anthropic 披露 AI 递归自我改进趋势:代码产出增 8 倍, 正逐步接管自身研发](https://llmposts.com/models/anthropic-recursive-self-improvement-report/)
-
-Anthropic 披露 AI 正在加速自身开发,工程师代码产出达以往 8 倍,且 80% 以上代码由 Claude 编写。报告探讨了递归自我改进的路径,指出任务处理时长每 4 个月翻倍,并警示完全自主迭代模型带来的对齐风险。
-
-[阅读全文 →](https://llmposts.com/models/anthropic-recursive-self-improvement-report/)
+[阅读全文 →](https://llmposts.com/models/anthropic-mythos-5-leak-capabilities/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
