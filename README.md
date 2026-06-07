@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-07 · 共 2 篇
+## 🔥 最新汇总 · 2026-06-07 · 共 3 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 3 篇
+
+#### [谷歌每月支付 9.2 亿美元租用 SpaceX 算力以支持 Gemini agent 平台](https://llmposts.com/models/google-spacex-compute-deal-gpu/)
+
+谷歌与 SpaceX 达成协议,每月支付 9.2 亿美元租用 11 万块 NVIDIA GPU,租期从 2026 年 10 月至 2029 年 6 月,旨在支持 Gemini Enterprise 的 agent 平台需求。
+
+[阅读全文 →](https://llmposts.com/models/google-spacex-compute-deal-gpu/)
 
 #### [OpenAI 计划对 ChatGPT 进行最大规模重组, 将其转型为超级应用](https://llmposts.com/models/openai-chatgpt-superapp-overhaul-ipo/)
 
