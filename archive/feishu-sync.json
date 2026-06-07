@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-06-07",
-      "node_token": "JaftwnIAHiW5U0k5falcfV4jnWf",
-      "block_id": "doxcn9HkawV9diO0gtb6p7NCF7f"
+      "date": "2026-06-08",
+      "node_token": "LxArwTTyKizI87k3FePcZ5x2n5f",
+      "block_id": "doxcnDF8lcOWwpyILyp3OyBXEXc"
     }
+  },
+  "2026-06-08": {
+    "node_token": "LxArwTTyKizI87k3FePcZ5x2n5f",
+    "obj_token": "UTmVdMJGsoim4wxPLTFczv3nnMc",
+    "synced_links": [
+      "https://llmposts.com/models/anthropic-mythos-5-leak-capabilities/"
+    ],
+    "first_synced_at": "2026-06-07T23:55:34.899Z",
+    "last_synced_at": "2026-06-07T23:55:34.900Z",
+    "public_access_set": true
   },
   "2026-06-07": {
     "node_token": "JaftwnIAHiW5U0k5falcfV4jnWf",
