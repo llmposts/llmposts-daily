@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-07 · 共 1 篇
+## 🔥 最新汇总 · 2026-06-07 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [OpenAI 计划对 ChatGPT 进行最大规模重组, 将其转型为超级应用](https://llmposts.com/models/openai-chatgpt-superapp-overhaul-ipo/)
+
+OpenAI 计划将 ChatGPT 转型为集成编程工具与 AI agents 的超级应用,以提升高利润产品占比。目前企业客户贡献约 40% 营收,Codex 周活用户已超 500 万,旨在为今年 IPO 驱动增长。
+
+[阅读全文 →](https://llmposts.com/models/openai-chatgpt-superapp-overhaul-ipo/)
 
 #### [Anthropic 披露 AI 递归自我改进趋势:代码产出增 8 倍, 正逐步接管自身研发](https://llmposts.com/models/anthropic-recursive-self-improvement-report/)
 
