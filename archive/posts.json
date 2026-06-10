@@ -1,5 +1,12 @@
 [
   {
+    "title": "Anthropic 发布 Claude Fable 5：软件工程 SOTA 且定价降低 50%",
+    "link": "https://llmposts.com/models/claude-fable-5-mythos-5-release/",
+    "date": "2026-06-10T08:55:27",
+    "summary": "Anthropic 发布 Claude Fable 5,在软件工程与科学研究领域达到 SOTA 水平。该模型定价为 10 美元/百万输入 token,性能在 5000 万行代码迁移任务中表现出色。",
+    "category": "模型动态"
+  },
+  {
     "title": "Anthropic 内部模型 Mythos 5 曝出强悍前端能力, 代码优化可达 52 倍加速",
     "link": "https://llmposts.com/models/anthropic-mythos-5-leak-capabilities/",
     "date": "2026-06-08T07:55:02",

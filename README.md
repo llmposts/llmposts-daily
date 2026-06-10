@@ -8,20 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-06-08<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-06-10<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-08 · 共 1 篇
+## 🔥 最新汇总 · 2026-06-10 · 共 1 篇
 
 ### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Anthropic 内部模型 Mythos 5 曝出强悍前端能力, 代码优化可达 52 倍加速](https://llmposts.com/models/anthropic-mythos-5-leak-capabilities/)
+#### [Anthropic 发布 Claude Fable 5：软件工程 SOTA 且定价降低 50%](https://llmposts.com/models/claude-fable-5-mythos-5-release/)
 
-据爆料 Anthropic 内部测试模型 Mythos 5 在代码优化任务中可实现最高 52 倍加速,且在 SVG 与前端生成领域表现强劲,但因成本过高公开版或被削弱。
+Anthropic 发布 Claude Fable 5,在软件工程与科学研究领域达到 SOTA 水平。该模型定价为 10 美元/百万输入 token,性能在 5000 万行代码迁移任务中表现出色。
 
-[阅读全文 →](https://llmposts.com/models/anthropic-mythos-5-leak-capabilities/)
+[阅读全文 →](https://llmposts.com/models/claude-fable-5-mythos-5-release/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
