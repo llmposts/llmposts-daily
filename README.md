@@ -8,20 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-06-10<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-06-11<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-10 · 共 1 篇
+## 🔥 最新汇总 · 2026-06-11 · 共 1 篇
 
 ### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Anthropic 发布 Claude Fable 5：软件工程 SOTA 且定价降低 50%](https://llmposts.com/models/claude-fable-5-mythos-5-release/)
+#### [Claude Fable 5 夺得 Code 与 Agent Arena 双冠, 任务成功率大幅领先](https://llmposts.com/models/claude-fable-5-arena-benchmark-results/)
 
-Anthropic 发布 Claude Fable 5,在软件工程与科学研究领域达到 SOTA 水平。该模型定价为 10 美元/百万输入 token,性能在 5000 万行代码迁移任务中表现出色。
+Claude Fable 5 在 Arena.ai 的 Code Arena 和 Agent Arena 评测中均夺冠,综合排名提升 11.2%,确认任务成功率提升 18.2%,在前端开发和智能体任务上领先 Opus-4.8 和 GPT-5.5。
 
-[阅读全文 →](https://llmposts.com/models/claude-fable-5-mythos-5-release/)
+[阅读全文 →](https://llmposts.com/models/claude-fable-5-arena-benchmark-results/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**

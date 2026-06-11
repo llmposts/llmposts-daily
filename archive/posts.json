@@ -1,5 +1,12 @@
 [
   {
+    "title": "Claude Fable 5 夺得 Code 与 Agent Arena 双冠, 任务成功率大幅领先",
+    "link": "https://llmposts.com/models/claude-fable-5-arena-benchmark-results/",
+    "date": "2026-06-11T09:25:26",
+    "summary": "Claude Fable 5 在 Arena.ai 的 Code Arena 和 Agent Arena 评测中均夺冠,综合排名提升 11.2%,确认任务成功率提升 18.2%,在前端开发和智能体任务上领先 Opus-4.8 和 GPT-5.5。",
+    "category": "模型动态"
+  },
+  {
     "title": "Anthropic 发布 Claude Fable 5：软件工程 SOTA 且定价降低 50%",
     "link": "https://llmposts.com/models/claude-fable-5-mythos-5-release/",
     "date": "2026-06-10T08:55:27",
