@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-06-10",
-      "node_token": "FHvLwDWVIiWoCVkqjCLcR4crn4c",
-      "block_id": "doxcn1VIoXBaYhpmKBomGi2rKgc"
+      "date": "2026-06-11",
+      "node_token": "JDwVwWcc1iSnvskZjYGc3lrInsY",
+      "block_id": "doxcn8qn0eiH5QImXPKNq1gEcld"
     }
+  },
+  "2026-06-11": {
+    "node_token": "JDwVwWcc1iSnvskZjYGc3lrInsY",
+    "obj_token": "EKrddqzEcoxTxDxj6IFcsfSnnQf",
+    "synced_links": [
+      "https://llmposts.com/models/claude-fable-5-arena-benchmark-results/"
+    ],
+    "first_synced_at": "2026-06-11T01:26:05.909Z",
+    "last_synced_at": "2026-06-11T01:26:05.909Z",
+    "public_access_set": true
   },
   "2026-06-10": {
     "node_token": "FHvLwDWVIiWoCVkqjCLcR4crn4c",
