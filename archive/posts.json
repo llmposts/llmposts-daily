@@ -1,5 +1,12 @@
 [
   {
+    "title": "Moonshot 发布开源代码模型 Kimi-K2.7-Code, 推理 token 消耗降低 30%",
+    "link": "https://llmposts.com/models/kimi-k2-7-code-model-release/",
+    "date": "2026-06-12T21:19:51",
+    "summary": "Moonshot 发布开源代码模型 Kimi-K2.7-Code,总参数 1T,激活参数 32B。该模型在 Kimi Code Bench v2 提升 21.8%,且推理 token 消耗降低 30%,支持 256K 上下文。",
+    "category": "模型动态"
+  },
+  {
     "title": "Claude Fable 5 夺得 Code 与 Agent Arena 双冠, 任务成功率大幅领先",
     "link": "https://llmposts.com/models/claude-fable-5-arena-benchmark-results/",
     "date": "2026-06-11T09:25:26",

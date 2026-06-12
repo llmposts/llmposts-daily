@@ -8,20 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-06-11<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-06-12<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-11 · 共 1 篇
+## 🔥 最新汇总 · 2026-06-12 · 共 1 篇
 
 ### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Claude Fable 5 夺得 Code 与 Agent Arena 双冠, 任务成功率大幅领先](https://llmposts.com/models/claude-fable-5-arena-benchmark-results/)
+#### [Moonshot 发布开源代码模型 Kimi-K2.7-Code, 推理 token 消耗降低 30%](https://llmposts.com/models/kimi-k2-7-code-model-release/)
 
-Claude Fable 5 在 Arena.ai 的 Code Arena 和 Agent Arena 评测中均夺冠,综合排名提升 11.2%,确认任务成功率提升 18.2%,在前端开发和智能体任务上领先 Opus-4.8 和 GPT-5.5。
+Moonshot 发布开源代码模型 Kimi-K2.7-Code,总参数 1T,激活参数 32B。该模型在 Kimi Code Bench v2 提升 21.8%,且推理 token 消耗降低 30%,支持 256K 上下文。
 
-[阅读全文 →](https://llmposts.com/models/claude-fable-5-arena-benchmark-results/)
+[阅读全文 →](https://llmposts.com/models/kimi-k2-7-code-model-release/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
