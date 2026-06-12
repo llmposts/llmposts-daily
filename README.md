@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-12 · 共 1 篇
+## 🔥 最新汇总 · 2026-06-12 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [OpenAI 或下周发布 GPT-5.6：性能对标 Claude Fable 5 并计划降价](https://llmposts.com/models/openai-gpt-5-6-release-leak/)
+
+OpenAI 或于下周发布 GPT-5.6，据披露该版本在推理、代码及 agent 工作流方面有显著提升，性能可对标 Claude Fable 5 且定价或大幅下调。
+
+[阅读全文 →](https://llmposts.com/models/openai-gpt-5-6-release-leak/)
 
 #### [Moonshot 发布开源代码模型 Kimi-K2.7-Code, 推理 token 消耗降低 30%](https://llmposts.com/models/kimi-k2-7-code-model-release/)
 

@@ -1,5 +1,12 @@
 [
   {
+    "title": "OpenAI 或下周发布 GPT-5.6：性能对标 Claude Fable 5 并计划降价",
+    "link": "https://llmposts.com/models/openai-gpt-5-6-release-leak/",
+    "date": "2026-06-12T21:26:26",
+    "summary": "OpenAI 或于下周发布 GPT-5.6，据披露该版本在推理、代码及 agent 工作流方面有显著提升，性能可对标 Claude Fable 5 且定价或大幅下调。",
+    "category": "模型动态"
+  },
+  {
     "title": "Moonshot 发布开源代码模型 Kimi-K2.7-Code, 推理 token 消耗降低 30%",
     "link": "https://llmposts.com/models/kimi-k2-7-code-model-release/",
     "date": "2026-06-12T21:19:51",
