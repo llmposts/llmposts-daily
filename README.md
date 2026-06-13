@@ -8,26 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-06-12<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-06-13<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-12 · 共 2 篇
+## 🔥 最新汇总 · 2026-06-13 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [OpenAI 或下周发布 GPT-5.6：性能对标 Claude Fable 5 并计划降价](https://llmposts.com/models/openai-gpt-5-6-release-leak/)
+#### [美国政府下令禁令,Anthropic 紧急禁用 Fable 5 与 Mythos 5](https://llmposts.com/models/anthropic-fable-mythos-access-suspended/)
 
-OpenAI 或于下周发布 GPT-5.6，据披露该版本在推理、代码及 agent 工作流方面有显著提升，性能可对标 Claude Fable 5 且定价或大幅下调。
+美国政府以国家安全为由要求暂停外国国民访问 Fable 5 与 Mythos 5。Anthropic 已于 2026 年 6 月 12 日禁用这两款模型的所有用户访问,但 GPT-5.5 等同类模型亦具备相关能力。
 
-[阅读全文 →](https://llmposts.com/models/openai-gpt-5-6-release-leak/)
-
-#### [Moonshot 发布开源代码模型 Kimi-K2.7-Code, 推理 token 消耗降低 30%](https://llmposts.com/models/kimi-k2-7-code-model-release/)
-
-Moonshot 发布开源代码模型 Kimi-K2.7-Code,总参数 1T,激活参数 32B。该模型在 Kimi Code Bench v2 提升 21.8%,且推理 token 消耗降低 30%,支持 256K 上下文。
-
-[阅读全文 →](https://llmposts.com/models/kimi-k2-7-code-model-release/)
+[阅读全文 →](https://llmposts.com/models/anthropic-fable-mythos-access-suspended/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
