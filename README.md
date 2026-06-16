@@ -8,20 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-06-13<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-06-16<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-13 · 共 1 篇
+## 🔥 最新汇总 · 2026-06-16 · 共 1 篇
 
 ### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [美国政府下令禁令,Anthropic 紧急禁用 Fable 5 与 Mythos 5](https://llmposts.com/models/anthropic-fable-mythos-access-suspended/)
+#### [Anthropic 派遣安全团队沟通无果,Claude Fable 5 出口管制依然生效](https://llmposts.com/models/anthropic-claude-fable-5-export-controls/)
 
-美国政府以国家安全为由要求暂停外国国民访问 Fable 5 与 Mythos 5。Anthropic 已于 2026 年 6 月 12 日禁用这两款模型的所有用户访问,但 GPT-5.5 等同类模型亦具备相关能力。
+Anthropic 派遣安全团队前往 DC 沟通,但未能解除 Claude Fable 5 出口管制。美国政府与厂商就 Mythos 能力解锁风险存在分歧,目前该模型访问权限仍被禁用。
 
-[阅读全文 →](https://llmposts.com/models/anthropic-fable-mythos-access-suspended/)
+[阅读全文 →](https://llmposts.com/models/anthropic-claude-fable-5-export-controls/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
