@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-06-13",
-      "node_token": "AQqEwHYOciwUaAkOr0FcAO8pnWb",
-      "block_id": "doxcniEYVuxp7fIsWR6YOVe2znc"
+      "date": "2026-06-16",
+      "node_token": "IipAwpsCiiBmP9kU0SmcrAj7n7q",
+      "block_id": "doxcnRNDJU7mUKZZyKyBTJrwrWf"
     }
+  },
+  "2026-06-16": {
+    "node_token": "IipAwpsCiiBmP9kU0SmcrAj7n7q",
+    "obj_token": "OUFwdkP6ro5uflxTDa5cdwlendc",
+    "synced_links": [
+      "https://llmposts.com/models/anthropic-claude-fable-5-export-controls/"
+    ],
+    "first_synced_at": "2026-06-16T10:40:34.037Z",
+    "last_synced_at": "2026-06-16T10:40:34.037Z",
+    "public_access_set": true
   },
   "2026-06-13": {
     "node_token": "AQqEwHYOciwUaAkOr0FcAO8pnWb",
