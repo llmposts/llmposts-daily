@@ -1,5 +1,12 @@
 [
   {
+    "title": "GLM-5.2 发布：支持 1M 上下文，专注长程编码任务且 MIT 开源",
+    "link": "https://llmposts.com/models/glm-5-2-long-horizon-model-architecture/",
+    "date": "2026-06-17T11:01:54",
+    "summary": "Z.ai 发布 GLM-5.2 旗舰模型，支持 1M tokens 上下文，并在 FrontierSWE 等长程编码评测中表现强劲，部分指标仅落后 Opus 4.8 1%。该模型采用 IndexShare 架构将计算量降低 2.9 倍，并以 MIT 协议开源。",
+    "category": "模型动态"
+  },
+  {
     "title": "Anthropic 派遣安全团队沟通无果,Claude Fable 5 出口管制依然生效",
     "link": "https://llmposts.com/models/anthropic-claude-fable-5-export-controls/",
     "date": "2026-06-16T18:39:40",

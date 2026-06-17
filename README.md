@@ -8,20 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-06-16<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-06-17<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-16 · 共 1 篇
+## 🔥 最新汇总 · 2026-06-17 · 共 1 篇
 
 ### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Anthropic 派遣安全团队沟通无果,Claude Fable 5 出口管制依然生效](https://llmposts.com/models/anthropic-claude-fable-5-export-controls/)
+#### [GLM-5.2 发布：支持 1M 上下文，专注长程编码任务且 MIT 开源](https://llmposts.com/models/glm-5-2-long-horizon-model-architecture/)
 
-Anthropic 派遣安全团队前往 DC 沟通,但未能解除 Claude Fable 5 出口管制。美国政府与厂商就 Mythos 能力解锁风险存在分歧,目前该模型访问权限仍被禁用。
+Z.ai 发布 GLM-5.2 旗舰模型，支持 1M tokens 上下文，并在 FrontierSWE 等长程编码评测中表现强劲，部分指标仅落后 Opus 4.8 1%。该模型采用 IndexShare 架构将计算量降低 2.9 倍，并以 MIT 协议开源。
 
-[阅读全文 →](https://llmposts.com/models/anthropic-claude-fable-5-export-controls/)
+[阅读全文 →](https://llmposts.com/models/glm-5-2-long-horizon-model-architecture/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
