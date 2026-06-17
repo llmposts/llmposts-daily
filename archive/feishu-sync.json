@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-06-16",
-      "node_token": "IipAwpsCiiBmP9kU0SmcrAj7n7q",
-      "block_id": "doxcnRNDJU7mUKZZyKyBTJrwrWf"
+      "date": "2026-06-17",
+      "node_token": "CM34wIwzWi4xdlkCYPEccyUTnDe",
+      "block_id": "doxcnGNCCJmxoqMtRhtJC5xax5c"
     }
+  },
+  "2026-06-17": {
+    "node_token": "CM34wIwzWi4xdlkCYPEccyUTnDe",
+    "obj_token": "EqDLdIpSRotcEGxMmwbcMO9NnPh",
+    "synced_links": [
+      "https://llmposts.com/models/glm-5-2-long-horizon-model-architecture/"
+    ],
+    "first_synced_at": "2026-06-17T03:02:34.671Z",
+    "last_synced_at": "2026-06-17T03:02:34.671Z",
+    "public_access_set": true
   },
   "2026-06-16": {
     "node_token": "IipAwpsCiiBmP9kU0SmcrAj7n7q",
