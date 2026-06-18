@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-06-17",
-      "node_token": "CM34wIwzWi4xdlkCYPEccyUTnDe",
-      "block_id": "doxcnGNCCJmxoqMtRhtJC5xax5c"
+      "date": "2026-06-18",
+      "node_token": "FE6twJraEiO46QksmSxc74jrnZf",
+      "block_id": "doxcn1zvDpeXxKCFo5LFBaN1vZg"
     }
+  },
+  "2026-06-18": {
+    "node_token": "FE6twJraEiO46QksmSxc74jrnZf",
+    "obj_token": "JFmUdEsPiojW69xuJBGcCD0qntb",
+    "synced_links": [
+      "https://llmposts.com/models/anthropic-mythos-fable-5-access-restored/"
+    ],
+    "first_synced_at": "2026-06-18T15:26:55.418Z",
+    "last_synced_at": "2026-06-18T15:26:55.418Z",
+    "public_access_set": true
   },
   "2026-06-17": {
     "node_token": "CM34wIwzWi4xdlkCYPEccyUTnDe",
