@@ -1,5 +1,12 @@
 [
   {
+    "title": "Anthropic 称 Mythos 和 Fable 5 模型或将在数日内恢复访问",
+    "link": "https://llmposts.com/models/anthropic-mythos-fable-5-access-restored/",
+    "date": "2026-06-18T23:26:05",
+    "summary": "Anthropic 高管表示 Mythos 和 Fable 5 模型或在未来几天恢复访问。此前白宫出于安全考虑封禁该模型,目前 Project Glasswing 已覆盖约 150 个合作伙伴。",
+    "category": "模型动态"
+  },
+  {
     "title": "GLM-5.2 发布：支持 1M 上下文，专注长程编码任务且 MIT 开源",
     "link": "https://llmposts.com/models/glm-5-2-long-horizon-model-architecture/",
     "date": "2026-06-17T11:01:54",
