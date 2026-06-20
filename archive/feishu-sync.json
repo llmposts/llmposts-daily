@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-06-18",
-      "node_token": "FE6twJraEiO46QksmSxc74jrnZf",
-      "block_id": "doxcn1zvDpeXxKCFo5LFBaN1vZg"
+      "date": "2026-06-20",
+      "node_token": "T3L2wkaevibTHUkiVNPceMTLn3b",
+      "block_id": "doxcnG1g7p0Q2IX02SEJGV8WLDc"
     }
+  },
+  "2026-06-20": {
+    "node_token": "T3L2wkaevibTHUkiVNPceMTLn3b",
+    "obj_token": "Ph76ddvBOoznMgxqtr1cKFban5b",
+    "synced_links": [
+      "https://llmposts.com/models/gpt-5-6-pro-leaks-release-date/"
+    ],
+    "first_synced_at": "2026-06-20T02:32:53.472Z",
+    "last_synced_at": "2026-06-20T02:32:53.472Z",
+    "public_access_set": true
   },
   "2026-06-18": {
     "node_token": "FE6twJraEiO46QksmSxc74jrnZf",
