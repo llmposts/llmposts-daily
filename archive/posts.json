@@ -1,6 +1,13 @@
 [
   {
-    "title": "GPT-5.6 Pro 或于本周四发布, 推理强度提升至 960",
+    "title": "Google DeepMind 内部爆料：模型竞争力下滑, 或跌至行业第四",
+    "link": "https://llmposts.com/models/google-deepmind-internal-leak-gemini-competitiveness/",
+    "date": "2026-06-20T13:58:27",
+    "summary": "Google DeepMind 内部爆料显示,公司在 AI 竞赛中排名跌至第五,Gemini 3.5 Pro 预计 6 月 30 日发布但被指缺乏竞争力,且被智谱 AI 等模型超越。",
+    "category": "模型动态"
+  },
+  {
+    "title": "GPT-5.6 Pro 或于下周四发布, 推理强度提升至 960",
     "link": "https://llmposts.com/models/gpt-5-6-pro-leaks-release-date/",
     "date": "2026-06-20T10:32:17",
     "summary": "OpenAI 的 GPT-5.6 Pro 或于本周四发布,推理强度 Juice Value 提升至 960,知识截止日期更新至 2025 年 12 月,并集成 Playwright 自动化支持。",

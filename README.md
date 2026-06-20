@@ -13,11 +13,17 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-20 · 共 1 篇
+## 🔥 最新汇总 · 2026-06-20 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
 
-#### [GPT-5.6 Pro 或于本周四发布, 推理强度提升至 960](https://llmposts.com/models/gpt-5-6-pro-leaks-release-date/)
+#### [Google DeepMind 内部爆料：模型竞争力下滑, 或跌至行业第四](https://llmposts.com/models/google-deepmind-internal-leak-gemini-competitiveness/)
+
+Google DeepMind 内部爆料显示,公司在 AI 竞赛中排名跌至第五,Gemini 3.5 Pro 预计 6 月 30 日发布但被指缺乏竞争力,且被智谱 AI 等模型超越。
+
+[阅读全文 →](https://llmposts.com/models/google-deepmind-internal-leak-gemini-competitiveness/)
+
+#### [GPT-5.6 Pro 或于下周四发布, 推理强度提升至 960](https://llmposts.com/models/gpt-5-6-pro-leaks-release-date/)
 
 OpenAI 的 GPT-5.6 Pro 或于本周四发布,推理强度 Juice Value 提升至 960,知识截止日期更新至 2025 年 12 月,并集成 Playwright 自动化支持。
 
