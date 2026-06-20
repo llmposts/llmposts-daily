@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-20 · 共 3 篇
+## 🔥 最新汇总 · 2026-06-20 · 共 4 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 4 篇
+
+#### [Claude Fable 5 或将恢复访问，软件工程能力可将数月工作量缩至数日](https://llmposts.com/models/claude-fable-5-model-recovery/)
+
+Anthropic 顶级模型 Claude Fable 5 或将在数日内恢复访问。该模型输入定价 10 美元/百万 token，在 5000 万行代码库迁移任务中将 2 个月工作量缩短至 1 天。
+
+[阅读全文 →](https://llmposts.com/models/claude-fable-5-model-recovery/)
 
 #### [微软成 OpenAI 进入中国通道，字节跳动年支出或超 10 亿美元](https://llmposts.com/models/microsoft-azure-openai-china-gateway/)
 
