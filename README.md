@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-20 · 共 2 篇
+## 🔥 最新汇总 · 2026-06-20 · 共 3 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 3 篇
+
+#### [微软成 OpenAI 进入中国通道，字节跳动年支出或超 10 亿美元](https://llmposts.com/models/microsoft-azure-openai-china-gateway/)
+
+微软通过 Azure 在新加坡等地为中国企业提供 OpenAI 模型访问，字节跳动年度支出预计超 10 亿美元，Azure 中国 AI 收入在 2025 财年增长约 3 倍。
+
+[阅读全文 →](https://llmposts.com/models/microsoft-azure-openai-china-gateway/)
 
 #### [Google DeepMind 内部爆料：模型竞争力下滑, 或跌至行业第四](https://llmposts.com/models/google-deepmind-internal-leak-gemini-competitiveness/)
 
