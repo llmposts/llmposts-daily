@@ -8,26 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-06-18<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-06-20<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-18 · 共 2 篇
+## 🔥 最新汇总 · 2026-06-20 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Transformer 共同作者 Noam Shazeer 正式加入 OpenAI](https://llmposts.com/models/noam-shazeer-joins-openai/)
+#### [GPT-5.6 Pro 或于本周四发布, 推理强度提升至 960](https://llmposts.com/models/gpt-5-6-pro-leaks-release-date/)
 
-OpenAI 招募 Transformer 架构共同作者 Noam Shazeer。他在 2000 年加入 Google 并共同撰写了奠基性论文，此前曾参与 27 亿美元的 Character.AI 交易。
+OpenAI 的 GPT-5.6 Pro 或于本周四发布,推理强度 Juice Value 提升至 960,知识截止日期更新至 2025 年 12 月,并集成 Playwright 自动化支持。
 
-[阅读全文 →](https://llmposts.com/models/noam-shazeer-joins-openai/)
-
-#### [Anthropic 称 Mythos 和 Fable 5 模型或将在数日内恢复访问](https://llmposts.com/models/anthropic-mythos-fable-5-access-restored/)
-
-Anthropic 高管表示 Mythos 和 Fable 5 模型或在未来几天恢复访问。此前白宫出于安全考虑封禁该模型,目前 Project Glasswing 已覆盖约 150 个合作伙伴。
-
-[阅读全文 →](https://llmposts.com/models/anthropic-mythos-fable-5-access-restored/)
+[阅读全文 →](https://llmposts.com/models/gpt-5-6-pro-leaks-release-date/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
