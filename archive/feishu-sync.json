@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-06-20",
-      "node_token": "T3L2wkaevibTHUkiVNPceMTLn3b",
-      "block_id": "doxcnG1g7p0Q2IX02SEJGV8WLDc"
+      "date": "2026-06-22",
+      "node_token": "TqszwnZiuihaJukjwFXcz0bKn1b",
+      "block_id": "doxcnk68iHrjLQsOH3MJhf3vrwf"
     }
+  },
+  "2026-06-22": {
+    "node_token": "TqszwnZiuihaJukjwFXcz0bKn1b",
+    "obj_token": "LgM3dcZKMokcrBxIWHocSHsNnhd",
+    "synced_links": [
+      "https://llmposts.com/models/claude-sonnet-5-leak-release-date/"
+    ],
+    "first_synced_at": "2026-06-22T09:16:53.623Z",
+    "last_synced_at": "2026-06-22T09:16:53.624Z",
+    "public_access_set": true
   },
   "2026-06-20": {
     "node_token": "T3L2wkaevibTHUkiVNPceMTLn3b",
