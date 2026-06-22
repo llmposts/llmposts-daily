@@ -8,38 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-06-20<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-06-22<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-20 · 共 4 篇
+## 🔥 最新汇总 · 2026-06-22 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 4 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Claude Fable 5 或将恢复访问，软件工程能力可将数月工作量缩至数日](https://llmposts.com/models/claude-fable-5-model-recovery/)
+#### [Claude Sonnet 5 或于下周发布，预计增强视觉能力并优化长上下文](https://llmposts.com/models/claude-sonnet-5-leak-release-date/)
 
-Anthropic 顶级模型 Claude Fable 5 或将在数日内恢复访问。该模型输入定价 10 美元/百万 token，在 5000 万行代码库迁移任务中将 2 个月工作量缩短至 1 天。
+Anthropic 的 Claude Sonnet 5 或将于下周发布，API 供应商已出现模型标识。预计升级 1M tokens 上下文并增强视觉能力，但 token 消耗可能增加 30%。
 
-[阅读全文 →](https://llmposts.com/models/claude-fable-5-model-recovery/)
-
-#### [微软成 OpenAI 进入中国通道，字节跳动年支出或超 10 亿美元](https://llmposts.com/models/microsoft-azure-openai-china-gateway/)
-
-微软通过 Azure 在新加坡等地为中国企业提供 OpenAI 模型访问，字节跳动年度支出预计超 10 亿美元，Azure 中国 AI 收入在 2025 财年增长约 3 倍。
-
-[阅读全文 →](https://llmposts.com/models/microsoft-azure-openai-china-gateway/)
-
-#### [Google DeepMind 内部爆料：模型竞争力下滑, 或跌至行业第四](https://llmposts.com/models/google-deepmind-internal-leak-gemini-competitiveness/)
-
-Google DeepMind 内部爆料显示,公司在 AI 竞赛中排名跌至第五,Gemini 3.5 Pro 预计 6 月 30 日发布但被指缺乏竞争力,且被智谱 AI 等模型超越。
-
-[阅读全文 →](https://llmposts.com/models/google-deepmind-internal-leak-gemini-competitiveness/)
-
-#### [GPT-5.6 Pro 或于下周四发布, 推理强度提升至 960](https://llmposts.com/models/gpt-5-6-pro-leaks-release-date/)
-
-OpenAI 的 GPT-5.6 Pro 或于本周四发布,推理强度 Juice Value 提升至 960,知识截止日期更新至 2025 年 12 月,并集成 Playwright 自动化支持。
-
-[阅读全文 →](https://llmposts.com/models/gpt-5-6-pro-leaks-release-date/)
+[阅读全文 →](https://llmposts.com/models/claude-sonnet-5-leak-release-date/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**

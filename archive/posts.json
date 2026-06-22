@@ -1,5 +1,12 @@
 [
   {
+    "title": "Claude Sonnet 5 或于下周发布，预计增强视觉能力并优化长上下文",
+    "link": "https://llmposts.com/models/claude-sonnet-5-leak-release-date/",
+    "date": "2026-06-22T17:16:08",
+    "summary": "Anthropic 的 Claude Sonnet 5 或将于下周发布，API 供应商已出现模型标识。预计升级 1M tokens 上下文并增强视觉能力，但 token 消耗可能增加 30%。",
+    "category": "模型动态"
+  },
+  {
     "title": "Claude Fable 5 或将恢复访问，软件工程能力可将数月工作量缩至数日",
     "link": "https://llmposts.com/models/claude-fable-5-model-recovery/",
     "date": "2026-06-20T21:48:48",
