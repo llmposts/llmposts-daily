@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-23 · 共 2 篇
+## 🔥 最新汇总 · 2026-06-23 · 共 3 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 3 篇
+
+#### [Anthropic 或将为移动端推出 Cowork 支持, 实现云端任务调度](https://llmposts.com/models/anthropic-cowork-mobile-support-leak/)
+
+Anthropic 计划在 iOS 应用中推出 Cowork 移动端支持,将任务执行迁移至云端以解除本地硬件依赖。最新构建版本显示支持跨平台调度,且语音模式或将支持模型选择,预计 2026 年 6 月底发布。
+
+[阅读全文 →](https://llmposts.com/models/anthropic-cowork-mobile-support-leak/)
 
 #### [OpenAI 拟推出 GPT-Bidi-1 双向音频模型升级 ChatGPT 语音模式](https://llmposts.com/models/chatgpt-gpt-bidi-1-voice-upgrade/)
 
