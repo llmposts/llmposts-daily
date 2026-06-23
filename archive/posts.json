@@ -1,5 +1,12 @@
 [
   {
+    "title": "GLM-5.2 领跑开源权重模型,GDPval-AA 智能体评测位列全球第三",
+    "link": "https://llmposts.com/models/glm-5-2-gdpval-aa-benchmark-performance/",
+    "date": "2026-06-23T10:00:37",
+    "summary": "智谱 AI 的 GLM-5.2 在 GDPval-AA 智能体评测中获得 1524 Elo 分数,位列全球第三,大幅领先 MiniMax-M3 等开源模型。",
+    "category": "模型动态"
+  },
+  {
     "title": "Claude Sonnet 5 或于下周发布，预计增强视觉能力并优化长上下文",
     "link": "https://llmposts.com/models/claude-sonnet-5-leak-release-date/",
     "date": "2026-06-22T17:16:08",

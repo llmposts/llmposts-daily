@@ -8,20 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-06-22<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-06-23<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-22 · 共 1 篇
+## 🔥 最新汇总 · 2026-06-23 · 共 1 篇
 
 ### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Claude Sonnet 5 或于下周发布，预计增强视觉能力并优化长上下文](https://llmposts.com/models/claude-sonnet-5-leak-release-date/)
+#### [GLM-5.2 领跑开源权重模型,GDPval-AA 智能体评测位列全球第三](https://llmposts.com/models/glm-5-2-gdpval-aa-benchmark-performance/)
 
-Anthropic 的 Claude Sonnet 5 或将于下周发布，API 供应商已出现模型标识。预计升级 1M tokens 上下文并增强视觉能力，但 token 消耗可能增加 30%。
+智谱 AI 的 GLM-5.2 在 GDPval-AA 智能体评测中获得 1524 Elo 分数,位列全球第三,大幅领先 MiniMax-M3 等开源模型。
 
-[阅读全文 →](https://llmposts.com/models/claude-sonnet-5-leak-release-date/)
+[阅读全文 →](https://llmposts.com/models/glm-5-2-gdpval-aa-benchmark-performance/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
