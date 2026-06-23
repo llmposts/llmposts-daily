@@ -13,10 +13,11 @@
     "node_token": "WrO7wGVrViC1BWkPREkcbjA4nqd",
     "obj_token": "YGuHdqXSooyAkTxgNgGcs1GQnOb",
     "synced_links": [
-      "https://llmposts.com/models/glm-5-2-gdpval-aa-benchmark-performance/"
+      "https://llmposts.com/models/glm-5-2-gdpval-aa-benchmark-performance/",
+      "https://llmposts.com/models/chatgpt-gpt-bidi-1-voice-upgrade/"
     ],
     "first_synced_at": "2026-06-23T02:01:21.356Z",
-    "last_synced_at": "2026-06-23T02:01:21.356Z",
+    "last_synced_at": "2026-06-23T06:41:46.870Z",
     "public_access_set": true
   },
   "2026-06-22": {
