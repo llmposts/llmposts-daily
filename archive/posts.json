@@ -1,5 +1,12 @@
 [
   {
+    "title": "OpenAI 拟推出 GPT-Bidi-1 双向音频模型升级 ChatGPT 语音模式",
+    "link": "https://llmposts.com/models/chatgpt-gpt-bidi-1-voice-upgrade/",
+    "date": "2026-06-23T14:40:55",
+    "summary": "OpenAI 计划推出 GPT-Bidi-1 双向音频模型，升级 ChatGPT 语音模式以支持实时中断响应，并提供 High、Medium、Instant 三档推理级别。",
+    "category": "模型动态"
+  },
+  {
     "title": "GLM-5.2 领跑开源权重模型,GDPval-AA 智能体评测位列全球第三",
     "link": "https://llmposts.com/models/glm-5-2-gdpval-aa-benchmark-performance/",
     "date": "2026-06-23T10:00:37",

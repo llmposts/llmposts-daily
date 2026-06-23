@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-23 · 共 1 篇
+## 🔥 最新汇总 · 2026-06-23 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [OpenAI 拟推出 GPT-Bidi-1 双向音频模型升级 ChatGPT 语音模式](https://llmposts.com/models/chatgpt-gpt-bidi-1-voice-upgrade/)
+
+OpenAI 计划推出 GPT-Bidi-1 双向音频模型，升级 ChatGPT 语音模式以支持实时中断响应，并提供 High、Medium、Instant 三档推理级别。
+
+[阅读全文 →](https://llmposts.com/models/chatgpt-gpt-bidi-1-voice-upgrade/)
 
 #### [GLM-5.2 领跑开源权重模型,GDPval-AA 智能体评测位列全球第三](https://llmposts.com/models/glm-5-2-gdpval-aa-benchmark-performance/)
 
