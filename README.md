@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-23 · 共 3 篇
+## 🔥 最新汇总 · 2026-06-23 · 共 4 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 4 篇
+
+#### [GPT-5.6 系列发布或延期至 7 月中旬，Pro 版推理强度提升至 960](https://llmposts.com/models/gpt-5-6-release-delay-leak/)
+
+GPT-5.6 系列发布时间或延期至 7 月中旬。爆料显示 GPT-5.6 Pro 推理强度提升至 960，知识截止日期更新至 2025 年 12 月，并增强了 SVG 生成与 Playwright 自动化支持。
+
+[阅读全文 →](https://llmposts.com/models/gpt-5-6-release-delay-leak/)
 
 #### [Anthropic 或将为移动端推出 Cowork 支持, 实现云端任务调度](https://llmposts.com/models/anthropic-cowork-mobile-support-leak/)
 
