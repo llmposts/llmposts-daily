@@ -1,5 +1,12 @@
 [
   {
+    "title": "Google DeepMind 或推迟 Gemini 3.5 Pro 发布计划",
+    "link": "https://llmposts.com/models/gemini-3-5-pro-launch-delayed/",
+    "date": "2026-06-24T11:02:33",
+    "summary": "Google DeepMind 推迟 Gemini 3.5 Pro 发布计划,原定于 6 月 30 日上线的旗舰模型因竞争力不足决定延期。该模型主打编程与 agent 工作流强化,定价预计在 Gemini 3.1 Pro 基础上上浮约 1.5 倍。",
+    "category": "模型动态"
+  },
+  {
     "title": "GPT-5.6 系列发布或延期至 7 月中旬，Pro 版推理强度提升至 960",
     "link": "https://llmposts.com/models/gpt-5-6-release-delay-leak/",
     "date": "2026-06-23T23:35:11",
