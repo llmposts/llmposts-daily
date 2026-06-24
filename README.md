@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-24 · 共 1 篇
+## 🔥 最新汇总 · 2026-06-24 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [OpenAI 联手 Broadcom 发布 Jalapeño 推理芯片，全栈自研加速 LLM 推理](https://llmposts.com/models/openai-broadcom-jalapeno-inference-chip/)
+
+OpenAI 与 Broadcom 发布首款 LLM 推理芯片 Jalapeño，设计至生产仅用 9 个月。该芯片针对 GPT-5.3-Codex-Spark 等模型优化，预计 2026 年底部署吉瓦级数据中心。
+
+[阅读全文 →](https://llmposts.com/models/openai-broadcom-jalapeno-inference-chip/)
 
 #### [Google DeepMind 或推迟 Gemini 3.5 Pro 发布计划](https://llmposts.com/models/gemini-3-5-pro-launch-delayed/)
 

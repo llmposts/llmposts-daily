@@ -1,5 +1,12 @@
 [
   {
+    "title": "OpenAI 联手 Broadcom 发布 Jalapeño 推理芯片，全栈自研加速 LLM 推理",
+    "link": "https://llmposts.com/models/openai-broadcom-jalapeno-inference-chip/",
+    "date": "2026-06-24T22:49:18",
+    "summary": "OpenAI 与 Broadcom 发布首款 LLM 推理芯片 Jalapeño，设计至生产仅用 9 个月。该芯片针对 GPT-5.3-Codex-Spark 等模型优化，预计 2026 年底部署吉瓦级数据中心。",
+    "category": "模型动态"
+  },
+  {
     "title": "Google DeepMind 或推迟 Gemini 3.5 Pro 发布计划",
     "link": "https://llmposts.com/models/gemini-3-5-pro-launch-delayed/",
     "date": "2026-06-24T11:02:33",
