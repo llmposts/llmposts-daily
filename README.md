@@ -8,26 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-06-24<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-06-25<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-24 · 共 2 篇
+## 🔥 最新汇总 · 2026-06-25 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [OpenAI 联手 Broadcom 发布 Jalapeño 推理芯片，全栈自研加速 LLM 推理](https://llmposts.com/models/openai-broadcom-jalapeno-inference-chip/)
+#### [Claude Code 更新暗示 Fable 5 模型回归并纳入订阅配额](https://llmposts.com/models/claude-code-fable-5-return-subscription/)
 
-OpenAI 与 Broadcom 发布首款 LLM 推理芯片 Jalapeño，设计至生产仅用 9 个月。该芯片针对 GPT-5.3-Codex-Spark 等模型优化，预计 2026 年底部署吉瓦级数据中心。
+Claude Code v2.1.190 版本更新显示 Fable 5 模型回归,计费模式由单独购买信用额度转为订阅计划的周配额,预计近期将恢复访问。
 
-[阅读全文 →](https://llmposts.com/models/openai-broadcom-jalapeno-inference-chip/)
-
-#### [Google DeepMind 或推迟 Gemini 3.5 Pro 发布计划](https://llmposts.com/models/gemini-3-5-pro-launch-delayed/)
-
-Google DeepMind 推迟 Gemini 3.5 Pro 发布计划,原定于 6 月 30 日上线的旗舰模型因竞争力不足决定延期。该模型主打编程与 agent 工作流强化,定价预计在 Gemini 3.1 Pro 基础上上浮约 1.5 倍。
-
-[阅读全文 →](https://llmposts.com/models/gemini-3-5-pro-launch-delayed/)
+[阅读全文 →](https://llmposts.com/models/claude-code-fable-5-return-subscription/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
