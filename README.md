@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-25 · 共 2 篇
+## 🔥 最新汇总 · 2026-06-25 · 共 3 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 3 篇
+
+#### [Anthropic 指控阿里巴巴利用 2.5 万个虚假账户蒸馏 Claude](https://llmposts.com/models/anthropic-accuses-alibaba-claude-distillation/)
+
+Anthropic 指控阿里巴巴通过近 2.5 万个虚假账户非法访问 Claude，在 2026 年 4 月至 6 月间产生 2880 万次对话，旨在利用对抗性蒸馏训练 Qwen 模型。
+
+[阅读全文 →](https://llmposts.com/models/anthropic-accuses-alibaba-claude-distillation/)
 
 #### [Gemini 核心成员或将离职，Google 面临新一轮 AI 人才流失](https://llmposts.com/models/google-ai-talent-loss-anthropic/)
 

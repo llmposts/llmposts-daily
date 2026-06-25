@@ -1,5 +1,12 @@
 [
   {
+    "title": "Anthropic 指控阿里巴巴利用 2.5 万个虚假账户蒸馏 Claude",
+    "link": "https://llmposts.com/models/anthropic-accuses-alibaba-claude-distillation/",
+    "date": "2026-06-25T17:30:39",
+    "summary": "Anthropic 指控阿里巴巴通过近 2.5 万个虚假账户非法访问 Claude，在 2026 年 4 月至 6 月间产生 2880 万次对话，旨在利用对抗性蒸馏训练 Qwen 模型。",
+    "category": "模型动态"
+  },
+  {
     "title": "Gemini 核心成员或将离职，Google 面临新一轮 AI 人才流失",
     "link": "https://llmposts.com/models/google-ai-talent-loss-anthropic/",
     "date": "2026-06-25T13:15:40",
