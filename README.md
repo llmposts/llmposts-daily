@@ -8,32 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-06-25<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-06-26<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-25 · 共 3 篇
+## 🔥 最新汇总 · 2026-06-26 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Anthropic 指控阿里巴巴利用 2.5 万个虚假账户蒸馏 Claude](https://llmposts.com/models/anthropic-accuses-alibaba-claude-distillation/)
+#### [谷歌调整 AI 编程专项团队架构，试图缩小与 Anthropic 的差距](https://llmposts.com/models/google-ai-coding-strike-team-reorganization/)
 
-Anthropic 指控阿里巴巴通过近 2.5 万个虚假账户非法访问 Claude，在 2026 年 4 月至 6 月间产生 2880 万次对话，旨在利用对抗性蒸馏训练 Qwen 模型。
+谷歌调整 AI 编程专项团队架构，将其升级为 midtraining 组以增强 Gemini 编程能力。此次变动发生在 Noam Shazeer 与 John Jumper 等核心人才离职之后，旨在应对 Anthropic 的竞争。
 
-[阅读全文 →](https://llmposts.com/models/anthropic-accuses-alibaba-claude-distillation/)
-
-#### [Gemini 核心成员或将离职，Google 面临新一轮 AI 人才流失](https://llmposts.com/models/google-ai-talent-loss-anthropic/)
-
-Google 再次发生核心 AI 人才流失，Gemini 关键贡献者计划加入 Anthropic。此次事件叠加此前 John Jumper 等人离职，反映出 Google 在算力分配与 IPO 激励面前的竞争压力。
-
-[阅读全文 →](https://llmposts.com/models/google-ai-talent-loss-anthropic/)
-
-#### [Claude Code 更新暗示 Fable 5 模型回归并纳入订阅配额](https://llmposts.com/models/claude-code-fable-5-return-subscription/)
-
-Claude Code v2.1.190 版本更新显示 Fable 5 模型回归,计费模式由单独购买信用额度转为订阅计划的周配额,预计近期将恢复访问。
-
-[阅读全文 →](https://llmposts.com/models/claude-code-fable-5-return-subscription/)
+[阅读全文 →](https://llmposts.com/models/google-ai-coding-strike-team-reorganization/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**

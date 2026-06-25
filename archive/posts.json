@@ -1,5 +1,12 @@
 [
   {
+    "title": "谷歌调整 AI 编程专项团队架构，试图缩小与 Anthropic 的差距",
+    "link": "https://llmposts.com/models/google-ai-coding-strike-team-reorganization/",
+    "date": "2026-06-26T00:39:06",
+    "summary": "谷歌调整 AI 编程专项团队架构，将其升级为 midtraining 组以增强 Gemini 编程能力。此次变动发生在 Noam Shazeer 与 John Jumper 等核心人才离职之后，旨在应对 Anthropic 的竞争。",
+    "category": "模型动态"
+  },
+  {
     "title": "Anthropic 指控阿里巴巴利用 2.5 万个虚假账户蒸馏 Claude",
     "link": "https://llmposts.com/models/anthropic-accuses-alibaba-claude-distillation/",
     "date": "2026-06-25T17:30:39",
