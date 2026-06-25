@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-26 · 共 1 篇
+## 🔥 最新汇总 · 2026-06-26 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [Gemini 3.5 Flash 原生集成 Computer Use 能力](https://llmposts.com/models/gemini-3-5-flash-computer-use/)
+
+谷歌在 Gemini 3.5 Flash 中原生集成 Computer Use 能力,支持跨浏览器和桌面环境的 agent 自动化操作,并推出针对 prompt injection 的对抗训练与企业级防护系统。
+
+[阅读全文 →](https://llmposts.com/models/gemini-3-5-flash-computer-use/)
 
 #### [谷歌调整 AI 编程专项团队架构，试图缩小与 Anthropic 的差距](https://llmposts.com/models/google-ai-coding-strike-team-reorganization/)
 
