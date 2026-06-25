@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-25 · 共 1 篇
+## 🔥 最新汇总 · 2026-06-25 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [Gemini 核心成员或将离职，Google 面临新一轮 AI 人才流失](https://llmposts.com/models/google-ai-talent-loss-anthropic/)
+
+Google 再次发生核心 AI 人才流失，Gemini 关键贡献者计划加入 Anthropic。此次事件叠加此前 John Jumper 等人离职，反映出 Google 在算力分配与 IPO 激励面前的竞争压力。
+
+[阅读全文 →](https://llmposts.com/models/google-ai-talent-loss-anthropic/)
 
 #### [Claude Code 更新暗示 Fable 5 模型回归并纳入订阅配额](https://llmposts.com/models/claude-code-fable-5-return-subscription/)
 
