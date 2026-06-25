@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-06-25",
-      "node_token": "C6PNwrXXmihRYikJY8ZcD1fBn0c",
-      "block_id": "doxcnFJC8NoUQxiu7fZpJuxUONc"
+      "date": "2026-06-26",
+      "node_token": "WuRyw2DCniE1ZakHZhqclTg5nOb",
+      "block_id": "doxcnQEPATguHZ4ZNBGMK9Lncle"
     }
+  },
+  "2026-06-26": {
+    "node_token": "WuRyw2DCniE1ZakHZhqclTg5nOb",
+    "obj_token": "USh1dI0b2oEde1xY0sbcHa7Sn1d",
+    "synced_links": [
+      "https://llmposts.com/models/google-ai-coding-strike-team-reorganization/"
+    ],
+    "first_synced_at": "2026-06-25T16:39:41.218Z",
+    "last_synced_at": "2026-06-25T16:39:41.218Z",
+    "public_access_set": true
   },
   "2026-06-25": {
     "node_token": "C6PNwrXXmihRYikJY8ZcD1fBn0c",
