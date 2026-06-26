@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-26 · 共 2 篇
+## 🔥 最新汇总 · 2026-06-26 · 共 3 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 3 篇
+
+#### [白宫要求 OpenAI 暂缓发布 GPT-5.6 以应对安全担忧](https://llmposts.com/models/openai-gpt-5-6-release-white-house-security/)
+
+白宫出于安全考量要求 OpenAI 暂缓发布 GPT-5.6。据 The Information 报道，该模型目前仅向少数伙伴提供有限预览，政府将对客户逐一审批访问权限。
+
+[阅读全文 →](https://llmposts.com/models/openai-gpt-5-6-release-white-house-security/)
 
 #### [Gemini 3.5 Flash 原生集成 Computer Use 能力](https://llmposts.com/models/gemini-3-5-flash-computer-use/)
 
