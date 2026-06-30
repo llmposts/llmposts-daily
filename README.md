@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-01 · 共 1 篇
+## 🔥 最新汇总 · 2026-07-01 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [Anthropic 发布 Claude Sonnet 5: 强化 Agentic 能力且定价更低](https://llmposts.com/models/claude-sonnet-5-agentic-model-release/)
+
+Anthropic 发布 Claude Sonnet 5,强化 agentic 能力以支持自主计划与工具使用。推广期定价为 2 美元/百万 input tokens,性能在多个维度逼近 Opus 4.8。
+
+[阅读全文 →](https://llmposts.com/models/claude-sonnet-5-agentic-model-release/)
 
 #### [Anthropic 发布 Claude Desktop Linux 版 Beta, 支持 Ubuntu 与 Debian](https://llmposts.com/models/claude-desktop-linux-beta-release/)
 
