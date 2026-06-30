@@ -1,5 +1,12 @@
 [
   {
+    "title": "Anthropic 发布 Claude Desktop Linux 版 Beta, 支持 Ubuntu 与 Debian",
+    "link": "https://llmposts.com/models/claude-desktop-linux-beta-release/",
+    "date": "2026-07-01T00:10:31",
+    "summary": "Anthropic 发布 Claude Desktop Linux 版 Beta,支持 Ubuntu 22.04 和 Debian 12。该版本整合了 Claude Code 与 Cowork 功能,提供可视化 diff 审查与集成终端,但暂不支持 Computer Use 模式。",
+    "category": "模型动态"
+  },
+  {
     "title": "Claude Code 被曝植入监测机制, 通过 system prompt 隐秘回传用户隐私",
     "link": "https://llmposts.com/models/claude-code-spyware-monitoring-mechanism/",
     "date": "2026-06-30T20:02:02",

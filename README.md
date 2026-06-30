@@ -8,20 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-06-30<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-07-01<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-30 · 共 1 篇
+## 🔥 最新汇总 · 2026-07-01 · 共 1 篇
 
 ### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Claude Code 被曝植入监测机制, 通过 system prompt 隐秘回传用户隐私](https://llmposts.com/models/claude-code-spyware-monitoring-mechanism/)
+#### [Anthropic 发布 Claude Desktop Linux 版 Beta, 支持 Ubuntu 与 Debian](https://llmposts.com/models/claude-desktop-linux-beta-release/)
 
-Claude Code 被曝在 2.1.91 版本起植入监测机制,通过修改 system prompt 隐秘传输中国用户时区与代理信息。该行为采用 XOR 混淆隐藏,引发开发者对权限滥用与隐私泄露的担忧。
+Anthropic 发布 Claude Desktop Linux 版 Beta,支持 Ubuntu 22.04 和 Debian 12。该版本整合了 Claude Code 与 Cowork 功能,提供可视化 diff 审查与集成终端,但暂不支持 Computer Use 模式。
 
-[阅读全文 →](https://llmposts.com/models/claude-code-spyware-monitoring-mechanism/)
+[阅读全文 →](https://llmposts.com/models/claude-desktop-linux-beta-release/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
