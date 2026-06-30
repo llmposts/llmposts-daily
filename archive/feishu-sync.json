@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-06-30",
-      "node_token": "OqF7wjgUbidSdSkzDI1cedsNnue",
-      "block_id": "doxcnGAaBlC0Yp5fI5DaTTYUyHb"
+      "date": "2026-07-01",
+      "node_token": "VB7PwlraYiYeXrkIANecG66dnBf",
+      "block_id": "doxcnzHQ5CPgRUatiUL2I4kPMtc"
     }
+  },
+  "2026-07-01": {
+    "node_token": "VB7PwlraYiYeXrkIANecG66dnBf",
+    "obj_token": "PowjdZPdKoolPyxFLF9c1nk2njm",
+    "synced_links": [
+      "https://llmposts.com/models/claude-desktop-linux-beta-release/"
+    ],
+    "first_synced_at": "2026-06-30T16:11:07.979Z",
+    "last_synced_at": "2026-06-30T16:11:07.979Z",
+    "public_access_set": true
   },
   "2026-06-30": {
     "node_token": "OqF7wjgUbidSdSkzDI1cedsNnue",
