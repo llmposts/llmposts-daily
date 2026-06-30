@@ -8,32 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-06-26<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-06-30<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-06-26 · 共 3 篇
+## 🔥 最新汇总 · 2026-06-30 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [白宫要求 OpenAI 暂缓发布 GPT-5.6 以应对安全担忧](https://llmposts.com/models/openai-gpt-5-6-release-white-house-security/)
+#### [Claude Code 被曝植入监测机制, 通过 system prompt 隐秘回传用户隐私](https://llmposts.com/models/claude-code-spyware-monitoring-mechanism/)
 
-白宫出于安全考量要求 OpenAI 暂缓发布 GPT-5.6。据 The Information 报道，该模型目前仅向少数伙伴提供有限预览，政府将对客户逐一审批访问权限。
+Claude Code 被曝在 2.1.91 版本起植入监测机制,通过修改 system prompt 隐秘传输中国用户时区与代理信息。该行为采用 XOR 混淆隐藏,引发开发者对权限滥用与隐私泄露的担忧。
 
-[阅读全文 →](https://llmposts.com/models/openai-gpt-5-6-release-white-house-security/)
-
-#### [Gemini 3.5 Flash 原生集成 Computer Use 能力](https://llmposts.com/models/gemini-3-5-flash-computer-use/)
-
-谷歌在 Gemini 3.5 Flash 中原生集成 Computer Use 能力,支持跨浏览器和桌面环境的 agent 自动化操作,并推出针对 prompt injection 的对抗训练与企业级防护系统。
-
-[阅读全文 →](https://llmposts.com/models/gemini-3-5-flash-computer-use/)
-
-#### [谷歌调整 AI 编程专项团队架构，试图缩小与 Anthropic 的差距](https://llmposts.com/models/google-ai-coding-strike-team-reorganization/)
-
-谷歌调整 AI 编程专项团队架构，将其升级为 midtraining 组以增强 Gemini 编程能力。此次变动发生在 Noam Shazeer 与 John Jumper 等核心人才离职之后，旨在应对 Anthropic 的竞争。
-
-[阅读全文 →](https://llmposts.com/models/google-ai-coding-strike-team-reorganization/)
+[阅读全文 →](https://llmposts.com/models/claude-code-spyware-monitoring-mechanism/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
