@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-06-26",
-      "node_token": "WuRyw2DCniE1ZakHZhqclTg5nOb",
-      "block_id": "doxcnQEPATguHZ4ZNBGMK9Lncle"
+      "date": "2026-06-30",
+      "node_token": "OqF7wjgUbidSdSkzDI1cedsNnue",
+      "block_id": "doxcnGAaBlC0Yp5fI5DaTTYUyHb"
     }
+  },
+  "2026-06-30": {
+    "node_token": "OqF7wjgUbidSdSkzDI1cedsNnue",
+    "obj_token": "S6XrdvrZSo9eWtxwm7FcqftMnqb",
+    "synced_links": [
+      "https://llmposts.com/models/claude-code-spyware-monitoring-mechanism/"
+    ],
+    "first_synced_at": "2026-06-30T12:02:11.392Z",
+    "last_synced_at": "2026-06-30T12:02:11.392Z",
+    "public_access_set": true
   },
   "2026-06-26": {
     "node_token": "WuRyw2DCniE1ZakHZhqclTg5nOb",
