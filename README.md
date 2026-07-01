@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-01 · 共 4 篇
+## 🔥 最新汇总 · 2026-07-01 · 共 5 篇
 
-### 01 · 模型动态 · Model Updates · 4 篇
+### 01 · 模型动态 · Model Updates · 5 篇
+
+#### [Anthropic 将删除 Claude Code 中针对中国用户的监控代码](https://llmposts.com/models/claude-code-chinese-user-spyware-removal/)
+
+Anthropic 确认将删除 Claude Code 中针对中国用户的隐藏监控代码。该代码自 3 月起运行，通过注入系统 prompt 收集用户时区和代理信息，预计在明日版本更新中完成回滚。
+
+[阅读全文 →](https://llmposts.com/models/claude-code-chinese-user-spyware-removal/)
 
 #### [Claude Code 被曝植入监测机制, 秘密收集中国用户代理与时区信息](https://llmposts.com/models/claude-code-hidden-monitoring-mechanism/)
 

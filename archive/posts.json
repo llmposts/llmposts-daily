@@ -1,5 +1,12 @@
 [
   {
+    "title": "Anthropic 将删除 Claude Code 中针对中国用户的监控代码",
+    "link": "https://llmposts.com/models/claude-code-chinese-user-spyware-removal/",
+    "date": "2026-07-01T22:35:58",
+    "summary": "Anthropic 确认将删除 Claude Code 中针对中国用户的隐藏监控代码。该代码自 3 月起运行，通过注入系统 prompt 收集用户时区和代理信息，预计在明日版本更新中完成回滚。",
+    "category": "模型动态"
+  },
+  {
     "title": "Claude Code 被曝植入监测机制, 秘密收集中国用户代理与时区信息",
     "link": "https://llmposts.com/models/claude-code-hidden-monitoring-mechanism/",
     "date": "2026-07-01T22:30:51",
