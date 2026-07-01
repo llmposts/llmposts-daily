@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-01 · 共 3 篇
+## 🔥 最新汇总 · 2026-07-01 · 共 4 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 4 篇
+
+#### [Claude Code 被曝植入监测机制, 秘密收集中国用户代理与时区信息](https://llmposts.com/models/claude-code-hidden-monitoring-mechanism/)
+
+Anthropic 的 Claude Code 被曝在 2.1.91 版本起植入监测机制,秘密收集中国用户时区与代理信息以防止蒸馏。负责人 Thariq 确认该实验将在次日版本中完全回滚。
+
+[阅读全文 →](https://llmposts.com/models/claude-code-hidden-monitoring-mechanism/)
 
 #### [Claude Fable 5 明日全球重新上架:软件工程能力显著提升](https://llmposts.com/models/claude-fable-5-redeploy-performance/)
 

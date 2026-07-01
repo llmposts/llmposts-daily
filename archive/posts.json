@@ -1,5 +1,12 @@
 [
   {
+    "title": "Claude Code 被曝植入监测机制, 秘密收集中国用户代理与时区信息",
+    "link": "https://llmposts.com/models/claude-code-hidden-monitoring-mechanism/",
+    "date": "2026-07-01T22:30:51",
+    "summary": "Anthropic 的 Claude Code 被曝在 2.1.91 版本起植入监测机制,秘密收集中国用户时区与代理信息以防止蒸馏。负责人 Thariq 确认该实验将在次日版本中完全回滚。",
+    "category": "模型动态"
+  },
+  {
     "title": "Claude Fable 5 明日全球重新上架:软件工程能力显著提升",
     "link": "https://llmposts.com/models/claude-fable-5-redeploy-performance/",
     "date": "2026-07-01T13:29:16",
