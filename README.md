@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-01 · 共 2 篇
+## 🔥 最新汇总 · 2026-07-01 · 共 3 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 3 篇
+
+#### [Claude Fable 5 明日全球重新上架:软件工程能力显著提升](https://llmposts.com/models/claude-fable-5-redeploy-performance/)
+
+Anthropic 宣布 Claude Fable 5 将于明日全球重新上架。该模型在 5000 万行代码库迁移任务中仅用 1 天完成原本需 2 个月的工作,并在金融推理评测集中获最高分。
+
+[阅读全文 →](https://llmposts.com/models/claude-fable-5-redeploy-performance/)
 
 #### [Anthropic 发布 Claude Sonnet 5: 强化 Agentic 能力且定价更低](https://llmposts.com/models/claude-sonnet-5-agentic-model-release/)
 

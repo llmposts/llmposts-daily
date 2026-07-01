@@ -1,5 +1,12 @@
 [
   {
+    "title": "Claude Fable 5 明日全球重新上架:软件工程能力显著提升",
+    "link": "https://llmposts.com/models/claude-fable-5-redeploy-performance/",
+    "date": "2026-07-01T13:29:16",
+    "summary": "Anthropic 宣布 Claude Fable 5 将于明日全球重新上架。该模型在 5000 万行代码库迁移任务中仅用 1 天完成原本需 2 个月的工作,并在金融推理评测集中获最高分。",
+    "category": "模型动态"
+  },
+  {
     "title": "Anthropic 发布 Claude Sonnet 5: 强化 Agentic 能力且定价更低",
     "link": "https://llmposts.com/models/claude-sonnet-5-agentic-model-release/",
     "date": "2026-07-01T02:23:28",
