@@ -8,44 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-07-01<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-07-02<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-01 · 共 5 篇
+## 🔥 最新汇总 · 2026-07-02 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 5 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Anthropic 将删除 Claude Code 中针对中国用户的监控代码](https://llmposts.com/models/claude-code-chinese-user-spyware-removal/)
+#### [Anthropic 或与三星合作研发定制 AI 芯片以降低部署成本](https://llmposts.com/models/anthropic-samsung-custom-ai-chip/)
 
-Anthropic 确认将删除 Claude Code 中针对中国用户的隐藏监控代码。该代码自 3 月起运行，通过注入系统 prompt 收集用户时区和代理信息，预计在明日版本更新中完成回滚。
+Anthropic 或将与三星合作研发定制 AI 芯片，拟采用 2 纳米制程。据 The Information 报道，此举旨在通过自研硬件缓解部署成本与电力供应压力。
 
-[阅读全文 →](https://llmposts.com/models/claude-code-chinese-user-spyware-removal/)
-
-#### [Claude Code 被曝植入监测机制, 秘密收集中国用户代理与时区信息](https://llmposts.com/models/claude-code-hidden-monitoring-mechanism/)
-
-Anthropic 的 Claude Code 被曝在 2.1.91 版本起植入监测机制,秘密收集中国用户时区与代理信息以防止蒸馏。负责人 Thariq 确认该实验将在次日版本中完全回滚。
-
-[阅读全文 →](https://llmposts.com/models/claude-code-hidden-monitoring-mechanism/)
-
-#### [Claude Fable 5 明日全球重新上架:软件工程能力显著提升](https://llmposts.com/models/claude-fable-5-redeploy-performance/)
-
-Anthropic 宣布 Claude Fable 5 将于明日全球重新上架。该模型在 5000 万行代码库迁移任务中仅用 1 天完成原本需 2 个月的工作,并在金融推理评测集中获最高分。
-
-[阅读全文 →](https://llmposts.com/models/claude-fable-5-redeploy-performance/)
-
-#### [Anthropic 发布 Claude Sonnet 5: 强化 Agentic 能力且定价更低](https://llmposts.com/models/claude-sonnet-5-agentic-model-release/)
-
-Anthropic 发布 Claude Sonnet 5,强化 agentic 能力以支持自主计划与工具使用。推广期定价为 2 美元/百万 input tokens,性能在多个维度逼近 Opus 4.8。
-
-[阅读全文 →](https://llmposts.com/models/claude-sonnet-5-agentic-model-release/)
-
-#### [Anthropic 发布 Claude Desktop Linux 版 Beta, 支持 Ubuntu 与 Debian](https://llmposts.com/models/claude-desktop-linux-beta-release/)
-
-Anthropic 发布 Claude Desktop Linux 版 Beta,支持 Ubuntu 22.04 和 Debian 12。该版本整合了 Claude Code 与 Cowork 功能,提供可视化 diff 审查与集成终端,但暂不支持 Computer Use 模式。
-
-[阅读全文 →](https://llmposts.com/models/claude-desktop-linux-beta-release/)
+[阅读全文 →](https://llmposts.com/models/anthropic-samsung-custom-ai-chip/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**

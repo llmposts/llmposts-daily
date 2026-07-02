@@ -1,5 +1,12 @@
 [
   {
+    "title": "Anthropic 或与三星合作研发定制 AI 芯片以降低部署成本",
+    "link": "https://llmposts.com/models/anthropic-samsung-custom-ai-chip/",
+    "date": "2026-07-02T22:22:52",
+    "summary": "Anthropic 或将与三星合作研发定制 AI 芯片，拟采用 2 纳米制程。据 The Information 报道，此举旨在通过自研硬件缓解部署成本与电力供应压力。",
+    "category": "模型动态"
+  },
+  {
     "title": "Anthropic 将删除 Claude Code 中针对中国用户的监控代码",
     "link": "https://llmposts.com/models/claude-code-chinese-user-spyware-removal/",
     "date": "2026-07-01T22:35:58",
