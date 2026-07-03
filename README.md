@@ -8,20 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-07-03<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-07-04<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-03 · 共 1 篇
+## 🔥 最新汇总 · 2026-07-04 · 共 1 篇
 
 ### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Anthropic 发布 Claude Science 且计划开发自有药物](https://llmposts.com/models/anthropic-claude-science-drug-development/)
+#### [OpenAI 或于 7 月 7 日发布 GPT-5.6,DeepMind 计划推出 Gemini 3.5 Pro](https://llmposts.com/models/openai-gpt-5-6-gemini-3-5-pro-launch-leaks/)
 
-Anthropic 发布 Claude Science 科学工作站并宣布将直接开发自有药物,重点关注被忽视的疾病。尽管 AI 可加速分子筛选,但药物临床试验仍需约 10 年周期且缺乏高质量实验数据。
+据爆料 OpenAI 计划在 2026 年 7 月 7 日至 9 日发布 GPT-5.6,旨在通过更宽松的限额吸引 Claude 用户。同时 Google Gemini 3.5 Pro 预计于 7 月 17 日推出。
 
-[阅读全文 →](https://llmposts.com/models/anthropic-claude-science-drug-development/)
+[阅读全文 →](https://llmposts.com/models/openai-gpt-5-6-gemini-3-5-pro-launch-leaks/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
