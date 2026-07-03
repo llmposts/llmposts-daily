@@ -8,20 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-07-02<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-07-03<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-02 · 共 1 篇
+## 🔥 最新汇总 · 2026-07-03 · 共 1 篇
 
 ### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Anthropic 或与三星合作研发定制 AI 芯片以降低部署成本](https://llmposts.com/models/anthropic-samsung-custom-ai-chip/)
+#### [Anthropic 发布 Claude Science 且计划开发自有药物](https://llmposts.com/models/anthropic-claude-science-drug-development/)
 
-Anthropic 或将与三星合作研发定制 AI 芯片，拟采用 2 纳米制程。据 The Information 报道，此举旨在通过自研硬件缓解部署成本与电力供应压力。
+Anthropic 发布 Claude Science 科学工作站并宣布将直接开发自有药物,重点关注被忽视的疾病。尽管 AI 可加速分子筛选,但药物临床试验仍需约 10 年周期且缺乏高质量实验数据。
 
-[阅读全文 →](https://llmposts.com/models/anthropic-samsung-custom-ai-chip/)
+[阅读全文 →](https://llmposts.com/models/anthropic-claude-science-drug-development/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**

@@ -1,5 +1,12 @@
 [
   {
+    "title": "Anthropic 发布 Claude Science 且计划开发自有药物",
+    "link": "https://llmposts.com/models/anthropic-claude-science-drug-development/",
+    "date": "2026-07-03T22:31:49",
+    "summary": "Anthropic 发布 Claude Science 科学工作站并宣布将直接开发自有药物,重点关注被忽视的疾病。尽管 AI 可加速分子筛选,但药物临床试验仍需约 10 年周期且缺乏高质量实验数据。",
+    "category": "模型动态"
+  },
+  {
     "title": "Anthropic 或与三星合作研发定制 AI 芯片以降低部署成本",
     "link": "https://llmposts.com/models/anthropic-samsung-custom-ai-chip/",
     "date": "2026-07-02T22:22:52",
