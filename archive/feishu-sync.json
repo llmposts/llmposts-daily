@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-07-02",
-      "node_token": "QomzwdRiVi8wnVkza8DckuXUnxb",
-      "block_id": "doxcnLYnb4KwxUoRGFQN7vbQqZg"
+      "date": "2026-07-03",
+      "node_token": "HMVywxfIniC4Crklf4PcKVfwnZf",
+      "block_id": "doxcnkmgU6vOGicnTrAsbookdzb"
     }
+  },
+  "2026-07-03": {
+    "node_token": "HMVywxfIniC4Crklf4PcKVfwnZf",
+    "obj_token": "SCBIdHItOoAO04xDVTHcUsKonAg",
+    "synced_links": [
+      "https://llmposts.com/models/anthropic-claude-science-drug-development/"
+    ],
+    "first_synced_at": "2026-07-03T14:32:30.338Z",
+    "last_synced_at": "2026-07-03T14:32:30.339Z",
+    "public_access_set": true
   },
   "2026-07-02": {
     "node_token": "QomzwdRiVi8wnVkza8DckuXUnxb",
