@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-04 · 共 1 篇
+## 🔥 最新汇总 · 2026-07-04 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [OpenAI 或于 7 月 7 日发布 GPT-5.6, 旨在通过高额度竞争 Claude 用户](https://llmposts.com/models/openai-gpt-5-6-release-date-leak/)
+
+OpenAI 计划在 7 月 7 日至 9 日发布 GPT-5.6 模型,旨在通过更宽松的额度限制吸引 Claude 用户。同时 Google DeepMind 暂定 Gemini 3.5 Pro 发布日期为 7 月 17 日。
+
+[阅读全文 →](https://llmposts.com/models/openai-gpt-5-6-release-date-leak/)
 
 #### [OpenAI 或于 7 月 7 日发布 GPT-5.6,DeepMind 计划推出 Gemini 3.5 Pro](https://llmposts.com/models/openai-gpt-5-6-gemini-3-5-pro-launch-leaks/)
 
