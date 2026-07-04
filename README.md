@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-04 · 共 2 篇
+## 🔥 最新汇总 · 2026-07-04 · 共 3 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 3 篇
+
+#### [Anthropic 提升 Claude Platform API 速率限制，最高分级提升 5 倍](https://llmposts.com/models/claude-platform-api-rate-limits-update/)
+
+Anthropic 调整 Claude Platform API 速率限制，最高分级模型限额提升 5 倍且不再与消费金额挂钩，最新 Opus、Sonnet 和 Haiku 模型吞吐量实现统一。
+
+[阅读全文 →](https://llmposts.com/models/claude-platform-api-rate-limits-update/)
 
 #### [OpenAI 或于 7 月 7 日发布 GPT-5.6, 旨在通过高额度竞争 Claude 用户](https://llmposts.com/models/openai-gpt-5-6-release-date-leak/)
 

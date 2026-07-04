@@ -1,5 +1,12 @@
 [
   {
+    "title": "Anthropic 提升 Claude Platform API 速率限制，最高分级提升 5 倍",
+    "link": "https://llmposts.com/models/claude-platform-api-rate-limits-update/",
+    "date": "2026-07-04T23:14:36",
+    "summary": "Anthropic 调整 Claude Platform API 速率限制，最高分级模型限额提升 5 倍且不再与消费金额挂钩，最新 Opus、Sonnet 和 Haiku 模型吞吐量实现统一。",
+    "category": "模型动态"
+  },
+  {
     "title": "OpenAI 或于 7 月 7 日发布 GPT-5.6, 旨在通过高额度竞争 Claude 用户",
     "link": "https://llmposts.com/models/openai-gpt-5-6-release-date-leak/",
     "date": "2026-07-04T23:10:44",
