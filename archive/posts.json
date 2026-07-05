@@ -1,5 +1,12 @@
 [
   {
+    "title": "Gemini 3.5 Pro 或支持 2M tokens 上下文窗口",
+    "link": "https://llmposts.com/models/gemini-3-5-pro-2m-context-window/",
+    "date": "2026-07-06T01:19:57",
+    "summary": "据爆料 Gemini 3.5 Pro 将支持 2M tokens 上下文窗口，规模约为 Anthropic Fable 5 等模型的 2 倍，可单次处理超大规模代码库和文档。",
+    "category": "模型动态"
+  },
+  {
     "title": "Anthropic 提升 Claude Platform API 速率限制，最高分级提升 5 倍",
     "link": "https://llmposts.com/models/claude-platform-api-rate-limits-update/",
     "date": "2026-07-04T23:14:36",

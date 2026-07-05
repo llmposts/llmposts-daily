@@ -8,32 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-07-04<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-07-06<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-04 · 共 3 篇
+## 🔥 最新汇总 · 2026-07-06 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 3 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Anthropic 提升 Claude Platform API 速率限制，最高分级提升 5 倍](https://llmposts.com/models/claude-platform-api-rate-limits-update/)
+#### [Gemini 3.5 Pro 或支持 2M tokens 上下文窗口](https://llmposts.com/models/gemini-3-5-pro-2m-context-window/)
 
-Anthropic 调整 Claude Platform API 速率限制，最高分级模型限额提升 5 倍且不再与消费金额挂钩，最新 Opus、Sonnet 和 Haiku 模型吞吐量实现统一。
+据爆料 Gemini 3.5 Pro 将支持 2M tokens 上下文窗口，规模约为 Anthropic Fable 5 等模型的 2 倍，可单次处理超大规模代码库和文档。
 
-[阅读全文 →](https://llmposts.com/models/claude-platform-api-rate-limits-update/)
-
-#### [OpenAI 或于 7 月 7 日发布 GPT-5.6, 旨在通过高额度竞争 Claude 用户](https://llmposts.com/models/openai-gpt-5-6-release-date-leak/)
-
-OpenAI 计划在 7 月 7 日至 9 日发布 GPT-5.6 模型,旨在通过更宽松的额度限制吸引 Claude 用户。同时 Google DeepMind 暂定 Gemini 3.5 Pro 发布日期为 7 月 17 日。
-
-[阅读全文 →](https://llmposts.com/models/openai-gpt-5-6-release-date-leak/)
-
-#### [OpenAI 或于 7 月 7 日发布 GPT-5.6,DeepMind 计划推出 Gemini 3.5 Pro](https://llmposts.com/models/openai-gpt-5-6-gemini-3-5-pro-launch-leaks/)
-
-据爆料 OpenAI 计划在 2026 年 7 月 7 日至 9 日发布 GPT-5.6,旨在通过更宽松的限额吸引 Claude 用户。同时 Google Gemini 3.5 Pro 预计于 7 月 17 日推出。
-
-[阅读全文 →](https://llmposts.com/models/openai-gpt-5-6-gemini-3-5-pro-launch-leaks/)
+[阅读全文 →](https://llmposts.com/models/gemini-3-5-pro-2m-context-window/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
