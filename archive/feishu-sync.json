@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-07-04",
-      "node_token": "ZldcwyBqqiFgX7kAQ61cT9jon3g",
-      "block_id": "doxcn1k93gVX5pAJOO8Q0WPDU0d"
+      "date": "2026-07-06",
+      "node_token": "HUxRw20yKihvlzk6JKRcG6QGnnh",
+      "block_id": "doxcnrboYEr2lvgThX01XTZSFbb"
     }
+  },
+  "2026-07-06": {
+    "node_token": "HUxRw20yKihvlzk6JKRcG6QGnnh",
+    "obj_token": "FO3WdrFFaosjJ1xHppuclTWsnyc",
+    "synced_links": [
+      "https://llmposts.com/models/gemini-3-5-pro-2m-context-window/"
+    ],
+    "first_synced_at": "2026-07-05T17:20:33.852Z",
+    "last_synced_at": "2026-07-05T17:20:33.853Z",
+    "public_access_set": true
   },
   "2026-07-04": {
     "node_token": "ZldcwyBqqiFgX7kAQ61cT9jon3g",
