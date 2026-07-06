@@ -13,10 +13,11 @@
     "node_token": "HUxRw20yKihvlzk6JKRcG6QGnnh",
     "obj_token": "FO3WdrFFaosjJ1xHppuclTWsnyc",
     "synced_links": [
-      "https://llmposts.com/models/gemini-3-5-pro-2m-context-window/"
+      "https://llmposts.com/models/gemini-3-5-pro-2m-context-window/",
+      "https://llmposts.com/models/anthropic-fable-5-1-release-rumor/"
     ],
     "first_synced_at": "2026-07-05T17:20:33.852Z",
-    "last_synced_at": "2026-07-05T17:20:33.853Z",
+    "last_synced_at": "2026-07-06T00:27:18.791Z",
     "public_access_set": true
   },
   "2026-07-04": {
