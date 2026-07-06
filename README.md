@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-06 · 共 1 篇
+## 🔥 最新汇总 · 2026-07-06 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [Anthropic Fable 5.1 或将于 8 月发布, 迭代周期缩短至 4 个月](https://llmposts.com/models/anthropic-fable-5-1-release-rumor/)
+
+Anthropic 的 Fable 5.1 爆料显示该模型或已完成开发,预计将于 2026 年 8 月或 9 月发布。其更新节奏已从年度周期缩短至 2-4 个月一次前沿升级。
+
+[阅读全文 →](https://llmposts.com/models/anthropic-fable-5-1-release-rumor/)
 
 #### [Gemini 3.5 Pro 或支持 2M tokens 上下文窗口](https://llmposts.com/models/gemini-3-5-pro-2m-context-window/)
 
