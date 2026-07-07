@@ -8,26 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-07-06<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-07-08<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-06 · 共 2 篇
+## 🔥 最新汇总 · 2026-07-08 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Anthropic Fable 5.1 或将于 8 月发布, 迭代周期缩短至 4 个月](https://llmposts.com/models/anthropic-fable-5-1-release-rumor/)
+#### [Claude Cowork 支持移动端与 Web 端, 支持离线执行定时任务](https://llmposts.com/models/claude-cowork-mobile-web-launch/)
 
-Anthropic 的 Fable 5.1 爆料显示该模型或已完成开发,预计将于 2026 年 8 月或 9 月发布。其更新节奏已从年度周期缩短至 2-4 个月一次前沿升级。
+Anthropic 发布 Claude Cowork 移动端与 Web 端支持,实现离线后台运行与多设备接力。据官方披露,超 90% 的使用场景为非代码知识工作,目前正向 Max 计划用户推送 Beta 版。
 
-[阅读全文 →](https://llmposts.com/models/anthropic-fable-5-1-release-rumor/)
-
-#### [Gemini 3.5 Pro 或支持 2M tokens 上下文窗口](https://llmposts.com/models/gemini-3-5-pro-2m-context-window/)
-
-据爆料 Gemini 3.5 Pro 将支持 2M tokens 上下文窗口，规模约为 Anthropic Fable 5 等模型的 2 倍，可单次处理超大规模代码库和文档。
-
-[阅读全文 →](https://llmposts.com/models/gemini-3-5-pro-2m-context-window/)
+[阅读全文 →](https://llmposts.com/models/claude-cowork-mobile-web-launch/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
