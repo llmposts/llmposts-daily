@@ -1,5 +1,12 @@
 [
   {
+    "title": "GPT-6 或将于本月提前发布，将采用更大规模预训练底座",
+    "link": "https://llmposts.com/models/gpt-6-release-leak-deepseek-v4-fable-5-1/",
+    "date": "2026-07-09T01:04:01",
+    "summary": "据爆料 GPT-6 或在 2026 年 7 月底或 8 月提前发布，将采用规模显著大于 4T tokens 的新底座。同时 Fable 5.1 与 DeepSeek V4 GA 也预计在未来数周内推出。",
+    "category": "模型动态"
+  },
+  {
     "title": "Claude Cowork 支持移动端与 Web 端, 支持离线执行定时任务",
     "link": "https://llmposts.com/models/claude-cowork-mobile-web-launch/",
     "date": "2026-07-08T01:14:52",
