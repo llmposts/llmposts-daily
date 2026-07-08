@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-07-08",
-      "node_token": "A4Kfw17uQiE4eNkTZFIcVqRdnah",
-      "block_id": "doxcnt0TasSWzCAOLksNv9cJKUY"
+      "date": "2026-07-09",
+      "node_token": "XKWEwuottihgiykfp7wcFzxFnSh",
+      "block_id": "doxcnVUreWGDcr5FLqvXG3abu4e"
     }
+  },
+  "2026-07-09": {
+    "node_token": "XKWEwuottihgiykfp7wcFzxFnSh",
+    "obj_token": "ZPAidURm3ormCBxUKHVchP58nIp",
+    "synced_links": [
+      "https://llmposts.com/models/gpt-6-release-leak-deepseek-v4-fable-5-1/"
+    ],
+    "first_synced_at": "2026-07-08T17:04:36.628Z",
+    "last_synced_at": "2026-07-08T17:04:36.628Z",
+    "public_access_set": true
   },
   "2026-07-08": {
     "node_token": "A4Kfw17uQiE4eNkTZFIcVqRdnah",
