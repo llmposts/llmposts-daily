@@ -8,26 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-07-09<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-07-10<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-09 · 共 2 篇
+## 🔥 最新汇总 · 2026-07-10 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [SpaceXAI 发布 Grok 4.5 模型, 在自动化评测集夺冠且成本极低](https://llmposts.com/models/spacexai-grok-4-5-automationbench-performance/)
+#### [Anthropic 发布 Claude 反思功能, 通过 4D 框架优化 AI 协作模式](https://llmposts.com/models/claude-reflect-ai-fluency-framework/)
 
-SpaceXAI 发布 Grok 4.5 模型,在 AutomationBench-AA 评测中以 51% 的得分位列第一。单次任务成本仅 0.34 美元,比 Claude Opus 4.8 便宜约 75%,并在金融领域目标完成率达 71%。
+Anthropic 发布 Claude 反思功能 Beta 版,支持回顾 1 到 12 个月的使用模式,并基于 4D AI 流畅度框架提供协作建议,旨在优化用户与 AI 的交互习惯。
 
-[阅读全文 →](https://llmposts.com/models/spacexai-grok-4-5-automationbench-performance/)
-
-#### [GPT-6 或将于本月提前发布，将采用更大规模预训练底座](https://llmposts.com/models/gpt-6-release-leak-deepseek-v4-fable-5-1/)
-
-据爆料 GPT-6 或在 2026 年 7 月底或 8 月提前发布，将采用规模显著大于 4T tokens 的新底座。同时 Fable 5.1 与 DeepSeek V4 GA 也预计在未来数周内推出。
-
-[阅读全文 →](https://llmposts.com/models/gpt-6-release-leak-deepseek-v4-fable-5-1/)
+[阅读全文 →](https://llmposts.com/models/claude-reflect-ai-fluency-framework/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
