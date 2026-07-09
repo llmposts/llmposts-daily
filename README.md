@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-09 · 共 1 篇
+## 🔥 最新汇总 · 2026-07-09 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [SpaceXAI 发布 Grok 4.5 模型, 在自动化评测集夺冠且成本极低](https://llmposts.com/models/spacexai-grok-4-5-automationbench-performance/)
+
+SpaceXAI 发布 Grok 4.5 模型,在 AutomationBench-AA 评测中以 51% 的得分位列第一。单次任务成本仅 0.34 美元,比 Claude Opus 4.8 便宜约 75%,并在金融领域目标完成率达 71%。
+
+[阅读全文 →](https://llmposts.com/models/spacexai-grok-4-5-automationbench-performance/)
 
 #### [GPT-6 或将于本月提前发布，将采用更大规模预训练底座](https://llmposts.com/models/gpt-6-release-leak-deepseek-v4-fable-5-1/)
 
