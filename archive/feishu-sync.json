@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-07-09",
-      "node_token": "XKWEwuottihgiykfp7wcFzxFnSh",
-      "block_id": "doxcnVUreWGDcr5FLqvXG3abu4e"
+      "date": "2026-07-10",
+      "node_token": "MTowwGCVviNKJzk3x7UcmYQsnYe",
+      "block_id": "doxcncJ0S6cLKBVlPbqTWpMZtEQ"
     }
+  },
+  "2026-07-10": {
+    "node_token": "MTowwGCVviNKJzk3x7UcmYQsnYe",
+    "obj_token": "O9YvdJEZxom5nlxBZT9cwtH4n5b",
+    "synced_links": [
+      "https://llmposts.com/models/claude-reflect-ai-fluency-framework/"
+    ],
+    "first_synced_at": "2026-07-09T16:56:43.807Z",
+    "last_synced_at": "2026-07-09T16:56:43.807Z",
+    "public_access_set": true
   },
   "2026-07-09": {
     "node_token": "XKWEwuottihgiykfp7wcFzxFnSh",
