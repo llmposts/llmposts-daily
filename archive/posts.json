@@ -1,5 +1,12 @@
 [
   {
+    "title": "Claude Code Artifacts 支持公开分享与多人协作编辑",
+    "link": "https://llmposts.com/models/claude-code-artifacts-public-sharing-multiplayer/",
+    "date": "2026-07-14T13:12:00",
+    "summary": "Claude Code Artifacts 于 2026 年 7 月 14 日更新,新增公开链接分享与多人实时编辑功能,且支持通过 Claude Tag 在 Slack 中直接构建内部页面。",
+    "category": "模型动态"
+  },
+  {
     "title": "Anthropic 发布 Claude 反思功能, 通过 4D 框架优化 AI 协作模式",
     "link": "https://llmposts.com/models/claude-reflect-ai-fluency-framework/",
     "date": "2026-07-10T00:56:09",

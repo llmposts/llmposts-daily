@@ -8,20 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-07-10<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-07-14<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-10 · 共 1 篇
+## 🔥 最新汇总 · 2026-07-14 · 共 1 篇
 
 ### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Anthropic 发布 Claude 反思功能, 通过 4D 框架优化 AI 协作模式](https://llmposts.com/models/claude-reflect-ai-fluency-framework/)
+#### [Claude Code Artifacts 支持公开分享与多人协作编辑](https://llmposts.com/models/claude-code-artifacts-public-sharing-multiplayer/)
 
-Anthropic 发布 Claude 反思功能 Beta 版,支持回顾 1 到 12 个月的使用模式,并基于 4D AI 流畅度框架提供协作建议,旨在优化用户与 AI 的交互习惯。
+Claude Code Artifacts 于 2026 年 7 月 14 日更新,新增公开链接分享与多人实时编辑功能,且支持通过 Claude Tag 在 Slack 中直接构建内部页面。
 
-[阅读全文 →](https://llmposts.com/models/claude-reflect-ai-fluency-framework/)
+[阅读全文 →](https://llmposts.com/models/claude-code-artifacts-public-sharing-multiplayer/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
