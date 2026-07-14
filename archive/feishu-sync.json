@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-07-10",
-      "node_token": "MTowwGCVviNKJzk3x7UcmYQsnYe",
-      "block_id": "doxcncJ0S6cLKBVlPbqTWpMZtEQ"
+      "date": "2026-07-14",
+      "node_token": "OKFqwWoylijP0QkREPtcyOlOnpf",
+      "block_id": "doxcncisZtdola6o5uj69y3dUWc"
     }
+  },
+  "2026-07-14": {
+    "node_token": "OKFqwWoylijP0QkREPtcyOlOnpf",
+    "obj_token": "H32gddPrkob1zcxesiDcUhQ0nFe",
+    "synced_links": [
+      "https://llmposts.com/models/claude-code-artifacts-public-sharing-multiplayer/"
+    ],
+    "first_synced_at": "2026-07-14T05:12:40.900Z",
+    "last_synced_at": "2026-07-14T05:12:40.900Z",
+    "public_access_set": true
   },
   "2026-07-10": {
     "node_token": "MTowwGCVviNKJzk3x7UcmYQsnYe",
