@@ -8,20 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-07-14<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-07-15<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-14 · 共 1 篇
+## 🔥 最新汇总 · 2026-07-15 · 共 1 篇
 
 ### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Claude Code Artifacts 支持公开分享与多人协作编辑](https://llmposts.com/models/claude-code-artifacts-public-sharing-multiplayer/)
+#### [Claude Opus 5 或将于本周发布，Anthropic 计划于 8 月推出 Fable 5 继任者](https://llmposts.com/models/claude-opus-5-launch-fable-successor/)
 
-Claude Code Artifacts 于 2026 年 7 月 14 日更新,新增公开链接分享与多人实时编辑功能,且支持通过 Claude Tag 在 Slack 中直接构建内部页面。
+据爆料，Anthropic 计划最快于 2026 年 7 月本周内发布 Claude Opus 5。此外，Fable 5 的订阅包含期限将至 7 月 19 日截止，其继任者预计在 8 月推出以竞争 GPT-6。
 
-[阅读全文 →](https://llmposts.com/models/claude-code-artifacts-public-sharing-multiplayer/)
+[阅读全文 →](https://llmposts.com/models/claude-opus-5-launch-fable-successor/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
