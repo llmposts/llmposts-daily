@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-07-14",
-      "node_token": "OKFqwWoylijP0QkREPtcyOlOnpf",
-      "block_id": "doxcncisZtdola6o5uj69y3dUWc"
+      "date": "2026-07-15",
+      "node_token": "AVdjwMRPwi7KVAkYcNfcEKX9njd",
+      "block_id": "doxcnqAcMHsdnRu6S5VTARHIeAL"
     }
+  },
+  "2026-07-15": {
+    "node_token": "AVdjwMRPwi7KVAkYcNfcEKX9njd",
+    "obj_token": "NttOdjmJwobzKjxdC1dcSlTBnU1",
+    "synced_links": [
+      "https://llmposts.com/models/claude-opus-5-launch-fable-successor/"
+    ],
+    "first_synced_at": "2026-07-14T17:54:30.167Z",
+    "last_synced_at": "2026-07-14T17:54:30.167Z",
+    "public_access_set": true
   },
   "2026-07-14": {
     "node_token": "OKFqwWoylijP0QkREPtcyOlOnpf",
