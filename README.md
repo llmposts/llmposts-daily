@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-15 · 共 1 篇
+## 🔥 最新汇总 · 2026-07-15 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [Kimi K3 或于明日发布, 被曝为对标 Opus 4.7 的编程模型](https://llmposts.com/models/kimi-k3-model-leak-coding-performance/)
+
+Kimi K3 模型或于 7 月 16 日发布,据爆料该模型对标 Opus 4.7 编程能力,在部分评测中优于 GPT 5.5 和 GPT 5.6 Terra,目前已在 Beta 站点上线。
+
+[阅读全文 →](https://llmposts.com/models/kimi-k3-model-leak-coding-performance/)
 
 #### [Claude Opus 5 或将于本周发布，Anthropic 计划于 8 月推出 Fable 5 继任者](https://llmposts.com/models/claude-opus-5-launch-fable-successor/)
 
