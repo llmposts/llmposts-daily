@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-07-15",
-      "node_token": "AVdjwMRPwi7KVAkYcNfcEKX9njd",
-      "block_id": "doxcnqAcMHsdnRu6S5VTARHIeAL"
+      "date": "2026-07-16",
+      "node_token": "CgaewKa0EiMz19kSWuecPtnGnkc",
+      "block_id": "doxcn2lNIeH5zVmfPLYdpGeKhob"
     }
+  },
+  "2026-07-16": {
+    "node_token": "CgaewKa0EiMz19kSWuecPtnGnkc",
+    "obj_token": "NbB8d5Rc3oHDlqxdB0LcuipsnDf",
+    "synced_links": [
+      "https://llmposts.com/models/moonshot-kimi-k3-model-release/"
+    ],
+    "first_synced_at": "2026-07-16T14:00:05.230Z",
+    "last_synced_at": "2026-07-16T14:00:05.230Z",
+    "public_access_set": true
   },
   "2026-07-15": {
     "node_token": "AVdjwMRPwi7KVAkYcNfcEKX9njd",
