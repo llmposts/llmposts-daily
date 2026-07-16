@@ -8,26 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-07-15<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-07-16<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-15 · 共 2 篇
+## 🔥 最新汇总 · 2026-07-16 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Kimi K3 或于明日发布, 被曝为对标 Opus 4.7 的编程模型](https://llmposts.com/models/kimi-k3-model-leak-coding-performance/)
+#### [月之暗面或发布 Kimi K3 模型, 参数量达 3T 挑战 Opus 4.8](https://llmposts.com/models/moonshot-kimi-k3-model-release/)
 
-Kimi K3 模型或于 7 月 16 日发布,据爆料该模型对标 Opus 4.7 编程能力,在部分评测中优于 GPT 5.5 和 GPT 5.6 Terra,目前已在 Beta 站点上线。
+月之暗面或将发布 Kimi K3 模型,参数量预计达 2T-3T,在主流 benchmark 上有望超越 Opus 4.8。该模型将以 open-weight 形式开放,融资估值目标约为 315 亿美元。
 
-[阅读全文 →](https://llmposts.com/models/kimi-k3-model-leak-coding-performance/)
-
-#### [Claude Opus 5 或将于本周发布，Anthropic 计划于 8 月推出 Fable 5 继任者](https://llmposts.com/models/claude-opus-5-launch-fable-successor/)
-
-据爆料，Anthropic 计划最快于 2026 年 7 月本周内发布 Claude Opus 5。此外，Fable 5 的订阅包含期限将至 7 月 19 日截止，其继任者预计在 8 月推出以竞争 GPT-6。
-
-[阅读全文 →](https://llmposts.com/models/claude-opus-5-launch-fable-successor/)
+[阅读全文 →](https://llmposts.com/models/moonshot-kimi-k3-model-release/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
