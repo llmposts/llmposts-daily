@@ -17,7 +17,7 @@
 
 ### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [月之暗面或发布 Kimi K3 模型, 参数量达 3T 挑战 Opus 4.8](https://llmposts.com/models/moonshot-kimi-k3-model-release/)
+#### [月之暗面已正式推出 Kimi K3 模型, 参数量达 3T 挑战 Opus 4.8](https://llmposts.com/models/moonshot-kimi-k3-model-release/)
 
 月之暗面或将发布 Kimi K3 模型,参数量预计达 2T-3T,在主流 benchmark 上有望超越 Opus 4.8。该模型将以 open-weight 形式开放,融资估值目标约为 315 亿美元。
 
