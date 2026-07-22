@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-07-16",
-      "node_token": "CgaewKa0EiMz19kSWuecPtnGnkc",
-      "block_id": "doxcn2lNIeH5zVmfPLYdpGeKhob"
+      "date": "2026-07-22",
+      "node_token": "HFaxw3O1HiRZzXkfuUec7Gwyn5g",
+      "block_id": "doxcnPqOK7fhSz4XT3SXKlQkyjg"
     }
+  },
+  "2026-07-22": {
+    "node_token": "HFaxw3O1HiRZzXkfuUec7Gwyn5g",
+    "obj_token": "Wgo6diAffoM9fuxGEDNcPd8OnCc",
+    "synced_links": [
+      "https://llmposts.com/models/claude-cowork-teach-skill-feature/"
+    ],
+    "first_synced_at": "2026-07-22T05:59:55.217Z",
+    "last_synced_at": "2026-07-22T05:59:55.217Z",
+    "public_access_set": true
   },
   "2026-07-16": {
     "node_token": "CgaewKa0EiMz19kSWuecPtnGnkc",
