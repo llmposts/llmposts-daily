@@ -8,20 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-07-16<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-07-22<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-16 · 共 1 篇
+## 🔥 最新汇总 · 2026-07-22 · 共 1 篇
 
 ### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [月之暗面已正式推出 Kimi K3 模型, 参数量达 3T 挑战 Opus 4.8](https://llmposts.com/models/moonshot-kimi-k3-model-release/)
+#### [Claude Cowork 发布教导技能功能:支持录屏口述转化为自动化工作流](https://llmposts.com/models/claude-cowork-teach-skill-feature/)
 
-月之暗面或将发布 Kimi K3 模型,参数量预计达 2T-3T,在主流 benchmark 上有望超越 Opus 4.8。该模型将以 open-weight 形式开放,融资估值目标约为 315 亿美元。
+Claude Cowork 发布教导技能功能,用户可通过录屏与口述让 AI 习得特定任务。该功能于 2026 年 7 月 22 日面向 Pro、Max 及 Team 计划用户开放。
 
-[阅读全文 →](https://llmposts.com/models/moonshot-kimi-k3-model-release/)
+[阅读全文 →](https://llmposts.com/models/claude-cowork-teach-skill-feature/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
