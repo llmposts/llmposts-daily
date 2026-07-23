@@ -4,10 +4,20 @@
     "parent_node_token": "Fal1we5ELi6gkKkLbgDcalbAnwU",
     "parent_obj_token": "KeQNdyWLEomwo7xpBi5caRsHnkf",
     "latest_pointer": {
-      "date": "2026-07-22",
-      "node_token": "HFaxw3O1HiRZzXkfuUec7Gwyn5g",
-      "block_id": "doxcnPqOK7fhSz4XT3SXKlQkyjg"
+      "date": "2026-07-23",
+      "node_token": "C6QPwuVptiifTGkdBgccODpQntb",
+      "block_id": "doxcnweGYhO52qVlIdhbpzwg5qe"
     }
+  },
+  "2026-07-23": {
+    "node_token": "C6QPwuVptiifTGkdBgccODpQntb",
+    "obj_token": "Hbatd4gc6oPwDAxmSwdcSiMBnVd",
+    "synced_links": [
+      "https://llmposts.com/models/claude-opus-5-launch-leaks/"
+    ],
+    "first_synced_at": "2026-07-23T03:17:16.625Z",
+    "last_synced_at": "2026-07-23T03:17:16.625Z",
+    "public_access_set": true
   },
   "2026-07-22": {
     "node_token": "HFaxw3O1HiRZzXkfuUec7Gwyn5g",
