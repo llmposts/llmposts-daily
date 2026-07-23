@@ -8,20 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-07-22<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-07-23<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-22 · 共 1 篇
+## 🔥 最新汇总 · 2026-07-23 · 共 1 篇
 
 ### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Claude Cowork 发布教导技能功能:支持录屏口述转化为自动化工作流](https://llmposts.com/models/claude-cowork-teach-skill-feature/)
+#### [Anthropic 或将于今日发布 Claude Opus 5，性能预计与 Fable 5 持平](https://llmposts.com/models/claude-opus-5-launch-leaks/)
 
-Claude Cowork 发布教导技能功能,用户可通过录屏与口述让 AI 习得特定任务。该功能于 2026 年 7 月 22 日面向 Pro、Max 及 Team 计划用户开放。
+Anthropic 或于 2026 年 7 月 23 日发布旗舰模型 Claude Opus 5。据爆料，其 benchmark 性能将与 Fable 5 相当但不会超越，发布时间定于周四。
 
-[阅读全文 →](https://llmposts.com/models/claude-cowork-teach-skill-feature/)
+[阅读全文 →](https://llmposts.com/models/claude-opus-5-launch-leaks/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
