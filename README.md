@@ -8,20 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-07-23<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-07-25<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-23 · 共 1 篇
+## 🔥 最新汇总 · 2026-07-25 · 共 1 篇
 
 ### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Anthropic 或将于今日发布 Claude Opus 5，性能预计与 Fable 5 持平](https://llmposts.com/models/claude-opus-5-launch-leaks/)
+#### [Claude Opus 5 发布：代码能力达 SOTA，成本减半逼近 Fable 5](https://llmposts.com/models/claude-opus-5-release-performance/)
 
-Anthropic 或于 2026 年 7 月 23 日发布旗舰模型 Claude Opus 5。据爆料，其 benchmark 性能将与 Fable 5 相当但不会超越，发布时间定于周四。
+Anthropic 发布 Claude Opus 5，输入定价 5 美元/百万 token，在 Frontier-Bench 等代码评测中达到 SOTA，部分任务性能达 Opus 4.8 的 2 倍且成本更低。
 
-[阅读全文 →](https://llmposts.com/models/claude-opus-5-launch-leaks/)
+[阅读全文 →](https://llmposts.com/models/claude-opus-5-release-performance/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
