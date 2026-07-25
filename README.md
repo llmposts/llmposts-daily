@@ -13,9 +13,15 @@
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-25 · 共 1 篇
+## 🔥 最新汇总 · 2026-07-25 · 共 2 篇
 
-### 01 · 模型动态 · Model Updates · 1 篇
+### 01 · 模型动态 · Model Updates · 2 篇
+
+#### [Fable 5.1 或于 8 月发布, 定价维持不变以竞争 GPT-6](https://llmposts.com/models/fable-5-1-leak-release-date/)
+
+Fable 5.1 或将于 2026 年 8 月发布,定价预计与 Fable 5 相同。据爆料,该模型可能抢在 GPT-6 之前推出以形成直接竞争。
+
+[阅读全文 →](https://llmposts.com/models/fable-5-1-leak-release-date/)
 
 #### [Claude Opus 5 发布：代码能力达 SOTA，成本减半逼近 Fable 5](https://llmposts.com/models/claude-opus-5-release-performance/)
 
