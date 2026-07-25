@@ -1,5 +1,12 @@
 [
   {
+    "title": "Claude Opus 5 领跑 AA-Briefcase 评测，单任务成本降低 20%",
+    "link": "https://llmposts.com/models/claude-opus-5-aa-briefcase-benchmark/",
+    "date": "2026-07-26T00:11:50",
+    "summary": "Claude Opus 5 在 AA-Briefcase 评测中以 1720 Elo 夺冠，单次任务成本较 Claude Fable 5 降低 20% 至 17.79 美元，但在呈现质量上仍落后于 GPT-5.6 Sol。",
+    "category": "模型动态"
+  },
+  {
     "title": "Fable 5.1 或于 8 月发布, 定价维持不变以竞争 GPT-6",
     "link": "https://llmposts.com/models/fable-5-1-leak-release-date/",
     "date": "2026-07-25T21:10:35",

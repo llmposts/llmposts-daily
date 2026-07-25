@@ -8,26 +8,20 @@
 
 ⭐ 觉得有用就点个 Star,点 **Watch** 关注更新。
 
-**最后更新:** <!-- UPDATED:START -->2026-07-25<!-- UPDATED:END -->
+**最后更新:** <!-- UPDATED:START -->2026-07-26<!-- UPDATED:END -->
 
 ---
 
 <!-- RECENT:START -->
-## 🔥 最新汇总 · 2026-07-25 · 共 2 篇
+## 🔥 最新汇总 · 2026-07-26 · 共 1 篇
 
-### 01 · 模型动态 · Model Updates · 2 篇
+### 01 · 模型动态 · Model Updates · 1 篇
 
-#### [Fable 5.1 或于 8 月发布, 定价维持不变以竞争 GPT-6](https://llmposts.com/models/fable-5-1-leak-release-date/)
+#### [Claude Opus 5 领跑 AA-Briefcase 评测，单任务成本降低 20%](https://llmposts.com/models/claude-opus-5-aa-briefcase-benchmark/)
 
-Fable 5.1 或将于 2026 年 8 月发布,定价预计与 Fable 5 相同。据爆料,该模型可能抢在 GPT-6 之前推出以形成直接竞争。
+Claude Opus 5 在 AA-Briefcase 评测中以 1720 Elo 夺冠，单次任务成本较 Claude Fable 5 降低 20% 至 17.79 美元，但在呈现质量上仍落后于 GPT-5.6 Sol。
 
-[阅读全文 →](https://llmposts.com/models/fable-5-1-leak-release-date/)
-
-#### [Claude Opus 5 发布：代码能力达 SOTA，成本减半逼近 Fable 5](https://llmposts.com/models/claude-opus-5-release-performance/)
-
-Anthropic 发布 Claude Opus 5，输入定价 5 美元/百万 token，在 Frontier-Bench 等代码评测中达到 SOTA，部分任务性能达 Opus 4.8 的 2 倍且成本更低。
-
-[阅读全文 →](https://llmposts.com/models/claude-opus-5-release-performance/)
+[阅读全文 →](https://llmposts.com/models/claude-opus-5-aa-briefcase-benchmark/)
 <!-- RECENT:END -->
 
 👉 **想看完整内容?全部文章都在 [llmposts.com](https://llmposts.com)**
